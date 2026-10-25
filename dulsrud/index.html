@@ -57,12 +57,6 @@ header{border-bottom:1px solid var(--line)}
 .hero-img .ph:nth-child(1),.hero-img .ph:nth-child(3){aspect-ratio:3/4.4}
 
 /* Notice */
-.fb{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
-.fb-box{background:var(--paper);border:1px solid #d9cdb8;min-height:520px;display:grid;place-items:center;text-align:center;padding:30px}
-.fb-box iframe{border:0;width:100%;max-width:500px;height:600px}
-.fb-box button{font:inherit;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;background:var(--ink);color:var(--cream);border:0;padding:15px 26px;cursor:pointer;margin-top:16px}
-.fb-box small{display:block;color:#7a7466;font-size:.78rem;margin-top:14px;max-width:300px}
-@media (max-width:760px){.fb{grid-template-columns:1fr}.fb-box{min-height:380px}}
 .notice{background:var(--ink);color:var(--cream)}
 .notice .wrap{display:flex;align-items:center;gap:18px;padding-top:18px;padding-bottom:18px;flex-wrap:wrap}
 .notice .tag{font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:#d9b88f;border:1px solid #d9b88f66;padding:4px 10px;white-space:nowrap}
@@ -292,23 +286,6 @@ footer a{color:#e9e2d4}
   </div>
 </section>
 
-<section id="nytt">
-  <div class="wrap fb">
-    <div class="head" style="text-align:left">
-      <span class="eyebrow">Siste nytt</span>
-      <h2>Rett fra butikken</h2>
-      <p>Nye varer, salg og arrangementer. Det vi legger ut på Facebook, dukker opp her av seg selv.</p>
-    </div>
-    <div class="fb-box" id="fb-box">
-      <div>
-        <p style="font-family:var(--serif);font-size:1.5rem">Se de siste innleggene våre</p>
-        <button type="button" id="fb-load">Vis siste nytt fra Facebook</button>
-        <small>Innholdet lastes fra Facebook når du trykker.</small>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section class="reviews">
   <div class="wrap">
     <div class="head">
@@ -378,15 +355,6 @@ footer a{color:#e9e2d4}
 
 <script>
 // Rediger her: oppslag øverst på siden (tom liste = ingen oppslag).
-
-// Facebook posts: loaded only on click, so no Facebook code runs before the visitor asks for it.
-document.getElementById("fb-load").addEventListener("click", () => {
-  const page = encodeURIComponent("https://www.facebook.com/dulsrudmoelv");
-  document.getElementById("fb-box").innerHTML =
-    `<iframe title="Siste innlegg fra Dulsrud på Facebook" loading="lazy" allow="encrypted-media"
-      src="https://www.facebook.com/plugins/page.php?href=${page}&tabs=timeline&width=500&height=600&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=false"></iframe>`;
-});
-
 const NOTICES = [
   { tag: "Nytt i butikken", text: "Følg med på Facebook for nyheter og salg", sub: "Vi legger ut nye varer nesten hver dag.", link: "https://www.facebook.com/dulsrudmoelv", linkText: "Til Facebook" }
 ];
