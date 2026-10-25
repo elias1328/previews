@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kafé Mølla – husmannskost og lunsj på Mølla Storsenter, Brumunddal</title>
+<meta name="description" content="Kafé Mølla på Mølla Storsenter i Brumunddal. Frokost fra kl. 07, lunsj og husmannskost til middag hver dag. Ny uteservering.">
+<!-- Preview only: keep out of search engines until the owner says yes -->
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#fbf6ee;--paper:#fffdf9;--brown:#4a2e1f;--red:#b5432f;--line:#e8dccb;--muted:#7b6656;--green:#2f7a4b}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;background:var(--cream);color:var(--brown);line-height:1.55}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.1}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.preview{background:var(--brown);color:#fff;text-align:center;font-size:.8rem;padding:6px 12px}
+
+nav{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+.logo{font-family:Fraunces,serif;font-weight:700;font-size:1.4rem}
+.logo small{display:block;font-family:Inter;font-weight:500;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.call{background:var(--red);color:#fff;text-decoration:none;padding:10px 18px;border-radius:999px;font-weight:600;font-size:.95rem;white-space:nowrap}
+
+.hero{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center;padding:30px 0 60px}
+.status{display:inline-flex;align-items:center;gap:8px;background:var(--paper);border:1px solid var(--line);padding:6px 14px;border-radius:999px;font-size:.85rem;font-weight:600}
+.dot{width:9px;height:9px;border-radius:50%;background:#aaa}
+.status.open .dot{background:var(--green);box-shadow:0 0 0 4px #2f7a4b22}
+.hero h1{font-size:clamp(2.4rem,6vw,4rem);margin:18px 0 16px}
+.hero h1 em{color:var(--red);font-style:italic}
+.hero p{font-size:1.1rem;color:var(--muted);max-width:500px}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{display:inline-block;padding:13px 22px;border-radius:999px;font-weight:600;text-decoration:none;border:2px solid var(--brown)}
+.btn.solid{background:var(--brown);color:#fff}
+.photo{aspect-ratio:4/5;border-radius:28px;background:repeating-linear-gradient(45deg,#efe3d2,#efe3d2 14px,#f5ecdf 14px,#f5ecdf 28px);display:grid;place-items:center;text-align:center;color:var(--muted);font-size:.9rem;border:1px dashed #cdb89d;padding:20px}
+
+.today{background:var(--paper);border:1px solid var(--line);border-radius:28px;padding:34px;margin-bottom:70px;display:grid;grid-template-columns:1fr 1.3fr;gap:30px}
+.label{font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--red)}
+.today h2{font-size:2rem;margin:8px 0 10px}
+.price-tag{display:inline-block;margin-top:14px;font-family:Fraunces,serif;font-size:1.25rem}
+.dishes{list-style:none;display:grid;gap:12px}
+.dishes li{background:var(--cream);border-radius:16px;padding:16px 18px;font-weight:500}
+.dishes li span{display:block;font-weight:400;font-size:.88rem;color:var(--muted);margin-top:2px}
+
+section{padding:20px 0 70px}
+section>.wrap>h2{font-size:2.2rem;margin-bottom:8px}
+.intro{color:var(--muted);margin-bottom:30px;max-width:600px}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
+.tabs button{font:inherit;font-weight:600;border:1px solid var(--line);background:var(--paper);color:var(--brown);padding:9px 16px;border-radius:999px;cursor:pointer}
+.tabs button[aria-selected=true]{background:var(--brown);color:#fff;border-color:var(--brown)}
+.menu{display:none;background:var(--paper);border:1px solid var(--line);border-radius:24px;padding:10px 26px}
+.menu.active{display:block}
+.menu .when{font-size:.85rem;color:var(--muted);padding:14px 0 4px}
+.row{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px dashed var(--line)}
+.row:last-child{border-bottom:0}
+.row b{font-weight:600}
+.row small{display:block;color:var(--muted)}
+.row .p{font-family:Fraunces,serif;white-space:nowrap}
+.week{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;padding:16px 0}
+.day{border-radius:14px;background:var(--cream);padding:14px;font-size:.88rem}
+.day h4{font-family:Fraunces,serif;font-size:1rem;margin-bottom:6px}
+.day.is-today{outline:2px solid var(--red)}
+.note{font-size:.85rem;color:var(--green);font-weight:600;padding:12px 0}
+
+.perks{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.perk{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:24px}
+.perk .ico{font-size:1.6rem}
+.perk h3{font-size:1.25rem;margin:10px 0 6px}
+.perk p{color:var(--muted);font-size:.95rem}
+
+.sweet,.about{display:grid;grid-template-columns:1.2fr 1fr;gap:34px;align-items:center}
+.about{grid-template-columns:1fr 1.2fr}
+.sweet h2,.about h2{font-size:2.2rem;margin:8px 0 12px}
+.sweet h2 em{color:var(--red)}
+.sweet p,.about p{color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.chips span{background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-size:.85rem;font-weight:500}
+.photo.small{aspect-ratio:4/3}
+.visit{background:var(--brown);color:#fff;border-radius:28px;padding:40px;display:grid;grid-template-columns:1fr 1fr;gap:34px}
+.visit h2{font-size:2.2rem;margin-bottom:12px}
+.visit a{color:#fff}
+.hours{width:100%;border-collapse:collapse;margin-top:6px}
+.hours td{padding:9px 0;border-bottom:1px solid #ffffff22}
+.hours td:last-child{text-align:right}
+.hours tr.is-today td{font-weight:700;color:#ffd7a8}
+.visit .btn{border-color:#fff}
+.visit .btn.solid{background:#fff;color:var(--brown)}
+footer{padding:40px 0;font-size:.85rem;color:var(--muted);text-align:center}
+
+/* Sticky call button on phones */
+.mobilebar{display:none}
+@media (max-width:760px){
+  .hero,.today,.visit,.sweet,.about{grid-template-columns:1fr}
+  .photo{aspect-ratio:16/10}
+  .today,.visit{padding:24px}
+  nav .call{display:none}
+  .mobilebar{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:fixed;left:12px;right:12px;bottom:12px;z-index:10}
+  .mobilebar a{text-align:center;padding:14px;border-radius:999px;font-weight:600;text-decoration:none;box-shadow:0 6px 20px #0003}
+  .mobilebar .a{background:var(--red);color:#fff}.mobilebar .b{background:#fff;color:var(--brown)}
+  footer{padding-bottom:100px}
+}
+</style>
+</head>
+<body>
+<div class="preview">Forhåndsvisning laget for Kafé Mølla – bilder kommer fra dere</div>
+
+<div class="wrap">
+  <nav>
+    <div class="logo">Kafé Mølla<small>Mølla Storsenter · Brumunddal</small></div>
+    <a class="call" href="tel:+4747626705">Ring 476 26 705</a>
+  </nav>
+
+  <div class="hero">
+    <div>
+      <span class="status" id="status"><span class="dot"></span><span id="status-text">Åpningstider</span></span>
+      <h1>Ditt møtested <em>i dala</em></h1>
+      <p>Kaffe og noe søtt, en god lunsj eller ekte husmannskost til middag – midt på Mølla Storsenter. Vi åpner kl. 07, så du rekker frokost før jobb.</p>
+      <div class="actions">
+        <a class="btn solid" href="#dagens">Se dagens middag</a>
+        <a class="btn" href="#meny">Hele menyen</a>
+      </div>
+    </div>
+    <div class="photo">Bilde av kafeen eller<br>en tallerken husmannskost<br>(deres eget bilde)</div>
+  </div>
+
+  <div class="today" id="dagens">
+    <div>
+      <span class="label" id="today-label">Dagens middag</span>
+      <h2 id="today-title">Husmannskost hver dag</h2>
+      <p style="color:var(--muted)">Liten porsjon eller stor – laget fra bunnen, slik som hjemme.</p>
+      <span class="price-tag">Liten 109,– · Stor 159,–</span>
+    </div>
+    <ul class="dishes" id="today-dishes"></ul>
+  </div>
+</div>
+
+<section id="meny">
+  <div class="wrap">
+    <h2>Menyen</h2>
+    <p class="intro">Alle retter kan serveres glutenfritt – vi bytter bare brødet.</p>
+    <div class="tabs" role="tablist">
+      <button role="tab" aria-selected="true" data-tab="lunsj">Frokost &amp; lunsj</button>
+      <button role="tab" aria-selected="false" data-tab="varmt">Varmt hele dagen</button>
+      <button role="tab" aria-selected="false" data-tab="middag">Ukens middager</button>
+    </div>
+
+    <div class="menu active" id="lunsj">
+      <div class="when">Mandag–lørdag kl. 10.00–15.00</div>
+      <div class="row"><div><b>Sjåførfrokost</b><small>Stekte poteter, bacon, speilegg, salat og brød</small></div><span class="p">149,–</span></div>
+      <div class="row"><div><b>Omelett med ost og skinke</b><small>Med salat og brød</small></div><span class="p">149,–</span></div>
+      <div class="row"><div><b>Smørbrød med speilegg og bacon</b></div><span class="p">99,–</span></div>
+      <div class="row"><div><b>Karbonadesmørbrød med speilegg</b></div><span class="p">99,–</span></div>
+      <div class="row"><div><b>Ekstra</b><small>Brød 10 · bacon 10 · egg 12 · stekte poteter 15 · karbonade 45</small></div><span class="p"></span></div>
+    </div>
+
+    <div class="menu" id="varmt">
+      <div class="when">Serveres til kl. 18.00 (lørdag 17.00)</div>
+      <div class="row"><div><b>Tomatsuppe med brød</b><small>+ makaroni 15 · + kokt egg 12</small></div><span class="p">99,–</span></div>
+      <div class="row"><div><b>Blomkålsuppe med brød</b><small>+ bacon 12</small></div><span class="p">99,–</span></div>
+      <div class="row"><div><b>Gulasjsuppe med brød</b></div><span class="p">99,–</span></div>
+      <div class="row"><div><b>Karbonadesmørbrød med løk</b></div><span class="p">99,–</span></div>
+      <div class="row"><div><b>Toast med ost, skinke og salat</b></div><span class="p">64,–</span></div>
+      <div class="row"><div><b>Varm baguette med salat</b><small>Skinke, kylling eller taco</small></div><span class="p">64,–</span></div>
+      <div class="row"><div><b>Minipizza</b><small>Skinke eller pepperoni</small></div><span class="p">41,–</span></div>
+      <div class="row"><div><b>Pommes frites</b><small>Liten 40 · stor 55</small></div><span class="p">40,–</span></div>
+    </div>
+
+    <div class="menu" id="middag">
+      <div class="when">Mandag–fredag kl. 12.00–17.30 · lørdag kl. 11.00–16.00 · Liten 109,– / stor 159,–</div>
+      <div class="week" id="week"></div>
+    </div>
+  </div>
+</section>
+
+<section id="sott">
+  <div class="wrap">
+    <div class="sweet">
+      <div>
+        <span class="label">Noe søtt til kaffen</span>
+        <h2>Kaffe og kake <em>89,–</em></h2>
+        <p>Svart kaffe og et kakestykke for 89 kroner (ord. 107,–). Hjemmebakte kaker, cupcakes og varm kakao når det er kaldt – iskaffe, softis og slush når sola skinner.</p>
+        <div class="chips"><span>Kaker</span><span>Cupcakes</span><span>Varm kakao</span><span>Iskaffe</span><span>Softis</span><span>Slush</span><span>Smoothie</span></div>
+      </div>
+      <div class="photo small">Bilde av kakedisken<br>(deres eget bilde)</div>
+    </div>
+  </div>
+</section>
+
+<section id="om">
+  <div class="wrap">
+    <div class="about">
+      <div class="photo small">Bilde av dere to<br>foran menytavla<br>(deres eget bilde)</div>
+      <div>
+        <span class="label">Om oss</span>
+        <h2>Et møtested, ikke bare en kafé</h2>
+        <p>Siden 2023 har vi drevet Kafé Mølla midt på Mølla Storsenter. Her møtes naboer over en kopp kaffe, sjåfører tar frokost før første tur, og familier spiser middag sammen etter handelen.</p>
+        <p style="margin-top:12px">Vi er stolte av å være en del av dala – også når det gjelder lokale arrangementer. Hos oss kan du for eksempel kjøpe billetter til konserter i nærmiljøet.</p>
+        <p style="margin-top:12px"><a href="#" style="font-weight:600">Bli Møllavenn</a> – send <b>MOLLA</b> på SMS til 2242 for klubbtilbud.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Derfor kommer folk tilbake</h2>
+    <p class="intro">Mer enn en kafé – et sted å møtes midt i Brumunddal.</p>
+    <div class="perks">
+      <div class="perk"><div class="ico">☕</div><h3>Åpent fra kl. 07</h3><p>Frokost og kaffe før jobb eller før handelen starter.</p></div>
+      <div class="perk"><div class="ico">🍽️</div><h3>Husmannskost</h3><p>Stekt flesk, kjøttkaker, seibiff og ovnsbakt laks – ny meny hver dag.</p></div>
+      <div class="perk"><div class="ico">🌾</div><h3>Glutenfritt</h3><p>Alle retter kan serveres glutenfritt. Bare si ifra.</p></div>
+      <div class="perk"><div class="ico">☀️</div><h3>Ny uteservering</h3><p>Ta med familien og spis ute når været er fint.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="besok">
+  <div class="wrap">
+    <div class="visit">
+      <div>
+        <h2>Kom innom</h2>
+        <p>Mølla Storsenter<br>Brugata 16, 2380 Brumunddal</p>
+        <p style="margin-top:14px">
+          <a href="tel:+4747626705">476 26 705</a><br>
+          <a href="mailto:post@kafe-molla.no">post@kafe-molla.no</a>
+        </p>
+        <div class="actions">
+          <a class="btn solid" href="https://www.google.com/maps/search/?api=1&query=Brugata+16,+2380+Brumunddal">Veibeskrivelse</a>
+          <a class="btn" href="https://www.instagram.com/kafe.molla/">Instagram</a>
+          <a class="btn" href="https://www.facebook.com/profile.php?id=61554285183172">Facebook</a>
+        </div>
+      </div>
+      <div>
+        <h3 style="font-size:1.4rem">Åpningstider</h3>
+        <table class="hours" id="hours"></table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>© Kafé Mølla AS · Brugata 16, 2380 Brumunddal</footer>
+
+<div class="mobilebar">
+  <a class="a" href="tel:+4747626705">Ring oss</a>
+  <a class="b" href="https://www.google.com/maps/search/?api=1&query=Brugata+16,+2380+Brumunddal">Veibeskrivelse</a>
+</div>
+
+<script>
+// Edit here when the menu or hours change.
+const DINNERS = {
+  1: ["Stekt flesk|Kålstuing, poteter og fett", "Grove kjøttkaker|Kålstuing, poteter og brun saus", "Lasagne|Salat og ciabatta"],
+  2: ["Panert rødspette|Raspet gulrot, pommes bistro, remulade og smeltet smør", "Medisterkaker|Makaronistuing, poteter og brun saus", "Lasagne|Salat og ciabatta"],
+  3: ["Ovnsstekt laks|Agurksalat, poteter, smeltet smør og rømme", "Seibiff med løk|Raspet gulrot, poteter, remulade og smeltet smør", "Lasagne|Salat og ciabatta"],
+  4: ["Stekt flesk|Kålstuing, poteter og fett", "Lasagne|Salat og ciabatta"],
+  5: ["Kyllingsnadder|Stekte poteter og grønnsaker – bearnaise eller peppersaus", "Lasagne|Salat og ciabatta"],
+  6: ["Lasagne|Salat og ciabatta"],
+};
+// [open, close] in hours; null = closed. Index 0 = Sunday.
+const HOURS = [null, [7, 19], [7, 19], [7, 19], [7, 19], [7, 19], [7, 18]];
+const DAYS = ["Søndag", "Mandag", "Tirsdag", "Onsdag", "Torsdag", "Fredag", "Lørdag"];
+
+const now = new Date();
+const today = now.getDay();
+const pad = h => String(h).padStart(2, "0") + ".00";
+
+// Open-now badge
+const h = HOURS[today], hour = now.getHours() + now.getMinutes() / 60;
+const status = document.getElementById("status"), text = document.getElementById("status-text");
+if (h && hour >= h[0] && hour < h[1]) {
+  status.classList.add("open");
+  text.textContent = `Åpent nå · stenger kl. ${pad(h[1])}`;
+} else {
+  let next = (today + 1) % 7;
+  if (h && hour < h[0]) next = today;
+  while (!HOURS[next]) next = (next + 1) % 7;
+  text.textContent = `Stengt nå · åpner ${next === today ? "i dag" : DAYS[next].toLowerCase()} kl. ${pad(HOURS[next][0])}`;
+}
+
+// Today's dinner
+const dishes = document.getElementById("today-dishes");
+const item = d => { const [n, s] = d.split("|"); return `<li>${n}<span>${s}</span></li>`; };
+if (DINNERS[today]) {
+  document.getElementById("today-label").textContent = `Dagens middag · ${DAYS[today]}`;
+  document.getElementById("today-title").textContent = DINNERS[today][0].split("|")[0] + " i dag";
+  dishes.innerHTML = DINNERS[today].map(item).join("");
+} else {
+  document.getElementById("today-label").textContent = "Søndag – vi har stengt";
+  document.getElementById("today-title").textContent = "I morgen: " + DINNERS[1][0].split("|")[0];
+  dishes.innerHTML = DINNERS[1].map(item).join("");
+}
+
+// Week menu
+document.getElementById("week").innerHTML = [1, 2, 3, 4, 5, 6].map(d =>
+  `<div class="day${d === today ? " is-today" : ""}"><h4>${DAYS[d]}</h4>${DINNERS[d].map(x => x.split("|")[0]).join("<br>")}</div>`
+).join("");
+
+// Hours table, Monday first
+document.getElementById("hours").innerHTML = [1, 2, 3, 4, 5, 6, 0].map(d =>
+  `<tr class="${d === today ? "is-today" : ""}"><td>${DAYS[d]}</td><td>${HOURS[d] ? pad(HOURS[d][0]) + "–" + pad(HOURS[d][1]) : "Stengt"}</td></tr>`
+).join("");
+
+// Menu tabs
+document.querySelectorAll(".tabs button").forEach(b => b.addEventListener("click", () => {
+  document.querySelectorAll(".tabs button").forEach(x => x.setAttribute("aria-selected", x === b));
+  document.querySelectorAll(".menu").forEach(m => m.classList.toggle("active", m.id === b.dataset.tab));
+}));
+</script>
+</body>
+</html>
