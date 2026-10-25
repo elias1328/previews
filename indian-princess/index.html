@@ -1,0 +1,469 @@
+<!doctype html>
+<html lang="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Indian Princess | Indisk restaurant i Storgata, Stange</title>
+<meta name="description" content="Indisk restaurant i Stange. Hele menyen med priser, milde og sterke retter, mye vegetar og veganske alternativer. Bestill mat på nett eller ring 48 64 34 83.">
+<!-- Preview only: keep out of search engines until the owner says yes -->
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,700;1,6..96,500&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ivory:#faf3e6;--paper:#fffaf1;--teal:#0d3a38;--teal2:#14514d;--saffron:#e39b16;--turmeric:#f4bd3a;
+  --plum:#5c1f48;--plum-soft:#f3e3ea;--ink:#2b1d18;--muted:#6b5a4f;--line:#e8d6b8;--green:#2e8a57;
+  --serif:"Bodoni Moda",Didot,Georgia,serif;--sans:Manrope,system-ui,sans-serif;--r:18px
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--ivory);color:var(--ink);line-height:1.6;overflow-x:hidden}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.08}
+h2,h3,blockquote p,.rows .p,.menufoot p{font-variation-settings:"opsz" 22}
+a{color:inherit}
+img{max-width:100%}
+:focus-visible{outline:3px solid var(--saffron);outline-offset:3px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 16px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.preview{background:var(--plum);color:#fff;text-align:center;font-size:.8rem;padding:7px 12px}
+
+/* Block-print border: lattice, dots and two rules, all gradients */
+.band{height:34px;background:
+  linear-gradient(var(--saffron),var(--saffron)) 0 2px/100% 2px no-repeat,
+  linear-gradient(var(--saffron),var(--saffron)) 0 calc(100% - 2px)/100% 2px no-repeat,
+  radial-gradient(circle,var(--saffron) 3.4px,transparent 4px) 0 50%/28px 28px repeat-x,
+  radial-gradient(circle,var(--plum) 2.2px,transparent 2.8px) 14px 50%/28px 28px repeat-x,
+  repeating-linear-gradient(45deg,transparent 0 9.2px,#14514d99 9.2px 10.6px,transparent 10.6px 19.8px),
+  repeating-linear-gradient(-45deg,transparent 0 9.2px,#14514d99 9.2px 10.6px,transparent 10.6px 19.8px),
+  var(--ivory)}
+.band.dark{background:
+  linear-gradient(var(--saffron),var(--saffron)) 0 2px/100% 2px no-repeat,
+  linear-gradient(var(--saffron),var(--saffron)) 0 calc(100% - 2px)/100% 2px no-repeat,
+  radial-gradient(circle,var(--turmeric) 3.4px,transparent 4px) 0 50%/28px 28px repeat-x,
+  radial-gradient(circle,var(--ivory) 2.2px,transparent 2.8px) 14px 50%/28px 28px repeat-x,
+  repeating-linear-gradient(45deg,transparent 0 9.2px,#f4bd3a66 9.2px 10.6px,transparent 10.6px 19.8px),
+  repeating-linear-gradient(-45deg,transparent 0 9.2px,#f4bd3a66 9.2px 10.6px,transparent 10.6px 19.8px),
+  var(--teal)}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:12px 22px;border-radius:999px;font-weight:700;font-size:1rem;text-decoration:none;border:2px solid transparent;white-space:nowrap;transition:transform .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn.order{background:var(--saffron);color:var(--ink);border-color:var(--saffron)}
+.btn.order:hover{background:var(--turmeric)}
+.btn.line{border-color:currentColor}
+.btn svg{width:18px;height:18px;flex:none}
+
+/* Header + hero on deep teal with a faint printed lattice */
+.top{background:var(--teal);color:var(--ivory);position:relative;
+  background-image:radial-gradient(circle at 0 0,transparent 13px,#ffffff0d 13.5px 14.5px,transparent 15px),radial-gradient(circle at 50% 50%,#f4bd3a14 1.6px,transparent 2.2px);
+  background-size:28px 28px}
+nav{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 0}
+.logo{font-family:var(--serif);font-size:1.35rem;text-decoration:none;font-weight:700;letter-spacing:.01em}
+.logo span{color:var(--turmeric);font-style:italic;font-weight:500}
+.links{display:none;gap:26px;align-items:center;font-weight:500}
+.links a{text-decoration:none;opacity:.9}
+.links a:hover{opacity:1;text-decoration:underline;text-underline-offset:5px}
+.links .btn{min-height:42px;padding:8px 18px;opacity:1}
+nav .navcall{font-weight:700;text-decoration:none;font-size:.95rem;border-bottom:1px solid var(--turmeric)}
+
+.hero{display:grid;gap:30px;padding:22px 0 44px}
+.kicker{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--turmeric)}
+.hero h1{font-size:clamp(3rem,13vw,6.2rem);margin:12px 0 14px;letter-spacing:-.01em}
+.hero h1 em{display:block;font-style:italic;color:var(--turmeric)}
+.hero .lead{font-size:1.08rem;max-width:30em;color:#e9e1d1}
+.meta{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 4px}
+.pill{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:999px;font-size:.88rem;font-weight:500;background:#ffffff12;border:1px solid #ffffff2a}
+.dot{width:9px;height:9px;border-radius:50%;background:#c9b9a3}
+.status.open .dot{background:#5fd18e;box-shadow:0 0 0 4px #5fd18e33}
+.star{color:var(--turmeric);letter-spacing:1px}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.hero .actions .btn{flex:1 1 220px}
+.photo{position:relative;border-radius:999px 999px var(--r) var(--r);aspect-ratio:1/1;max-height:380px;width:min(100% - 16px,340px);justify-self:center;display:grid;place-items:center;text-align:center;padding:30px;font-size:.92rem;color:var(--muted);
+  background:repeating-linear-gradient(45deg,#efe2c9 0 14px,#f7eedd 14px 28px);border:2px solid var(--saffron);outline:1px solid var(--saffron);outline-offset:6px;margin:8px}
+.photo.small{border-radius:var(--r);aspect-ratio:16/10;outline:0;margin:0;border:1px dashed #cdb48b}
+
+section{padding:56px 0}
+.label{font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--plum)}
+section h2{font-size:clamp(2.1rem,7vw,3.2rem);margin:8px 0 12px}
+.intro{color:var(--muted);max-width:40em}
+
+/* Menu */
+.menuhead{display:grid;gap:18px;margin-bottom:22px}
+.ask{display:inline-block;margin-top:10px;font-weight:700;color:var(--teal)}
+.filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.filters span{font-size:.85rem;color:var(--muted);margin-right:4px}
+.chip{font:inherit;font-weight:700;font-size:.9rem;min-height:42px;padding:8px 16px;border-radius:999px;border:1.5px solid var(--teal);background:transparent;color:var(--teal);cursor:pointer}
+.chip[aria-pressed=true]{background:var(--teal);color:var(--ivory)}
+.tabs{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;border-bottom:2px solid var(--line);margin:0 -16px;padding:0 16px}
+.tabs::-webkit-scrollbar{display:none}
+.tab{font:inherit;font-weight:500;font-size:.95rem;flex:none;background:none;border:0;border-bottom:3px solid transparent;margin-bottom:-2px;padding:12px 12px;color:var(--muted);cursor:pointer;min-height:46px}
+.tab[aria-selected=true]{color:var(--ink);font-weight:700;border-bottom-color:var(--saffron)}
+.tab small{font-size:.75rem;color:var(--plum);margin-left:3px}
+.tab[hidden]{display:none}
+.panel{background:var(--paper);border:1px solid var(--line);border-top:0;border-radius:0 0 var(--r) var(--r);padding:8px 18px 18px}
+.panel h3{font-size:1.7rem;padding:18px 0 4px}
+.rows{list-style:none;display:grid;column-gap:44px}
+.rows li{display:flex;gap:14px;justify-content:space-between;padding:15px 0;border-bottom:1px solid var(--line)}
+.rows .n{font-weight:700}
+.rows .d{display:block;font-size:.9rem;color:var(--muted);margin-top:2px}
+.rows .p{font-family:var(--serif);font-weight:700;font-size:1.1rem;white-space:nowrap;color:var(--plum)}
+.tag{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.04em;padding:2px 8px;border-radius:6px;margin:6px 6px 0 0;vertical-align:middle}
+.tag.v{background:#e2f1e7;color:#1d6a3f}
+.tag.m{background:#fbefd2;color:#7a4f00}
+.empty{padding:20px 0;color:var(--muted)}
+.menufoot{display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center;justify-content:space-between;margin-top:18px;padding:18px;border-radius:var(--r);background:var(--teal);color:var(--ivory)}
+.menufoot p{font-family:var(--serif);font-size:1.3rem}
+.menufoot .actions{width:100%}
+.menufoot .btn{flex:1 1 200px}
+
+/* Reviews */
+.reviews{background:var(--plum);color:#fbeef3}
+.reviews .label{color:var(--turmeric)}
+.quotes{display:grid;gap:16px;margin-top:26px}
+blockquote{position:relative;padding:26px 22px 20px;border-radius:var(--r);background:#ffffff0f;border:1px solid #ffffff22}
+blockquote p{font-family:var(--serif);font-size:1.3rem;line-height:1.35;font-style:italic}
+blockquote footer{margin-top:14px;font-size:.88rem;color:#e6c9d6}
+blockquote footer b{color:#fff}
+.score{margin-top:22px;font-size:.95rem}
+
+/* Ways to eat */
+.ways{display:grid;gap:16px;margin-top:26px}
+.way{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:24px;position:relative;overflow:hidden}
+.way::before{content:"";position:absolute;left:0;right:0;top:0;height:8px;background:repeating-linear-gradient(90deg,var(--saffron) 0 10px,transparent 10px 14px,var(--plum) 14px 18px,transparent 18px 22px)}
+.way .num{font-family:var(--serif);font-style:italic;font-size:1rem;color:var(--plum)}
+.way h3{font-size:1.6rem;margin:6px 0 8px}
+.way p{color:var(--muted)}
+.way a{font-weight:700;color:var(--teal)}
+
+/* Visit */
+.visit{background:var(--teal);color:var(--ivory);border-radius:calc(var(--r) + 6px);padding:28px 20px;display:grid;gap:32px}
+.visit .label{color:var(--turmeric)}
+.visit address{font-style:normal;font-size:1.1rem;margin-top:6px}
+.visit dl{margin-top:16px;display:grid;gap:4px}
+.visit dt{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:#bcd0cc;margin-top:10px}
+.visit dd a{font-weight:700;text-underline-offset:4px;word-break:break-word}
+.visit h3{font-size:1.7rem;margin-bottom:8px}
+.hours{width:100%;border-collapse:collapse}
+.hours td{padding:11px 10px;border-bottom:1px solid #ffffff1f}
+.hours td:last-child{text-align:right}
+.hours tr.is-today td{background:#f4bd3a26;color:var(--turmeric);font-weight:700}
+.hours tr.is-today td:first-child{border-radius:10px 0 0 10px}
+.hours tr.is-today td:last-child{border-radius:0 10px 10px 0}
+.hours .t{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;margin-left:8px;background:var(--turmeric);color:var(--ink);padding:2px 7px;border-radius:5px}
+
+.site-foot{background:var(--teal);color:#cfdcd9;padding:30px 0 110px;font-size:.88rem;text-align:center}
+.site-foot b{font-family:var(--serif);font-size:1.3rem;color:var(--ivory);display:block;margin-bottom:6px}
+
+/* Sticky bar on phones */
+.mobilebar{position:fixed;left:12px;right:12px;bottom:12px;z-index:20;display:grid;grid-template-columns:1.4fr 1fr;gap:10px}
+.mobilebar .btn{box-shadow:0 8px 24px #0d3a3855;padding:12px 10px}
+.mobilebar .call{background:var(--paper);color:var(--teal);border-color:var(--teal)}
+
+@media (min-width:760px){
+  .wrap{padding:0 28px}
+  .tabs{margin:0;padding:0 4px;flex-wrap:wrap}
+  .photo{aspect-ratio:4/4.4;max-height:none;width:auto;justify-self:stretch}
+  .menufoot .actions{width:auto}
+  .menufoot .btn{flex:0 0 auto}
+  .menufoot{padding:18px 24px}
+  .links{display:flex}
+  nav .navcall{display:none}
+  .hero{grid-template-columns:1.15fr .85fr;align-items:center;gap:56px;padding:40px 0 72px}
+  .hero .actions .btn{flex:0 0 auto}
+  .menuhead{grid-template-columns:1.2fr 1fr;align-items:end}
+  .filters{justify-content:flex-end}
+  .panel{padding:10px 30px 24px}
+  .rows{grid-template-columns:1fr 1fr}
+  .quotes,.ways{grid-template-columns:repeat(3,1fr)}
+  .visit{grid-template-columns:1fr 1fr;padding:44px;gap:48px}
+  section{padding:80px 0}
+  .mobilebar{display:none}
+  .site-foot{padding-bottom:34px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+</style>
+</head>
+<body>
+<div class="preview">Forhåndsvisning laget for Indian Princess, bildene kommer fra dere</div>
+
+<header class="top">
+  <div class="wrap">
+    <nav aria-label="Hovedmeny">
+      <a class="logo" href="#">Indian <span>Princess</span></a>
+      <div class="links">
+        <a href="#meny">Meny</a>
+        <a href="#spis">Spis her eller hent</a>
+        <a href="#besok">Finn oss</a>
+        <a class="btn order" href="https://getfood.no/indianprincess" target="_blank" rel="noopener">Bestill mat</a>
+      </div>
+      <a class="navcall" href="tel:+4748643483">48 64 34 83</a>
+    </nav>
+
+    <div class="hero">
+      <div>
+        <p class="kicker">Indisk restaurant i Storgata, Stange</p>
+        <h1>Indian <em>Princess</em></h1>
+        <p class="lead">Hele menyen med priser ligger her. Bestill på nett, ring oss, eller sett deg ned hos oss i Storgata 18.</p>
+        <div class="meta">
+          <span class="pill status" id="status"><span class="dot" aria-hidden="true"></span><span id="status-text">Tirsdag til søndag 15.00 til 21.00</span></span>
+          <span class="pill"><span class="star" aria-hidden="true">★★★★★</span> 4,8 på Google (129 anmeldelser)</span>
+        </div>
+        <div class="actions">
+          <a class="btn order" href="https://getfood.no/indianprincess" target="_blank" rel="noopener">Bestill mat <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn line" href="tel:+4748643483">Ring og bestill: 48 64 34 83</a>
+        </div>
+      </div>
+      <div class="photo">Bilde av en rett eller lokalet<br>(deres eget bilde)</div>
+    </div>
+  </div>
+  <div class="band dark" aria-hidden="true"></div>
+</header>
+
+<main>
+<section id="meny" aria-labelledby="meny-h">
+  <div class="wrap">
+    <div class="menuhead">
+      <div>
+        <p class="label">Menyen</p>
+        <h2 id="meny-h">Mildt eller sterkt, med og uten kjøtt</h2>
+        <p class="intro">Mange av rettene er vegetar, og flere finnes med vegansk alternativ. Velg et filter for å se hva som passer deg.</p>
+        <p class="ask">Spør oss gjerne om styrke og allergener.</p>
+      </div>
+      <div class="filters" role="group" aria-label="Filtrer menyen">
+        <span>Vis:</span>
+        <button class="chip" data-f="alle" aria-pressed="true">Alle</button>
+        <button class="chip" data-f="veg" aria-pressed="false">Vegetar</button>
+        <button class="chip" data-f="vegan" aria-pressed="false">Vegansk alternativ</button>
+        <button class="chip" data-f="mild" aria-pressed="false">Mild</button>
+      </div>
+    </div>
+    <div class="tabs" role="tablist" aria-label="Menykategorier" id="tabs"></div>
+    <div id="panels"></div>
+    <div class="menufoot">
+      <p>Fant du noe godt?</p>
+      <div class="actions" style="margin:0">
+        <a class="btn order" href="https://getfood.no/indianprincess" target="_blank" rel="noopener">Bestill mat</a>
+        <a class="btn line" href="tel:+4748643483">Ring og bestill: 48 64 34 83</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="band" aria-hidden="true"></div>
+
+<section class="reviews" aria-labelledby="rev-h">
+  <div class="wrap">
+    <p class="label">Fra Google</p>
+    <h2 id="rev-h">Gjestene sier</h2>
+    <div class="quotes">
+      <blockquote><p>“Nydelig indisk mat med autentiske smaker, hyggelig service og en varm atmosfære.”</p><footer><b>Lina</b>, Google</footer></blockquote>
+      <blockquote><p>“Store porsjoner, med både milde og sterke retter som passer en hvermann.”</p><footer><b>Kenneth</b>, Google</footer></blockquote>
+      <blockquote><p>“…en unik perle i Stange.”</p><footer><b>Jørgen</b>, Google</footer></blockquote>
+    </div>
+    <p class="score"><span class="star" aria-hidden="true">★★★★★</span> 4,8 på Google (129 anmeldelser)</p>
+  </div>
+</section>
+
+<div class="band" aria-hidden="true"></div>
+
+<section id="spis" aria-labelledby="spis-h">
+  <div class="wrap">
+    <p class="label">Slik vil du ha det</p>
+    <h2 id="spis-h">Spis her, hent eller få levert</h2>
+    <div class="ways">
+      <article class="way"><span class="num">i.</span><h3>Spis her</h3><p>Sett deg ned hos oss i Storgata 18. Vi har åpent tirsdag til søndag fra kl. 15.</p></article>
+      <article class="way"><span class="num">ii.</span><h3>Hent</h3><p>Bestill på <a href="https://getfood.no/indianprincess" target="_blank" rel="noopener">nett</a> eller ring <a href="tel:+4748643483">48 64 34 83</a>, så henter du maten hos oss.</p></article>
+      <article class="way"><span class="num">iii.</span><h3>Få levert</h3><p>Vi leverer også. Bestill på <a href="https://getfood.no/indianprincess" target="_blank" rel="noopener">nett</a> eller ring oss.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="besok" aria-labelledby="besok-h" style="padding-top:0">
+  <div class="wrap">
+    <div class="visit">
+      <div>
+        <p class="label">Finn oss</p>
+        <h2 id="besok-h">Velkommen innom</h2>
+        <address>Storgata 18<br>2335 Stange</address>
+        <dl>
+          <dt>Telefon</dt><dd><a href="tel:+4748643483">48 64 34 83</a></dd>
+          <dt>E-post</dt><dd><a href="mailto:indianprincessstange@gmail.com">indianprincessstange@gmail.com</a></dd>
+        </dl>
+        <div class="actions">
+          <a class="btn order" href="https://www.google.com/maps/dir/?api=1&amp;destination=Storgata+18,+2335+Stange" target="_blank" rel="noopener">Veibeskrivelse</a>
+          <a class="btn line" href="https://www.facebook.com/p/Indian-Princess-61553404804628" target="_blank" rel="noopener">Facebook</a>
+        </div>
+      </div>
+      <div>
+        <h3>Åpningstider</h3>
+        <table class="hours" id="hours"><caption class="sr">Åpningstider per dag</caption></table>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <b>Indian Princess</b>
+    Storgata 18, 2335 Stange · <a href="tel:+4748643483">48 64 34 83</a><br>
+    Indian Princess AS · Org.nr. 928 688 216
+  </div>
+</footer>
+
+<div class="mobilebar">
+  <a class="btn order" href="https://getfood.no/indianprincess" target="_blank" rel="noopener">Bestill mat</a>
+  <a class="btn call" href="tel:+4748643483">Ring oss</a>
+</div>
+
+<script>
+// MENU from the owner's menu. Each item is [name, description, price in kr]. Empty price = not shown.
+const MENU = [
+ {id:"forretter", name:"Forretter", items:[
+  ["Kyllingsuppe","Krydret kyllingsuppe med kyllingbiter","105"],
+  ["Linsesuppe","Krydret linsesuppe med forskjellige urter. Vegansk alternativ tilgjengelig","105"],
+  ["Pyaj Pakora","Frityrstekt løk blandet med linsemel og krydder","115"],
+  ["Samosa","Sprøstekt butterdeig fylt med krydrede potetterninger","115"],
+  ["Paneer Pakora","Frityrstekt hjemmelaget ost med et lag kikertmel og krydder","120"],
+  ["Kylling Pakora","Frityrstekte kyllingbiter med kikertmel og urter","120"],
+  ["Prawns Pakora","Frityrstekte kongereker med kikertmel og urter","125"],
+  ["Miks Pakora","Utvalg av forskjellige pakoras","129"]]},
+ {id:"kylling", name:"Kyllingretter", items:[
+  ["Kylling Korma","Kylling kokt i fløtesaus med cashewnøtter og rosiner","249"],
+  ["Kylling Spinach","Kylling med spinat, ingefær, hvitløk, urter og krydder","249"],
+  ["Kylling Karahi","Rik karrisaus med paprika, løk, urter og rødvin","249"],
+  ["Kylling Tikka Masala","Tandooristekt kylling i mild saus av tomater, nøtter, rosiner og krydder","255"],
+  ["Butter Chicken","Tandooristekt kylling i mild saus av nøttesaus, fløte, smør og krydder","255"],
+  ["Mango Kylling","Kylling med mangosaus, fløte, kokosmelk og indisk krydder","259"],
+  ["Kylling Garlic Bhuna","Rik karrisaus med hvitløk, rødløk, ingefær og urter","259"]]},
+ {id:"lam", name:"Lammeretter", items:[
+  ["Lam Karahi","Rik karrisaus med paprika, løk, urter og rødvin","259"],
+  ["Lam Tikka Masala","Tandooristekt lam i mild saus av tomater, nøtter, rosiner og krydder","265"],
+  ["Lam Korma","Lam kokt i fløtesaus med cashewnøtter og rosiner","265"],
+  ["Butter Lam","Tandooristekt lam i mild saus av nøttesaus, fløte, smør og krydder","265"],
+  ["Lam Garlic Bhuna","Rik karrisaus med hvitløk, rødløk, ingefær og urter","269"],
+  ["Mango Lam","Lam med mangosaus, fløte, kokosmelk og indisk krydder","269"],
+  ["Lam Spinach","Lam med spinat, ingefær, hvitløk, urter og krydder","269"]]},
+ {id:"tandoori", name:"Fra tandoorovnen", items:[
+  ["Kylling Tikka","Kylling marinert i yoghurt og indiske krydder, grillet i tandoorovn","255"],
+  ["Kylling Malai Tikka","Marinert i yoghurt, cashewnøttpasta og krydder, grillet i tandoorovn","259"],
+  ["Kylling Garlic Tikka","Marinert i yoghurt, hvitløk, grønn chili og krydder, grillet i tandoorovn","259"],
+  ["Lam Tikka","Lam marinert i yoghurt og indiske krydder, grillet i tandoorovn","269"],
+  ["Prawns Tikka","Kongereker marinert i yoghurt, hvitløk, grønn chili og krydder","269"],
+  ["Miks Grill Tikka","Utvalg av tandooriretter","272"]]},
+ {id:"sjomat", name:"Havets retter", items:[
+  ["Fisk Curry","Fisk i rik karrisaus med paprika, løk og urter","279"],
+  ["Fisk Spinach","Fisk med spinat, ingefær, hvitløk, urter og krydder","279"],
+  ["Prawn Curry","Kongereker i rik karrisaus med paprika, løk og urter","279"],
+  ["Prawn Spinach","Kongereker med spinat, ingefær, hvitløk, urter og krydder","279"]]},
+ {id:"vegetar", name:"Vegetar", items:[
+  ["Dal Makhni","Linser kokt i fløtesaus med hvitløk, ingefær og krydder. Vegansk alternativ tilgjengelig","239"],
+  ["Paneer Makhani","Hjemmelaget ost i mild saus av nøtter, fløte, smør og krydder","239"],
+  ["Mix Vegetables","Grønnsaker i karrisaus. Vegansk alternativ tilgjengelig","239"],
+  ["Chana Masala","Kikerter med ingefær, hvitløk, urter og krydder. Vegansk alternativ tilgjengelig","239"],
+  ["Paneer Spinach","Hjemmelaget ost med spinat, ingefær, hvitløk, urter og krydder","245"],
+  ["Spinach Chana Masala","Kikerter med spinat, ingefær, hvitløk og krydder. Vegansk alternativ tilgjengelig","245"],
+  ["Paneer Karahi","Hjemmelaget ost i rik karrisaus med paprika, løk, urter og rødvin","245"]]},
+ {id:"biryani", name:"Biryani", items:[
+  ["Vegetar Biryani","Basmatiris med grønnsaker, safran, urter, krydder og smør","229"],
+  ["Kylling Biryani","Basmatiris med beinfri kylling, grønnsaker, safran og krydder","259"],
+  ["Prawn Biryani","Basmatiris med kongereker, grønnsaker, safran og krydder","269"],
+  ["Lam Biryani","Basmatiris med beinfri lam, grønnsaker, safran og krydder","269"]]},
+ {id:"naan", name:"Naan og brød", items:[
+  ["Tandoori Roti","Ugjæret brød. Vegansk alternativ tilgjengelig","45"],
+  ["Tandoori Naan","Vanlig gjæret brød","49"],
+  ["Garlic Naan","Gjæret brød med hvitløk","55"],
+  ["Chili Garlic Naan","Gjæret brød med chili og hvitløk","59"],
+  ["Peshawari Naan","Fylt med mandler, kokos, pistasj og sukker","62"],
+  ["Aloo Paratha","Fylt med potet, koriander og løk. Vegansk alternativ tilgjengelig","62"],
+  ["Cheese Naan","Fylt med hjemmelaget ost og krydder","62"]]},
+ {id:"tilbehor", name:"Tilbehør", items:[
+  ["Mix Pickles","Syltede grønnsaker i krydret oljesaus","25"],
+  ["Mango Chutney","Søt mango med krydder og lett syrlighet","25"],
+  ["Pappadums","4 stk med tamarindchutney","45"],
+  ["Pommes frites","","45"],
+  ["Indisk salat","Agurk, paprika, løk, tomat og appelsin","49"],
+  ["Mint Raita","Yoghurt med myntesaus, koriander og krydder","59"],
+  ["Miks Raita","Yoghurt med agurk, koriander og krydder","59"]]},
+ {id:"barn", name:"Barnemeny", items:[
+  ["Kylling Tikka med pommes frites","Saftig kylling i tikkasaus","139"],
+  ["Kylling Tikka med ris","Saftig kylling i tikkasaus med hvit ris","139"],
+  ["Pølser og pommes frites","","139"]]},
+ {id:"dessert", name:"Dessert og drikke", items:[
+  ["Eplekake med is","Saftig eplekake med vaniljeis","125"],
+  ["Gulab Jamun","Søte indiske melboller i rosevannssirup","129"],
+  ["Brownie med is","Sjokoladebrownie med vaniljeis","129"],
+  ["Salt lassi","Yoghurt, vann, salt og spisskummen","55"],
+  ["Mango lassi","",""],
+  ["Brus","Farris, Pepsi, Pepsi Max, 7up, eplemost","49"]]}
+];
+
+// Hours: [open, close] in hours, null = closed. Index 0 = Sunday.
+const HOURS = [[15, 21], null, [15, 21], [15, 21], [15, 21], [15, 21], [15, 21]];
+const DAYS = ["Søndag", "Mandag", "Tirsdag", "Onsdag", "Torsdag", "Fredag", "Lørdag"];
+
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+// Tags and filters are computed from the menu text, never set by hand.
+const isVegan = (c, [n, d]) => /vegansk alternativ/i.test(d);
+const isMild = (c, [n, d]) => /mild saus/i.test(d) || /korma/i.test(n);
+const isVeg = (c, it) => c.id === "vegetar" || /paneer/i.test(it[0]) || it[0] === "Vegetar Biryani" || isVegan(c, it);
+const FILTERS = { alle: () => true, veg: isVeg, vegan: isVegan, mild: isMild };
+
+let filter = "alle", current = MENU[0].id;
+const tabs = document.getElementById("tabs"), panels = document.getElementById("panels");
+
+function render() {
+  const f = FILTERS[filter];
+  const counts = MENU.map(c => c.items.filter(it => f(c, it)).length);
+  if (!counts[MENU.findIndex(c => c.id === current)]) current = MENU[counts.findIndex(n => n > 0)].id;
+  tabs.innerHTML = MENU.map((c, i) => {
+    const on = c.id === current;
+    return `<button class="tab" role="tab" id="t-${c.id}" aria-controls="p-${c.id}" aria-selected="${on}" tabindex="${on ? 0 : -1}"${counts[i] ? "" : " hidden"}>${c.name}${filter !== "alle" ? `<small>${counts[i]}</small>` : ""}</button>`;
+  }).join("");
+  const c = MENU.find(c => c.id === current);
+  const items = c.items.filter(it => f(c, it));
+  panels.innerHTML = `<div class="panel" role="tabpanel" id="p-${c.id}" aria-labelledby="t-${c.id}" tabindex="0">
+    <h3>${c.name}</h3>
+    <ul class="rows">${items.map(it => {
+      const [n, d, p] = it;
+      const tags = (isVegan(c, it) ? '<span class="tag v">Vegansk alt.</span>' : "") + (isMild(c, it) ? '<span class="tag m">Mild</span>' : "");
+      return `<li><span><span class="n">${esc(n)}</span>${d ? `<span class="d">${esc(d)}</span>` : ""}${tags}</span><span class="p">${p ? p + " kr" : ""}</span></li>`;
+    }).join("")}</ul></div>`;
+  const btns = [...tabs.querySelectorAll(".tab:not([hidden])")];
+  btns.forEach((b, i) => {
+    b.addEventListener("click", () => { current = b.id.slice(2); render(); const t = document.getElementById(b.id); t.focus({ preventScroll: true }); t.scrollIntoView({ block: "nearest", inline: "nearest" }); });
+    b.addEventListener("keydown", e => {
+      const k = e.key === "ArrowRight" ? 1 : e.key === "ArrowLeft" ? -1 : 0;
+      if (k) { const n = btns[(i + k + btns.length) % btns.length]; current = n.id.slice(2); render(); document.getElementById(n.id).focus(); }
+    });
+  });
+}
+
+document.querySelectorAll(".chip").forEach(b => b.addEventListener("click", () => {
+  filter = b.dataset.f;
+  document.querySelectorAll(".chip").forEach(x => x.setAttribute("aria-pressed", x === b));
+  render();
+}));
+render();
+
+// Open now badge
+const now = new Date(), today = now.getDay(), hr = now.getHours() + now.getMinutes() / 60;
+const pad = h => String(h).padStart(2, "0") + ".00";
+const h = HOURS[today], status = document.getElementById("status"), text = document.getElementById("status-text");
+if (h && hr >= h[0] && hr < h[1]) {
+  status.classList.add("open");
+  text.textContent = `Åpent nå, til kl. ${pad(h[1])}`;
+} else {
+  let next = h && hr < h[0] ? today : (today + 1) % 7;
+  while (!HOURS[next]) next = (next + 1) % 7;
+  text.textContent = `Stengt nå, åpner ${next === today ? "i dag" : next === (today + 1) % 7 ? "i morgen" : DAYS[next].toLowerCase()} kl. ${pad(HOURS[next][0])}`;
+}
+
+// Hours table, Monday first; today's row is highlighted.
+document.getElementById("hours").insertAdjacentHTML("beforeend", [1, 2, 3, 4, 5, 6, 0].map(d =>
+  `<tr class="${d === today ? "is-today" : ""}"><td>${DAYS[d]}${d === today ? '<span class="t">I dag</span>' : ""}</td><td>${HOURS[d] ? pad(HOURS[d][0]) + " til " + pad(HOURS[d][1]) : "Stengt"}</td></tr>`
+).join(""));
+</script>
+</body>
+</html>
