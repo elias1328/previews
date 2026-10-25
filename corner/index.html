@@ -1,0 +1,780 @@
+<!doctype html>
+<html lang="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Corner Restaurant · Italiensk restaurant og pizza i Brumunddal</title>
+<meta name="description" content="Italiensk restaurant og pizza i Brumunddal. Ekte italiensk pizza og pasta, biff, burger, fisk og barnemeny i Brugata 12. Bestill bord på 40 15 90 23.">
+<!-- Preview only: keep out of search engines until the owner says yes -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#14110e">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#14110e;--bg2:#1c1814;--card:#221d18;--line:#3a3128;
+  --gold:#d9b06a;--gold2:#f0d49b;--cream:#f4ead8;--muted:#c3b49c;--ember:#c8783c;
+  --serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+  --sans:"DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);background:var(--bg);color:var(--cream);line-height:1.6;overflow-x:hidden}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.08;letter-spacing:.005em}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold2);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.preview{background:var(--gold);color:#1a140c;text-align:center;font-size:.8rem;font-weight:600;padding:7px 12px}
+
+/* Nav */
+nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 0}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.seal{width:44px;height:44px;border-radius:50%;background:#0b0907;border:1px solid var(--gold);display:grid;place-items:center;font-family:var(--serif);font-weight:700;color:var(--gold);font-size:1.25rem}
+.brand b{font-family:var(--serif);font-weight:700;font-size:1.35rem;letter-spacing:.22em}
+.links{display:flex;gap:26px;font-size:.92rem;color:var(--muted)}
+.links a{text-decoration:none}.links a:hover{color:var(--gold2)}
+.call{background:var(--gold);color:#1a140c;text-decoration:none;padding:10px 18px;border-radius:999px;font-weight:600;font-size:.92rem;white-space:nowrap}
+
+/* Hero */
+.hero{position:relative;padding:40px 0 70px;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:-20% -10% auto auto;width:720px;height:720px;background:radial-gradient(closest-side,#c8783c33,#d9b06a14 45%,transparent 70%);pointer-events:none}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.eyebrow{font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:var(--gold)}
+.wordmark{font-family:var(--serif);font-weight:700;font-size:clamp(4.2rem,15vw,9rem);letter-spacing:.14em;line-height:.95;margin:14px 0 6px;background:linear-gradient(180deg,var(--gold2),var(--gold) 60%,#b98b45);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{font-family:var(--serif);font-style:italic;font-size:1.35rem;color:var(--muted);margin-bottom:22px}
+.lead{font-size:1.15rem;max-width:520px}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 24px;border-radius:999px;font-weight:600;text-decoration:none;border:1.5px solid var(--gold);color:var(--gold2);min-height:48px}
+.btn.solid{background:var(--gold);color:#1a140c}
+.btn:hover{filter:brightness(1.08)}
+.facts{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:30px;font-size:.92rem;color:var(--muted)}
+.facts span{display:inline-flex;align-items:center;gap:8px}
+.facts strong{color:var(--cream);font-weight:600}
+.stars{color:var(--gold);letter-spacing:2px}
+.photo{border-radius:22px;background:repeating-linear-gradient(45deg,#231d17,#231d17 14px,#2a231c 14px,#2a231c 28px);display:grid;place-items:center;text-align:center;color:var(--muted);font-size:.9rem;border:1px dashed #5a4a38;padding:20px;aspect-ratio:4/5}
+.hero .photo{aspect-ratio:1/1;box-shadow:0 30px 80px #0008,0 0 0 8px #d9b06a10}
+
+/* Sections */
+section{padding:80px 0}
+.head{max-width:640px;margin-bottom:34px}
+.head h2{font-size:clamp(2.2rem,5vw,3.2rem);margin:10px 0 12px}
+.head p{color:var(--muted)}
+.rule{display:flex;align-items:center;gap:14px;color:var(--gold)}
+.rule::after{content:"";height:1px;width:60px;background:var(--gold);opacity:.6}
+
+/* Menu */
+#meny{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.owner{display:flex;gap:12px;align-items:flex-start;border:1px dashed var(--gold);background:#d9b06a12;border-radius:14px;padding:14px 16px;font-size:.9rem;margin-bottom:26px;max-width:760px}
+.owner b{color:var(--gold2)}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.tabs::-webkit-scrollbar{display:none}
+.tabs button{flex:0 0 auto;font:inherit;font-weight:600;font-size:.92rem;border:1px solid var(--line);background:var(--card);color:var(--cream);padding:10px 18px;border-radius:999px;cursor:pointer;min-height:44px}
+.tabs button[aria-selected=true]{background:var(--gold);color:#1a140c;border-color:var(--gold)}
+.panel{display:none;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:28px}
+.panel.active{display:grid;grid-template-columns:1fr 1.6fr;gap:34px}
+.panel h3{font-size:2.2rem;color:var(--gold2)}
+.panel .desc{color:var(--muted);margin-top:8px}
+.tag{display:inline-block;margin-top:14px;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--gold);border:1px solid #d9b06a66;border-radius:999px;padding:4px 10px}
+.rows{list-style:none}
+.rows li{display:flex;align-items:baseline;gap:10px;padding:14px 0;border-bottom:1px dashed var(--line)}
+.rows li:last-child{border-bottom:0}
+.rows .n{font-family:var(--serif);font-size:1.3rem;font-weight:600}
+.rows .n small{display:block;font-family:var(--sans);font-size:.85rem;font-weight:400;color:var(--muted)}
+.rows .dots{flex:1;border-bottom:1px dotted #5a4a38;transform:translateY(-5px);min-width:20px}
+.rows .p{font-family:var(--serif);font-size:1.2rem;color:var(--gold);white-space:nowrap}
+.rows li.ph .n{color:var(--muted);font-style:italic;font-weight:500}
+
+/* Perfect for */
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:26px 22px;position:relative}
+.card .num{font-family:var(--serif);font-style:italic;color:var(--gold);font-size:1.1rem}
+.card h3{font-size:1.65rem;margin:8px 0 8px}
+.card p{color:var(--muted);font-size:.95rem}
+.book-note{margin-top:26px;color:var(--muted)}
+.book-note a{color:var(--gold2);font-weight:600}
+
+/* Takeaway */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.box{background:linear-gradient(160deg,#2a221a,#1d1915);border:1px solid var(--line);border-radius:22px;padding:32px}
+.box h3{font-size:2rem;margin:10px 0 10px}
+.box p{color:var(--muted)}
+.box ul{list-style:none;margin-top:16px;display:grid;gap:8px}
+.box li{display:flex;gap:10px}
+.box li::before{content:"";flex:0 0 7px;height:7px;margin-top:9px;border-radius:50%;background:var(--gold)}
+.box .btn{margin-top:22px}
+.box .photo{aspect-ratio:16/9;margin-top:22px;font-size:.85rem}
+
+/* Reviews */
+.rating{display:flex;align-items:center;gap:18px;margin-bottom:26px}
+.rating .big{font-family:var(--serif);font-size:4rem;font-weight:700;color:var(--gold2);line-height:1}
+.rating .stars{font-size:1.2rem}
+.rating small{display:block;color:var(--muted)}
+.quotes{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+blockquote{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:6px 20px 20px 6px;padding:28px}
+blockquote p{font-family:var(--serif);font-size:1.6rem;line-height:1.3;font-style:italic}
+blockquote footer{margin-top:14px;color:var(--muted);font-size:.9rem}
+blockquote footer b{color:var(--cream)}
+
+/* Visit */
+#besok{background:radial-gradient(ellipse at top left,#c8783c22,transparent 60%),var(--bg2);border-top:1px solid var(--line)}
+.visit{display:grid;grid-template-columns:1.1fr 1fr;gap:40px}
+.visit h2{font-size:clamp(2.2rem,5vw,3.2rem);margin:10px 0 16px}
+.info{display:grid;gap:14px;margin-top:6px}
+.info div{display:grid;grid-template-columns:90px 1fr;gap:10px;padding-bottom:14px;border-bottom:1px solid var(--line)}
+.info dt{color:var(--gold);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;padding-top:3px}
+.info dd a{text-decoration-color:#d9b06a88;text-underline-offset:3px}
+.phone{font-family:var(--serif);font-size:1.7rem;font-weight:700;text-decoration:none!important;color:var(--gold2)}
+.hours-card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:28px}
+.hours-card h3{font-size:1.8rem}
+.hours{width:100%;border-collapse:collapse;margin-top:14px}
+.hours td{padding:11px 0;border-bottom:1px solid var(--line)}
+.hours tr:last-child td{border-bottom:0}
+.hours td:last-child{text-align:right;color:var(--muted)}
+.hours td.ph{font-style:italic}
+.hours tr.is-today td:first-child{color:var(--gold2);font-weight:600}
+.hours-card .tag{margin-top:0}
+
+.site-foot{padding:44px 0;text-align:center;color:var(--muted);font-size:.88rem;border-top:1px solid var(--line)}
+.site-foot .brand{justify-content:center;margin-bottom:12px}
+
+/* Sticky booking bar on phones */
+.mobilebar{display:none}
+@media (max-width:900px){
+  .cards{grid-template-columns:1fr 1fr}
+  .links{display:none}
+}
+@media (max-width:760px){
+  section{padding:60px 0}
+  .hero{padding:24px 0 54px}
+  .hero .wrap,.panel.active,.split,.quotes,.visit{grid-template-columns:1fr}
+  .panel.active{gap:18px}
+  .hero .photo{aspect-ratio:16/10}
+  .panel,.box,.hours-card{padding:22px}
+  blockquote p{font-size:1.4rem}
+  nav .call{display:none}
+  .mobilebar{display:grid;grid-template-columns:1.5fr 1fr;gap:10px;position:fixed;left:12px;right:12px;bottom:12px;z-index:10}
+  .mobilebar a{text-align:center;padding:14px 10px;border-radius:999px;font-weight:600;text-decoration:none;box-shadow:0 8px 24px #000a}
+  .mobilebar .a{background:var(--gold);color:#1a140c}
+  .mobilebar .b{background:#2a231c;color:var(--cream);border:1px solid var(--gold)}
+  .site-foot{padding-bottom:110px}
+}
+@media (max-width:440px){
+  .cards{grid-template-columns:1fr}
+  .btn{width:100%}
+  .info div{grid-template-columns:1fr;gap:2px}
+}
+</style>
+</head>
+<body>
+<div class="preview">Forhåndsvisning laget for Corner Restaurant, bilder kommer fra dere</div>
+
+<header class="wrap">
+  <nav aria-label="Hovedmeny">
+    <a class="brand" href="#top" aria-label="Corner Restaurant"><span class="seal" aria-hidden="true">C</span><b>CORNER</b></a>
+    <div class="links"><a href="#meny">Meny</a><a href="#ta-med">Ta med</a><a href="#anmeldelser">Anmeldelser</a><a href="#besok">Finn oss</a></div>
+    <a class="call" href="tel:+4740159023">Bestill bord: 40 15 90 23</a>
+  </nav>
+</header>
+
+<main id="top">
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Restaurant i Brugata 12, Brumunddal</span>
+      <h1 class="wordmark">Corner</h1>
+      <p class="sub">Pizza, pasta og mer</p>
+      <p class="lead">Ekte italiensk pizza og pasta i hyggelige lokaler midt i Brumunddal.</p>
+      <div class="actions">
+        <a class="btn solid" href="tel:+4740159023">Bestill bord: 40 15 90 23</a>
+        <a class="btn" href="#meny">Se menyen</a>
+      </div>
+      <div class="facts">
+        <span><span class="stars" aria-hidden="true">★★★★★</span><strong>4,6</strong> på Google (53 anmeldelser)</span>
+        <span><strong>200 til 300 kr</strong> per person</span>
+      </div>
+    </div>
+    <div class="photo">Bilde av lokalet om kvelden<br>eller en nystekt pizza<br>(deres eget bilde)</div>
+  </div>
+</div>
+
+<section id="meny" aria-labelledby="meny-h">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow rule">Menyen</span>
+      <h2 id="meny-h">Fra pizzaovnen og kjøkkenet</h2>
+      <p>Italiensk pizza og pasta, tyrkiske retter, biff fra grillen, fisk og en egen meny for barna. Hele menyen, med priser. Spør oss gjerne om allergener.</p>
+    </div>
+
+    <div class="tabs" role="tablist" aria-label="Menykategorier" id="tabs"></div>
+    <div id="panels"></div>
+  </div>
+</section>
+
+<section aria-labelledby="perfekt-h">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow rule">Perfekt for</span>
+      <h2 id="perfekt-h">Et bord for hver anledning</h2>
+      <p>Bordbestilling anbefales, og vi tilpasser gjerne til dine ønsker.</p>
+    </div>
+    <div class="cards">
+      <article class="card"><span class="num">i</span><h3>Middag</h3><p>Pizza, pasta, biff eller fisk. Noe for enhver smak rundt bordet.</p></article>
+      <article class="card"><span class="num">ii</span><h3>Selskap</h3><p>Samle venner, kolleger eller familien. Ring oss, så tilpasser vi gjerne etter dine ønsker.</p></article>
+      <article class="card"><span class="num">iii</span><h3>En kveld ute</h3><p>God mat i hyggelige lokaler midt i sentrum av Brumunddal.</p></article>
+      <article class="card"><span class="num">iv</span><h3>Familie</h3><p>Egen barnemeny og plass til både store og små.</p></article>
+    </div>
+    <p class="book-note">Ring <a href="tel:+4740159023">40 15 90 23</a> for å bestille bord. Drop-in er også velkommen.</p>
+  </div>
+</section>
+
+<section id="ta-med" aria-labelledby="tamed-h" style="padding-top:0">
+  <div class="wrap split">
+    <div class="box">
+      <span class="eyebrow">Takeaway og henting</span>
+      <h3 id="tamed-h">Ta Corner med hjem</h3>
+      <p>Lyst på restaurantmat i sofaen? Ring inn bestillingen og hent maten hos oss.</p>
+      <ul>
+        <li>Takeaway av retter fra menyen</li>
+        <li>Hent selv i Brugata 12</li>
+      </ul>
+      <a class="btn solid" href="tel:+4740159023">Ring og bestill: 40 15 90 23</a>
+    </div>
+    <div class="box">
+      <span class="eyebrow">Uteservering</span>
+      <h3>Spis ute når været tillater det</h3>
+      <p>Vi har uteservering, så du kan nyte pizzaen i frisk luft på lune kvelder.</p>
+      <div class="photo">Bilde av uteserveringen<br>(deres eget bilde)</div>
+    </div>
+  </div>
+</section>
+
+<section id="anmeldelser" aria-labelledby="anm-h" style="padding-top:0">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow rule">Gjestene sier</span>
+      <h2 id="anm-h">Fra anmeldelser på Google</h2>
+    </div>
+    <div class="rating">
+      <span class="big">4,6</span>
+      <div><span class="stars" aria-label="4,6 av 5 stjerner">★★★★★</span><small>Basert på 53 anmeldelser på Google</small></div>
+    </div>
+    <div class="quotes">
+      <blockquote><p>“Utrolig bra service. God mat. Alle var fornøyde”</p><footer><b>Terje</b>, Google</footer></blockquote>
+      <blockquote><p>“Veldig god mat og fint service ... Anbefales på det sterkeste”</p><footer><b>Irina</b>, Google</footer></blockquote>
+    </div>
+  </div>
+</section>
+
+<section id="besok" aria-labelledby="besok-h">
+  <div class="wrap visit">
+    <div>
+      <span class="eyebrow rule">Bestill bord og finn oss</span>
+      <h2 id="besok-h">Velkommen til bords</h2>
+      <dl class="info">
+        <div><dt>Telefon</dt><dd><a class="phone" href="tel:+4740159023">40 15 90 23</a><br><span style="color:var(--muted);font-size:.92rem">Ring for å bestille bord eller takeaway</span></dd></div>
+        <div><dt>Adresse</dt><dd>Brugata 12<br>2380 Brumunddal</dd></div>
+        <div><dt>E-post</dt><dd><a href="mailto:corner2380@gmail.com">corner2380@gmail.com</a></dd></div>
+      </dl>
+      <div class="actions">
+        <a class="btn solid" href="https://www.google.com/maps/dir/?api=1&amp;destination=Corner+Restaurant+Brugata+12+2380+Brumunddal" rel="noopener">Veibeskrivelse</a>
+        <a class="btn" href="https://www.facebook.com/profile.php?id=61573082146184" rel="noopener">Facebook</a>
+      </div>
+    </div>
+    <div class="hours-card">
+      <h3>Åpningstider</h3>
+      <table class="hours" id="hours"><caption class="sr" style="position:absolute;left:-9999px">Åpningstider per dag</caption></table>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Til toppen"><span class="seal" aria-hidden="true">C</span><b>CORNER</b></a>
+    <p>Corner Restaurant · Brugata 12, 2380 Brumunddal · <a href="tel:+4740159023">40 15 90 23</a></p>
+    <p style="margin-top:6px">© Brugata 12 Drift AS</p>
+  </div>
+</footer>
+
+<div class="mobilebar">
+  <a class="a" href="tel:+4740159023">Bestill bord: ring oss</a>
+  <a class="b" href="#meny">Meny</a>
+</div>
+
+<script>
+// MENU: fill in dishes and prices from the owner's menu.
+// Each item is [name, description, price]. Leave price "" until known.
+const MENU = [
+ {
+  "id": "pizza",
+  "name": "Pizza Rosso",
+  "desc": "Med tomatsaus.",
+  "items": [
+   [
+    "Margherita",
+    "Tomatsaus, mozzarella, basilikum",
+    "179 kr"
+   ],
+   [
+    "Capricciosa",
+    "Mozzarella, cottoskinke, champignon",
+    "189 kr"
+   ],
+   [
+    "Hawaii",
+    "Mozzarella, ananas, cottoskinke",
+    "189 kr"
+   ],
+   [
+    "Dala's Spesial",
+    "Mozzarella, semitørkede cherrytomater, champignon, salami Ventricina",
+    "195 kr"
+   ],
+   [
+    "Milano",
+    "Mozzarella, semitørkede cherrytomater, marinert kylling, pesto Genovese, dressing",
+    "195 kr"
+   ],
+   [
+    "Don Vito",
+    "Mozzarella, parmesan, pepperoni, oliven, salami Ventricina",
+    "205 kr"
+   ],
+   [
+    "Mamma Rosa",
+    "Mozzarella, pepperoni, cottoskinke, biff",
+    "215 kr"
+   ],
+   [
+    "Kebab Classico",
+    "Mozzarella, kebabkjøtt i isbergsalat, cherrytomater, fries, dressing",
+    "215 kr"
+   ],
+   [
+    "Pizza Piccante (Spicy+)",
+    "Mozzarella, nduja, salami Ventricina, jalapeños, parmesan",
+    "215 kr"
+   ],
+   [
+    "Maccinata",
+    "Mozzarella, marinert kjøttdeig, salami Ventricina, spinat, løk, hvitløksolje",
+    "215 kr"
+   ],
+   [
+    "Pizza Al Gorgonzola",
+    "Mozzarella, gorgonzola piccante, cottoskinke, salami Ventricina",
+    "215 kr"
+   ],
+   [
+    "Pizza Di Parma",
+    "Mozzarella, parmaskinke, ruccola, parmesan",
+    "219 kr"
+   ],
+   [
+    "Pizza Diavola (Spicy)",
+    "Mozzarella, nduja, pastrami, ananas",
+    "219 kr"
+   ],
+   [
+    "L'americano (Spicy++)",
+    "BBQ-marinert oksefilet, jalapeños, ananas, rødløk",
+    "245 kr"
+   ]
+  ]
+ },
+ {
+  "id": "bianca",
+  "name": "Pizza Bianca og calzone",
+  "desc": "Med hvit saus, eller brettet calzone.",
+  "items": [
+   [
+    "Quattro Formaggi",
+    "Mozzarella, gorgonzola, parmesan, feta",
+    "205 kr"
+   ],
+   [
+    "Cipolla Rossa",
+    "Rødløk, bacon, cherrytomat og frisk basilikum",
+    "215 kr"
+   ],
+   [
+    "Pollo Croccante",
+    "Sprøbakt kyllingfilet, ananas, rødløk, paprika",
+    "229 kr"
+   ],
+   [
+    "Calzone A La Romana",
+    "Tomatsaus, mozzarella, cottoskinke",
+    "189 kr"
+   ],
+   [
+    "Calzone Piccante",
+    "Tomatsaus, mozzarella, biff, pepperoni, rødløk, sopp",
+    "215 kr"
+   ],
+   [
+    "Calzone Sandwich",
+    "Tomatsaus, mozzarella, kebab eller kylling, salat, tomat, dressing",
+    "225 kr"
+   ],
+   [
+    "Calzone Al Pesto",
+    "Tomatsaus, mozzarella, pesto, kylling, sopp",
+    "225 kr"
+   ]
+  ]
+ },
+ {
+  "id": "pasta",
+  "name": "Pasta",
+  "desc": "Ekte italiensk pasta.",
+  "items": [
+   [
+    "Spaghetti Bolognese",
+    "Med kjøttsaus",
+    "235 kr"
+   ],
+   [
+    "Penne Maccheroni Gorgonzola",
+    "Pastarør og skinke i fløte og gorgonzolasaus",
+    "239 kr"
+   ],
+   [
+    "Ravioli Fungi Porcini",
+    "Steinsopp, strimlet cottoskinke, champignon, parmesansaus",
+    "239 kr"
+   ],
+   [
+    "Spaghetti Carbonara",
+    "Bacon, eggeplommer, fløte, parmesan",
+    "259 kr"
+   ],
+   [
+    "Tagliatelle Frutti Di Mare",
+    "Scampi og ørret i kremet hvitvinsaus, lime, parmesan",
+    "259 kr"
+   ],
+   [
+    "Tagliatelle Con Pollo",
+    "Kylling, løk, sopp, tomatisert fløtesaus, parmesan",
+    "259 kr"
+   ],
+   [
+    "Penne Corner Spesial",
+    "Biffbiter, paprika, løk, fersk hvitløk og fløtesaus, parmesan",
+    "269 kr"
+   ],
+   [
+    "Corner Ravioli",
+    "Pastaputer og biffbiter i kremet peppersaus, parmesan",
+    "275 kr"
+   ]
+  ]
+ },
+ {
+  "id": "grill",
+  "name": "Grill og husets retter",
+  "desc": "Fra grillen og kjøkkenet.",
+  "items": [
+   [
+    "Løvstek",
+    "Salat, fries og bearnaise",
+    "215 kr"
+   ],
+   [
+    "Kylling Curry",
+    "Strimlet kyllingfilet i curry og fløtesaus, ris og salat",
+    "265 kr"
+   ],
+   [
+    "Kyllingsnadder",
+    "Kyllingfilet med sopp, paprika og løk, salat, bearnaise, fries",
+    "275 kr"
+   ],
+   [
+    "Biffsnadder av indrefilet",
+    "Med sopp, paprika og løk, salat, bearnaise, fries",
+    "285 kr"
+   ],
+   [
+    "Crispy Kylling Indrefilet BBQ",
+    "BBQ-saus, grillet tomat, salat, fries",
+    "289 kr"
+   ],
+   [
+    "Svin Indrefilet Choron",
+    "Bacon, grillet ananas, choronsaus, salat, fries",
+    "295 kr"
+   ],
+   [
+    "Kjøkkenets Spesial",
+    "Biff, kylling og sopp, ostegratinert i fløtesaus, fries og grønnsaker",
+    "339 kr"
+   ]
+  ]
+ },
+ {
+  "id": "tyrkisk",
+  "name": "Tyrkiske retter",
+  "desc": "Kebab og grill.",
+  "items": [
+   [
+    "Kebab Rull",
+    "Ekte dönerkebab, salat, løk, tomat, agurk, mais og dressing i rull",
+    "259 kr"
+   ],
+   [
+    "Kebab Tallerken",
+    "Ekte dönerkebab, kebabdressing, salat, fries",
+    "269 kr"
+   ],
+   [
+    "Kyllingkebab Tallerken",
+    "Marinert kylling, kebabdressing, salat, fries",
+    "269 kr"
+   ],
+   [
+    "Osmanish Kebab",
+    "Aubergine, løk, sopp, paprika, gratinert med ost, salat, tyrkisk ris",
+    "275 kr"
+   ],
+   [
+    "Shish Kebab",
+    "Marinert biff eller kylling på spyd, sprø salat, tyrkisk ris",
+    "285 kr"
+   ],
+   [
+    "Köfte Tallerken",
+    "Hjemmelagde kjøttboller, grillet tomat og paprika, sprø salat, dressing",
+    "299 kr"
+   ],
+   [
+    "Mix Grill",
+    "Biff, kylling, lam og köfte, grillet paprika og tomat, salat og dressing",
+    "325 kr"
+   ]
+  ]
+ },
+ {
+  "id": "biff",
+  "name": "Biff",
+  "desc": "Indrefilet av storfe.",
+  "items": [
+   [
+    "Corner's Biff",
+    "Mør indrefilet av storfe, dagens grønnsaker og valgfri potet",
+    "325 kr"
+   ],
+   [
+    "Filet Black & White",
+    "Indrefilet av svin og storfe, bearnaise, peppersaus, grønnsaker, valgfri potet",
+    "385 kr"
+   ],
+   [
+    "Husets Biff",
+    "200 g indrefilet med hvitløksaus, feta, oliven, salat, valgfri potet",
+    "395 kr"
+   ],
+   [
+    "Plankebiff",
+    "200 g indrefilet på planke, grønnsaker, bearnaise, peppersaus, potetmos",
+    "399 kr"
+   ]
+  ]
+ },
+ {
+  "id": "fisk",
+  "name": "Fisk og burger",
+  "desc": "Fra havet, og noe saftig mellom to brød.",
+  "items": [
+   [
+    "Fish & Chips",
+    "Torskefilet i sprø panering, salat, remulade og fries",
+    "259 kr"
+   ],
+   [
+    "Stekt Fjellørretfilet",
+    "Med rømme, salat og kokte poteter",
+    "275 kr"
+   ],
+   [
+    "Scampi Con Panna",
+    "Grillet scampi i fløtesaus med ananas og hvitløk, salat og ris",
+    "275 kr"
+   ],
+   [
+    "Hamburger",
+    "",
+    "229 kr"
+   ],
+   [
+    "Corner's Crispy Kyllingburger",
+    "Sprøbakt kyllingfilet, salat, cheddar, hvitløksaus, sweet chili",
+    "249 kr"
+   ]
+  ]
+ },
+ {
+  "id": "start",
+  "name": "Forretter og salater",
+  "desc": "Til å dele, eller som et lettere måltid.",
+  "items": [
+   [
+    "Scampi Sweet Chili",
+    "Grillede scampi, sweet chili, ruccola, brød",
+    "165 kr"
+   ],
+   [
+    "Gratinerte Nachos",
+    "Med kjøttdeig, jalapeños og ost",
+    "169 kr"
+   ],
+   [
+    "Bruschetta De Parma",
+    "Ristet brød med parmaskinke, tomat, olivenolje, basilikum, parmesan",
+    "169 kr"
+   ],
+   [
+    "Italiensk Smakstallerken",
+    "Parmaskinke, salami Ventricina, Padano, semitørkede cherrytomater, oliven",
+    "199 kr"
+   ],
+   [
+    "Kyllingsalat",
+    "Grillet kylling og sopp, salat, løk, tomat, agurk, dressing",
+    "219 kr"
+   ],
+   [
+    "Crispy Cæsar",
+    "Bacon, sprøbakt kyllingfilet, parmesan, krutonger, caesardressing",
+    "229 kr"
+   ]
+  ]
+ },
+ {
+  "id": "barn",
+  "name": "Barnemeny",
+  "desc": "For de minste gjestene.",
+  "items": [
+   [
+    "Pølse med fries",
+    "",
+    "99 kr"
+   ],
+   [
+    "Barnas pizza",
+    "Pepperoni eller skinke",
+    "109 kr"
+   ],
+   [
+    "Spaghetti med kjøttsaus",
+    "",
+    "109 kr"
+   ],
+   [
+    "Junior hamburger med fries",
+    "100 g burger i brød",
+    "120 kr"
+   ]
+  ]
+ },
+ {
+  "id": "dessert",
+  "name": "Dessert",
+  "desc": "Noe søtt til slutt.",
+  "items": [
+   [
+    "Coppa Tre Amore",
+    "Vanilje, jordbær og sjokoladeis med jordbær og sjokoladesaus",
+    "125 kr"
+   ],
+   [
+    "Crème Brûlée",
+    "Klassisk fransk karamelldessert",
+    "149 kr"
+   ],
+   [
+    "Eple-tartelett",
+    "Servert lun med vaniljeis og sjokoladesaus",
+    "149 kr"
+   ],
+   [
+    "Sjokoladefondant",
+    "Servert med vaniljeis",
+    "149 kr"
+   ],
+   [
+    "Cuore al Pistacchio",
+    "Fondant fylt med pistasjkrem, med vaniljeis",
+    "159 kr"
+   ]
+  ]
+ },
+ {
+  "id": "afterwork",
+  "name": "After work dinner",
+  "desc": "Rimeligere middag etter jobb. Spør oss om tidspunkt.",
+  "items": [
+   [
+    "Pizza Capricciosa",
+    "Cottoskinke og champignon",
+    "169 kr"
+   ],
+   [
+    "Penne Gorgonzola",
+    "Skinke og kremet gorgonzolasaus",
+    "199 kr"
+   ],
+   [
+    "Kylling Curry",
+    "Fløtesaus og fries",
+    "219 kr"
+   ],
+   [
+    "Corner's Biff",
+    "150 g, grønnsaker, fries, bearnaise eller peppersaus",
+    "279 kr"
+   ]
+  ]
+ }
+];
+
+// OPENING HOURS (from Google Maps, 2026-10-25). Format ["13.00", "22.00"] or "Stengt".
+const HOURS = { Mandag: ["13.00", "22.00"], Tirsdag: ["13.00", "22.00"], Onsdag: ["13.00", "22.00"], Torsdag: ["13.00", "22.00"], Fredag: ["13.00", "22.00"], Lørdag: ["13.00", "22.00"], Søndag: ["13.00", "22.00"] };
+
+const esc = s => s.replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const tabs = document.getElementById("tabs"), panels = document.getElementById("panels");
+tabs.innerHTML = MENU.map((c, i) =>
+  `<button role="tab" id="t-${c.id}" aria-controls="p-${c.id}" aria-selected="${i === 0}" tabindex="${i === 0 ? 0 : -1}">${c.name}</button>`).join("");
+panels.innerHTML = MENU.map((c, i) => `
+  <div class="panel${i === 0 ? " active" : ""}" role="tabpanel" id="p-${c.id}" aria-labelledby="t-${c.id}">
+    <div><h3>${c.name}</h3><p class="desc">${c.desc}</p>${c.ph ? '<span class="tag">Plassholder til eieren</span>' : ""}</div>
+    <ul class="rows">${c.items.map(([n, d, p]) => {
+      const isPh = n.startsWith("Retter og priser");
+      return `<li class="${isPh ? "ph" : ""}"><span class="n">${esc(n)}${d ? `<small>${esc(d)}</small>` : ""}</span><span class="dots" aria-hidden="true"></span><span class="p">${esc(p)}</span></li>`;
+    }).join("")}</ul>
+  </div>`).join("");
+
+const btns = [...tabs.querySelectorAll("button")];
+const select = b => {
+  btns.forEach(x => { const on = x === b; x.setAttribute("aria-selected", on); x.tabIndex = on ? 0 : -1; });
+  document.querySelectorAll(".panel").forEach(p => p.classList.toggle("active", p.id === b.getAttribute("aria-controls")));
+};
+btns.forEach((b, i) => {
+  b.addEventListener("click", () => select(b));
+  b.addEventListener("keydown", e => {
+    const d = e.key === "ArrowRight" ? 1 : e.key === "ArrowLeft" ? -1 : 0;
+    if (d) { const n = btns[(i + d + btns.length) % btns.length]; select(n); n.focus(); }
+  });
+});
+
+// Hours table, Monday first; today's row is highlighted.
+const todayName = ["Søndag", "Mandag", "Tirsdag", "Onsdag", "Torsdag", "Fredag", "Lørdag"][new Date().getDay()];
+document.getElementById("hours").insertAdjacentHTML("beforeend", Object.entries(HOURS).map(([day, h]) => {
+  const val = h === null ? "Kommer her" : Array.isArray(h) ? `${h[0]} til ${h[1]}` : h;
+  return `<tr class="${day === todayName ? "is-today" : ""}"><td>${day}</td><td class="${h === null ? "ph" : ""}">${val}</td></tr>`;
+}).join(""));
+</script>
+</body>
+</html>
