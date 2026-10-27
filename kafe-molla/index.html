@@ -318,7 +318,7 @@ function parseCsv(text) {
 
 renderDinners(DINNERS);
 if (SHEET_CSV) {
-  fetch(SHEET_CSV, { cache: "no-store" }).then(r => r.ok ? r.text() : Promise.reject(r.status)).then(text => {
+  fetch(SHEET_CSV + "&t=" + Date.now(), { cache: "no-store" }).then(r => r.ok ? r.text() : Promise.reject(r.status)).then(text => {
     const menu = {};
     for (const [dag, rett, beskrivelse = ""] of parseCsv(text).slice(1)) {
       const d = DAYS.findIndex(x => x.toLowerCase() === (dag || "").trim().toLowerCase());

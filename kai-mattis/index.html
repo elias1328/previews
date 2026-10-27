@@ -415,7 +415,7 @@ function parseCsv(text) {
 
 renderDagens(DAGENS);
 if (SHEET_CSV) {
-  fetch(SHEET_CSV, { cache: "no-store" }).then(r => r.ok ? r.text() : Promise.reject(r.status)).then(text => {
+  fetch(SHEET_CSV + "&t=" + Date.now(), { cache: "no-store" }).then(r => r.ok ? r.text() : Promise.reject(r.status)).then(text => {
     const d = {};
     for (const [felt = "", tekst = ""] of parseCsv(text).slice(1)) {
       const k = felt.trim().toLowerCase();
