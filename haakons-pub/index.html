@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Haakons Pub | brun pub med scene i Storgata 95, Lillehammer</title>
+<meta name="description" content="Haakons Pub i Storgata 95, Lillehammer. Brun pub med scene inne og en lun bakgård på sommeren. Åpent hver dag fra kl. 13 til kl. 03.">
+<!-- Preview only: keep out of search engines until the owner says yes -->
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#1a110c">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --wood:#1a110c;--wood-2:#24170f;--wood-3:#2f1e13;
+  --brass:#c9a15a;--brass-l:#e8cd92;--brass-d:#8a6a33;
+  --red:#8e2420;--red-d:#6b1916;--green:#1f3b2d;--green-l:#2c5240;
+  --paper:#efe4cb;--paper-2:#e6d7b8;--ink:#22160f;--muted:#6a5644;--ok:#5bbf7d
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Source Sans 3",system-ui,sans-serif;background:var(--wood);color:var(--paper);line-height:1.6;font-size:1.04rem;overflow-x:hidden}
+a{color:inherit}
+img,svg{display:block}
+.wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+.preview{background:var(--brass);color:var(--wood);text-align:center;font-size:.8rem;font-weight:600;padding:6px 12px}
+.bebas{font-family:"Bebas Neue",Impact,sans-serif;font-weight:400;letter-spacing:.02em}
+.serif{font-family:"Libre Caslon Text",Georgia,serif}
+.eyebrow{font-size:.74rem;letter-spacing:.24em;text-transform:uppercase;font-weight:700;color:var(--brass)}
+.rule{display:flex;align-items:center;gap:12px;color:var(--brass)}
+.rule::before,.rule::after{content:"";flex:1;height:1px;background:currentColor;opacity:.55}
+.rule svg{width:18px;height:18px}
+
+/* Wood: dark planks with a faint grain, all CSS */
+.planks{
+  background:
+    repeating-linear-gradient(90deg,#00000000 0 118px,#0000006b 118px 120px,#ffffff08 120px 121px,#00000000 121px 240px),
+    repeating-linear-gradient(90deg,#ffffff05 0 3px,#00000000 3px 11px,#0000000d 11px 13px,#00000000 13px 29px),
+    linear-gradient(180deg,#2a1a10,#1a110c 70%);
+}
+
+/* HERO */
+.hero{position:relative;padding:12px 0 70px;overflow:hidden}
+.hero::before{content:"";position:absolute;left:50%;top:-140px;width:760px;height:560px;transform:translateX(-50%);background:radial-gradient(closest-side,#e8b86a33,#e8b86a10 55%,#0000);pointer-events:none}
+nav{position:relative;z-index:2;display:flex;justify-content:center;gap:24px;padding:14px 0 0;font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700}
+nav a{text-decoration:none;color:var(--brass-l);padding:6px 2px;border-bottom:1px solid transparent}
+nav a:hover{border-bottom-color:var(--brass)}
+.sign{position:relative;z-index:2;max-width:640px;margin:34px auto 0;padding:12px;border-radius:10px;background:linear-gradient(145deg,#d9b56c,#8a6a33 45%,#d1aa60 70%,#7a5a28);box-shadow:0 30px 60px #000a,inset 0 1px 0 #fff6}
+.sign-in{border-radius:5px;background:radial-gradient(120% 90% at 50% 0%,var(--green-l),var(--green) 60%,#142a20);padding:30px 22px 28px;text-align:center;box-shadow:inset 0 0 0 1px #00000066,inset 0 0 40px #0008;position:relative}
+.sign-in::before,.sign-in::after{content:"";position:absolute;top:12px;width:10px;height:10px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#f4dea6,#8a6a33 70%);box-shadow:0 1px 1px #0008}
+.sign-in::before{left:12px}.sign-in::after{right:12px}
+.sign .eyebrow{color:var(--brass-l)}
+.sign h1{font-family:"Bebas Neue",Impact,sans-serif;font-weight:400;font-size:clamp(4.2rem,17vw,8.6rem);line-height:.86;letter-spacing:.04em;color:var(--brass-l);text-shadow:0 2px 0 #0007,0 0 24px #e8cd9230;margin-top:8px;padding-left:.04em}
+.sign .pub{display:flex;align-items:center;justify-content:center;gap:14px;font-family:"Libre Caslon Text",Georgia,serif;font-style:italic;font-size:clamp(1.3rem,4vw,1.7rem);color:var(--paper);margin-top:6px}
+.sign .pub::before,.sign .pub::after{content:"";width:46px;height:1px;background:var(--brass)}
+.sign .town{font-size:.82rem;letter-spacing:.32em;text-transform:uppercase;color:var(--brass-l);margin-top:10px;font-weight:600;padding-left:.32em}
+.hero-txt{position:relative;z-index:2;text-align:center;margin-top:34px}
+.motto{font-family:"Libre Caslon Text",Georgia,serif;font-style:italic;font-size:clamp(1.25rem,3.6vw,1.65rem);color:#fff4dc;line-height:1.4}
+.motto small{display:block;font-family:"Source Sans 3",sans-serif;font-style:normal;font-size:.76rem;letter-spacing:.18em;text-transform:uppercase;color:var(--brass);margin-top:10px}
+.addr{margin-top:18px;font-weight:600;color:#f3e6c9}
+.meta{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 12px;margin-top:18px;font-size:.9rem}
+.pill{display:inline-flex;align-items:center;gap:8px;background:#0000005c;border:1px solid #c9a15a66;padding:6px 14px;border-radius:999px;font-weight:600}
+.dot{width:9px;height:9px;border-radius:50%;background:#a99a8c}
+.pill.open .dot{background:var(--ok);box-shadow:0 0 0 4px #5bbf7d33}
+.pill b{color:var(--brass-l)}
+.stars{color:var(--brass-l);letter-spacing:.08em}
+.actions{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:24px}
+.btn{display:inline-block;padding:13px 24px;border-radius:3px;font-weight:700;text-decoration:none;letter-spacing:.04em;border:1px solid var(--brass);color:var(--brass-l);transition:background .2s,color .2s}
+.btn.solid{background:var(--brass);color:var(--wood)}
+.btn:hover{background:var(--brass-l);color:var(--wood)}
+.btn:focus-visible,a:focus-visible{outline:2px solid var(--brass-l);outline-offset:3px}
+
+/* PROGRAM: gig poster on paper */
+.program{background:
+  radial-gradient(circle at 18% 22%,#00000008 0 1px,#0000 2px) 0 0/14px 14px,
+  radial-gradient(120% 80% at 50% 0%,#f4ead3,var(--paper) 55%,var(--paper-2));
+  color:var(--ink);padding:72px 0 80px;position:relative}
+.program::before{content:"";position:absolute;left:0;right:0;top:0;height:10px;background:repeating-linear-gradient(90deg,var(--red) 0 22px,var(--wood) 22px 44px)}
+.poster-head{text-align:center;margin-bottom:34px}
+.poster-head .eyebrow{color:var(--red)}
+.poster-head h2{font-family:"Bebas Neue",Impact,sans-serif;font-weight:400;line-height:.88;margin-top:10px;color:var(--ink)}
+.poster-head h2 .l1{display:block;font-size:clamp(3rem,11vw,5.6rem);letter-spacing:.03em}
+.poster-head h2 .l2{display:inline-block;font-size:clamp(2.2rem,7.6vw,3.8rem);color:var(--paper);background:var(--red);padding:6px 18px 2px;transform:rotate(-1.6deg);margin-top:8px;letter-spacing:.06em;box-shadow:4px 4px 0 var(--ink)}
+.poster-head p{color:var(--muted);max-width:540px;margin:22px auto 0}
+
+.events{list-style:none;display:grid;gap:22px;max-width:820px;margin:0 auto}
+.ticket{--notch:14px;position:relative;display:grid;grid-template-columns:132px 1fr;background:#fbf5e6;color:var(--ink);border-radius:8px;filter:drop-shadow(0 10px 18px #3b26172e);
+  -webkit-mask:radial-gradient(circle var(--notch) at 132px 0,#0000 98%,#000) top/100% 51% no-repeat,radial-gradient(circle var(--notch) at 132px 100%,#0000 98%,#000) bottom/100% 51% no-repeat;
+  mask:radial-gradient(circle var(--notch) at 132px 0,#0000 98%,#000) top/100% 51% no-repeat,radial-gradient(circle var(--notch) at 132px 100%,#0000 98%,#000) bottom/100% 51% no-repeat}
+.stub{background:var(--red);color:var(--paper);border-radius:8px 0 0 8px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px 8px;position:relative}
+.stub::after{content:"";position:absolute;right:-1px;top:18px;bottom:18px;border-right:3px dotted #fbf5e6}
+.stub .wd{font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;font-weight:700;color:#f3d9a6}
+.stub .d{font-family:"Bebas Neue",Impact,sans-serif;font-size:4rem;line-height:.9;margin-top:4px}
+.stub .m{font-family:"Bebas Neue",Impact,sans-serif;font-size:1.5rem;letter-spacing:.14em;line-height:1}
+.body{padding:22px 26px 22px 30px;display:flex;flex-direction:column;justify-content:center;gap:8px;border:1px solid #d8c6a1;border-left:0;border-radius:0 8px 8px 0;background:repeating-linear-gradient(0deg,#0000 0 27px,#d8c6a133 27px 28px)}
+.body .when{font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--red)}
+.body h3{font-family:"Bebas Neue",Impact,sans-serif;font-weight:400;font-size:clamp(1.9rem,5.4vw,2.6rem);line-height:.95;letter-spacing:.02em}
+.body p{color:#4b3a2c}
+.body .btn{align-self:flex-start;margin-top:6px;background:var(--ink);color:var(--paper);border-color:var(--ink);padding:10px 20px}
+.body .btn:hover{background:var(--red);border-color:var(--red);color:#fff}
+.more{text-align:center;margin-top:30px;font-family:"Bebas Neue",Impact,sans-serif;font-size:1.7rem;letter-spacing:.08em;color:var(--red)}
+.more span{display:inline-block;border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);padding:4px 16px 0}
+.fb-line{text-align:center;margin-top:14px;color:var(--muted);font-size:.95rem}
+
+/* OM STEDET */
+section.dark{padding:76px 0}
+.head{text-align:center;margin-bottom:34px}
+.head h2{font-family:"Libre Caslon Text",Georgia,serif;font-weight:400;font-size:clamp(2rem,5.4vw,2.8rem);line-height:1.15;color:var(--brass-l);margin-top:10px}
+.head p{color:#d9c9ac;max-width:580px;margin:12px auto 0}
+.om-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.panel{border:1px solid #c9a15a55;border-radius:6px;padding:28px 26px;background:linear-gradient(180deg,#ffffff07,#0000)}
+.panel svg.ill{width:100%;height:150px;margin-bottom:18px}
+.panel h3{font-family:"Bebas Neue",Impact,sans-serif;font-weight:400;font-size:2rem;letter-spacing:.05em;color:var(--brass-l);line-height:1}
+.panel p{color:#e6d7bb;margin-top:10px}
+.facts{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:30px}
+.facts span{border:1px solid #c9a15a55;border-radius:999px;padding:6px 14px;font-size:.9rem;color:#ecdcbc}
+.facts small{display:block;width:100%;text-align:center;color:#a8957b;font-size:.82rem;margin-top:4px}
+
+/* Guests */
+.guests{background:var(--green);border-top:4px solid var(--brass-d);border-bottom:4px solid var(--brass-d)}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.quotes blockquote{background:#0000002e;border:1px solid #c9a15a44;border-radius:6px;padding:24px 22px;position:relative}
+.quotes blockquote::before{content:"\201C";position:absolute;top:-6px;left:16px;font-family:"Libre Caslon Text",Georgia,serif;font-size:4rem;color:var(--brass);line-height:1}
+.quotes p{font-family:"Libre Caslon Text",Georgia,serif;font-style:italic;font-size:1.08rem;color:#f6ecd6;margin-top:18px}
+.quotes footer{margin-top:12px;font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;color:var(--brass-l)}
+.score{text-align:center;margin-top:30px;color:#e6d7bb}
+.score b{font-family:"Bebas Neue",Impact,sans-serif;font-weight:400;font-size:2.4rem;color:var(--brass-l);vertical-align:-4px;margin-right:6px}
+
+/* Finn oss */
+.visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:start}
+.card{border:1px solid #c9a15a55;border-radius:6px;padding:26px 24px;background:linear-gradient(180deg,#ffffff07,#0000)}
+.card h3{font-family:"Bebas Neue",Impact,sans-serif;font-weight:400;font-size:1.9rem;letter-spacing:.05em;color:var(--brass-l);line-height:1;margin-bottom:12px}
+.card p{color:#eadcc0}
+.card p+p{margin-top:10px}
+.card a{color:#fff;text-underline-offset:3px}
+.card .actions{justify-content:flex-start;margin-top:18px}
+.hours{width:100%;border-collapse:collapse}
+.hours td{padding:9px 0;border-bottom:1px solid #ffffff1a}
+.hours td:last-child{text-align:right}
+.hours tr.is-today td{color:var(--brass-l);font-weight:700}
+.hours tr.is-today td:first-child::after{content:" (i dag)";font-weight:400;color:#bfae92}
+.note{font-size:.88rem;color:#b9a68a;margin-top:12px}
+
+footer.site{background:#120b07;color:#ad9b82;border-top:1px solid #c9a15a33;padding:32px 16px;font-size:.86rem;text-align:center}
+footer.site .rule{max-width:220px;margin:0 auto 14px}
+footer.site .by{margin-top:10px;font-size:.78rem;color:#857560}
+
+.mobilebar{display:none}
+@media (max-width:760px){
+  .om-grid,.visit-grid,.quotes{grid-template-columns:1fr}
+  .mobilebar{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;position:fixed;left:10px;right:10px;bottom:10px;z-index:10}
+  .mobilebar a{text-align:center;padding:13px 6px;border-radius:4px;font-weight:700;text-decoration:none;box-shadow:0 8px 22px #0007;font-size:.95rem}
+  .mobilebar .a{background:var(--red);color:#fff;border:1px solid var(--brass)}
+  .mobilebar .b{background:var(--wood);color:var(--brass-l);border:1px solid var(--brass)}
+  footer.site{padding-bottom:96px}
+}
+@media (max-width:540px){
+  nav{gap:14px;font-size:.72rem;letter-spacing:.14em}
+  .sign{padding:9px;margin-top:26px}
+  .sign-in{padding:24px 12px 22px}
+  .ticket{grid-template-columns:96px 1fr;--notch:11px;
+    -webkit-mask:radial-gradient(circle var(--notch) at 96px 0,#0000 98%,#000) top/100% 51% no-repeat,radial-gradient(circle var(--notch) at 96px 100%,#0000 98%,#000) bottom/100% 51% no-repeat;
+    mask:radial-gradient(circle var(--notch) at 96px 0,#0000 98%,#000) top/100% 51% no-repeat,radial-gradient(circle var(--notch) at 96px 100%,#0000 98%,#000) bottom/100% 51% no-repeat}
+  .stub .d{font-size:3.2rem}
+  .stub .m{font-size:1.25rem}
+  .body{padding:18px 16px 18px 20px}
+  .panel,.card{padding:22px 18px}
+}
+</style>
+</head>
+<body>
+<div class="preview">Forhåndsvisning laget for Haakons Pub</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <!-- Small star used as an ornament -->
+    <symbol id="star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2l2.6 6.9L22 9.3l-5.8 4.6 2 7.1L12 17l-6.2 4 2-7.1L2 9.3l7.4-.4z"/></symbol>
+  </defs>
+</svg>
+
+<header class="hero planks">
+  <nav aria-label="Hovedmeny">
+    <a href="#program">Det skjer</a>
+    <a href="#om">Om stedet</a>
+    <a href="#finn">Finn oss</a>
+  </nav>
+
+  <div class="wrap">
+    <div class="sign">
+      <div class="sign-in">
+        <div class="eyebrow">Storgata 95</div>
+        <h1>Haakons</h1>
+        <div class="pub">Pub</div>
+        <div class="town">Lillehammer</div>
+      </div>
+    </div>
+
+    <div class="hero-txt">
+      <p class="motto">"Stedet du går inn når du går ut"<small>Brun pub med scene inne og bakgård på sommeren</small></p>
+      <p class="addr">Storgata 95, 2615 Lillehammer</p>
+      <div class="meta">
+        <span class="pill" id="status"><span class="dot"></span><span id="status-text">Åpent hver dag kl. 13 til 03</span></span>
+        <span class="pill"><span class="stars" aria-hidden="true">&#9733;</span><b>4,4</b> av 5 på Google, 445 omtaler</span>
+      </div>
+      <div class="actions">
+        <a class="btn solid" href="#program">Se hva som skjer</a>
+        <a class="btn" href="tel:+4761263550">Ring 61 26 35 50</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="program" id="program">
+  <div class="wrap">
+    <div class="poster-head">
+      <div class="eyebrow">Scenen</div>
+      <h2><span class="l1">Det skjer</span><span class="l2">på Haakons</span></h2>
+    </div>
+
+    <ul class="events" id="events" aria-live="polite"></ul>
+    <p class="more" id="more" hidden><span>Flere arrangementer kommer</span></p>
+    <p class="fb-line">Følg med på <a href="https://www.facebook.com/HaakonsPubLillehammer/">Facebook-siden vår</a> også.</p>
+  </div>
+</section>
+
+<section class="dark planks" id="om">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Om stedet</div>
+      <h2>En brun pub midt i Storgata</h2>
+      <p>Brun pub, med scene inne og i en lun bakgård på sommeren. Døra er åpen hver dag fra kl. 13 til kl. 03.</p>
+    </div>
+
+    <div class="om-grid">
+      <div class="panel">
+        <svg class="ill" viewBox="0 0 320 150" aria-hidden="true">
+          <!-- Stage: curtain, floor boards, mic stand and an amp -->
+          <path d="M20 10h280" stroke="#c9a15a" stroke-width="3"/>
+          <path d="M20 12c10 40 4 90 14 128H20z" fill="#8e2420"/>
+          <path d="M300 12c-10 40-4 90-14 128h14z" fill="#8e2420"/>
+          <path d="M34 12c18 8 34 10 52 4M286 12c-18 8-34 10-52 4" stroke="#6b1916" stroke-width="6" fill="none"/>
+          <ellipse cx="160" cy="70" rx="90" ry="60" fill="#e8cd92" opacity=".08"/>
+          <path d="M34 130h252" stroke="#c9a15a" stroke-width="2"/>
+          <path d="M34 140h252" stroke="#c9a15a55" stroke-width="1"/>
+          <path d="M160 128V60M160 60l18-14" stroke="#e8cd92" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <path d="M148 128l12-12 12 12" stroke="#e8cd92" stroke-width="3" fill="none"/>
+          <rect x="175" y="38" width="8" height="14" rx="4" transform="rotate(-38 179 45)" fill="#c9a15a"/>
+          <rect x="210" y="92" width="44" height="38" rx="3" fill="#2f1e13" stroke="#c9a15a" stroke-width="2"/>
+          <circle cx="232" cy="113" r="11" fill="none" stroke="#c9a15a88" stroke-width="2"/>
+          <rect x="72" y="104" width="34" height="26" rx="2" fill="#2f1e13" stroke="#c9a15a" stroke-width="2"/>
+        </svg>
+        <h3>Scene inne</h3>
+        <p>Det er en scene inne på puben. Konserter og andre arrangementer legges ut i programmet over.</p>
+      </div>
+      <div class="panel">
+        <svg class="ill" viewBox="0 0 320 150" aria-hidden="true">
+          <!-- Backyard: fence, string lights, a table with two glasses -->
+          <g stroke="#c9a15a66" stroke-width="2">
+            <path d="M20 70h280M20 100h280"/>
+            <path d="M30 60v80M60 60v80M90 60v80M120 60v80M150 60v80M180 60v80M210 60v80M240 60v80M270 60v80M300 60v80"/>
+          </g>
+          <path d="M14 18q73 36 146 0t146 0" stroke="#e8cd92" stroke-width="1.5" fill="none"/>
+          <g fill="#f2d48a">
+            <circle cx="40" cy="30" r="4"/><circle cx="72" cy="36" r="4"/><circle cx="104" cy="34" r="4"/><circle cx="134" cy="25" r="4"/>
+            <circle cx="186" cy="25" r="4"/><circle cx="216" cy="34" r="4"/><circle cx="248" cy="36" r="4"/><circle cx="280" cy="30" r="4"/>
+          </g>
+          <g fill="#f2d48a" opacity=".18">
+            <circle cx="40" cy="30" r="11"/><circle cx="72" cy="36" r="11"/><circle cx="104" cy="34" r="11"/><circle cx="134" cy="25" r="11"/>
+            <circle cx="186" cy="25" r="11"/><circle cx="216" cy="34" r="11"/><circle cx="248" cy="36" r="11"/><circle cx="280" cy="30" r="11"/>
+          </g>
+          <rect x="104" y="96" width="112" height="8" rx="2" fill="#8a6a33"/>
+          <path d="M118 104v36M202 104v36" stroke="#8a6a33" stroke-width="5"/>
+          <path d="M136 72h16l-2 24h-12z" fill="#e8b86a" stroke="#e8cd92" stroke-width="1.5"/>
+          <path d="M136 72h16v5h-16z" fill="#fbf5e6"/>
+          <path d="M168 72h16l-2 24h-12z" fill="#e8b86a" stroke="#e8cd92" stroke-width="1.5"/>
+          <path d="M168 72h16v5h-16z" fill="#fbf5e6"/>
+          <path d="M20 140h280" stroke="#c9a15a" stroke-width="2"/>
+        </svg>
+        <h3>Bakgården</h3>
+        <p>Om sommeren er det også scene ute i den lune bakgården.</p>
+      </div>
+    </div>
+
+    <div class="facts" aria-label="Fra Google-oppføringen">
+      <span>Stort utvalg av øl</span>
+      <span>Cocktailer og vin</span>
+      <span>Uteservering</span>
+      <span>Bordservering</span>
+      <span>Tar imot reservasjoner</span>
+      <span>Rullestolinngang</span>
+      <small>Fra oppføringen på Google</small>
+    </div>
+  </div>
+</section>
+
+<section class="dark guests">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Gjestene sier</div>
+      <h2>Sånn en brun pub skal være</h2>
+    </div>
+    <div class="quotes">
+      <blockquote><p>Sånn en brun pub skal være. Bra musikk i bakgrunnen, øl og en veldig god Irish Coffee</p><footer>Gjest på Google</footer></blockquote>
+      <blockquote><p>Brun, akkurat slik vi liker det! Hyggelig betjening, godt utvalg, hyggelig priser!</p><footer>Gjest på Google</footer></blockquote>
+      <blockquote><p>Skikkelig pub. Alltid god stemning.</p><footer>Gjest på Google</footer></blockquote>
+    </div>
+    <p class="score"><b>4,4</b> av 5 på Google, fra 445 omtaler</p>
+  </div>
+</section>
+
+<section class="dark planks" id="finn">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Finn oss</div>
+      <h2>Storgata 95, Lillehammer</h2>
+    </div>
+    <div class="visit-grid">
+      <div class="card">
+        <h3>Adresse og kontakt</h3>
+        <p>Haakons Pub<br>Storgata 95<br>2615 Lillehammer</p>
+        <p>Telefon: <a href="tel:+4761263550">61 26 35 50</a></p>
+        <p>Facebook: <a href="https://www.facebook.com/HaakonsPubLillehammer/">HaakonsPubLillehammer</a></p>
+        <div class="actions">
+          <a class="btn solid" href="https://www.google.com/maps/search/?api=1&amp;query=Haakons+Pub%2C+Storgata+95%2C+2615+Lillehammer">Åpne i Google Maps</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Åpningstider</h3>
+        <table class="hours"><tbody id="hours"></tbody></table>
+        <p class="note">Vi stenger kl. 03 natt til dagen etter.</p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site">
+  <div class="rule"><svg aria-hidden="true"><use href="#star"/></svg></div>
+  Haakons Pub AS, org.nr. 976 037 782<br>Storgata 95, 2615 Lillehammer, <a href="tel:+4761263550" style="color:inherit">61 26 35 50</a>
+  <p class="by">Forslag laget av Elias Berntsen</p>
+</footer>
+
+<div class="mobilebar">
+  <a class="a" href="#program">Det skjer</a>
+  <a class="b" href="tel:+4761263550">Ring</a>
+  <a class="b" href="https://www.google.com/maps/dir/?api=1&amp;destination=Haakons+Pub%2C+Storgata+95%2C+2615+Lillehammer">Veibeskrivelse</a>
+</div>
+
+<script>
+// ---------- Time in Lillehammer (Europe/Oslo), whatever the visitor's clock says ----------
+const DAYS = ["Søndag", "Mandag", "Tirsdag", "Onsdag", "Torsdag", "Fredag", "Lørdag"];
+const WD = ["søn", "man", "tir", "ons", "tor", "fre", "lør"];
+const MON = ["jan", "feb", "mar", "apr", "mai", "jun", "jul", "aug", "sep", "okt", "nov", "des"];
+
+function osloNow() {
+  const p = {};
+  for (const x of new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/Oslo", year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", hourCycle: "h23" }).formatToParts(new Date())) p[x.type] = x.value;
+  const date = new Date(Date.UTC(+p.year, +p.month - 1, +p.day));
+  return { iso: `${p.year}-${p.month}-${p.day}`, day: date.getUTCDay(), mins: +p.hour * 60 + +p.minute };
+}
+const now = osloNow();
+
+// ---------- Open-now badge: every day 13.00 to 03.00 (past midnight) ----------
+const OPEN = 13 * 60, CLOSE = 3 * 60;
+const isOpen = now.mins >= OPEN || now.mins < CLOSE;
+const st = document.getElementById("status"), stt = document.getElementById("status-text");
+if (isOpen) { st.classList.add("open"); stt.textContent = "Åpent nå, stenger kl. 03"; }
+else stt.textContent = "Stengt nå, åpner i dag kl. 13";
+
+// Hours table, Monday first. The "today" row follows the pub's day: before 03 it is still yesterday's night.
+const pubDay = now.mins < CLOSE ? (now.day + 6) % 7 : now.day;
+document.getElementById("hours").innerHTML = [1, 2, 3, 4, 5, 6, 0].map(d =>
+  `<tr class="${d === pubDay ? "is-today" : ""}"><td>${DAYS[d]}</td><td>13.00 til 03.00</td></tr>`
+).join("");
+
+// ---------- Program from Google Sheet ----------
+// The owner edits a Google Sheet from the phone. Columns (row 1 is the header):
+//   Dato (YYYY-MM-DD) | Tid | Tittel | Beskrivelse | Billettlenke
+// Publish it with File > Share > Publish to web > CSV, and paste the link here.
+// Empty = show the built-in list below.
+const SHEET_CSV = "";
+
+// Built-in list: only events checked on Haakons' own Facebook page (2026-10-28).
+const EVENTS = [
+  { dato: "2026-12-26", tid: "18:00", tittel: "RomjulsBlues på Haakons", beskrivelse: "Med Vibro Kings og Tumbling Dice.", billett: "https://fabnite.com/" }
+];
+
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+// Minimal CSV parser (handles quoted fields with commas and line breaks).
+function parseCsv(text) {
+  const rows = []; let row = [], field = "", q = false;
+  for (let i = 0; i < text.length; i++) {
+    const c = text[i];
+    if (q) { if (c === '"' && text[i + 1] === '"') { field += '"'; i++; } else if (c === '"') q = false; else field += c; }
+    else if (c === '"') q = true;
+    else if (c === ",") { row.push(field); field = ""; }
+    else if (c === "\n" || c === "\r") { if (c === "\r" && text[i + 1] === "\n") i++; row.push(field); rows.push(row); row = []; field = ""; }
+    else field += c;
+  }
+  if (field || row.length) { row.push(field); rows.push(row); }
+  return rows;
+}
+
+// Accepts 2026-12-26, and also 26.12.2026 in case someone types it the Norwegian way.
+function normDate(s) {
+  s = (s || "").trim();
+  let m = s.match(/^(\d{4})-(\d{1,2})-(\d{1,2})$/);
+  if (m) return `${m[1]}-${m[2].padStart(2, "0")}-${m[3].padStart(2, "0")}`;
+  m = s.match(/^(\d{1,2})\.(\d{1,2})\.(\d{4})$/);
+  if (m) return `${m[3]}-${m[2].padStart(2, "0")}-${m[1].padStart(2, "0")}`;
+  return "";
+}
+const fmtTime = s => { const m = (s || "").trim().match(/^(\d{1,2})[:.](\d{2})$/); return m ? `kl. ${m[1].padStart(2, "0")}.${m[2]}` : (s || "").trim(); };
+const safeUrl = u => /^https?:\/\//i.test((u || "").trim()) ? u.trim() : "";
+
+function renderEvents(list) {
+  const upcoming = list
+    .map(e => ({ ...e, dato: normDate(e.dato) }))
+    .filter(e => e.dato && e.tittel && e.dato >= now.iso)
+    .sort((a, b) => (a.dato + (a.tid || "")).localeCompare(b.dato + (b.tid || "")));
+  const ul = document.getElementById("events");
+  if (!upcoming.length) {
+    ul.innerHTML = "";
+    document.getElementById("more").hidden = false;
+    return;
+  }
+  ul.innerHTML = upcoming.map(e => {
+    const [y, mo, d] = e.dato.split("-").map(Number);
+    const wd = WD[new Date(Date.UTC(y, mo - 1, d)).getUTCDay()];
+    const when = `${wd} ${d}. ${MON[mo - 1]}` + (e.tid ? `, ${fmtTime(e.tid)}` : "");
+    const url = safeUrl(e.billett);
+    return `<li class="ticket">
+      <div class="stub" aria-hidden="true"><span class="wd">${wd}</span><span class="d">${d}</span><span class="m">${MON[mo - 1]}</span></div>
+      <div class="body">
+        <span class="when">${esc(when)}</span>
+        <h3>${esc(e.tittel)}</h3>
+        ${e.beskrivelse ? `<p>${esc(e.beskrivelse)}</p>` : ""}
+        ${url ? `<a class="btn" href="${esc(url)}" target="_blank" rel="noopener">Kjøp billett</a>` : ""}
+      </div>
+    </li>`;
+  }).join("");
+  document.getElementById("more").hidden = upcoming.length > 1;
+}
+
+renderEvents(EVENTS);
+if (SHEET_CSV) {
+  fetch(SHEET_CSV + "&t=" + Date.now(), { cache: "no-store" }).then(r => r.ok ? r.text() : Promise.reject(r.status)).then(text => {
+    const rows = parseCsv(text).slice(1)
+      .map(([dato = "", tid = "", tittel = "", beskrivelse = "", billett = ""]) => ({ dato, tid: tid.trim(), tittel: tittel.trim(), beskrivelse: beskrivelse.trim(), billett }))
+      .filter(e => e.tittel);
+    if (rows.length) renderEvents(rows);  // keep the built-in list if the sheet is empty
+  }).catch(() => {});
+}
+</script>
+</body>
+</html>
