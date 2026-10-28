@@ -1,0 +1,588 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Murer'n &amp; Snekker'n AS, Lillehammer</title>
+<meta name="description" content="Murer'n &amp; Snekker'n AS i Lillehammer. Mur, tømrer og flis i samme firma. Sentralt godkjent hos DiBK.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f6f1e7; --card:#fffbf4; --ink:#1f1b17; --muted:#5d554b; --line:#e2d7c5;
+  --brick:#a8402c; --brick-d:#7c2c1e; --brick-l:#f0a487;
+  --spruce:#24402f; --spruce-d:#17291f; --spruce-l:#a9d1b2;
+  --mortar:#d9cbb6; --gold:#e8c46a;
+  --brickbg:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='48'%3E%3Crect width='120' height='48' fill='%23cdbba2'/%3E%3Crect x='2' y='2' width='56' height='20' rx='1.5' fill='%23a8402c'/%3E%3Crect x='62' y='2' width='56' height='20' rx='1.5' fill='%239c3a28'/%3E%3Crect x='-28' y='26' width='56' height='20' rx='1.5' fill='%23b24b34'/%3E%3Crect x='32' y='26' width='56' height='20' rx='1.5' fill='%23a23f2c'/%3E%3Crect x='92' y='26' width='56' height='20' rx='1.5' fill='%23b24b34'/%3E%3C/svg%3E");
+  --grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='58' height='240'%3E%3Cg fill='none' stroke='%23000' stroke-opacity='.16' stroke-width='1'%3E%3Cpath d='M14 0c3 40-4 70 1 120s-3 80 0 120'/%3E%3Cpath d='M30 0c-2 50 5 80 0 130s3 70 1 110'/%3E%3Cpath d='M44 0c2 30-3 60 1 100 3 30-6 60-1 140'/%3E%3Cellipse cx='24' cy='150' rx='4' ry='9'/%3E%3C/g%3E%3C/svg%3E");
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1.0625rem/1.6 "Public Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img,svg{display:block}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+h1,h2,h3,.disp{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:800;letter-spacing:-.02em;line-height:1.02;margin:0}
+.preview{background:var(--gold);color:#1f1a0e;text-align:center;font-size:.8rem;font-weight:600;padding:6px 12px}
+.ap{color:var(--brick-l)}
+.ap-g{color:var(--spruce-l)}
+
+/* Textures */
+.t-brick{background-color:#a8402c;background-image:var(--brickbg);background-size:120px 48px}
+.t-board{background-color:var(--spruce);background-image:var(--grain),linear-gradient(90deg,#ffffff0d,#0000 30%,#00000014),repeating-linear-gradient(90deg,#2a4a37 0 54px,#13221a 54px 56px,#3a5d48 56px 58px);background-size:58px 240px,58px 100%,58px 100%}
+.t-tile{background-color:#ece4d6;background-image:linear-gradient(#c9bba5 2px,transparent 2px),linear-gradient(90deg,#c9bba5 2px,transparent 2px);background-size:34px 34px}
+.t-pine{background-color:#d8a86c;background-image:var(--grain),repeating-linear-gradient(0deg,#d8a86c 0 46px,#a97a45 46px 48px,#e2b77f 48px 50px);background-size:58px 240px,100% 50px}
+
+/* Header */
+header.top{background:var(--paper);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:1.15rem;letter-spacing:-.01em}
+.brand .mark{width:30px;height:30px;border-radius:6px;overflow:hidden;display:grid;grid-template-columns:1fr 1fr;flex:none;box-shadow:0 0 0 1px #0000001a}
+.brand .mark span:first-child{background-size:60px 24px}
+.brand .mark span:last-child{background-size:29px 120px,29px 100%,29px 100%}
+.brand .ap{color:var(--brick)}
+.brand .ap-g{color:var(--spruce)}
+nav.main{display:none;gap:22px;font-weight:600;font-size:.95rem}
+nav.main a{text-decoration:none;padding:6px 0;border-bottom:2px solid transparent}
+nav.main a:hover{border-color:var(--brick)}
+header.top .hdr-call{display:none}
+
+/* Hero split */
+.hero{position:relative;background:var(--paper)}
+.hero-top{position:relative}
+.split{display:grid;grid-template-rows:1fr 1fr;position:relative;margin:0}
+.half{position:relative;display:flex;padding:22px 20px;min-height:160px;overflow:hidden}
+.half .word{font-size:clamp(3.6rem,16vw,8rem);color:#fffaf0;text-shadow:0 2px 0 #00000030,0 10px 30px #0000003d;line-height:.9}
+.half .tag{position:absolute;font:700 .72rem/1 "Public Sans",sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#fffaf0;background:#00000040;padding:7px 10px;border-radius:999px;backdrop-filter:blur(2px)}
+.half.mur{align-items:flex-end;justify-content:flex-start;padding-bottom:26px;padding-top:56px}
+.half.mur .tag{top:18px;left:20px}
+.half.snekker{align-items:flex-start;justify-content:flex-end;padding-top:56px;padding-bottom:78px}
+.half.snekker .tag{top:16px;left:20px}
+.half.mur::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#0000 40%,#3b120a66)}
+.half.snekker::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#0000 40%,#0a170f66)}
+.half > *{position:relative;z-index:1}
+.amp{position:absolute;z-index:3;left:auto;right:22px;top:calc(50% - 26px);transform:translateY(-50%) rotate(-6deg);width:76px;height:76px;border-radius:50%;background:var(--paper);color:var(--ink);display:grid;place-items:center;font-size:2.8rem;font-weight:800;box-shadow:0 0 0 6px #fffaf055,0 12px 28px #00000040;padding-bottom:6px}
+.ridge{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:auto;z-index:2;pointer-events:none}
+.hero-body{padding:8px 0 40px}
+.hero-body .wrap{display:grid;gap:26px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.78rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--brick-d);margin:0 0 12px}
+.eyebrow::before{content:"";width:22px;height:10px;border-radius:2px;background:linear-gradient(90deg,var(--brick) 0 50%,var(--spruce) 50%)}
+.lead{font-size:clamp(1.15rem,3.6vw,1.6rem);line-height:1.35;margin:0 0 22px;font-weight:500;max-width:30ch}
+.lead strong{font-weight:700}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 24px;border-radius:12px;font-weight:700;font-size:1.05rem;text-decoration:none;border:2px solid transparent;cursor:pointer;font-family:inherit}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-brick{background:var(--brick);color:#fff;box-shadow:0 4px 0 var(--brick-d)}
+.btn-brick:hover{background:#b54934}
+.btn-line{border-color:var(--spruce);color:var(--spruce);background:transparent}
+.btn-line:hover{background:var(--spruce);color:#fff}
+.trust{display:inline-flex;align-items:center;gap:8px;margin-top:16px;font-weight:600;font-size:.95rem;color:var(--spruce);text-decoration:none;border-bottom:1px solid #24402f55;padding-bottom:2px}
+.trust svg{width:18px;height:18px}
+.hero-body .stamp-wrap{display:none}
+.stamp-wrap{display:flex;align-items:center;gap:16px;text-decoration:none;color:var(--ink)}
+.stamp{width:84px;height:84px;flex:none;filter:drop-shadow(0 6px 12px #24402f33)}
+.stamp-wrap:hover .stamp{transform:rotate(-8deg);transition:transform .3s}
+.stamp-wrap p{margin:0;font-size:.95rem;color:var(--muted);max-width:26ch}
+.stamp-wrap p b{display:block;color:var(--ink);font-size:1.05rem}
+
+/* Kapasitet: spirit level */
+.level{margin:4px 0 0;background:#f2cf4d;border-radius:14px;padding:12px;display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:center;box-shadow:inset 0 -4px 0 #d5ae2a,0 10px 24px #24402f1f;position:relative;border:1px solid #c79f22}
+.level::before,.level::after{content:"";position:absolute;top:50%;width:8px;height:8px;border-radius:50%;background:#c79f22;transform:translateY(-50%)}
+.level::before{left:8px}.level::after{right:8px}
+.vial{width:92px;height:34px;border-radius:999px;background:linear-gradient(180deg,#d9f0b3,#a8d36e);border:2px solid #7f9a3d;position:relative;box-shadow:inset 0 2px 4px #00000026;margin-left:12px}
+.vial::before,.vial::after{content:"";position:absolute;top:3px;bottom:3px;width:2px;background:#3d4f17}
+.vial::before{left:31px}.vial::after{right:31px}
+.bubble{position:absolute;top:7px;left:50%;width:22px;height:16px;margin-left:-11px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#fff,#f4ffe0 60%,#d7eda6);animation:settle 2.4s ease-out 1}
+@keyframes settle{0%{transform:translateX(-26px)}40%{transform:translateX(14px)}70%{transform:translateX(-5px)}100%{transform:none}}
+.level-txt{min-width:0;padding-right:10px}
+.level-txt small{display:block;font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#5b4a0c}
+.level-txt b{display:block;font-family:"Bricolage Grotesque",sans-serif;font-size:1.15rem;line-height:1.25;color:#1f1b17}
+.level-msg{display:none;margin:6px 0 0;font-size:.95rem;color:#3a300a}
+.level-msg.show{display:block}
+.level a{display:none}
+
+/* Sections */
+section.sec{padding:64px 0}
+.sec-head{max-width:640px;margin-bottom:30px}
+.sec-head h2{font-size:clamp(2rem,6vw,3rem)}
+.sec-head p{color:var(--muted);margin:12px 0 0}
+.kicker{font-size:.78rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--spruce);margin:0 0 10px}
+
+.cards{display:grid;gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+.card .swatch{height:92px;position:relative}
+.card .swatch span{position:absolute;left:14px;bottom:-18px;width:44px;height:44px;border-radius:12px;background:var(--card);display:grid;place-items:center;border:1px solid var(--line)}
+.card .swatch svg{width:24px;height:24px}
+.card .body{padding:30px 20px 22px}
+.card h3{font-size:1.45rem;margin-bottom:8px}
+.card p{margin:0;color:var(--muted)}
+.card .note{margin-top:14px;font-size:.85rem;font-weight:600;color:var(--spruce)}
+.t-paper{background:repeating-linear-gradient(135deg,#efe6d6 0 10px,#e7dcc8 10px 20px)}
+
+/* Seam band */
+.seam{display:grid;border-radius:20px;overflow:hidden;margin-top:28px;background:var(--spruce-d);color:#fffaf0}
+.seam .pat{display:grid;grid-template-columns:1fr 1fr;min-height:120px}
+.seam .txt{padding:26px 22px}
+.seam h3{font-size:clamp(1.6rem,4.4vw,2.2rem);margin-bottom:10px}
+.seam p{margin:0;color:#e5ddd0;max-width:52ch}
+
+/* Steps */
+.steps{display:grid;gap:14px;counter-reset:s}
+.step{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px 20px 22px 86px;position:relative;min-height:108px}
+.step::before{counter-increment:s;content:counter(s);position:absolute;left:18px;top:18px;width:50px;height:50px;border-radius:10px;font:800 1.6rem/50px "Bricolage Grotesque",sans-serif;text-align:center;color:#fff;background:var(--brick)}
+.step:nth-child(2)::before{background:var(--spruce)}
+.step:nth-child(3)::before{background:#b98a4e}
+.step h3{font-size:1.3rem;margin-bottom:6px}
+.step p{margin:0;color:var(--muted)}
+
+/* Photos placeholder */
+.photos{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.photo{aspect-ratio:4/3;border-radius:14px;position:relative;overflow:hidden}
+.photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#0000 55%,#00000047)}
+.photo span{position:absolute;left:12px;bottom:10px;z-index:1;color:#fff;font-weight:700;font-size:.9rem;text-shadow:0 1px 3px #0008}
+.photo.t-tile span{color:#1f1b17;text-shadow:none}
+.photo.t-tile::after{background:none}
+.photos-note{margin:16px 0 0;color:var(--muted);font-style:italic}
+
+/* Approvals */
+.cert{background:var(--card);border:2px solid var(--spruce);border-radius:18px;padding:24px 20px;position:relative;box-shadow:8px 8px 0 #24402f22}
+.cert-top{display:flex;gap:18px;align-items:center;flex-wrap:wrap;margin-bottom:18px}
+.cert-top .stamp{width:96px;height:96px}
+.cert h3{font-size:1.7rem}
+.cert .period{margin:6px 0 0;font-weight:600;color:var(--spruce)}
+.areas{list-style:none;margin:0 0 20px;padding:0;display:grid;gap:10px}
+.areas li{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:12px 14px;border-radius:10px;background:#f1ebdf}
+.areas li b{font-weight:600}
+.areas li small{display:block;color:var(--muted);font-size:.85rem}
+.chip{flex:none;font-size:.75rem;font-weight:700;padding:5px 9px;border-radius:999px;background:var(--spruce);color:#fff;white-space:nowrap}
+.cert a.reg{font-weight:700;color:var(--brick-d)}
+.mini{display:grid;gap:12px;margin-top:16px}
+.mini div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.mini b{display:block;font-family:"Bricolage Grotesque",sans-serif;font-size:1.2rem}
+.mini p{margin:4px 0 0;color:var(--muted);font-size:.95rem}
+
+/* About */
+.about{background:var(--spruce-d);color:#f4eee4;position:relative;overflow:hidden}
+.about .kicker{color:var(--spruce-l)}
+.about .sec-head p{color:#d8d0c2}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:8px}
+.fact{border-top:3px solid var(--brick-l);padding-top:12px}
+.fact b{display:block;font:800 clamp(2rem,8vw,3.2rem)/1 "Bricolage Grotesque",sans-serif;color:#fffaf0}
+.fact span{font-size:.9rem;color:#cfc6b6}
+.about .owner{margin:26px 0 0;padding:16px 18px;border:1px dashed #ffffff40;border-radius:12px;color:#d8d0c2;font-style:italic;max-width:640px}
+.about-ridge{position:absolute;right:-40px;bottom:0;width:520px;opacity:.12;pointer-events:none}
+
+/* Form */
+.quote{display:grid;gap:24px}
+form.q{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px 18px;display:grid;gap:16px;box-shadow:0 16px 40px #24402f14}
+.f label{display:block;font-weight:700;margin-bottom:6px}
+.f label small{font-weight:500;color:var(--muted)}
+.f input,.f select,.f textarea{width:100%;font:inherit;font-size:1.05rem;padding:14px;border:2px solid #d4c7b2;border-radius:12px;background:#fff;color:var(--ink);min-height:54px}
+.f textarea{min-height:120px;resize:vertical}
+.f input:focus,.f select:focus,.f textarea:focus{outline:none;border-color:var(--spruce);box-shadow:0 0 0 4px #24402f22}
+.row2{display:grid;gap:16px}
+form.q .btn{width:100%;min-height:60px;font-size:1.1rem}
+.done{display:none;background:#e7f1e9;border:2px solid var(--spruce);border-radius:14px;padding:18px;font-weight:600;color:var(--spruce-d)}
+.done.show{display:block}
+.contact-card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px 20px;align-self:start}
+.contact-card h3{font-size:1.5rem;margin-bottom:12px}
+.big-tel{display:flex;align-items:center;gap:12px;text-decoration:none;font:800 clamp(1.8rem,7vw,2.4rem)/1.1 "Bricolage Grotesque",sans-serif;color:var(--brick-d);margin:6px 0 4px}
+.big-tel svg{width:30px;height:30px}
+.contact-card p{margin:10px 0 0;color:var(--muted)}
+.contact-card .place{display:flex;gap:10px;align-items:center;font-weight:600;color:var(--ink);margin-top:18px}
+.contact-card .place svg{width:20px;height:20px;color:var(--spruce)}
+
+/* Footer */
+footer{background:#13100d;color:#cbc2b4;padding:34px 0 110px;font-size:.92rem}
+footer .split-line{height:8px;display:grid;grid-template-columns:1fr 1fr;margin-bottom:26px;border-radius:4px;overflow:hidden}
+footer b{color:#fffaf0}
+footer p{margin:4px 0}
+
+/* Sticky bar */
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:20;display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:#fffbf4f2;backdrop-filter:blur(8px);border-top:1px solid var(--line);box-shadow:0 -6px 20px #0000001a}
+.sticky .btn{min-height:52px;padding:0 12px;width:100%}
+
+@media (min-width:560px){
+  .photos{grid-template-columns:repeat(4,1fr)}
+  .row2{grid-template-columns:1fr 1fr}
+  .mini{grid-template-columns:1fr 1fr}
+}
+@media (min-width:820px){
+  nav.main{display:flex}
+  header.top .hdr-call{display:inline-flex;min-height:44px;padding:0 16px;font-size:.95rem}
+  .split{grid-template-rows:none;grid-template-columns:1fr 1fr;min-height:min(62vh,560px)}
+  .half{min-height:0;padding:40px 4vw 150px}
+  .half .word{font-size:clamp(4rem,8.4vw,8.4rem)}
+  .half.mur{justify-content:flex-end;align-items:flex-end;padding-right:70px;padding-bottom:150px}
+  .half.snekker{justify-content:flex-start;align-items:flex-end;padding-left:70px;padding-top:40px;padding-bottom:150px}
+  .half.mur .tag{top:28px;left:28px}
+  .half.snekker .tag{top:28px;left:auto;right:28px}
+  .half.mur::after,.half.snekker::after{background:linear-gradient(180deg,#0000 35%,#0000004d)}
+  .amp{left:50%;right:auto;top:auto;bottom:150px;transform:translate(-50%,0) rotate(-6deg);width:104px;height:104px;font-size:3.8rem}
+  .hero-body{padding:0 0 48px}
+  .hero-body .wrap{grid-template-columns:1.4fr 1fr}
+  .hero-body .stamp-wrap{display:flex;justify-self:end}
+  .trust{display:none}
+  .stamp{width:150px;height:150px}
+  .cards{grid-template-columns:repeat(4,1fr)}
+  .seam{grid-template-columns:1fr 1.3fr}
+  .seam .txt{padding:34px 36px;align-self:center}
+  .steps{grid-template-columns:repeat(3,1fr)}
+  .step{padding:84px 22px 24px}
+  .step::before{left:22px;top:22px}
+  .approvals{display:grid;grid-template-columns:1.5fr 1fr;gap:20px;align-items:start}
+  .mini{grid-template-columns:1fr;margin-top:0}
+  .cert{padding:30px}
+  .quote{grid-template-columns:1.5fr 1fr;align-items:start}
+  form.q{padding:30px}
+  .sticky{display:none}
+  footer{padding-bottom:40px}
+}
+@media (prefers-reduced-motion:reduce){.bubble{animation:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="preview">Forhåndsvisning laget for Murer'n &amp; Snekker'n AS, bildene kommer fra dere</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#">
+      <span class="mark" aria-hidden="true"><span class="t-brick"></span><span class="t-board"></span></span>
+      <span>Murer<span class="ap">'</span>n &amp; Snekker<span class="ap-g">'</span>n</span>
+    </a>
+    <nav class="main" aria-label="Hovedmeny">
+      <a href="#tjenester">Tjenester</a>
+      <a href="#godkjenning">Godkjenning</a>
+      <a href="#om">Om oss</a>
+      <a href="#tilbud">Kontakt</a>
+    </nav>
+    <a class="btn btn-line hdr-call" href="tel:+4791733388">Ring 917 33 388</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-top">
+  <h1 class="split" aria-label="Murer'n og Snekker'n">
+    <span class="half mur t-brick" aria-hidden="true"><span class="tag">Mur og flis</span><span class="word">Murer<span class="ap-g">'</span>n</span></span>
+    <span class="amp" aria-hidden="true">&amp;</span>
+    <span class="half snekker t-board" aria-hidden="true"><span class="tag">Tømrer og snekker</span><span class="word">Snekker<span class="ap">'</span>n</span></span>
+  </h1>
+  <svg class="ridge" viewBox="0 0 1440 150" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 96 L90 70 L170 84 L260 44 L330 62 L420 30 L520 66 L600 52 L700 86 L790 58 L880 72 L960 38 L1040 60 L1130 26 L1220 64 L1300 50 L1380 74 L1440 64 V150 H0 Z" fill="#f6f1e7" opacity=".35"/>
+    <path d="M0 122 L110 98 L200 110 L300 82 L380 100 L470 76 L560 104 L660 90 L740 112 L830 92 L920 106 L1010 80 L1100 100 L1190 84 L1280 108 L1370 96 L1440 104 V150 H0 Z" fill="#f6f1e7"/>
+  </svg>
+  </div>
+  <div class="hero-body">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">Mur, tre og flis i Lillehammer</p>
+        <p class="lead">Murer og snekker i <strong>samme firma</strong>. Vi murer, bygger i tre og legger flis, så du har én å ringe til.</p>
+        <div class="btns">
+          <a class="btn btn-brick" href="#tilbud">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16v4z"/><path d="M13.5 6.5l4 4"/></svg>
+            Få tilbud
+          </a>
+          <a class="btn btn-line" href="tel:+4791733388">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+            Ring 917 33 388
+          </a>
+        </div>
+        <a class="trust" href="https://sgregister.dibk.no/enterprises/891216432" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/></svg>Sentralt godkjent hos DiBK til 2027</a>
+      </div>
+      <a class="stamp-wrap" href="https://sgregister.dibk.no/enterprises/891216432" target="_blank" rel="noopener">
+        <svg class="stamp" viewBox="0 0 160 160" aria-hidden="true">
+          <defs><path id="ring" d="M80 80 m-58 0 a58 58 0 1 1 116 0 a58 58 0 1 1 -116 0"/></defs>
+          <circle cx="80" cy="80" r="76" fill="#24402f"/>
+          <circle cx="80" cy="80" r="70" fill="none" stroke="#a9d1b2" stroke-width="1.5" stroke-dasharray="3 4"/>
+          <text font-family="Public Sans,sans-serif" font-size="12.5" font-weight="700" letter-spacing="3.2" fill="#fffaf0"><textPath href="#ring">SENTRALT GODKJENT · DIBK · TIL 2027 ·</textPath></text>
+          <circle cx="80" cy="80" r="40" fill="#a8402c"/>
+          <path d="M62 81l12 12 25-27" fill="none" stroke="#fffaf0" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <p><b>Sentralt godkjent</b>for mur, tømrer og som ansvarlig søker. Gyldig til 16.05.2027.</p>
+      </a>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="level" id="kapasitet">
+      <div class="vial" aria-hidden="true"><span class="bubble"></span></div>
+      <div class="level-txt">
+        <small>Ledig kapasitet</small>
+        <b id="kap-text">Ta kontakt for ledig kapasitet og pris.</b>
+        <p class="level-msg" id="kap-msg"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="tjenester">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kicker">Tjenester</p>
+      <h2>Tre fag under samme tak</h2>
+      <p>Navnet sier det meste. Her er det murer og snekker i samme firma, og flisleggingen tar vi også.</p>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <div class="swatch t-brick"><span><svg viewBox="0 0 24 24" fill="none" stroke="#a8402c" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1"/><path d="M3 9.3h18M3 14.7h18M12 4v5.3M7.5 9.3v5.4M16.5 9.3v5.4M12 14.7V20"/></svg></span></div>
+        <div class="body">
+          <h3>Murarbeid</h3>
+          <p>Mur er halve navnet vårt. Firmaet står i Mesterregisteret som murmester.</p>
+          <p class="note">Sentralt godkjent for murarbeid</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="swatch t-board"><span><svg viewBox="0 0 24 24" fill="none" stroke="#24402f" stroke-width="2" aria-hidden="true"><path d="M4 3h5v18H4zM10 3h5v18h-5zM16 3h4v18h-4z"/><path d="M6.5 7c.6 3-.6 6 0 10M12.5 6c-.6 4 .6 7 0 11"/></svg></span></div>
+        <div class="body">
+          <h3>Tømrer og snekker</h3>
+          <p>Den andre halvdelen. Tømrerarbeid og trekonstruksjoner, fra samme folk som murer.</p>
+          <p class="note">Sentralt godkjent for tømrerarbeid</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="swatch t-tile"><span><svg viewBox="0 0 24 24" fill="none" stroke="#5d554b" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="8" rx="1"/><rect x="3" y="13" width="8" height="8" rx="1"/><rect x="13" y="13" width="8" height="8" rx="1"/></svg></span></div>
+        <div class="body">
+          <h3>Flislegging</h3>
+          <p>Vi legger flis også. Da slipper du å hente inn et eget firma til det.</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="swatch t-paper"><span><svg viewBox="0 0 24 24" fill="none" stroke="#7c2c1e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5M9 13h7M9 17h5"/></svg></span></div>
+        <div class="body">
+          <h3>Byggesøknad</h3>
+          <p>Vi er godkjent som ansvarlig søker i tiltaksklasse 1, så vi kan stå for søknaden når jobben krever det.</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="seam">
+      <div class="pat" aria-hidden="true"><div class="t-brick"></div><div class="t-board"></div></div>
+      <div class="txt">
+        <h3>Der mur møter tre</h3>
+        <p>Mange jobber trenger både murer og snekker, og ofte flis i tillegg. Hos oss er det samme firma, så du har én å forholde deg til fra start til slutt.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:8px">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kicker">Slik jobber vi</p>
+      <h2>Tre enkle steg</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><h3>Du tar kontakt</h3><p>Ring oss eller fyll ut skjemaet under. Fortell kort hva du har tenkt.</p></div>
+      <div class="step"><h3>Vi kommer på befaring</h3><p>Vi ser på jobben der den skal gjøres, og tar en prat om hva som trengs.</p></div>
+      <div class="step"><h3>Du får et fast tilbud</h3><p>Etter befaringen får du et tilbud på jobben, så du vet hva du sier ja til.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:8px">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kicker">Bilder av jobbene</p>
+      <h2>Mur, tre og flis</h2>
+    </div>
+    <div class="photos">
+      <div class="photo t-brick"><span>Mur</span></div>
+      <div class="photo t-board"><span>Tømrer</span></div>
+      <div class="photo t-tile"><span>Flis</span></div>
+      <div class="photo t-pine"><span>Snekker</span></div>
+    </div>
+    <p class="photos-note">Her legger vi inn bilder av jobbene deres.</p>
+  </div>
+</section>
+
+<section class="sec" id="godkjenning" style="padding-top:8px">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kicker">Godkjenninger</p>
+      <h2>Sjekk oss gjerne opp</h2>
+      <p>Sentral godkjenning betyr at Direktoratet for byggkvalitet har sjekket utdanning, erfaring og rutiner i firmaet.</p>
+    </div>
+    <div class="approvals">
+      <div class="cert">
+        <div class="cert-top">
+          <svg class="stamp" viewBox="0 0 160 160" aria-hidden="true">
+            <defs><path id="ring2" d="M80 80 m-58 0 a58 58 0 1 1 116 0 a58 58 0 1 1 -116 0"/></defs>
+            <circle cx="80" cy="80" r="76" fill="#a8402c"/>
+            <circle cx="80" cy="80" r="70" fill="none" stroke="#f0a487" stroke-width="1.5" stroke-dasharray="3 4"/>
+            <text font-family="Public Sans,sans-serif" font-size="12.5" font-weight="700" letter-spacing="3.2" fill="#fffaf0"><textPath href="#ring2">SENTRAL GODKJENNING · DIBK ·</textPath></text>
+            <circle cx="80" cy="80" r="40" fill="#24402f"/>
+            <path d="M62 81l12 12 25-27" fill="none" stroke="#fffaf0" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <div>
+            <h3>Sentral godkjenning</h3>
+            <p class="period">16.05.2024 til 16.05.2027</p>
+          </div>
+        </div>
+        <ul class="areas">
+          <li><span><b>Murarbeid</b><small>Utførende</small></span><span class="chip">Tiltaksklasse 1</span></li>
+          <li><span><b>Tømrerarbeid og montering av trekonstruksjoner</b><small>Utførende</small></span><span class="chip">Tiltaksklasse 1</span></li>
+          <li><span><b>Ansvarlig søker</b><small>For alle typer tiltak</small></span><span class="chip">Tiltaksklasse 1</span></li>
+        </ul>
+        <a class="reg" href="https://sgregister.dibk.no/enterprises/891216432" target="_blank" rel="noopener">Se godkjenningen i registeret hos DiBK</a>
+      </div>
+      <div class="mini">
+        <div><b>Godkjent lærebedrift</b><p>Står oppført som godkjent lærebedrift på <a href="https://utdanning.no/finnlarebedrift/bedrift/891216432" target="_blank" rel="noopener">utdanning.no</a>.</p></div>
+        <div><b>Murmester</b><p>Firmaet er registrert med murmester i Mesterregisteret.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec about" id="om">
+  <svg class="about-ridge" viewBox="0 0 520 160" aria-hidden="true"><path d="M0 160 L70 90 L120 120 L200 40 L260 90 L330 20 L410 100 L460 70 L520 110 V160 Z" fill="#fffaf0"/></svg>
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kicker">Om oss</p>
+      <h2>Murer<span class="ap">'</span>n &amp; Snekker<span class="ap-g">'</span>n</h2>
+      <p>Et håndverksfirma i Lillehammer med mur, tre og flis i samme hus. Vi startet i 2007 og er i dag 11 ansatte.</p>
+    </div>
+    <div class="facts">
+      <div class="fact"><b>2007</b><span>startet firmaet</span></div>
+      <div class="fact"><b>11</b><span>ansatte</span></div>
+      <div class="fact"><b>3</b><span>fag: mur, tre, flis</span></div>
+    </div>
+    <p class="owner">Her kan dere skrive litt om dere selv, folka i firmaet og hvordan dere liker å jobbe.</p>
+  </div>
+</section>
+
+<section class="sec" id="tilbud">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kicker">Kontakt</p>
+      <h2>Få et uforpliktende tilbud</h2>
+      <p>Fortell kort hva det gjelder, så tar vi kontakt.</p>
+    </div>
+    <div class="quote">
+      <form class="q" id="qform" novalidate>
+        <div class="f">
+          <label for="hva">Hva gjelder det</label>
+          <select id="hva" name="hva">
+            <option>Murarbeid</option>
+            <option>Tømrer og snekker</option>
+            <option>Flislegging</option>
+            <option>Byggesøknad</option>
+            <option>Annet</option>
+          </select>
+        </div>
+        <div class="f">
+          <label for="beskr">Beskrivelse</label>
+          <textarea id="beskr" name="beskrivelse" placeholder="Hva skal gjøres? Mål og bilder kan du sende senere."></textarea>
+        </div>
+        <div class="row2">
+          <div class="f">
+            <label for="sted">Adresse eller sted</label>
+            <input id="sted" name="sted" autocomplete="street-address">
+          </div>
+          <div class="f">
+            <label for="naar">Når passer det</label>
+            <select id="naar" name="naar">
+              <option>Så fort som mulig</option>
+              <option>I løpet av måneden</option>
+              <option>Senere</option>
+              <option>Vet ikke</option>
+            </select>
+          </div>
+        </div>
+        <div class="row2">
+          <div class="f">
+            <label for="navn">Navn</label>
+            <input id="navn" name="navn" autocomplete="name">
+          </div>
+          <div class="f">
+            <label for="tlf">Telefon</label>
+            <input id="tlf" name="telefon" type="tel" inputmode="tel" autocomplete="tel">
+          </div>
+        </div>
+        <div class="f">
+          <label for="epost">E-post <small>(valgfritt)</small></label>
+          <input id="epost" name="epost" type="email" inputmode="email" autocomplete="email">
+        </div>
+        <button class="btn btn-brick" type="submit">Send forespørsel</button>
+        <div class="done" id="done" role="status">Dette er en forhåndsvisning. Når siden er satt opp, kommer forespørselen rett i innboksen deres.</div>
+      </form>
+      <aside class="contact-card">
+        <h3>Heller ringe?</h3>
+        <a class="big-tel" href="tel:+4791733388">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+          917 33 388
+        </a>
+        <p>Ring gjerne, eller send skjemaet, så tar vi kontakt.</p>
+        <div class="place">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 19l6-10 4 6 3-4 5 8z"/></svg>
+          Lillehammer
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="split-line" aria-hidden="true"><span class="t-brick"></span><span class="t-board"></span></div>
+    <p><b>MURER'N &amp; SNEKKER'N AS</b></p>
+    <p>Org.nr. 891 216 432</p>
+    <p>Lillehammer</p>
+  </div>
+</footer>
+
+<div class="sticky">
+  <a class="btn btn-brick" href="#tilbud">Få tilbud</a>
+  <a class="btn btn-line" href="tel:+4791733388">Ring</a>
+</div>
+
+<script>
+// Ledig kapasitet: the owner edits a published Google Sheet (columns Felt, Tekst; rows Kapasitet, Beskjed).
+const SHEET_CSV = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRzMwAp-szIap7qKFgAhMxaeN0zlnUtOg243ExNd1KiPjxMhmx8G6CRKAKFdDfLWvQoH4XXmkY3pIqA/pub?output=csv";
+const FALLBACK = "Ta kontakt for ledig kapasitet og pris.";
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+// Minimal CSV parser (handles quoted fields with commas).
+function parseCsv(text) {
+  const rows = []; let row = [], field = "", q = false;
+  for (let i = 0; i < text.length; i++) {
+    const c = text[i];
+    if (q) { if (c === '"' && text[i + 1] === '"') { field += '"'; i++; } else if (c === '"') q = false; else field += c; }
+    else if (c === '"') q = true;
+    else if (c === ",") { row.push(field); field = ""; }
+    else if (c === "\n" || c === "\r") { if (c === "\r" && text[i + 1] === "\n") i++; row.push(field); rows.push(row); row = []; field = ""; }
+    else field += c;
+  }
+  if (field || row.length) { row.push(field); rows.push(row); }
+  return rows;
+}
+
+function renderKap(d) {
+  document.getElementById("kap-text").innerHTML = esc(d["kapasitet"] || FALLBACK);
+  const m = document.getElementById("kap-msg"), msg = (d["beskjed"] || "").trim();
+  m.innerHTML = esc(msg);
+  m.classList.toggle("show", !!msg);
+}
+
+renderKap({});
+if (SHEET_CSV) {
+  fetch(SHEET_CSV + "&t=" + Date.now(), { cache: "no-store" }).then(r => r.ok ? r.text() : Promise.reject(r.status)).then(text => {
+    const d = {};
+    for (const [felt = "", tekst = ""] of parseCsv(text).slice(1)) {
+      const k = felt.trim().toLowerCase();
+      if (k) d[k] = tekst.trim();
+    }
+    renderKap(d);
+  }).catch(() => renderKap({}));
+}
+
+// Preview form: never sends anything.
+document.getElementById("qform").addEventListener("submit", e => {
+  e.preventDefault();
+  const d = document.getElementById("done");
+  d.classList.add("show");
+  d.scrollIntoView({ behavior: "smooth", block: "center" });
+});
+</script>
+</body>
+</html>

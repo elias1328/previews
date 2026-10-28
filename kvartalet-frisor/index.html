@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kvartalet Frisør | frisør i Storgata 13, Elverum</title>
+<meta name="description" content="Kvartalet Frisør i Storgata 13 i Elverum. Ring 62 41 22 20 for time, og se månedens tilbud.">
+<!-- Preview only: keep out of search engines until the owner says yes -->
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#123f3d">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --teal:#123f3d;--teal-2:#1b5552;--teal-3:#0b2c2a;
+  --blush:#f3dcd3;--blush-2:#f9ece6;--rose:#d98f7c;--rose-d:#a85a47;
+  --paper:#fbf6f2;--ink:#1f2a29;--muted:#5e6b69;--line:#e6d3ca;--grid:#12403d14
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Inter",system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;font-size:1.02rem;overflow-x:hidden;font-variant-numeric:lining-nums}
+h1,h2,h3{font-family:"Bricolage Grotesque","Inter",sans-serif;font-weight:700;line-height:1.05;letter-spacing:-.02em;text-wrap:balance}
+a{color:inherit}
+svg{display:block}
+.wrap{max-width:1100px;margin:0 auto;padding:0 16px}
+.preview{background:#d4a72c;color:#1d1a12;text-align:center;font-size:.8rem;font-weight:600;padding:6px 12px}
+
+/* Block grid: thin "street" lines like a city plan */
+.gridbg{background-color:var(--paper);background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:44px 44px}
+.tag{display:inline-flex;align-items:center;gap:8px;font-size:.74rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--rose-d)}
+.tag::before{content:"";width:18px;height:2px;background:currentColor}
+
+/* Header */
+.top{background:var(--teal);color:#fff}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:14px;padding-bottom:14px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:1.15rem;letter-spacing:-.01em}
+.brand .mk{width:30px;height:30px}
+.top nav{display:flex;gap:22px;font-size:.88rem;font-weight:500}
+.top nav a{text-decoration:none;color:#d7ebe8}
+.top nav a:hover{color:#fff}
+
+/* Hero */
+.hero{padding:56px 0 64px;border-bottom:1px solid var(--line)}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(3rem,9vw,5.6rem);font-weight:800;color:var(--teal);margin:14px 0 6px}
+.hero h1 em{font-style:normal;color:var(--rose-d)}
+.addr{font-size:1.15rem;color:var(--muted)}
+.addr b{color:var(--ink);font-weight:600}
+.lead{font-size:1.12rem;max-width:520px;margin-top:18px}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 24px;border-radius:999px;font-weight:600;text-decoration:none;border:2px solid var(--teal);color:var(--teal);background:transparent;transition:background .2s,color .2s}
+.btn:hover{background:var(--teal);color:#fff}
+.btn.solid{background:var(--teal);color:#fff}
+.btn.solid:hover{background:var(--teal-2);border-color:var(--teal-2)}
+.btn svg{width:18px;height:18px}
+
+/* The block map */
+.map{position:relative;background:var(--blush-2);border:1px solid var(--line);border-radius:22px;padding:18px;box-shadow:0 20px 50px #12403d1a}
+.map svg{width:100%;height:auto}
+.map .cap{display:flex;justify-content:space-between;font-size:.78rem;color:var(--muted);margin-top:10px;letter-spacing:.04em}
+
+/* Monthly offer */
+.offer{background:var(--teal);color:#fff;position:relative;overflow:hidden}
+.offer::before{content:"";position:absolute;inset:0;background-image:linear-gradient(#ffffff0d 1px,transparent 1px),linear-gradient(90deg,#ffffff0d 1px,transparent 1px);background-size:44px 44px;pointer-events:none}
+.offer .wrap{position:relative;padding-top:56px;padding-bottom:56px}
+.offer-card{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;background:var(--teal-3);border:1px solid #ffffff22;border-radius:22px;padding:30px 32px}
+.stamp{width:130px;height:130px;border-radius:50%;background:var(--blush);color:var(--teal);display:grid;place-items:center;text-align:center;font-family:"Bricolage Grotesque",sans-serif;font-weight:800;line-height:1;transform:rotate(-8deg);box-shadow:0 0 0 6px var(--teal-3),0 0 0 8px var(--rose)}
+.stamp small{display:block;font-family:"Inter",sans-serif;font-size:.68rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--rose-d);margin-bottom:6px}
+.stamp span{font-size:1.45rem;text-transform:capitalize}
+.offer .tag{color:var(--rose)}
+.offer h2{font-size:clamp(2rem,5.4vw,3rem);margin:10px 0 10px}
+.offer-text{font-size:clamp(1.2rem,3.4vw,1.5rem);font-weight:500;color:#fff;max-width:640px}
+.offer-sub{margin-top:10px;color:#bcd8d4}
+.offer-sub a{color:#fff;font-weight:600;text-underline-offset:3px}
+.beskjed{display:none;margin-top:18px;align-items:flex-start;gap:12px;background:#ffffff10;border-left:3px solid var(--rose);padding:12px 16px;border-radius:0 12px 12px 0}
+.beskjed.show{display:flex}
+.beskjed b{flex:none;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--rose);padding-top:4px}
+
+/* Sections */
+section{padding:76px 0}
+.head{max-width:640px;margin-bottom:34px}
+.head h2{font-size:clamp(2.1rem,5.6vw,3.1rem);color:var(--teal);margin:10px 0 10px}
+.head p{color:var(--muted)}
+
+/* Salon features as city blocks */
+.blocks{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.block{background:#fff;border:1px solid var(--line);border-radius:18px;padding:26px 24px 22px;position:relative}
+.block .no{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:.85rem;color:var(--rose-d);letter-spacing:.08em}
+.block h3{font-size:1.45rem;color:var(--teal);margin:8px 0 8px}
+.block p{color:var(--muted);font-size:.97rem}
+.block svg{width:40px;height:40px;color:var(--teal);margin-bottom:14px}
+
+/* Reviews */
+.reviews{background:var(--blush)}
+.reviews .head h2{color:var(--teal-3)}
+.rating{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:30px}
+.pill{display:flex;align-items:center;gap:14px;background:var(--teal);color:#fff;border-radius:18px;padding:14px 22px}
+.pill .n{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:2.3rem;line-height:1}
+.pill .stars{color:#f1c9bc;letter-spacing:2px;font-size:.95rem}
+.pill span{font-size:.92rem;line-height:1.35}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.quotes blockquote{background:var(--paper);border-radius:18px;padding:26px 24px 20px;border:1px solid #e9c9bd}
+.quotes p{font-family:"Bricolage Grotesque",sans-serif;font-weight:500;font-size:1.28rem;line-height:1.3;color:var(--teal-3)}
+.quotes p::before{content:"\201C";display:block;font-size:3rem;line-height:.6;color:var(--rose);margin-bottom:8px}
+.quotes footer{margin-top:14px;font-size:.8rem;color:var(--muted);letter-spacing:.04em}
+
+/* Visit */
+.visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:stretch}
+.card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:28px}
+.card h3{font-size:1.5rem;color:var(--teal);margin-bottom:12px}
+.card p+p{margin-top:12px}
+.card .big{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:clamp(2rem,6vw,2.6rem);color:var(--teal);text-decoration:none;letter-spacing:-.01em;display:inline-block;margin:4px 0 2px}
+.card .muted{color:var(--muted)}
+.card .actions{margin-top:20px}
+.social{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.social a{font-size:.92rem;font-weight:500;text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:7px 14px;background:var(--blush-2)}
+.social a:hover{border-color:var(--rose)}
+
+footer.site{background:var(--teal-3);color:#a9c4c0;padding:34px 16px;font-size:.88rem;text-align:center}
+footer.site .brand{justify-content:center;color:#fff;margin-bottom:10px}
+footer.site .by{margin-top:12px;font-size:.78rem;color:#7f9e9a}
+
+.mobilebar{display:none}
+@media (max-width:860px){
+  .hero-grid{grid-template-columns:1fr;gap:34px}
+  .blocks,.quotes{grid-template-columns:1fr}
+  .visit-grid{grid-template-columns:1fr}
+}
+@media (max-width:760px){
+  .top nav{display:none}
+  .mobilebar{display:grid;grid-template-columns:1.4fr 1fr;gap:10px;position:fixed;left:12px;right:12px;bottom:12px;z-index:10}
+  .mobilebar a{text-align:center;padding:15px 8px;border-radius:999px;font-weight:600;font-size:.95rem;text-decoration:none;box-shadow:0 10px 24px #0b2c2a55}
+  .mobilebar .a{background:var(--teal);color:#fff;border:2px solid var(--rose)}
+  .mobilebar .b{background:var(--blush);color:var(--teal);border:2px solid var(--teal)}
+  footer.site{padding-bottom:100px}
+  section{padding:58px 0}
+  .hero{padding:26px 0 34px}
+  .actions{margin-top:22px}
+  .hero-grid{gap:26px}
+  .map{padding:10px;border-radius:18px}
+  .map svg{height:140px;border-radius:10px}
+  .map .cap{display:none}
+  .offer .wrap{padding-top:36px;padding-bottom:40px}
+  .offer-card{grid-template-columns:1fr;padding:26px 22px;gap:0;position:relative}
+  .stamp{position:absolute;top:-16px;right:12px;width:84px;height:84px}
+  .stamp small{font-size:.58rem;margin-bottom:3px}
+  .stamp span{font-size:1rem}
+  .offer h2{padding-right:80px}
+}
+</style>
+</head>
+<body>
+<div class="preview">Forhåndsvisning laget for Kvartalet Frisør</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <!-- Mark: a city block split into four lots, one filled -->
+    <symbol id="mk" viewBox="0 0 32 32">
+      <rect x="1.5" y="1.5" width="29" height="29" rx="7" fill="none" stroke="currentColor" stroke-width="2.4"/>
+      <path d="M16 3v26M3 16h26" stroke="currentColor" stroke-width="2.4"/>
+      <rect x="18.5" y="18.5" width="9.5" height="9.5" rx="2.5" fill="#d98f7c"/>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="top">
+  <div class="wrap">
+    <a class="brand" href="#top"><svg class="mk" aria-hidden="true"><use href="#mk"/></svg>Kvartalet Frisør</a>
+    <nav aria-label="Hovedmeny"><a href="#tilbud">Månedens tilbud</a><a href="#salongen">Salongen</a><a href="#kunder">Kundene</a><a href="#finn">Finn oss</a></nav>
+  </div>
+</div>
+
+<header class="hero gridbg" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="tag">Frisørsalong i Elverum</span>
+      <h1>Kvartalet <em>Frisør</em></h1>
+      <p class="addr"><b>Storgata 13</b>, 2408 Elverum</p>
+      <p class="lead">Ring oss for time. Og følg med på månedens tilbud, det står alltid her på siden.</p>
+      <div class="actions">
+        <a class="btn solid" href="tel:62412220"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>Ring for time</a>
+        <a class="btn" href="#tilbud">Månedens tilbud</a>
+      </div>
+    </div>
+    <div class="map" aria-hidden="true">
+      <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" role="presentation">
+        <rect width="400" height="300" fill="#f9ece6"/>
+        <!-- blocks -->
+        <g fill="#efd9cf">
+          <rect x="14" y="14" width="104" height="78" rx="6"/>
+          <rect x="146" y="14" width="110" height="78" rx="6"/>
+          <rect x="284" y="14" width="102" height="78" rx="6"/>
+          <rect x="14" y="196" width="104" height="90" rx="6"/>
+          <rect x="146" y="196" width="110" height="90" rx="6"/>
+          <rect x="284" y="196" width="102" height="90" rx="6"/>
+          <rect x="14" y="120" width="104" height="48" rx="6"/>
+          <rect x="284" y="120" width="102" height="48" rx="6"/>
+        </g>
+        <!-- the salon's block -->
+        <rect x="146" y="120" width="110" height="48" rx="6" fill="#123f3d"/>
+        <text x="201" y="150" text-anchor="middle" font-family="Bricolage Grotesque, sans-serif" font-weight="800" font-size="18" fill="#f3dcd3">13</text>
+        <!-- streets -->
+        <g stroke="#12403d33" stroke-width="1" stroke-dasharray="6 6">
+          <path d="M0 106H400M0 182H400M132 0V300M270 0V300"/>
+        </g>
+        <text x="386" y="102" text-anchor="end" font-family="Inter, sans-serif" font-weight="600" font-size="11" letter-spacing="2" fill="#a85a47">STORGATA</text>
+        <!-- pin -->
+        <g transform="translate(201 92)">
+          <path d="M0 22C-9 11-13 5-13 -1a13 13 0 0 1 26 0c0 6-4 12-13 23z" fill="#d98f7c"/>
+          <circle cx="0" cy="-1" r="5" fill="#fbf6f2"/>
+        </g>
+      </svg>
+      <div class="cap"><span>Kvartalet Frisør</span><span>Storgata 13</span></div>
+    </div>
+  </div>
+</header>
+
+<div class="offer" id="tilbud">
+  <div class="wrap">
+    <div class="offer-card" aria-live="polite">
+      <div class="stamp"><div><small>Tilbud</small><span id="mnd">Denne måneden</span></div></div>
+      <div>
+        <span class="tag">Gjelder denne måneden</span>
+        <h2>Månedens tilbud</h2>
+        <p class="offer-text" id="tilbud-tekst">Spør oss om månedens tilbud.</p>
+        <p class="offer-sub">Ring <a href="tel:62412220">62 41 22 20</a> eller spør når du er innom.</p>
+        <p class="beskjed" id="beskjed"><b>Beskjed</b><span id="beskjed-tekst"></span></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<main>
+<section class="gridbg" id="salongen">
+  <div class="wrap">
+    <div class="head">
+      <span class="tag">Salongen</span>
+      <h2>Det kundene nevner</h2>
+      <p>Tre ting kunder har trukket fram i anmeldelser av salongen på Google.</p>
+    </div>
+    <div class="blocks">
+      <div class="block">
+        <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M8 30h24M12 30V18a8 8 0 0 1 16 0v12M10 34h20"/><path d="M15 12c1-3 3-4 5-4"/></svg>
+        <span class="no">01</span>
+        <h3>Massasjestol ved hårvasken</h3>
+        <p>Godt med massasjestol når håret blir vasket, skriver en kunde.</p>
+      </div>
+      <div class="block">
+        <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="20" cy="18" r="9"/><path d="M11 32c2-4 5-5 9-5s7 1 9 5M8 12c-2 2-2 6 0 8M32 12c2 2 2 6 0 8"/></svg>
+        <span class="no">02</span>
+        <h3>Hodemassasje</h3>
+        <p>En annen kunde nevner hodemassasje og behagelige stoler.</p>
+      </div>
+      <div class="block">
+        <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 16h20v8a8 8 0 0 1-8 8h-4a8 8 0 0 1-8-8z"/><path d="M28 18h2a4 4 0 0 1 0 8h-2M14 6c-1 2 1 3 0 5M20 6c-1 2 1 3 0 5"/></svg>
+        <span class="no">03</span>
+        <h3>En kopp kaffe</h3>
+        <p>Den samme kunden skriver at det ble servert kaffe.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews" id="kunder">
+  <div class="wrap">
+    <div class="head">
+      <span class="tag">Kundene</span>
+      <h2>Fra anmeldelsene</h2>
+    </div>
+    <div class="rating">
+      <div class="pill"><span class="n">4,8</span><span><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span><br>av 20 anmeldelser på Google</span></div>
+      <div class="pill"><span class="n">96%</span><span>anbefaler salongen<br>på Facebook</span></div>
+    </div>
+    <div class="quotes">
+      <blockquote><p>Veldig flinke frisører, og godt med massasje stol når håret blir vasket</p><footer>Kunde på Google</footer></blockquote>
+      <blockquote><p>Hyggelig betjening. Behagelig stoler.</p><footer>Kunde på Google</footer></blockquote>
+      <blockquote><p>Min frisør gir utrolig god service</p><footer>Kunde på Google</footer></blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="gridbg" id="finn">
+  <div class="wrap">
+    <div class="head">
+      <span class="tag">Finn oss</span>
+      <h2>Storgata 13, Elverum</h2>
+    </div>
+    <div class="visit-grid">
+      <div class="card">
+        <h3>Ring for time</h3>
+        <a class="big" href="tel:62412220">62 41 22 20</a>
+        <p class="muted">Ring salongen, så finner vi en time som passer.</p>
+        <div class="actions">
+          <a class="btn solid" href="tel:62412220">Ring for time</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Adresse</h3>
+        <p>Kvartalet Frisør<br>Storgata 13<br>2408 Elverum</p>
+        <div class="actions">
+          <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Kvartalet+fris%C3%B8r+Storgata+13+2408+Elverum" target="_blank" rel="noopener">Åpne i Google Maps</a>
+        </div>
+        <div class="social">
+          <a href="https://www.facebook.com/profile.php?id=100044280349549" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://www.instagram.com/kvartaletfrisor/" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site">
+  <a class="brand" href="#top"><svg class="mk" aria-hidden="true"><use href="#mk"/></svg>Kvartalet Frisør</a>
+  Kvartalet Frisør AS, org.nr. 988 138 789<br>Storgata 13, 2408 Elverum, <a href="tel:62412220" style="color:inherit">62 41 22 20</a>
+  <p class="by">Forslag laget av Elias Berntsen</p>
+</footer>
+
+<div class="mobilebar">
+  <a class="a" href="tel:62412220">Ring for time</a>
+  <a class="b" href="https://www.google.com/maps/search/?api=1&amp;query=Kvartalet+fris%C3%B8r+Storgata+13+2408+Elverum" target="_blank" rel="noopener">Veibeskrivelse</a>
+</div>
+
+<script>
+// Month name in Norway, whatever the visitor's own time zone is
+const MONTHS = ["januar", "februar", "mars", "april", "mai", "juni", "juli", "august", "september", "oktober", "november", "desember"];
+const osloParts = {};
+for (const x of new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/Oslo", year: "numeric", month: "numeric" }).formatToParts(new Date())) osloParts[x.type] = x.value;
+const YEAR = +osloParts.year, MONTH = +osloParts.month;
+document.getElementById("mnd").textContent = MONTHS[MONTH - 1];
+
+// The owner edits a Google Sheet from the phone (columns: Felt, Tekst).
+// Rows: "Månedens tilbud" and "Beskjed" (Beskjed is hidden when empty).
+// Paste the sheet's "Publiser på nettet" CSV link here. Empty = use the built-in text below.
+const SHEET_CSV = "https://docs.google.com/spreadsheets/d/e/2PACX-1vS0wgJWQkq4zvWP04kRUVxUwkMQsXAUw8ZKwtI_vqA4XKu5_6hRqn_wYd2qKgFy4QUyKBzUFh99Ziyj/pub?output=csv";
+
+// Built-in text. The October offer is from the salon's Facebook post of 14 Oct 2026,
+// so it is only shown in October 2026. Other months fall back to the general line.
+const FALLBACK = (YEAR === 2026 && MONTH === 10)
+  ? { "månedens tilbud": "2 favoritter på tilbud ut oktober.", "beskjed": "" }
+  : { "månedens tilbud": "Spør oss om månedens tilbud.", "beskjed": "" };
+
+function render(d) {
+  document.getElementById("tilbud-tekst").textContent = d["månedens tilbud"] || FALLBACK["månedens tilbud"];
+  const b = (d["beskjed"] || "").trim();
+  document.getElementById("beskjed-tekst").textContent = b;
+  document.getElementById("beskjed").classList.toggle("show", !!b);
+}
+
+// Minimal CSV parser (handles quoted fields with commas).
+function parseCsv(text) {
+  const rows = []; let row = [], field = "", q = false;
+  for (let i = 0; i < text.length; i++) {
+    const c = text[i];
+    if (q) { if (c === '"' && text[i + 1] === '"') { field += '"'; i++; } else if (c === '"') q = false; else field += c; }
+    else if (c === '"') q = true;
+    else if (c === ",") { row.push(field); field = ""; }
+    else if (c === "\n" || c === "\r") { if (c === "\r" && text[i + 1] === "\n") i++; row.push(field); rows.push(row); row = []; field = ""; }
+    else field += c;
+  }
+  if (field || row.length) { row.push(field); rows.push(row); }
+  return rows;
+}
+
+render(FALLBACK);
+if (SHEET_CSV) {
+  // Cache-buster is required: Google caches the published CSV for about 5 minutes.
+  fetch(SHEET_CSV + "&t=" + Date.now(), { cache: "no-store" }).then(r => r.ok ? r.text() : Promise.reject(r.status)).then(text => {
+    const d = {};
+    for (const [felt = "", tekst = ""] of parseCsv(text).slice(1)) {
+      const k = felt.trim().toLowerCase();
+      if (k) d[k] = tekst.trim();
+    }
+    if (d["månedens tilbud"] || d["beskjed"]) render(d);
+  }).catch(() => {});
+}
+</script>
+</body>
+</html>

@@ -510,7 +510,7 @@ footer .mark{color:#fff;margin-bottom:12px}
 // The owner writes the season note in a Google Sheet (columns: Felt, Tekst).
 // Rows: "Kapasitet" (e.g. "Vi booker nå befaringer for våren"), "Beskjed" (optional, hidden if empty).
 // Paste the sheet's "Publiser på nettet" CSV link here. Empty = fallback text.
-const SHEET_CSV = "";
+const SHEET_CSV = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQIonDawZRERDWxV000CBXgQ3xUgAkz64qHNppzVw89J5LbonosZaaPS7F1UuemzTGqiEX6lA8j3Suv/pub?output=csv";
 const FALLBACK = "Ta kontakt for befaring og ledig kapasitet.";
 
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
