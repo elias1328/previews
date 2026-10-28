@@ -1,0 +1,649 @@
+<!doctype html>
+<html lang="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Glenns Billakkering | lakkeringsverksted i Hunndalen, Gjøvik</title>
+<meta name="description" content="Glenns Billakkering AS er et lakkeringsverksted i Sivesindvegen 8 i Hunndalen. Riper, steinsprut og lakkskader. Send et bilde av skaden eller ring 61 17 36 67.">
+<!-- Preview only: keep out of search engines until the owner says yes -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#081226">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,400..900;1,62..125,400..900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --night:#081226;--night-2:#0e1d3d;--blue:#173a7a;--blue-l:#3d6fd6;--ice:#9fc0ff;
+  --candy:#c8102e;--candy-d:#9c0b22;--candy-l:#ff4d63;
+  --chrome:#dfe4ec;--steel:#8b95a7;--paper:#f2f4f8;--card:#ffffff;
+  --ink:#0d1424;--muted:#4f5b70;--line:#d5dbe5;--gold:#e8c46a;--green:#36c07a
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Archivo",system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;font-size:1.03rem;overflow-x:hidden}
+h1,h2,h3{font-stretch:125%;font-weight:800;line-height:1.05;letter-spacing:-.01em}
+a{color:inherit}
+img,svg{display:block}
+.wrap{max-width:1140px;margin:0 auto;padding:0 16px}
+.mono{font-family:"JetBrains Mono",ui-monospace,monospace}
+.preview{background:var(--gold);color:#1a1405;text-align:center;font-size:.8rem;font-weight:600;padding:6px 12px}
+
+/* paint chip used as eyebrow */
+.chip{display:inline-flex;align-items:stretch;border-radius:6px;overflow:hidden;font-family:"JetBrains Mono",monospace;font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;box-shadow:0 1px 0 #ffffff22 inset,0 4px 14px #0814301f}
+.chip i{width:26px;background:linear-gradient(135deg,var(--candy-l),var(--candy) 45%,var(--candy-d));font-style:normal}
+.chip b{background:#fff;color:var(--ink);padding:5px 10px;font-weight:700}
+.chip.blue i{background:linear-gradient(135deg,var(--blue-l),var(--blue) 50%,var(--night))}
+.dark .chip b{background:#ffffff14;color:var(--chrome);border:1px solid #ffffff22;border-left:0}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 24px;border-radius:999px;font-weight:700;font-size:1rem;text-decoration:none;border:2px solid transparent;cursor:pointer;font-family:inherit;transition:transform .15s,box-shadow .15s}
+.btn svg{width:20px;height:20px}
+.btn-red{background:linear-gradient(180deg,#e2213f,var(--candy) 55%,var(--candy-d));color:#fff;box-shadow:0 1px 0 #ffffff55 inset,0 10px 24px #c8102e55}
+.btn-red:hover{transform:translateY(-1px);box-shadow:0 1px 0 #ffffff55 inset,0 14px 30px #c8102e77}
+.btn-ghost{border-color:#ffffff55;color:#fff;background:#ffffff0d}
+.btn-ghost:hover{background:#ffffff1f}
+.btn-line{border-color:var(--ink);color:var(--ink)}
+
+/* header */
+header{position:relative;z-index:5;background:var(--night)}
+.top{display:flex;align-items:center;justify-content:space-between;padding-top:14px;padding-bottom:14px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
+.brand-mark{width:38px;height:38px;border-radius:9px;background:linear-gradient(135deg,var(--candy-l),var(--candy) 40%,var(--candy-d));position:relative;overflow:hidden;box-shadow:0 1px 0 #ffffff66 inset}
+.brand-mark::after{content:"G";position:absolute;inset:0;display:grid;place-items:center;font-weight:900;font-stretch:125%;font-size:1.25rem;color:#fff}
+.brand-mark::before{content:"";position:absolute;top:-10px;left:-14px;width:30px;height:60px;background:#ffffff40;transform:rotate(28deg)}
+.brand-t{line-height:1.1}
+.brand-t strong{display:block;font-stretch:125%;font-weight:800;font-size:1.05rem}
+.brand-t span{font-family:"JetBrains Mono",monospace;font-size:.66rem;letter-spacing:.16em;color:var(--steel);text-transform:uppercase}
+nav{display:none;gap:26px}
+nav a{color:var(--chrome);text-decoration:none;font-weight:600;font-size:.94rem}
+nav a:hover{color:#fff}
+@media(min-width:860px){nav{display:flex}}
+
+/* hero: metallic midnight blue with clear coat sheen */
+.hero{position:relative;color:#fff;overflow:hidden;
+  background:
+    radial-gradient(120% 80% at 80% 10%,#2c5bc055 0%,transparent 55%),
+    radial-gradient(90% 70% at 10% 100%,#0a245a 0%,transparent 60%),
+    linear-gradient(160deg,#0d214a 0%,var(--night) 55%,#050b18 100%)}
+.hero::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.35;
+  background-image:radial-gradient(#ffffff26 1px,transparent 1.2px),radial-gradient(#9fc0ff22 1px,transparent 1.2px);
+  background-size:7px 7px,11px 11px;background-position:0 0,3px 5px;mix-blend-mode:screen}
+.sheen{position:absolute;inset:-20%;pointer-events:none;
+  background:linear-gradient(115deg,transparent 38%,#ffffff10 45%,#ffffff2e 49%,#ffffff10 53%,transparent 60%);
+  animation:sweep 9s ease-in-out infinite}
+@keyframes sweep{0%{transform:translateX(-55%)}55%,100%{transform:translateX(55%)}}
+@media(prefers-reduced-motion:reduce){.sheen{animation:none;transform:translateX(10%)}}
+.hero-grid{position:relative;display:grid;gap:18px;padding-top:36px;padding-bottom:30px}
+.hero h1{font-size:clamp(2.6rem,10vw,5.4rem);margin:18px 0 6px;
+  background:linear-gradient(180deg,#ffffff 0%,#e6ecf7 46%,#a9b6cc 54%,#f4f7fc 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero h1 em{display:block;font-style:italic;font-weight:700;font-size:.52em;letter-spacing:0;
+  background:linear-gradient(180deg,#ff8a99,var(--candy-l) 50%,#e0213f);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{font-size:1.15rem;color:#d3dbea;max-width:34em;margin:16px 0 26px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.facts{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:24px;font-size:.92rem;color:#c3cde0}
+.facts span{display:inline-flex;align-items:center;gap:8px}
+.facts svg{width:16px;height:16px;color:var(--ice)}
+.open{display:inline-flex;align-items:center;gap:8px;padding:3px 10px 3px 8px;border-radius:999px;background:#ffffff12;border:1px solid #ffffff26;font-weight:600;color:#fff}
+.open::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--steel)}
+.open.is-open::before{background:var(--green);box-shadow:0 0 0 4px #36c07a33}
+.panel-art{position:relative;align-self:center;width:100%;max-width:400px;margin-left:auto}
+.panel-art svg{width:100%;height:auto;-webkit-mask-image:linear-gradient(90deg,transparent 1%,#000 16%,#000 80%,transparent 99%),linear-gradient(180deg,#000 85%,transparent 100%);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent 1%,#000 16%,#000 80%,transparent 99%),linear-gradient(180deg,#000 85%,transparent 100%);mask-composite:intersect}
+.swatches{position:absolute;left:8%;top:-4px;display:flex;transform:rotate(-8deg);z-index:2}
+.sw{width:58px;height:96px;border-radius:8px;margin-left:-26px;box-shadow:0 10px 20px #00000055,0 1px 0 #ffffff55 inset;position:relative;overflow:hidden;transform-origin:50% 120%}
+.sw::after{content:attr(data-c);position:absolute;left:0;right:0;bottom:0;background:#fff;color:#111;font:700 .5rem/1.9 "JetBrains Mono",monospace;text-align:center;letter-spacing:.05em}
+.sw::before{content:"";position:absolute;top:-20px;left:-10px;width:22px;height:120px;background:#ffffff35;transform:rotate(25deg)}
+.sw:nth-child(1){background:linear-gradient(140deg,#5d8af0,#173a7a 60%,#0b1a3c);transform:rotate(-14deg)}
+.sw:nth-child(2){background:linear-gradient(140deg,#ff5a70,#c8102e 60%,#6e0617);transform:rotate(-5deg)}
+.sw:nth-child(3){background:linear-gradient(140deg,#ffffff,#c9d0db 60%,#8b95a7);transform:rotate(4deg)}
+.sw:nth-child(4){background:linear-gradient(140deg,#4a4f59,#15181e 60%,#000);transform:rotate(13deg)}
+@media(min-width:900px){.hero-grid{grid-template-columns:1.05fr 1fr;align-items:center;padding-top:70px;padding-bottom:60px}.panel-art{max-width:none}}
+
+/* capacity bar */
+.cap-wrap{position:relative;z-index:3;margin-top:-1px;background:linear-gradient(180deg,#050b18 0 50%,var(--paper) 50% 100%);padding:0}
+.cap{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;background:#fff;border-radius:16px;padding:16px 18px;box-shadow:0 18px 40px #0814302e;border:1px solid var(--line);position:relative;overflow:hidden}
+.cap::before{content:"";position:absolute;left:0;top:0;bottom:0;width:6px;background:linear-gradient(180deg,var(--candy-l),var(--candy-d))}
+.cap-label{font-family:"JetBrains Mono",monospace;font-size:.7rem;font-weight:700;letter-spacing:.16em;color:var(--candy);display:flex;align-items:center;gap:8px;padding-left:6px}
+.cap-label::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px #36c07a2e}
+.cap-text{font-stretch:112%;font-weight:800;font-size:1.15rem;flex:1 1 280px}
+.cap-note{flex-basis:100%;color:var(--muted);font-size:.95rem;padding-left:6px}
+.cap-note:empty{display:none}
+.cap a{font-weight:700;color:var(--candy);text-decoration:none;border-bottom:2px solid currentColor;padding-bottom:2px}
+
+section{padding:72px 0}
+.sec-h{max-width:640px;margin-bottom:34px}
+.sec-h h2{font-size:clamp(1.9rem,5.5vw,2.9rem);margin:14px 0 10px}
+.sec-h p{color:var(--muted);font-size:1.08rem}
+
+/* services */
+.svc{display:grid;gap:16px}
+@media(min-width:760px){.svc{grid-template-columns:repeat(3,1fr)}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
+.card-top{height:118px;position:relative;overflow:hidden}
+.card-top::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 30%,#ffffff40 42%,transparent 54%)}
+.card-top .code{position:absolute;left:14px;bottom:12px;background:#fff;color:var(--ink);font:700 .7rem/1 "JetBrains Mono",monospace;letter-spacing:.1em;padding:6px 8px;border-radius:5px}
+.t1{background:linear-gradient(135deg,#5d8af0,#173a7a 55%,#0a1835)}
+.t2{background:linear-gradient(135deg,#ff6b7e,#c8102e 55%,#5e0414)}
+.t3{background:linear-gradient(135deg,#f4f6fa,#b9c2d0 55%,#6f7a8c)}
+.card-b{padding:20px 20px 24px}
+.card h3{font-size:1.3rem;margin-bottom:8px}
+.card p{color:var(--muted)}
+
+/* before / after */
+.ba-sec{background:var(--night);color:#fff;position:relative;overflow:hidden}
+.ba-sec .sec-h p{color:#b9c4d8}
+.ba{position:relative;border-radius:20px;overflow:hidden;aspect-ratio:16/10;max-width:900px;margin:0 auto;box-shadow:0 30px 60px #00000080;border:1px solid #ffffff1f;user-select:none;touch-action:pan-y}
+.ba svg{position:absolute;inset:0;width:100%;height:100%}
+.ba .after{clip-path:inset(0 0 0 var(--pos,50%))}
+.ba-line{position:absolute;top:0;bottom:0;left:var(--pos,50%);width:3px;margin-left:-1.5px;background:#fff;box-shadow:0 0 12px #000a;pointer-events:none}
+.ba-knob{position:absolute;top:50%;left:50%;width:48px;height:48px;margin:-24px 0 0 -24px;border-radius:50%;background:#fff;color:var(--ink);display:grid;place-items:center;box-shadow:0 6px 16px #0008}
+.ba-knob svg{position:static;width:26px;height:26px}
+.ba input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
+.ba-tag{position:absolute;top:14px;font:700 .72rem/1 "JetBrains Mono",monospace;letter-spacing:.14em;padding:7px 10px;border-radius:6px;pointer-events:none}
+.ba-tag.l{left:14px;background:#000000a0;color:#fff}
+.ba-tag.r{right:14px;background:#fff;color:var(--ink)}
+.ba-cap{text-align:center;color:#b9c4d8;margin-top:18px;font-size:.98rem}
+.ba-input:focus-visible + .ba-line{box-shadow:0 0 0 4px var(--ice)}
+
+/* steps */
+.steps{display:grid;gap:16px;counter-reset:s}
+@media(min-width:760px){.steps{grid-template-columns:repeat(3,1fr)}}
+.step{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px;position:relative}
+.step .layer{display:flex;gap:4px;margin-bottom:16px}
+.step .layer span{height:10px;border-radius:3px;flex:1;background:var(--line)}
+.step:nth-child(1) .layer span:nth-child(-n+1),.step:nth-child(2) .layer span:nth-child(-n+2),.step:nth-child(3) .layer span{background:linear-gradient(90deg,var(--candy),var(--candy-l))}
+.step .n{font:700 .74rem/1 "JetBrains Mono",monospace;letter-spacing:.14em;color:var(--candy)}
+.step h3{font-size:1.2rem;margin:8px 0 6px}
+.step p{color:var(--muted)}
+
+/* form */
+.form-sec{background:linear-gradient(180deg,var(--paper),#e6eaf2)}
+.form-grid{display:grid;gap:30px}
+@media(min-width:900px){.form-grid{grid-template-columns:.8fr 1.2fr;align-items:start}}
+.side-note{background:var(--night);color:#d3dbea;border-radius:18px;padding:24px;position:relative;overflow:hidden}
+.side-note h3{color:#fff;font-size:1.25rem;margin-bottom:10px}
+.side-note ul{list-style:none;display:grid;gap:10px;margin-top:14px}
+.side-note li{display:flex;gap:10px}
+.side-note li::before{content:"";flex:0 0 10px;height:10px;margin-top:8px;border-radius:3px;background:var(--candy-l)}
+.side-note .ring{margin-top:20px}
+form{background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:0 20px 40px #0814301a}
+.row{display:grid;gap:14px}
+@media(min-width:600px){.row.two{grid-template-columns:1fr 1fr}}
+.f{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}
+.f label,.f .lab{font-weight:700;font-size:.93rem}
+.f small{font-weight:500;color:var(--muted)}
+input,select,textarea{font:inherit;font-size:1rem;width:100%;min-height:52px;padding:12px 14px;border:1.5px solid #c3cbd8;border-radius:12px;background:#fbfcfe;color:var(--ink)}
+textarea{min-height:110px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--blue-l);box-shadow:0 0 0 4px #3d6fd626}
+.up{position:relative;display:flex;align-items:center;gap:14px;border:2px dashed #b4bfd0;border-radius:14px;padding:14px;background:#f5f7fb;cursor:pointer}
+.up:hover{border-color:var(--blue-l)}
+.up input{position:absolute;inset:0;opacity:0;cursor:pointer;min-height:0}
+.up-ic{flex:0 0 46px;height:46px;border-radius:12px;background:linear-gradient(135deg,var(--blue-l),var(--blue));display:grid;place-items:center;color:#fff}
+.up-ic svg{width:24px;height:24px}
+.up-t strong{display:block}
+.up-t span{color:var(--muted);font-size:.9rem;word-break:break-all}
+.up.has{border-style:solid;border-color:var(--green);background:#eefaf3}
+form .btn{width:100%;margin-top:6px}
+.done{display:none;margin-top:16px;padding:16px 18px;border-radius:14px;background:#eef3ff;border:1px solid #c9d7fb;color:var(--ink)}
+.done.show{display:block}
+
+/* about */
+.about{display:grid;gap:30px}
+@media(min-width:860px){.about{grid-template-columns:1.1fr .9fr;align-items:center}}
+.about p{font-size:1.08rem;margin-bottom:14px}
+.spec{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px}
+.spec div{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.spec dt{font:700 .66rem/1.4 "JetBrains Mono",monospace;letter-spacing:.14em;color:var(--muted);text-transform:uppercase}
+.spec dd{font-weight:800;font-stretch:112%}
+.layers{background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px}
+.layers h3{font-size:1.05rem;margin-bottom:14px}
+.lay{display:flex;align-items:center;gap:14px;margin-bottom:6px}
+.lay i{flex:0 0 58%;border-radius:4px;display:block}
+.lay span{font:600 .78rem/1.3 "JetBrains Mono",monospace;color:var(--muted)}
+.l1 i{height:16px;background:linear-gradient(180deg,#ffffffcc,#e9eef8aa);border:1px solid #cfd8e8}
+.l2 i{height:26px;background:linear-gradient(135deg,#5d8af0,#173a7a 60%,#0b1a3c)}
+.l3 i{height:14px;background:#a9a69c}
+.l4 i{height:30px;background:repeating-linear-gradient(90deg,#7d8796 0 2px,#8f99a8 2px 5px)}
+.layers p{font-size:.88rem;color:var(--muted);margin-top:12px}
+
+/* contact */
+.contact{background:var(--night);color:#fff}
+.ct{display:grid;gap:18px}
+@media(min-width:860px){.ct{grid-template-columns:1fr 1fr}}
+.ct-box{background:#ffffff0b;border:1px solid #ffffff1c;border-radius:18px;padding:24px}
+.ct-box h3{font-size:1.15rem;margin-bottom:14px}
+.ct-line{display:flex;gap:12px;align-items:flex-start;margin-bottom:14px;color:#d3dbea}
+.ct-line svg{flex:0 0 20px;height:20px;color:var(--candy-l);margin-top:3px}
+.ct-line a{color:#fff;font-weight:700}
+.big-tel{font-stretch:125%;font-weight:800;font-size:clamp(1.8rem,6vw,2.6rem);color:#fff;text-decoration:none;display:block;margin:6px 0 16px}
+table{width:100%;border-collapse:collapse}
+td{padding:9px 0;border-bottom:1px solid #ffffff1a;color:#d3dbea}
+td:last-child{text-align:right;font-family:"JetBrains Mono",monospace;font-size:.9rem}
+tr.is-today td{color:#fff;font-weight:700}
+tr.is-today td:first-child::after{content:"  i dag";font-family:"JetBrains Mono",monospace;font-size:.68rem;color:var(--candy-l);letter-spacing:.1em}
+.ct .btn{margin-top:6px}
+
+footer{background:#050b18;color:var(--steel);font-size:.88rem;padding:26px 0 110px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:6px 18px;justify-content:space-between}
+@media(min-width:860px){footer{padding-bottom:28px}}
+
+/* sticky mobile bar */
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:20;display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:#081226ee;backdrop-filter:blur(8px);border-top:1px solid #ffffff1f;transform:translateY(110%);transition:transform .25s}
+.sticky.on{transform:none}
+.sticky .btn{min-height:50px;padding:0 10px;font-size:.95rem}
+@media(min-width:860px){.sticky{display:none}}
+:focus-visible{outline:3px solid var(--blue-l);outline-offset:3px}
+</style>
+</head>
+<body>
+
+<div class="preview">Forhåndsvisning laget for Glenns Billakkering AS, bildene kommer fra dere</div>
+
+<header>
+  <div class="wrap top">
+    <a class="brand" href="#">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-t"><strong>Glenns Billakkering</strong><span>Hunndalen, Gjøvik</span></span>
+    </a>
+    <nav aria-label="Meny">
+      <a href="#tjenester">Tjenester</a>
+      <a href="#for-etter">Før og etter</a>
+      <a href="#bilde">Send bilde</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero dark">
+  <div class="sheen" aria-hidden="true"></div>
+  <div class="wrap hero-grid">
+    <div>
+      <span class="chip"><i></i><b>Lakkeringsverksted i Hunndalen</b></span>
+      <h1>Glenns Billakkering <em>lakk, riper og steinsprut</em></h1>
+      <p class="lead">Har bilen fått riper, steinsprut eller en lakkskade? Send oss et bilde av skaden, så ser vi på det. Verkstedet ligger i Sivesindvegen 8.</p>
+      <div class="cta">
+        <a class="btn btn-red" href="#bilde">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>
+          Send bilde av skaden
+        </a>
+        <a class="btn btn-ghost" href="tel:+4761173667">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1z"/></svg>
+          Ring 61 17 36 67
+        </a>
+      </div>
+      <div class="facts">
+        <span><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.3 7 13 7 13s7-7.7 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg>Sivesindvegen 8, 2827 Hunndalen</span>
+        <span class="open" id="open-badge">Mandag til fredag kl. 7.30 til 15.30</span>
+      </div>
+    </div>
+
+    <div class="panel-art" aria-hidden="true">
+      <div class="swatches"><div class="sw" data-c="BLÅ"></div><div class="sw" data-c="RØD"></div><div class="sw" data-c="SØLV"></div><div class="sw" data-c="SORT"></div></div>
+      <svg viewBox="0 0 600 400">
+        <defs>
+          <linearGradient id="body" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#4f7fe6"/>
+            <stop offset=".22" stop-color="#1f4697"/>
+            <stop offset=".5" stop-color="#0f2a63"/>
+            <stop offset=".52" stop-color="#2d5bb8"/>
+            <stop offset=".75" stop-color="#0d2350"/>
+            <stop offset="1" stop-color="#06122c"/>
+          </linearGradient>
+          <linearGradient id="refl" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+            <stop offset=".5" stop-color="#fff" stop-opacity=".55"/>
+            <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+          </linearGradient>
+          <radialGradient id="rim" cx=".45" cy=".4" r=".7">
+            <stop offset="0" stop-color="#f4f7fb"/><stop offset=".6" stop-color="#9aa4b4"/><stop offset="1" stop-color="#4b5463"/>
+          </radialGradient>
+          <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#1b2a48"/><stop offset="1" stop-color="#05080f"/>
+          </linearGradient>
+          <clipPath id="bodyclip"><path d="M10 150 C 120 112, 300 100, 590 118 L590 330 L10 330 Z"/></clipPath>
+        </defs>
+        <!-- window line -->
+        <path d="M90 136 C 160 70, 260 50, 380 52 C 450 54, 500 80, 560 122 L 560 128 L 90 140 Z" fill="url(#glass)"/>
+        <path d="M120 128 C 180 80, 260 64, 360 64" stroke="#ffffff30" stroke-width="3" fill="none"/>
+        <!-- body -->
+        <path d="M10 150 C 120 112, 300 100, 590 118 L590 330 L10 330 Z" fill="url(#body)"/>
+        <g clip-path="url(#bodyclip)">
+          <path d="M10 214 C 200 198, 400 196, 590 206" stroke="#9fc0ff" stroke-opacity=".55" stroke-width="2.5" fill="none"/>
+          <path d="M10 218 C 200 202, 400 200, 590 210" stroke="#000" stroke-opacity=".35" stroke-width="2" fill="none"/>
+          <rect x="-200" y="120" width="160" height="260" fill="url(#refl)" transform="skewX(-28)" opacity=".7">
+            <animate attributeName="x" values="-200;760;760" keyTimes="0;.6;1" dur="7s" repeatCount="indefinite"/>
+          </rect>
+          <path d="M10 160 C 140 132, 320 122, 590 136" stroke="#ffffff" stroke-opacity=".45" stroke-width="5" fill="none"/>
+          <line x1="300" y1="108" x2="296" y2="330" stroke="#020814" stroke-opacity=".7" stroke-width="2"/>
+          <rect x="226" y="178" width="46" height="9" rx="4.5" fill="#cfd6e2"/>
+          <rect x="226" y="178" width="46" height="3" rx="1.5" fill="#fff" opacity=".8"/>
+        </g>
+        <!-- wheel arch and wheel -->
+        <circle cx="450" cy="345" r="104" fill="#03070f"/>
+        <circle cx="450" cy="345" r="86" fill="#15181e"/>
+        <circle cx="450" cy="345" r="58" fill="url(#rim)"/>
+        <g stroke="#5b6574" stroke-width="7" stroke-linecap="round">
+          <line x1="450" y1="300" x2="450" y2="390"/><line x1="407" y1="331" x2="493" y2="359"/><line x1="423" y1="381" x2="477" y2="309"/><line x1="423" y1="309" x2="477" y2="381"/><line x1="407" y1="359" x2="493" y2="331"/>
+        </g>
+        <circle cx="450" cy="345" r="13" fill="#2a303a"/>
+        <rect x="0" y="330" width="600" height="70" fill="#050b18" opacity="0"/>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<div class="cap-wrap">
+  <div class="wrap">
+    <div class="cap" role="status" aria-live="polite">
+      <span class="cap-label">LEDIG TID</span>
+      <span class="cap-text" id="cap-text">Ta kontakt for ledig tid i verkstedet.</span>
+      <a href="#bilde">Send bilde</a>
+      <span class="cap-note" id="cap-note"></span>
+    </div>
+  </div>
+</div>
+
+<section id="tjenester">
+  <div class="wrap">
+    <div class="sec-h">
+      <span class="chip blue"><i></i><b>Tjenester</b></span>
+      <h2>Billakkering i Hunndalen</h2>
+      <p>Vi er et lakkeringsverksted. Lurer du på om vi kan ta jobben, er det enklest å sende et bilde eller ringe.</p>
+    </div>
+    <div class="svc">
+      <article class="card">
+        <div class="card-top t1"><span class="code mono">LAKK</span></div>
+        <div class="card-b">
+          <h3>Billakkering</h3>
+          <p>Lakkering av bil i eget verksted i Sivesindvegen 8.</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top t2"><span class="code mono">RIPER</span></div>
+        <div class="card-b">
+          <h3>Riper og steinsprut</h3>
+          <p>Har bilen mistet glansen, eller fått riper og steinsprut? Ta et bilde, så ser vi på hva som kan gjøres.</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top t3"><span class="code mono">SKADE</span></div>
+        <div class="card-b">
+          <h3>Lakkskader og bilskade</h3>
+          <p>Har bilen fått en smell? Send bilde av skaden, så får du svar på hva som må til.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="ba-sec dark" id="for-etter">
+  <div class="wrap">
+    <div class="sec-h">
+      <span class="chip"><i></i><b>Før og etter</b></span>
+      <h2>Dra og se forskjellen</h2>
+      <p>Her kommer bilder fra jobbene deres. Dra streken til siden for å sammenligne.</p>
+    </div>
+
+    <div class="ba" id="ba" style="--pos:50%">
+      <!-- BEFORE: dull, scratched panel -->
+      <svg viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <defs>
+          <linearGradient id="dull" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#3a4f78"/><stop offset=".5" stop-color="#28395c"/><stop offset="1" stop-color="#1a2640"/>
+          </linearGradient>
+          <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="4"/><feColorMatrix values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .22 0"/></filter>
+        </defs>
+        <rect width="800" height="500" fill="#121a2b"/>
+        <path d="M0 60 C 260 30, 560 30, 800 70 L800 500 L0 500 Z" fill="url(#dull)"/>
+        <rect width="800" height="500" filter="url(#grain)" opacity=".55"/>
+        <path d="M0 250 C 260 236, 540 236, 800 250" stroke="#6f84ab" stroke-opacity=".5" stroke-width="3" fill="none"/>
+        <ellipse cx="330" cy="330" rx="110" ry="46" fill="#000" opacity=".22"/>
+        <ellipse cx="320" cy="318" rx="80" ry="26" fill="#9fb2d6" opacity=".12"/>
+        <g stroke="#e9eef8" stroke-linecap="round" fill="none" opacity=".85">
+          <path d="M150 180 L 420 300" stroke-width="2.4"/>
+          <path d="M170 172 L 380 262" stroke-width="1.2"/>
+          <path d="M210 210 C 300 240, 360 280, 460 330" stroke-width="1.6"/>
+          <path d="M480 150 L 600 210" stroke-width="1.4"/>
+          <path d="M520 360 L 690 390" stroke-width="1"/>
+        </g>
+        <g fill="#e9eef8" opacity=".9">
+          <circle cx="600" cy="140" r="3"/><circle cx="640" cy="170" r="2"/><circle cx="560" cy="120" r="2.2"/><circle cx="700" cy="150" r="2.6"/><circle cx="660" cy="118" r="1.6"/><circle cx="110" cy="390" r="2.4"/><circle cx="150" cy="420" r="1.8"/>
+        </g>
+        <g stroke="#ffffff" stroke-opacity=".08" fill="none">
+          <circle cx="250" cy="150" r="40"/><circle cx="250" cy="150" r="60"/><circle cx="250" cy="150" r="80"/><circle cx="600" cy="380" r="50"/><circle cx="600" cy="380" r="72"/>
+        </g>
+        <path d="M60 470 C 90 440, 130 450, 150 480 L 160 500 L 40 500 Z" fill="#7a4a2a" opacity=".55"/>
+      </svg>
+      <!-- AFTER: polished, deep gloss -->
+      <svg class="after" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <defs>
+          <linearGradient id="gloss" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#5a8bf2"/><stop offset=".3" stop-color="#1d4596"/><stop offset=".49" stop-color="#0c2257"/><stop offset=".51" stop-color="#3566c9"/><stop offset=".8" stop-color="#0c2052"/><stop offset="1" stop-color="#050f28"/>
+          </linearGradient>
+          <linearGradient id="streak" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".6"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
+          </linearGradient>
+          <filter id="flake"><feTurbulence type="fractalNoise" baseFrequency="1.6" numOctaves="1" seed="9"/><feColorMatrix values="0 0 0 0 .75  0 0 0 0 .85  0 0 0 0 1  0 0 0 .5 -.18"/></filter>
+        </defs>
+        <rect width="800" height="500" fill="#0a1222"/>
+        <path d="M0 60 C 260 30, 560 30, 800 70 L800 500 L0 500 Z" fill="url(#gloss)"/>
+        <path d="M0 60 C 260 30, 560 30, 800 70 L800 500 L0 500 Z" fill="#fff" filter="url(#flake)" opacity=".35"/>
+        <path d="M0 250 C 260 236, 540 236, 800 250" stroke="#bcd3ff" stroke-opacity=".8" stroke-width="3" fill="none"/>
+        <path d="M0 254 C 260 240, 540 240, 800 254" stroke="#000" stroke-opacity=".4" stroke-width="2" fill="none"/>
+        <path d="M0 92 C 260 64, 560 64, 800 100" stroke="#fff" stroke-opacity=".75" stroke-width="6" fill="none"/>
+        <rect x="380" y="40" width="70" height="480" fill="url(#streak)" transform="skewX(-22)"/>
+        <rect x="470" y="40" width="22" height="480" fill="url(#streak)" transform="skewX(-22)" opacity=".7"/>
+        <path d="M0 330 C 200 300, 600 300, 800 340" stroke="#fff" stroke-opacity=".14" stroke-width="30" fill="none"/>
+      </svg>
+      <div class="ba-tag l">FØR</div>
+      <div class="ba-tag r">ETTER</div>
+      <input class="ba-input" type="range" min="0" max="100" value="50" aria-label="Sammenlign før og etter">
+      <div class="ba-line"><div class="ba-knob"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l-5 6 5 6M15 6l5 6-5 6"/></svg></div></div>
+    </div>
+    <p class="ba-cap">Her kommer før og etter-bilder fra verkstedet</p>
+  </div>
+</section>
+
+<section id="slik">
+  <div class="wrap">
+    <div class="sec-h">
+      <span class="chip blue"><i></i><b>Slik gjør du det</b></span>
+      <h2>Fra skade til blank lakk</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="layer"><span></span><span></span><span></span></div><span class="n">STEG 1</span><h3>Du sender et bilde</h3><p>Ta et bilde av skaden med mobilen og send det her på siden. Eller ring oss.</p></div>
+      <div class="step"><div class="layer"><span></span><span></span><span></span></div><span class="n">STEG 2</span><h3>Vi ser på skaden</h3><p>Vi tar kontakt og sier hva vi tror må gjøres. Noen ganger må vi se bilen først.</p></div>
+      <div class="step"><div class="layer"><span></span><span></span><span></span></div><span class="n">STEG 3</span><h3>Bilen inn i verkstedet</h3><p>Du får et tilbud, og vi finner en dag som passer for å ta bilen inn.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="form-sec" id="bilde">
+  <div class="wrap form-grid">
+    <div>
+      <div class="sec-h" style="margin-bottom:20px">
+        <span class="chip"><i></i><b>Send bilde</b></span>
+        <h2>Send oss et bilde av skaden</h2>
+        <p>Fyll inn det du vet. Et bilde sier ofte mer enn en lang beskrivelse.</p>
+      </div>
+      <div class="side-note">
+        <h3>Tips til bildet</h3>
+        <ul>
+          <li>Ta ett bilde på litt avstand, så vi ser hvor på bilen det er.</li>
+          <li>Ta ett bilde tett på skaden.</li>
+          <li>Dagslys er best. Unngå blits rett på lakken.</li>
+        </ul>
+        <a class="btn btn-ghost ring" href="tel:+4761173667">Heller ringe? 61 17 36 67</a>
+      </div>
+    </div>
+
+    <form id="skjema" novalidate>
+      <div class="row two">
+        <div class="f"><label for="bil">Bilmerke og modell</label><input id="bil" name="bil" autocomplete="off" placeholder="F.eks. Toyota Corolla"></div>
+        <div class="f"><label for="reg">Reg.nr <small>(valgfritt)</small></label><input id="reg" name="reg" autocomplete="off" placeholder="AB 12345" style="text-transform:uppercase"></div>
+      </div>
+      <div class="f">
+        <label for="hva">Hva har skjedd</label>
+        <select id="hva" name="hva">
+          <option value="">Velg</option>
+          <option>Bulk/ripe</option>
+          <option>Lakkskade</option>
+          <option>Rust</option>
+          <option>Etter kollisjon</option>
+          <option>Annet</option>
+        </select>
+      </div>
+      <div class="f"><label for="besk">Beskrivelse</label><textarea id="besk" name="besk" placeholder="Hvor på bilen er skaden, og hvor stor er den omtrent?"></textarea></div>
+      <div class="f">
+        <span class="lab">Bilde av skaden</span>
+        <label class="up" id="up">
+          <input type="file" id="fil" name="fil" accept="image/*" multiple>
+          <span class="up-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg></span>
+          <span class="up-t"><strong id="up-title">Ta bilde eller velg fra mobilen</strong><span id="up-name">Trykk her for å legge ved bilde</span></span>
+        </label>
+      </div>
+      <div class="row two">
+        <div class="f"><label for="navn">Navn</label><input id="navn" name="navn" autocomplete="name"></div>
+        <div class="f"><label for="tlf">Telefon</label><input id="tlf" name="tlf" type="tel" inputmode="tel" autocomplete="tel"></div>
+      </div>
+      <button class="btn btn-red" type="submit">Send bilde og beskjed</button>
+      <div class="done" id="done" role="status">Dette er en forhåndsvisning. Når siden er satt opp, kommer forespørselen rett i innboksen deres.</div>
+    </form>
+  </div>
+</section>
+
+<section id="om">
+  <div class="wrap about">
+    <div>
+      <div class="sec-h" style="margin-bottom:18px">
+        <span class="chip blue"><i></i><b>Om oss</b></span>
+        <h2>Lakkeringsverksted i Hunndalen</h2>
+      </div>
+      <p>Glenns Billakkering AS ble startet i 2007 og holder til i Sivesindvegen 8 i Hunndalen, like ved Gjøvik. Glenn Rune Fremstad er daglig leder.</p>
+      <p>Verkstedet er åpent på hverdager. Ring gjerne før du kommer innom.</p>
+      <dl class="spec">
+        <div><dt>Startet</dt><dd>2007</dd></div>
+        <div><dt>Åpent</dt><dd>Man til fre</dd></div>
+        <div><dt>Sted</dt><dd>Hunndalen</dd></div>
+        <div><dt>Org.nr</dt><dd>991 266 933</dd></div>
+      </dl>
+    </div>
+    <div class="layers" aria-label="Illustrasjon av lag i billakk">
+      <h3>Lag for lag</h3>
+      <div class="lay l1"><i></i><span>Klarlakk</span></div>
+      <div class="lay l2"><i></i><span>Farge</span></div>
+      <div class="lay l3"><i></i><span>Grunning</span></div>
+      <div class="lay l4"><i></i><span>Karosseri</span></div>
+      <p>En lakk er bygd opp av flere lag. En ripe kan gå gjennom ett eller flere av dem.</p>
+    </div>
+  </div>
+</section>
+
+<section class="contact dark" id="kontakt">
+  <div class="wrap">
+    <div class="sec-h">
+      <span class="chip"><i></i><b>Kontakt</b></span>
+      <h2>Ring eller kom innom</h2>
+    </div>
+    <div class="ct">
+      <div class="ct-box">
+        <h3>Telefon</h3>
+        <a class="big-tel" href="tel:+4761173667">61 17 36 67</a>
+        <div class="ct-line"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.3 7 13 7 13s7-7.7 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg><span>Sivesindvegen 8<br>2827 Hunndalen</span></div>
+        <a class="btn btn-red" href="https://www.google.com/maps/search/?api=1&amp;query=Glenns%20Billakkering%2C%20Sivesindvegen%208%2C%202827%20Hunndalen" target="_blank" rel="noopener">Åpne i Google Maps</a>
+      </div>
+      <div class="ct-box">
+        <h3>Åpningstider</h3>
+        <table><tbody id="hours"></tbody></table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>Glenns Billakkering AS, org.nr 991 266 933</span>
+    <span>Sivesindvegen 8, 2827 Hunndalen</span>
+  </div>
+</footer>
+
+<div class="sticky" id="sticky">
+  <a class="btn btn-red" href="#bilde">Send bilde</a>
+  <a class="btn btn-ghost" href="tel:+4761173667">Ring</a>
+</div>
+
+<script>
+// Kapasitet: published Google Sheet CSV (columns Felt, Tekst; rows Kapasitet, Beskjed). Elias connects it later.
+const SHEET_CSV = "";
+const FALLBACK = "Ta kontakt for ledig tid i verkstedet.";
+
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+function parseCsv(text) {
+  const rows = []; let row = [], field = "", q = false;
+  for (let i = 0; i < text.length; i++) {
+    const c = text[i];
+    if (q) { if (c === '"' && text[i + 1] === '"') { field += '"'; i++; } else if (c === '"') q = false; else field += c; }
+    else if (c === '"') q = true;
+    else if (c === ",") { row.push(field); field = ""; }
+    else if (c === "\n" || c === "\r") { if (c === "\r" && text[i + 1] === "\n") i++; row.push(field); rows.push(row); row = []; field = ""; }
+    else field += c;
+  }
+  if (field || row.length) { row.push(field); rows.push(row); }
+  return rows;
+}
+
+if (SHEET_CSV) {
+  fetch(SHEET_CSV + "&t=" + Date.now(), { cache: "no-store" }).then(r => r.ok ? r.text() : Promise.reject(r.status)).then(text => {
+    const d = {};
+    for (const [felt = "", tekst = ""] of parseCsv(text).slice(1)) {
+      const k = felt.trim().toLowerCase();
+      if (k) d[k] = tekst.trim();
+    }
+    document.getElementById("cap-text").innerHTML = esc(d["kapasitet"] || FALLBACK);
+    document.getElementById("cap-note").innerHTML = esc(d["beskjed"] || "");
+  }).catch(() => {});
+}
+
+// Opening hours (Google): Monday to Friday 07:30 to 15:30
+const DAYS = ["Søndag", "Mandag", "Tirsdag", "Onsdag", "Torsdag", "Fredag", "Lørdag"];
+const OPEN = [7 * 60 + 30, 15 * 60 + 30];
+const now = new Date(), today = now.getDay(), mins = now.getHours() * 60 + now.getMinutes();
+const weekday = today >= 1 && today <= 5;
+document.getElementById("hours").innerHTML = [1, 2, 3, 4, 5, 6, 0].map(d =>
+  `<tr class="${d === today ? "is-today" : ""}"><td>${DAYS[d]}</td><td>${d >= 1 && d <= 5 ? "07.30 til 15.30" : "Stengt"}</td></tr>`
+).join("");
+const badge = document.getElementById("open-badge");
+if (weekday && mins >= OPEN[0] && mins < OPEN[1]) { badge.classList.add("is-open"); badge.textContent = "Åpent nå, til kl. 15.30"; }
+else if (weekday && mins < OPEN[0]) badge.textContent = "Stengt nå, åpner kl. 7.30";
+else badge.textContent = "Stengt nå. Åpent mandag til fredag kl. 7.30 til 15.30";
+
+// Before / after slider
+const ba = document.getElementById("ba");
+ba.querySelector("input").addEventListener("input", e => ba.style.setProperty("--pos", e.target.value + "%"));
+
+// Image field: preview only shows the file name
+const fil = document.getElementById("fil"), up = document.getElementById("up");
+fil.addEventListener("change", () => {
+  const names = [...fil.files].map(f => f.name);
+  if (names.length) {
+    up.classList.add("has");
+    document.getElementById("up-title").textContent = names.length === 1 ? "Bilde lagt ved" : names.length + " bilder lagt ved";
+    document.getElementById("up-name").textContent = names.join(", ");
+  }
+});
+
+// Preview: the form sends nothing
+document.getElementById("skjema").addEventListener("submit", e => {
+  e.preventDefault();
+  const done = document.getElementById("done");
+  done.classList.add("show");
+  done.scrollIntoView({ behavior: "smooth", block: "nearest" });
+});
+
+// Sticky bar on phones after the hero
+const sticky = document.getElementById("sticky");
+const onScroll = () => sticky.classList.toggle("on", window.scrollY > 420);
+addEventListener("scroll", onScroll, { passive: true }); onScroll();
+</script>
+</body>
+</html>
