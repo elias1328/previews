@@ -1,0 +1,629 @@
+<!doctype html>
+<html lang="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Malermester Rune Stende AS | maler på Gjøvik</title>
+<meta name="description" content="Malermester Rune Stende AS på Gjøvik: maling, tapetsering, gulv, fasade og linoljemaling, og eget verksted for restaurering av gamle vinduer. Ring 61 18 76 00.">
+<!-- Preview only: keep out of search engines until the owner says yes -->
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#f3ecdf">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --linen:#f3ecdf;--linen2:#e9dfcc;--card:#faf6ee;--line:#d9ccb4;
+  --ink:#2a211c;--muted:#655a4f;
+  --falu:#86271e;--falu-d:#5e1a14;--falu-l:#c46a57;
+  --oxide:#a5482c;
+  --ochre:#c9952f;--ochre-l:#e8c477;--ochre-d:#8a6219;
+  --frame:#f7f2e7;
+  --night:#23201c;--night2:#2f2a25;
+  /* Vertical board cladding (tømmermannskledning): wide board, shadow, lath */
+  --boards:repeating-linear-gradient(90deg,#00000000 0 40px,#0000002e 40px 42px,#ffffff14 42px 44px,#00000000 44px 54px,#00000038 54px 56px)
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Public Sans",system-ui,sans-serif;background:var(--linen);color:var(--ink);line-height:1.6;font-size:1.04rem;overflow-x:hidden}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;line-height:1.02;letter-spacing:-.005em}
+a{color:inherit}
+svg{display:block}
+.wrap{max-width:1120px;margin:0 auto;padding:0 16px}
+.preview{background:#e9c46a;color:#1f1a0e;text-align:center;font-size:.8rem;font-weight:600;padding:6px 12px}
+.kicker{display:inline-flex;align-items:center;gap:12px;font-size:.78rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--falu)}
+.kicker::before{content:"";width:16px;height:16px;flex:none;border:2px solid currentColor;background:linear-gradient(currentColor,currentColor) 50% 0/2px 100% no-repeat,linear-gradient(currentColor,currentColor) 0 50%/100% 2px no-repeat}
+
+/* Header */
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 16px}
+.mark{display:flex;align-items:center;gap:12px;text-decoration:none;line-height:1.05}
+.mark svg{width:30px;height:38px;flex:none}
+.mark b{display:block;font-family:"Cormorant Garamond",serif;font-weight:700;font-size:1.45rem;letter-spacing:.01em}
+.mark small{display:block;font-size:.68rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.top nav{display:flex;gap:24px;font-weight:600;font-size:.94rem}
+.top nav a{text-decoration:none;padding:6px 0;border-bottom:2px solid transparent}
+.top nav a:hover{border-color:var(--ochre)}
+
+/* Hero: text on linen, a red board wall with a white window on the right */
+.hero{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);min-height:560px;border-top:1px solid var(--line)}
+.hero-text{padding:56px 48px 64px max(16px,calc((100vw - 1120px)/2 + 16px));display:flex;flex-direction:column;justify-content:center}
+.hero h1{font-size:clamp(3rem,8.4vw,5.6rem);font-weight:600;margin:18px 0 0}
+.hero h1 span{display:block;font-style:italic;font-weight:500;color:var(--falu)}
+.lead{font-size:clamp(1.1rem,2.3vw,1.26rem);max-width:520px;margin-top:22px;color:#3d342c}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:12px 28px;font:inherit;font-weight:700;font-size:1.06rem;text-decoration:none;border-radius:2px;border:2px solid var(--ink);color:var(--ink);background:transparent;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.btn.solid{background:var(--falu);border-color:var(--falu);color:#fff}
+.btn:hover{background:var(--ink);border-color:var(--ink);color:#fff}
+.btn svg{width:20px;height:20px}
+.meta{margin-top:26px;display:flex;flex-wrap:wrap;gap:6px 22px;font-size:.93rem;color:var(--muted);font-weight:500}
+.meta span{display:inline-flex;align-items:center;gap:8px}
+.meta span::before{content:"";width:7px;height:7px;background:var(--ochre);transform:rotate(45deg)}
+.wall{position:relative;background-color:var(--falu);background-image:var(--boards),linear-gradient(180deg,#ffffff10,#00000030);display:grid;place-items:center;padding:48px 24px 40px;overflow:hidden}
+.wall::after{content:"";position:absolute;left:0;right:0;bottom:0;height:34px;background:var(--frame);box-shadow:0 -6px 0 #00000022}
+.wall .win{width:300px;max-width:64%;filter:drop-shadow(0 18px 26px #0000004a);position:relative;z-index:1;margin-bottom:24px}
+
+/* Kapasitet: an ochre band */
+.cap{background:var(--ochre);color:var(--ink);border-bottom:1px solid var(--ochre-d)}
+.cap-in{display:flex;flex-wrap:wrap;align-items:center;gap:8px 22px;padding:18px 16px}
+.cap-k{display:inline-flex;align-items:center;gap:10px;font-size:.78rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase}
+.cap-k svg{width:20px;height:20px}
+.cap-t{font-family:"Cormorant Garamond",serif;font-weight:700;font-size:clamp(1.35rem,3.6vw,1.7rem);line-height:1.15;flex:1 1 320px}
+.cap-a{font-weight:700;text-decoration:none;border-bottom:2px solid var(--ink);padding:4px 0}
+.cap-b{display:none;width:100%;border-top:1px solid #2a211c40;padding-top:8px;font-weight:500}
+.cap-b.show{display:block}
+
+/* Sections */
+section{padding:88px 0}
+.head{margin-bottom:38px;max-width:680px}
+.head h2{font-size:clamp(2.4rem,6.4vw,3.6rem);margin:14px 0 12px}
+.head p{color:var(--muted);font-size:1.08rem}
+
+/* Services as paint sample cards */
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.pc{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);text-decoration:none;box-shadow:0 1px 0 #fff inset,0 10px 24px #4a301812;transition:transform .2s,box-shadow .2s}
+.pc:hover{transform:translateY(-3px);box-shadow:0 16px 30px #4a30182a}
+.sw{height:118px;position:relative;border-bottom:1px solid #00000018}
+.sw::after{content:attr(data-no);position:absolute;right:10px;top:8px;font-size:.7rem;font-weight:700;letter-spacing:.14em;color:#fff;text-shadow:0 1px 3px #0009}
+.pc .tx{padding:16px 18px 18px;display:flex;flex-direction:column;flex:1}
+.pc h3{font-size:1.6rem;margin-bottom:4px}
+.pc p{color:#4e443b;font-size:.96rem;flex:1}
+.pc .go{margin-top:12px;font-size:.84rem;font-weight:700;color:var(--falu)}
+.sw.maling{background:linear-gradient(180deg,#f2ead9,#e7dcc6)}
+.sw.maling::after{color:#6d614e;text-shadow:none}
+.sw.maling::before{content:"";position:absolute;left:18px;right:40%;bottom:22px;height:30px;background:var(--falu);border-radius:2px 18px 14px 2px;box-shadow:24px -34px 0 -6px var(--ochre)}
+.sw.tapet{background-color:#3d4a3e;background-image:radial-gradient(circle at 50% 50%,#c9b98f 0 3px,transparent 3.5px),radial-gradient(circle at 0 0,#c9b98f55 0 6px,transparent 6.5px),repeating-linear-gradient(90deg,transparent 0 18px,#ffffff10 18px 19px);background-size:36px 36px,36px 36px,100% 100%}
+.sw.fasade{background-color:var(--falu);background-image:var(--boards)}
+.sw.lin{background:linear-gradient(135deg,#d9a441,#b98221);}
+.sw.lin::before{content:"";position:absolute;inset:auto 18px 18px 18px;height:44px;border-radius:50%;background:radial-gradient(ellipse at 40% 35%,#fff6 0 18%,transparent 45%),radial-gradient(ellipse,#8a5c12,#6e4609);opacity:.85}
+.sw.tre{background-color:#9b6b3e;background-image:repeating-linear-gradient(176deg,transparent 0 9px,#00000020 9px 10px,transparent 10px 17px,#ffffff18 17px 18px)}
+.sw.sliping{background-color:#c79b62;background-image:linear-gradient(90deg,#00000024 0 1px,transparent 1px),repeating-linear-gradient(180deg,transparent 0 26px,#5a3b1a40 26px 27px),linear-gradient(90deg,#ffffff00 0 50%,#ffffff30 50% 100%);background-size:96px 100%,100% 27px,100% 100%}
+.sw.gulv{background-color:#6d4a2e;background-image:linear-gradient(90deg,#00000038 0 2px,transparent 2px),linear-gradient(180deg,#00000038 0 2px,transparent 2px);background-size:120px 28px,100% 28px}
+.sw.vatrom{background-color:#9fb0ad;background-image:linear-gradient(90deg,#f7f2e7 0 2px,transparent 2px),linear-gradient(180deg,#f7f2e7 0 2px,transparent 2px),linear-gradient(135deg,#ffffff40,transparent 60%);background-size:26px 26px,26px 26px,100% 100%}
+.svc-note{margin-top:24px;color:var(--muted)}
+.svc-note a{color:var(--falu);font-weight:700}
+
+/* Window workshop: dark section */
+.vind{background:var(--night);color:#efe6d6;position:relative;overflow:hidden}
+.vind::before{content:"";position:absolute;inset:0;background-image:linear-gradient(90deg,#ffffff07 0 2px,transparent 2px),linear-gradient(180deg,#ffffff07 0 2px,transparent 2px);background-size:120px 160px;pointer-events:none}
+.vind .wrap{position:relative}
+.vind .kicker{color:var(--ochre-l)}
+.vind-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:56px;align-items:center}
+.vind h2{font-size:clamp(2.4rem,6.4vw,3.6rem);margin:14px 0 18px}
+.vind h2 em{color:var(--ochre-l);font-weight:500}
+.vind p{color:#d6cbb8;max-width:520px}
+.vind p+p{margin-top:12px}
+.tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.tags span{border:1px solid #ffffff33;padding:7px 14px;font-size:.88rem;font-weight:600;color:#f3ead9}
+.vind .btn{margin-top:30px;background:var(--ochre);border-color:var(--ochre);color:var(--ink)}
+.vind .btn:hover{background:var(--frame);border-color:var(--frame)}
+
+/* Before / after slider (placeholder drawings) */
+.ba{position:relative;aspect-ratio:4/3.3;overflow:hidden;border:10px solid var(--night2);outline:1px solid #ffffff22;--p:50%;user-select:none;touch-action:pan-y}
+.ba .layer{position:absolute;inset:0}
+.ba .layer svg{width:100%;height:100%}
+.ba .before{clip-path:inset(0 calc(100% - var(--p)) 0 0)}
+.ba .handle{position:absolute;top:0;bottom:0;left:var(--p);width:3px;margin-left:-1.5px;background:var(--frame);pointer-events:none;box-shadow:0 0 0 1px #0003}
+.ba .handle::after{content:"";position:absolute;top:50%;left:50%;width:46px;height:46px;margin:-23px 0 0 -23px;border-radius:50%;background:var(--frame) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9 6l-6 6 6 6M15 6l6 6-6 6' fill='none' stroke='%232a211c' stroke-width='2.2'/%3E%3C/svg%3E") 50%/22px no-repeat;box-shadow:0 4px 14px #0006}
+.ba input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
+.ba .lab{position:absolute;top:12px;padding:4px 12px;background:#23201cd9;color:#fff;font-size:.78rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;pointer-events:none}
+.ba .lab.l{left:12px}
+.ba .lab.r{right:12px;background:#f7f2e7e6;color:var(--ink)}
+.ba-cap{display:flex;align-items:center;gap:12px;margin-top:14px;color:#cfc3ae;font-weight:500}
+.ba-cap::before{content:"";width:34px;height:2px;background:var(--ochre);flex:none}
+
+/* Steps */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);background:var(--card)}
+.step{padding:30px 28px;border-right:1px solid var(--line)}
+.step:last-child{border-right:0}
+.step b{display:block;font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:600;font-size:3.4rem;line-height:1;color:var(--ochre-d)}
+.step h3{font-size:1.65rem;margin:10px 0 8px}
+.step p{color:#4e443b}
+
+/* Photo strip placeholder */
+.jobs{background:var(--linen2)}
+.tiles{display:grid;grid-template-columns:1.3fr 1fr 1fr 1.3fr;grid-template-rows:250px;gap:10px}
+.tile{position:relative;overflow:hidden;display:flex;align-items:flex-end;padding:12px}
+.tile span{position:relative;z-index:1;background:#faf6eef0;color:var(--ink);font-weight:600;font-size:.88rem;padding:6px 10px}
+.tile::after{content:"";position:absolute;inset:0;background:linear-gradient(160deg,#ffffff1c,transparent 50%,#00000030)}
+.t1{background-color:var(--falu);background-image:var(--boards)}
+.t1::before{content:"";position:absolute;left:30%;top:22%;width:34%;height:46%;background:linear-gradient(#f7f2e7,#f7f2e7) 50% 0/4px 100% no-repeat,linear-gradient(#f7f2e7,#f7f2e7) 0 50%/100% 4px no-repeat,linear-gradient(160deg,#5c6f78,#2d3a40);border:6px solid #f7f2e7;box-shadow:0 -10px 0 -2px #f7f2e7}
+.t2{background-color:#3d4a3e;background-image:radial-gradient(circle,#c9b98f 0 3px,transparent 3.5px),radial-gradient(circle at 0 0,#c9b98f55 0 6px,transparent 6.5px);background-size:32px 32px}
+.t3{background-color:#c79b62;background-image:repeating-linear-gradient(180deg,transparent 0 30px,#5a3b1a40 30px 31px),linear-gradient(90deg,#00000020 0 1px,transparent 1px);background-size:100% 31px,110px 100%}
+.t4{background-color:#d6a54a;background-image:repeating-linear-gradient(90deg,transparent 0 46px,#0000002a 46px 48px,#ffffff1c 48px 50px,transparent 50px 60px,#00000030 60px 62px)}
+.ph{margin-top:16px;display:flex;align-items:center;gap:12px;color:var(--muted);font-weight:500}
+.ph::before{content:"";width:34px;height:2px;background:var(--falu);flex:none}
+
+/* Om oss */
+.about{display:grid;grid-template-columns:1.15fr 1fr;gap:48px;align-items:start}
+.about p+p{margin-top:12px}
+.about .badge{display:flex;gap:14px;align-items:flex-start;margin-top:26px;padding:18px 20px;background:var(--card);border:1px solid var(--line);border-left:6px solid var(--ochre)}
+.badge svg{width:30px;height:30px;color:var(--ochre-d);flex:none;margin-top:2px}
+.badge b{display:block;font-family:"Cormorant Garamond",serif;font-size:1.35rem;line-height:1.2}
+.badge a{font-size:.92rem;font-weight:600;color:var(--falu)}
+.facts{background:var(--card);border:1px solid var(--line)}
+.facts div{display:flex;justify-content:space-between;gap:16px;padding:14px 18px;border-bottom:1px solid var(--linen2)}
+.facts div:last-child{border-bottom:0}
+.facts dt{color:var(--muted);font-weight:600}
+.facts dd{font-weight:700;text-align:right}
+
+/* Form */
+.quote-sec{background-color:var(--falu);background-image:var(--boards);color:#fff}
+.quote-sec .kicker{color:var(--ochre-l)}
+.quote-sec .head p{color:#f0d9d2}
+.qgrid{display:grid;grid-template-columns:1.5fr 1fr;gap:30px;align-items:start}
+form{background:var(--card);color:var(--ink);padding:30px 26px;border:8px solid var(--frame);box-shadow:0 26px 50px #0000004d}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:0 16px}
+label{display:block;font-weight:700;font-size:.97rem;margin:0 0 6px}
+label small{font-weight:500;color:var(--muted);font-size:.86rem}
+.f{margin-bottom:16px}
+input,select,textarea{width:100%;font:inherit;font-size:1.05rem;color:var(--ink);background:#fff;border:2px solid var(--line);border-radius:2px;padding:13px 14px;min-height:54px}
+textarea{min-height:120px;resize:vertical}
+select{appearance:none;background-image:linear-gradient(45deg,transparent 50%,#2a211c 50%),linear-gradient(135deg,#2a211c 50%,transparent 50%);background-position:calc(100% - 22px) 50%,calc(100% - 16px) 50%;background-size:6px 6px;background-repeat:no-repeat;padding-right:40px}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--falu);box-shadow:0 0 0 3px #86271e2e}
+form .btn{width:100%;font-size:1.14rem;min-height:60px}
+.sent{display:none;margin-top:16px;background:#f6ecd3;border:2px solid var(--ochre);border-left-width:8px;padding:16px 18px;font-weight:600}
+.sent.show{display:block}
+.side{background:var(--frame);color:var(--ink);padding:26px;border:1px solid #ffffff55}
+.side h3{font-size:1.7rem;margin-bottom:6px}
+.side p{color:var(--muted)}
+.side .big{display:block;font-family:"Cormorant Garamond",serif;font-weight:700;font-size:2.5rem;color:var(--falu);text-decoration:none;line-height:1.1;margin:8px 0 10px}
+
+/* Kontakt */
+.contact{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.cbox{background:var(--card);border:1px solid var(--line);padding:24px;position:relative}
+.cbox::before{content:"";position:absolute;left:-1px;right:-1px;top:-1px;height:6px;background:var(--falu)}
+.cbox:nth-child(2)::before{background:var(--ochre)}
+.cbox:nth-child(3)::before{background:var(--ink)}
+.cbox h3{font-size:1.5rem;margin-bottom:8px}
+.cbox p+p{margin-top:8px}
+.cbox a{font-weight:700;text-underline-offset:3px}
+.cbox .tel{font-family:"Cormorant Garamond",serif;font-size:2.2rem;text-decoration:none;color:var(--falu)}
+.hours{width:100%;border-collapse:collapse}
+.hours td{padding:5px 0;border-bottom:1px dashed var(--line)}
+.hours td+td{text-align:right;font-weight:600}
+.hours tr:last-child td{border-bottom:0}
+.hours tr.today td{color:var(--falu);font-weight:700}
+
+footer{background:var(--night);color:#cbbfab;padding:40px 0;font-size:.92rem}
+footer .mark{color:#fff;margin-bottom:14px}
+footer .mark small{color:#a99c86}
+.trim{height:14px;background:var(--falu);background-image:var(--boards);border-bottom:6px solid var(--frame)}
+
+.mobilebar{display:none}
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr;min-height:0}
+  .hero-text{padding:36px 16px 40px}
+  .wall{padding:26px 16px 20px}
+  .wall .win{width:150px;margin-bottom:14px}
+  .wall::after{height:22px}
+  .cards{grid-template-columns:1fr 1fr}
+  .vind-grid,.about,.qgrid{grid-template-columns:1fr;gap:36px}
+  .steps{grid-template-columns:1fr}
+  .step{border-right:0;border-bottom:1px solid var(--line)}
+  .step:last-child{border-bottom:0}
+  .tiles{grid-template-columns:1fr 1fr;grid-template-rows:170px 170px}
+  .contact{grid-template-columns:1fr}
+}
+@media (max-width:760px){
+  .top nav{display:none}
+  .mobilebar{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:fixed;left:12px;right:12px;bottom:12px;z-index:10;transform:translateY(140%);transition:transform .25s}
+  .mobilebar.on{transform:none}
+  .mobilebar a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:56px;border-radius:2px;font-weight:700;font-size:1.1rem;text-decoration:none;box-shadow:0 8px 22px #0005}
+  .mobilebar svg{width:18px;height:18px}
+  .mobilebar .a{background:var(--falu);color:#fff}
+  .mobilebar .b{background:var(--ink);color:#fff}
+  footer{padding-bottom:100px}
+}
+@media (max-width:520px){
+  .hero h1{font-size:clamp(2.7rem,12.5vw,3.4rem)}
+  .actions .btn{flex:1 1 100%}
+  section{padding:64px 0}
+  .cards{gap:12px}
+  .sw{height:84px}
+  .pc .tx{padding:12px 14px 14px}
+  .pc h3{font-size:1.35rem}
+  .pc p{font-size:.9rem}
+  .row{grid-template-columns:1fr}
+  form{padding:22px 16px;border-width:6px}
+  .facts div{flex-direction:column;gap:0}
+  .facts dd{text-align:left}
+}
+</style>
+</head>
+<body>
+<div class="preview">Forhåndsvisning laget for Malermester Rune Stende AS, bildene kommer fra dere</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></symbol>
+    <symbol id="i-mark" viewBox="0 0 30 38"><path d="M1 9L15 2l14 7z" fill="#86271e"/><rect x="3" y="10" width="24" height="26" fill="#f7f2e7" stroke="#86271e" stroke-width="2"/><g fill="#2f4148"><rect x="6.5" y="13.5" width="7" height="6"/><rect x="16.5" y="13.5" width="7" height="6"/><rect x="6.5" y="22" width="7" height="5.5"/><rect x="16.5" y="22" width="7" height="5.5"/><rect x="6.5" y="30" width="7" height="3"/><rect x="16.5" y="30" width="7" height="3"/></g></symbol>
+    <symbol id="i-pane" viewBox="0 0 20 20"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="16" height="16"/><path d="M10 2v16M2 10h16"/></g></symbol>
+    <symbol id="i-seal" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 2.5l2.2 1.6 2.7-.1.9 2.6 2.2 1.6-.8 2.6.8 2.6-2.2 1.6-.9 2.6-2.7-.1L12 19.5l-2.2-1.6-2.7.1-.9-2.6L4 13.8l.8-2.6L4 8.6l2.2-1.6.9-2.6 2.7.1z"/><path d="M8.6 11.2l2.4 2.3 4.4-4.4"/></g></symbol>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7d97a1"/><stop offset=".55" stop-color="#3c5058"/><stop offset="1" stop-color="#26343a"/></linearGradient>
+    <linearGradient id="glass-old" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8a8b80"/><stop offset="1" stop-color="#4c4d46"/></linearGradient>
+    <!-- A classic two-leaf window with six panes, cap and sill, drawn in a 240 x 330 box -->
+    <symbol id="window" viewBox="0 0 240 330">
+      <path d="M8 34L120 4l112 30z" fill="var(--wf,#f7f2e7)"/>
+      <rect x="4" y="34" width="232" height="12" fill="var(--wf,#f7f2e7)"/>
+      <rect x="14" y="46" width="212" height="262" fill="var(--wf,#f7f2e7)"/>
+      <rect x="26" y="58" width="188" height="238" fill="#1b1714"/>
+      <g fill="url(#glass)">
+        <rect x="32" y="64" width="80" height="70"/><rect x="128" y="64" width="80" height="70"/>
+        <rect x="32" y="142" width="80" height="70"/><rect x="128" y="142" width="80" height="70"/>
+        <rect x="32" y="220" width="80" height="70"/><rect x="128" y="220" width="80" height="70"/>
+      </g>
+      <g fill="#ffffff" opacity=".22">
+        <path d="M32 64h34L32 104z"/><path d="M128 64h22l-22 26z"/><path d="M60 220h52v16L44 290H32v-12z" opacity=".5"/><path d="M162 142h46v8l-62 62h-18v-6z" opacity=".6"/>
+      </g>
+      <g fill="var(--wf,#f7f2e7)"><rect x="112" y="58" width="16" height="238"/><rect x="26" y="134" width="188" height="8"/><rect x="26" y="212" width="188" height="8"/></g>
+      <rect x="118.5" y="58" width="3" height="238" fill="#00000022"/>
+      <rect x="0" y="306" width="240" height="14" fill="var(--wf,#f7f2e7)"/>
+      <rect x="6" y="320" width="228" height="6" fill="#00000030"/>
+    </symbol>
+  </defs>
+</svg>
+
+<header>
+  <div class="wrap top">
+    <a class="mark" href="#"><svg aria-hidden="true"><use href="#i-mark"/></svg><span><b>Rune Stende</b><small>Malermester, Gjøvik</small></span></a>
+    <nav aria-label="Hovedmeny"><a href="#tjenester">Tjenester</a><a href="#vinduer">Vinduer</a><a href="#om">Om oss</a><a href="#kontakt">Kontakt</a></nav>
+  </div>
+</header>
+
+<main>
+<div class="hero">
+  <div class="hero-text">
+    <span class="kicker">Malerfirma på Gjøvik</span>
+    <h1>Malermester Rune Stende <span>maler, tapetserer og legger gulv</span></h1>
+    <p class="lead">Store og små jobber, inne og ute. Og vi har eget verksted der vi setter i stand gamle vinduer.</p>
+    <div class="actions">
+      <a class="btn solid" href="#tilbud">Få tilbud</a>
+      <a class="btn" href="tel:+4761187600"><svg aria-hidden="true"><use href="#i-phone"/></svg>Ring 61 18 76 00</a>
+    </div>
+    <div class="meta"><span>Ringvegen 7, Gjøvik</span><span>Mandag til fredag kl. 7 til 15</span></div>
+  </div>
+  <div class="wall" aria-hidden="true">
+    <svg class="win" viewBox="0 0 240 330"><use href="#window"/></svg>
+  </div>
+</div>
+
+<div class="cap" aria-live="polite">
+  <div class="wrap cap-in">
+    <span class="cap-k"><svg aria-hidden="true"><use href="#i-pane"/></svg>Kapasitet</span>
+    <span class="cap-t" id="cap-text">Ta kontakt for ledig kapasitet og pris.</span>
+    <a class="cap-a" href="#tilbud">Spør om tilbud</a>
+    <p class="cap-b" id="cap-msg"></p>
+  </div>
+</div>
+
+<section id="tjenester">
+  <div class="wrap">
+    <div class="head">
+      <span class="kicker">Tjenester</span>
+      <h2>Det vi gjør</h2>
+      <p>Trykk på det som passer, så er det valgt i skjemaet. Fortell resten med egne ord.</p>
+    </div>
+    <div class="cards">
+      <a class="pc" href="#tilbud" data-pick="Maling"><div class="sw maling" data-no="01"></div><div class="tx"><h3>Maling</h3><p>Maling inne og ute, store og små jobber.</p><span class="go">Spør om tilbud</span></div></a>
+      <a class="pc" href="#tilbud" data-pick="Tapetsering"><div class="sw tapet" data-no="02"></div><div class="tx"><h3>Tapetsering</h3><p>Nytt tapet på veggen. Har du funnet et tapet, ta det med i beskrivelsen.</p><span class="go">Spør om tilbud</span></div></a>
+      <a class="pc" href="#tilbud" data-pick="Fasadeoppussing"><div class="sw fasade" data-no="03"></div><div class="tx"><h3>Fasade</h3><p>Oppussing av fasaden når huset trenger et nytt strøk.</p><span class="go">Spør om tilbud</span></div></a>
+      <a class="pc" href="#tilbud" data-pick="Linoljemaling"><div class="sw lin" data-no="04"></div><div class="tx"><h3>Linoljemaling</h3><p>Vi maler med linoljemaling. Spør oss gjerne om det passer til ditt hus.</p><span class="go">Spør om tilbud</span></div></a>
+      <a class="pc" href="#tilbud" data-pick="Trepleie"><div class="sw tre" data-no="05"></div><div class="tx"><h3>Trepleie</h3><p>Behandling og pleie av treverk.</p><span class="go">Spør om tilbud</span></div></a>
+      <a class="pc" href="#tilbud" data-pick="Gulvsliping"><div class="sw sliping" data-no="06"></div><div class="tx"><h3>Gulvsliping</h3><p>Sliping av tregulv.</p><span class="go">Spør om tilbud</span></div></a>
+      <a class="pc" href="#tilbud" data-pick="Gulvlegging"><div class="sw gulv" data-no="07"></div><div class="tx"><h3>Gulvlegging</h3><p>Vi legger nytt gulv.</p><span class="go">Spør om tilbud</span></div></a>
+      <a class="pc" href="#tilbud" data-pick="Våtrom"><div class="sw vatrom" data-no="08"></div><div class="tx"><h3>Våtrom</h3><p>Arbeid på bad og andre våtrom.</p><span class="go">Spør om tilbud</span></div></a>
+    </div>
+    <p class="svc-note">Står det ikke her? <a href="#tilbud">Spør likevel</a>, så sier vi ifra om det er noe for oss.</p>
+  </div>
+</section>
+
+<section id="vinduer" class="vind">
+  <div class="wrap vind-grid">
+    <div>
+      <span class="kicker">Vindusverkstedet</span>
+      <h2>Gamle vinduer <em>får et nytt liv</em></h2>
+      <p>Vi har eget verksted for vedlikehold og restaurering av gamle vinduer.</p>
+      <p>Har du vinduer du lurer på om kan settes i stand? Ring oss eller fortell litt om dem i skjemaet, så tar vi en prat.</p>
+      <div class="tags"><span>Vindusrestaurering</span><span>Linoljemaling</span><span>Bygningsvern</span></div>
+      <a class="btn" href="#tilbud" data-pick="Restaurering av vinduer">Spør om vinduene dine</a>
+    </div>
+    <div>
+      <div class="ba" id="ba">
+        <div class="layer after" aria-hidden="true">
+          <svg viewBox="0 0 400 330" preserveAspectRatio="xMidYMid slice">
+            <rect width="400" height="330" fill="#86271e"/>
+            <g opacity=".9"><path d="M0 0h400v330H0z" fill="url(#boards-after)"/></g>
+            <svg x="105" y="8" width="190" height="300" viewBox="0 0 240 330" style="--wf:#f7f2e7"><use href="#window"/></svg>
+          </svg>
+        </div>
+        <div class="layer before" aria-hidden="true">
+          <svg viewBox="0 0 400 330" preserveAspectRatio="xMidYMid slice">
+            <defs>
+              <pattern id="boards-after" width="28" height="330" patternUnits="userSpaceOnUse"><rect x="20" width="1.5" height="330" fill="#00000040"/><rect x="21.5" width="1.5" height="330" fill="#ffffff18"/><rect x="26" width="2" height="330" fill="#00000040"/></pattern>
+            </defs>
+            <rect width="400" height="330" fill="#6e4a3c"/>
+            <path d="M0 0h400v330H0z" fill="url(#boards-after)"/>
+            <svg x="105" y="8" width="190" height="300" viewBox="0 0 240 330" style="--wf:#b3aa98"><use href="#window"/></svg>
+            <g fill="#8b6a48">
+              <ellipse cx="128" cy="70" rx="9" ry="4"/><ellipse cx="270" cy="150" rx="6" ry="10"/><ellipse cx="200" cy="290" rx="14" ry="4"/><ellipse cx="120" cy="230" rx="5" ry="12"/><ellipse cx="236" cy="40" rx="12" ry="3"/><ellipse cx="282" cy="296" rx="8" ry="3"/>
+            </g>
+            <g fill="none" stroke="#e9e3d2" stroke-width="1.2" opacity=".75">
+              <path d="M140 70l18 22-6 14M154 92l14-4"/><path d="M240 196l-14 18 6 12"/>
+            </g>
+            <rect width="400" height="330" fill="#c9b48a" opacity=".16"/>
+          </svg>
+        </div>
+        <div class="handle" aria-hidden="true"></div>
+        <span class="lab l">Før</span><span class="lab r">Etter</span>
+        <input type="range" min="0" max="100" value="50" aria-label="Dra for å sammenligne før og etter">
+      </div>
+      <p class="ba-cap">Her kommer før og etter-bilder fra verkstedet.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="head">
+      <span class="kicker">Slik jobber vi</span>
+      <h2>Tre enkle steg</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><b>1</b><h3>Du tar kontakt</h3><p>Ring oss eller fyll ut skjemaet. Skriv kort hva det gjelder og hvor jobben er.</p></div>
+      <div class="step"><b>2</b><h3>Vi kommer på befaring</h3><p>Vi ser på jobben og hører hva du ser for deg.</p></div>
+      <div class="step"><b>3</b><h3>Du får et fast tilbud</h3><p>Etter befaringen får du et tilbud å ta stilling til. Ingenting er bestemt før du sier ja.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="jobbene" class="jobs">
+  <div class="wrap">
+    <div class="head">
+      <span class="kicker">Bilder av jobbene</span>
+      <h2>Fra jobbene våre</h2>
+    </div>
+    <div class="tiles" aria-hidden="true">
+      <div class="tile t1"><span>Fasade og vinduer</span></div>
+      <div class="tile t2"><span>Tapet</span></div>
+      <div class="tile t3"><span>Gulv</span></div>
+      <div class="tile t4"><span>Linoljemaling</span></div>
+    </div>
+    <p class="ph">Her legger vi inn bilder av jobbene deres.</p>
+  </div>
+</section>
+
+<section id="om">
+  <div class="wrap about">
+    <div>
+      <div class="head">
+        <span class="kicker">Om oss</span>
+        <h2>Et malerfirma på Gjøvik</h2>
+      </div>
+      <p>Malermester Rune Stende AS holder til i Ringvegen 7 på Gjøvik. Vi tar jobber for både private og bedrifter, fra små vedlikeholdsjobber til større oppussinger.</p>
+      <p>Daglig leder er Stian Stende.</p>
+      <div class="badge">
+        <svg aria-hidden="true"><use href="#i-seal"/></svg>
+        <div><b>Godkjent lærebedrift</b>i maler- og overflateteknikkfaget.<br><a href="https://utdanning.no/finnlarebedrift/bedrift/913765974/" rel="noopener">Se hos utdanning.no</a></div>
+      </div>
+    </div>
+    <dl class="facts">
+      <div><dt>Firma</dt><dd>Malermester Rune Stende AS</dd></div>
+      <div><dt>Org.nr</dt><dd>913 765 974</dd></div>
+      <div><dt>Ansatte</dt><dd>13</dd></div>
+      <div><dt>Adresse</dt><dd>Ringvegen 7, 2816 Gjøvik</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section id="tilbud" class="quote-sec">
+  <div class="wrap">
+    <div class="head">
+      <span class="kicker">Uforpliktende tilbud</span>
+      <h2>Få et uforpliktende tilbud</h2>
+      <p>Fortell kort hva det gjelder, så tar vi kontakt.</p>
+    </div>
+    <div class="qgrid">
+      <form id="form" novalidate>
+        <div class="f">
+          <label for="hva">Hva gjelder det</label>
+          <select id="hva" name="hva" required>
+            <option value="">Velg</option>
+            <option>Maling</option>
+            <option>Tapetsering</option>
+            <option>Fasadeoppussing</option>
+            <option>Linoljemaling</option>
+            <option>Restaurering av vinduer</option>
+            <option>Trepleie</option>
+            <option>Gulvsliping</option>
+            <option>Gulvlegging</option>
+            <option>Våtrom</option>
+            <option>Annet</option>
+          </select>
+        </div>
+        <div class="f">
+          <label for="besk">Beskrivelse</label>
+          <textarea id="besk" name="beskrivelse" placeholder="For eksempel: male stue og gang, eller fire gamle vinduer som trenger stell" required></textarea>
+        </div>
+        <div class="row">
+          <div class="f">
+            <label for="sted">Adresse eller sted</label>
+            <input id="sted" name="sted" autocomplete="street-address">
+          </div>
+          <div class="f">
+            <label for="nar">Når passer det</label>
+            <select id="nar" name="nar">
+              <option>Så fort som mulig</option>
+              <option>I løpet av måneden</option>
+              <option>Senere</option>
+              <option selected>Vet ikke</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="f">
+            <label for="navn">Navn</label>
+            <input id="navn" name="navn" autocomplete="name" required>
+          </div>
+          <div class="f">
+            <label for="tlf">Telefon</label>
+            <input id="tlf" name="telefon" type="tel" inputmode="tel" autocomplete="tel" required>
+          </div>
+        </div>
+        <div class="f">
+          <label for="epost">E-post <small>(valgfritt)</small></label>
+          <input id="epost" name="epost" type="email" inputmode="email" autocomplete="email">
+        </div>
+        <button class="btn solid" type="submit">Send forespørsel</button>
+        <p class="sent" id="sent" role="status">Dette er en forhåndsvisning. Når siden er satt opp, kommer forespørselen rett i innboksen deres.</p>
+      </form>
+      <aside class="side">
+        <h3>Heller ringe?</h3>
+        <p>Det går like fint. Vi har åpent mandag til fredag kl. 7 til 15.</p>
+        <a class="big" href="tel:+4761187600">61 18 76 00</a>
+        <p>Malermester Rune Stende AS<br>Ringvegen 7, 2816 Gjøvik</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section id="kontakt">
+  <div class="wrap">
+    <div class="head">
+      <span class="kicker">Kontakt</span>
+      <h2>Ta kontakt</h2>
+    </div>
+    <div class="contact">
+      <div class="cbox">
+        <h3>Telefon</h3>
+        <a class="tel" href="tel:+4761187600">61 18 76 00</a>
+      </div>
+      <div class="cbox">
+        <h3>Adresse</h3>
+        <p>Ringvegen 7<br>2816 Gjøvik</p>
+        <p><a href="https://www.google.com/maps/search/?api=1&amp;query=Malermester+Rune+Stende+AS%2C+Ringvegen+7%2C+Gj%C3%B8vik">Åpne i Google Maps</a></p>
+      </div>
+      <div class="cbox">
+        <h3>Åpningstider</h3>
+        <table class="hours" id="hours">
+          <tr data-d="1"><td>Mandag</td><td>07 til 15</td></tr>
+          <tr data-d="2"><td>Tirsdag</td><td>07 til 15</td></tr>
+          <tr data-d="3"><td>Onsdag</td><td>07 til 15</td></tr>
+          <tr data-d="4"><td>Torsdag</td><td>07 til 15</td></tr>
+          <tr data-d="5"><td>Fredag</td><td>07 til 15</td></tr>
+          <tr data-d="6"><td>Lørdag</td><td>Stengt</td></tr>
+          <tr data-d="0"><td>Søndag</td><td>Stengt</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="trim" aria-hidden="true" style="margin:-40px 0 34px"></div>
+  <div class="wrap">
+    <span class="mark"><svg aria-hidden="true"><use href="#i-mark"/></svg><span><b>Rune Stende</b><small>Malermester, Gjøvik</small></span></span>
+    Malermester Rune Stende AS, org.nr 913 765 974<br>
+    Ringvegen 7, 2816 Gjøvik
+  </div>
+</footer>
+
+<div class="mobilebar" id="mobilebar">
+  <a class="a" href="#tilbud">Få tilbud</a>
+  <a class="b" href="tel:+4761187600"><svg aria-hidden="true"><use href="#i-phone"/></svg>Ring</a>
+</div>
+
+<script>
+// The owner writes capacity in a Google Sheet (columns: Felt, Tekst).
+// Rows: "Kapasitet" (e.g. "Vi har ledig kapasitet fra uke 46"), "Beskjed" (optional, hidden if empty).
+// Paste the sheet's "Publiser på nettet" CSV link here. Empty = fallback text.
+const SHEET_CSV = "";
+const FALLBACK = "Ta kontakt for ledig kapasitet og pris.";
+
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+// Minimal CSV parser (handles quoted fields with commas).
+function parseCsv(text) {
+  const rows = []; let row = [], field = "", q = false;
+  for (let i = 0; i < text.length; i++) {
+    const c = text[i];
+    if (q) { if (c === '"' && text[i + 1] === '"') { field += '"'; i++; } else if (c === '"') q = false; else field += c; }
+    else if (c === '"') q = true;
+    else if (c === ",") { row.push(field); field = ""; }
+    else if (c === "\n" || c === "\r") { if (c === "\r" && text[i + 1] === "\n") i++; row.push(field); rows.push(row); row = []; field = ""; }
+    else field += c;
+  }
+  if (field || row.length) { row.push(field); rows.push(row); }
+  return rows;
+}
+
+function renderCap(d) {
+  document.getElementById("cap-text").innerHTML = esc(d["kapasitet"] || FALLBACK);
+  const m = document.getElementById("cap-msg"), msg = (d["beskjed"] || "").trim();
+  m.innerHTML = esc(msg);
+  m.classList.toggle("show", !!msg);
+}
+
+renderCap({});
+if (SHEET_CSV) {
+  // Cache-buster is required: Google caches published CSVs for about 5 minutes.
+  fetch(SHEET_CSV + "&t=" + Date.now(), { cache: "no-store" }).then(r => r.ok ? r.text() : Promise.reject(r.status)).then(text => {
+    const d = {};
+    for (const [felt = "", tekst = ""] of parseCsv(text).slice(1)) {
+      const k = felt.trim().toLowerCase();
+      if (k) d[k] = tekst.trim();
+    }
+    renderCap(d);
+  }).catch(() => renderCap({}));
+}
+
+// Before/after placeholder: the range input moves the divider.
+const ba = document.getElementById("ba");
+ba.querySelector("input").addEventListener("input", e => ba.style.setProperty("--p", e.target.value + "%"));
+
+// Today's row in the opening hours.
+const row = document.querySelector('#hours tr[data-d="' + new Date().getDay() + '"]');
+if (row) row.classList.add("today");
+
+// Service cards preselect the matching option in the form.
+const hva = document.getElementById("hva");
+document.querySelectorAll("[data-pick]").forEach(a => a.addEventListener("click", () => { hva.value = a.dataset.pick; }));
+
+// Preview form: never sends anything, just shows a note.
+const form = document.getElementById("form"), sent = document.getElementById("sent");
+form.addEventListener("submit", e => {
+  e.preventDefault();
+  const missing = [...form.querySelectorAll("[required]")].find(el => !el.value.trim());
+  if (missing) { missing.focus(); missing.setCustomValidity("Fyll ut dette feltet"); missing.reportValidity(); missing.setCustomValidity(""); return; }
+  sent.classList.add("show");
+  sent.scrollIntoView({ behavior: "smooth", block: "center" });
+});
+
+// Sticky bar shows once the hero buttons have scrolled away.
+const bar = document.getElementById("mobilebar"), heroBtns = document.querySelector(".hero .actions");
+if ("IntersectionObserver" in window) {
+  new IntersectionObserver(([e]) => bar.classList.toggle("on", !e.isIntersecting && e.boundingClientRect.top < 0)).observe(heroBtns);
+} else bar.classList.add("on");
+</script>
+</body>
+</html>
