@@ -1,0 +1,668 @@
+<!doctype html>
+<html lang="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Øst Interiør og Håndverk AS | maling, gulv, flis, tapet og snekring</title>
+<meta name="description" content="Øst Interiør og Håndverk AS maler, legger gulv og flis, tapetserer og tar snekkerarbeid som dører, vinduer og kjøkken. Ring 911 15 088 eller be om et uforpliktende tilbud.">
+<!-- Preview only: keep out of search engines until the owner says yes -->
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#f5f2ea">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f5f2ea;--paper2:#ece7dc;--card:#fbfaf6;--line:#ddd6c7;
+  --text:#22252c;--muted:#5b5e66;
+  --ink:#1e2638;--ink2:#2c3852;
+  --sage:#9aa98f;--sage-d:#5d6d55;--sage-l:#dfe5d6;
+  --plum:#6d3b55;--plum-d:#552c42;--plum-l:#d9bfcb;
+  --oak:#c9a473;--oak-d:#a3804f;
+  --gold:#e9c46a;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Hanken Grotesk",system-ui,sans-serif;background:var(--paper);color:var(--text);line-height:1.6;font-size:1.06rem;overflow-x:hidden}
+h1,h2,h3{font-family:"Instrument Serif",Georgia,serif;font-weight:400;line-height:1.04;letter-spacing:-.005em}
+h2 em,h1 em{font-style:italic}
+a{color:inherit}
+svg{display:block}
+.wrap{max-width:1120px;margin:0 auto;padding:0 16px}
+.preview{background:var(--gold);color:#1f1a0e;text-align:center;font-size:.8rem;font-weight:600;padding:6px 12px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.8rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--plum)}
+.eyebrow::before{content:"";width:22px;height:12px;border-radius:2px;background:linear-gradient(90deg,var(--sage) 0 33%,var(--plum) 33% 66%,var(--ink) 66%);flex:none}
+
+/* Swatch strip: the recurring motif */
+.strip{display:flex;height:12px}
+.strip i{flex:1}
+.strip i:nth-child(1){background:#e8e2d4}.strip i:nth-child(2){background:var(--sage-l)}.strip i:nth-child(3){background:var(--sage)}
+.strip i:nth-child(4){background:var(--sage-d)}.strip i:nth-child(5){background:var(--oak)}.strip i:nth-child(6){background:var(--plum-l)}
+.strip i:nth-child(7){background:var(--plum)}.strip i:nth-child(8){background:var(--ink2)}.strip i:nth-child(9){background:var(--ink)}
+
+/* Header */
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 16px}
+.mark{display:flex;align-items:center;gap:12px;text-decoration:none;line-height:1}
+.mark svg{width:30px;height:30px;flex:none}
+.mark b{font-family:"Instrument Serif",serif;font-weight:400;font-size:1.6rem;letter-spacing:.01em}
+.mark small{display:block;font-size:.66rem;font-weight:700;letter-spacing:.2em;color:var(--muted);text-transform:uppercase;margin-top:4px}
+.top nav{display:flex;gap:24px;font-weight:600;font-size:.95rem}
+.top nav a{text-decoration:none;padding:6px 0;border-bottom:2px solid transparent}
+.top nav a:hover{border-color:var(--plum)}
+
+/* Hero */
+.hero{padding:24px 0 100px}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center}
+.hero h1{font-size:clamp(3.1rem,9.5vw,6rem);line-height:.95;margin:16px 0 0;color:var(--ink)}
+.hero h1 em{color:var(--plum);display:block}
+.lead{font-size:clamp(1.12rem,2.4vw,1.28rem);max-width:540px;margin-top:22px;color:#373a42}
+.trades{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px;list-style:none}
+.trades li{display:inline-flex;align-items:center;gap:8px;font-size:.92rem;font-weight:600;padding:5px 12px 5px 6px;background:var(--card);border:1px solid var(--line);border-radius:999px}
+.trades li::before{content:"";width:16px;height:16px;border-radius:50%;background:var(--c);box-shadow:inset 0 0 0 1px #0000001a}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:12px 26px;font:inherit;font-weight:700;font-size:1.08rem;text-decoration:none;border-radius:999px;border:2px solid var(--ink);color:var(--ink);background:transparent;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.btn.solid{background:var(--ink);color:#fff}
+.btn.solid:hover{background:var(--plum);border-color:var(--plum)}
+.btn:not(.solid):hover{background:var(--ink);color:#fff}
+.btn svg{width:20px;height:20px}
+
+/* Room illustration */
+.room{position:relative;border-radius:10px;overflow:hidden;aspect-ratio:480/540;box-shadow:0 30px 60px #1e263828;background:var(--sage)}
+.room svg{width:100%;height:100%}
+
+/* Kapasitet: a paint chip card */
+.cap-wrap{position:relative;z-index:3;margin-top:-58px}
+.cap{display:grid;grid-template-columns:78px 1fr;background:var(--card);border-radius:8px;overflow:hidden;box-shadow:0 18px 44px #1e263826;border:1px solid var(--line)}
+.cap .sw{display:grid;grid-template-rows:1fr 1fr 1fr}
+.cap .sw i:nth-child(1){background:var(--sage-l)}.cap .sw i:nth-child(2){background:var(--sage)}.cap .sw i:nth-child(3){background:var(--sage-d)}
+.cap-in{padding:18px 22px;display:flex;flex-wrap:wrap;align-items:center;gap:6px 22px}
+.cap-k{font-size:.78rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--sage-d);display:flex;align-items:center;gap:8px}
+.cap-k::before{content:"";width:9px;height:9px;border-radius:50%;background:#4f9a6c;box-shadow:0 0 0 4px #4f9a6c2e}
+.cap-t{font-family:"Instrument Serif",serif;font-size:clamp(1.45rem,3.6vw,1.8rem);line-height:1.15;flex:1 1 300px;color:var(--ink)}
+.cap-b{display:none;width:100%;border-top:1px solid var(--line);padding-top:8px;color:var(--muted)}
+.cap-b.show{display:block}
+.cap-a{font-weight:700;text-decoration:none;border-bottom:2px solid var(--plum);padding:4px 0;color:var(--plum-d)}
+
+/* Sections */
+section{padding:88px 0}
+.head{margin-bottom:36px;max-width:680px}
+.head h2{font-size:clamp(2.4rem,6.4vw,3.6rem);margin:12px 0 12px;color:var(--ink)}
+.head p{color:var(--muted);font-size:1.1rem}
+
+/* Services: six paint chips */
+.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.s{background:var(--card);border:1px solid var(--line);border-radius:8px;overflow:hidden;display:flex;flex-direction:column;transition:box-shadow .2s,border-color .2s}
+.s .face{height:132px;position:relative;border-bottom:1px solid var(--line)}
+.s .face svg{width:100%;height:100%}
+.s .body{padding:18px 20px 20px;display:flex;flex-direction:column;flex:1}
+.s .code{font-size:.74rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.s h3{font-size:1.9rem;margin:2px 0 6px;color:var(--ink)}
+.s p{color:#474a52;flex:1}
+.pick{margin-top:16px;display:flex;align-items:center;justify-content:center;gap:10px;min-height:48px;width:100%;font:inherit;font-weight:700;font-size:.98rem;border-radius:999px;border:2px solid var(--line);background:var(--paper);color:var(--ink);cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.pick::before{content:"";width:18px;height:18px;border-radius:50%;border:2px solid currentColor;flex:none;box-sizing:border-box}
+.pick:hover{border-color:var(--ink)}
+.pick[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+.pick[aria-pressed="true"]::before{background:var(--sage-l) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 8.4l2.6 2.5L12 5.4' fill='none' stroke='%231e2638' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/14px no-repeat;border-color:var(--sage-l)}
+.s.on{border-color:var(--ink);box-shadow:0 14px 30px #1e26381f}
+.together{margin-top:30px;display:grid;grid-template-columns:auto 1fr auto;gap:18px;align-items:center;background:var(--ink);color:#fff;border-radius:8px;padding:20px 24px}
+.together .fan{display:flex}
+.together .fan i{width:22px;height:46px;border-radius:3px;margin-left:-6px;box-shadow:-2px 0 0 var(--ink)}
+.together .fan i:first-child{margin-left:0}
+.together p{color:#dfe3ec}
+.together b{color:#fff;font-weight:700}
+.together a{white-space:nowrap;font-weight:700;color:#fff;text-decoration:none;border-bottom:2px solid var(--plum-l);padding:4px 0}
+
+/* Steps */
+.steps-sec{background:var(--paper2)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;counter-reset:s}
+.step{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:26px 24px;position:relative;overflow:hidden}
+.step::before{content:"";position:absolute;left:0;top:0;bottom:0;width:6px;background:var(--c)}
+.step b{font-family:"Instrument Serif",serif;font-weight:400;font-size:3rem;line-height:1;color:var(--c)}
+.step h3{font-size:1.65rem;margin:10px 0 6px;color:var(--ink)}
+.step p{color:#474a52}
+.fine{margin-top:20px;color:var(--muted);font-size:.95rem}
+
+/* Photo strip placeholder */
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:250px;gap:12px}
+.tile{position:relative;border-radius:8px;overflow:hidden;display:flex;align-items:flex-end;padding:12px}
+.tile svg{position:absolute;inset:0;width:100%;height:100%}
+.tile span{position:relative;z-index:1;background:#fbfaf6f2;color:var(--ink);font-weight:600;font-size:.9rem;padding:6px 12px;border-radius:999px}
+.ph{margin-top:18px;display:flex;align-items:center;gap:12px;color:var(--muted);font-weight:500}
+.ph::before{content:"";width:34px;height:2px;background:var(--plum);flex:none}
+
+/* Om oss */
+.about-sec{background:var(--sage-l);position:relative}
+.about{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:start}
+.about p+p{margin-top:12px}
+.about .head p{color:#3f4a3c}
+.facts{background:var(--card);border:1px solid #c7d0bd;border-radius:8px}
+.facts div{display:flex;justify-content:space-between;gap:16px;padding:14px 18px;border-bottom:1px solid var(--line)}
+.facts div:last-child{border-bottom:0}
+.facts dt{color:var(--muted);font-weight:600}
+.facts dd{font-weight:700;text-align:right}
+.about .eyebrow{color:var(--sage-d)}
+
+/* Form */
+.qgrid{display:grid;grid-template-columns:1.55fr 1fr;gap:34px;align-items:start}
+form{background:var(--card);padding:28px 24px;border-radius:10px;border:1px solid var(--line);box-shadow:0 22px 46px #1e263814}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:0 16px}
+label,.lbl{display:block;font-weight:700;font-size:.98rem;margin:0 0 6px}
+label small,.lbl small{font-weight:500;color:var(--muted);font-size:.86rem}
+.f{margin-bottom:18px;border:0;min-width:0}
+input,select,textarea{width:100%;font:inherit;font-size:1.05rem;color:var(--text);background:#fff;border:2px solid var(--line);border-radius:6px;padding:13px 14px;min-height:54px}
+textarea{min-height:120px;resize:vertical}
+select{appearance:none;background-image:linear-gradient(45deg,transparent 50%,#22252c 50%),linear-gradient(135deg,#22252c 50%,transparent 50%);background-position:calc(100% - 22px) 50%,calc(100% - 16px) 50%;background-size:6px 6px;background-repeat:no-repeat;padding-right:40px}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--ink);box-shadow:0 0 0 3px #1e263826}
+.jobs{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.job{position:relative}
+.job input{position:absolute;opacity:0;width:1px;height:1px;min-height:0}
+.job label{display:flex;align-items:center;gap:12px;margin:0;min-height:58px;padding:8px 14px 8px 8px;border:2px solid var(--line);border-radius:6px;background:#fff;cursor:pointer;font-weight:600;line-height:1.2;transition:border-color .15s,background .15s}
+.job label i{width:26px;height:40px;border-radius:3px;background:var(--c);flex:none;box-shadow:inset 0 0 0 1px #0000001a;position:relative}
+.job input:checked+label{border-color:var(--ink);background:#eef0f4}
+.job input:checked+label i::after{content:"";position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 8.4l2.6 2.5L12 5.4' fill='none' stroke='%23fff' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/16px no-repeat}
+.job input:focus-visible+label{box-shadow:0 0 0 3px #1e263840}
+.picked{margin-top:10px;font-size:.95rem;color:var(--muted);min-height:1.5em}
+.picked b{color:var(--ink)}
+form .btn{width:100%;font-size:1.15rem;min-height:60px}
+.err{display:none;color:#9b2c2c;font-weight:600;font-size:.95rem;margin-top:8px}
+.err.show{display:block}
+.sent{display:none;margin-top:16px;background:var(--sage-l);border:2px solid var(--sage-d);border-left-width:8px;padding:16px 18px;font-weight:600;border-radius:6px}
+.sent.show{display:block}
+.side{background:var(--ink);color:#fff;border-radius:10px;padding:26px 24px;overflow:hidden;position:relative}
+.side .strip{position:absolute;left:0;right:0;top:0;height:8px}
+.side h3{font-size:1.8rem;margin:6px 0 8px}
+.side p{color:#cfd5e2}
+.side .big{display:block;font-family:"Instrument Serif",serif;font-size:2.7rem;color:#fff;text-decoration:none;line-height:1.1;margin:8px 0 10px}
+
+/* Kontakt */
+.contact-sec{background:var(--paper2)}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.cbox{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:24px;position:relative;overflow:hidden}
+.cbox::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;background:var(--plum)}
+.cbox:nth-child(2)::before{background:var(--sage)}
+.cbox h3{font-size:1.6rem;margin-bottom:8px;color:var(--ink)}
+.cbox p+p{margin-top:8px}
+.cbox a{font-weight:700;text-underline-offset:3px}
+.cbox .tel{font-family:"Instrument Serif",serif;font-weight:400;font-size:2.4rem;text-decoration:none;color:var(--plum-d)}
+.cbox .who{color:var(--muted)}
+
+footer{background:var(--ink);color:#c9cfdc;font-size:.92rem}
+footer .wrap{padding-top:34px;padding-bottom:36px}
+footer .mark{color:#fff;margin-bottom:14px}
+footer .mark small{color:#9aa3b8}
+
+.mobilebar{display:none}
+@media (max-width:900px){
+  .svc{grid-template-columns:1fr 1fr}
+}
+@media (max-width:860px){
+  .hero-grid{grid-template-columns:1fr;gap:30px}
+  .room{aspect-ratio:auto;height:300px}
+  .about,.qgrid,.contact{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  .tiles{grid-template-columns:1fr 1fr;grid-template-rows:170px 170px}
+  .together{grid-template-columns:1fr}
+  .together .fan{display:none}
+}
+@media (max-width:760px){
+  .top nav{display:none}
+  .mobilebar{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:fixed;left:12px;right:12px;bottom:12px;z-index:10;transform:translateY(140%);transition:transform .25s}
+  .mobilebar.on{transform:none}
+  .mobilebar a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:56px;border-radius:999px;font-weight:700;font-size:1.1rem;text-decoration:none;box-shadow:0 8px 22px #0005}
+  .mobilebar svg{width:18px;height:18px}
+  .mobilebar .a{background:var(--plum);color:#fff}
+  .mobilebar .b{background:var(--ink);color:#fff}
+  footer .wrap{padding-bottom:100px}
+}
+@media (max-width:560px){
+  .hero{padding:10px 0 90px}
+  .trades{display:none}
+  .room{height:250px}
+  .svc{grid-template-columns:1fr}
+  .s .face{height:104px}
+  .row{grid-template-columns:1fr}
+  .actions .btn{flex:1 1 100%}
+  section{padding:66px 0}
+  form{padding:22px 16px}
+  .cap{grid-template-columns:22px 1fr}
+  .cap-in{padding:16px}
+  .facts div{flex-direction:column;gap:0}
+  .facts dd{text-align:left}
+}
+@media (max-width:380px){
+  .jobs{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="preview">Forhåndsvisning laget for Øst Interiør og Håndverk AS, bildene kommer fra dere</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></symbol>
+    <symbol id="i-mark" viewBox="0 0 30 30"><rect x="1" y="3" width="8" height="24" rx="1.5" fill="#9aa98f"/><rect x="11" y="3" width="8" height="24" rx="1.5" fill="#6d3b55"/><rect x="21" y="3" width="8" height="24" rx="1.5" fill="currentColor"/><rect x="1" y="21" width="28" height="6" fill="#fbfaf6" opacity=".55"/></symbol>
+    <!-- Wallpaper: small leaf motif -->
+    <pattern id="p-wall" width="28" height="36" patternUnits="userSpaceOnUse">
+      <rect width="28" height="36" fill="#e3e8db"/>
+      <path d="M14 5c5.5 5 5.5 12 0 17c-5.5-5-5.5-12 0-17zM14 8v13" fill="none" stroke="#9aa98f" stroke-width="1.2"/>
+      <circle cx="0" cy="27" r="1.6" fill="#b9c3ad"/><circle cx="28" cy="27" r="1.6" fill="#b9c3ad"/>
+    </pattern>
+    <pattern id="p-wall2" width="34" height="44" patternUnits="userSpaceOnUse">
+      <rect width="34" height="44" fill="#efe4e8"/>
+      <path d="M17 6c6 6 6 14 0 20c-6-6-6-14 0-20zM17 10v15" fill="none" stroke="#a87a90" stroke-width="1.3"/>
+      <path d="M0 0v44M34 0v44" stroke="#e2d1d8" stroke-width="3"/>
+      <circle cx="17" cy="36" r="1.8" fill="#c7a6b5"/>
+    </pattern>
+    <!-- Oak floor planks with staggered joints -->
+    <pattern id="p-plank" width="200" height="64" patternUnits="userSpaceOnUse">
+      <rect width="200" height="64" fill="#c9a473"/>
+      <rect y="16" width="200" height="16" fill="#c39d6b"/><rect y="48" width="200" height="16" fill="#cead7d"/>
+      <path d="M0 16h200M0 32h200M0 48h200M0 64h200" stroke="#a3804f" stroke-width="1.2"/>
+      <path d="M60 0v16M150 16v16M20 32v16M110 32v16M180 48v16M80 48v16" stroke="#a3804f" stroke-width="1.2"/>
+      <path d="M8 7c30 -3 50 3 46 0M90 24c22 -2 40 2 54 0M30 40c25 2 60 -2 70 0M120 56c15 -2 40 2 50 0" fill="none" stroke="#b48d5c" stroke-width=".8"/>
+    </pattern>
+    <!-- Tile grid -->
+    <pattern id="p-tile" width="30" height="30" patternUnits="userSpaceOnUse">
+      <rect width="30" height="30" fill="#f1f0ec"/><rect x="2" y="2" width="28" height="28" fill="#cfd8de"/>
+      <path d="M2 2l28 28" stroke="#ffffff" stroke-opacity=".25" stroke-width="6"/>
+    </pattern>
+    <!-- Wood grain -->
+    <pattern id="p-grain" width="120" height="60" patternUnits="userSpaceOnUse">
+      <rect width="120" height="60" fill="#d4b388"/>
+      <path d="M0 10c30 -6 60 6 120 0M0 22c40 8 70 -8 120 0M0 36c20 -4 50 10 120 2M0 50c35 6 80 -6 120 0" fill="none" stroke="#b8925f" stroke-width="1.4"/>
+      <ellipse cx="78" cy="28" rx="9" ry="4" fill="none" stroke="#a9834f" stroke-width="1.2"/>
+    </pattern>
+  </defs>
+</svg>
+
+<header>
+  <div class="wrap top">
+    <a class="mark" href="#"><svg aria-hidden="true"><use href="#i-mark"/></svg><span><b>Øst Interiør</b><small>og Håndverk</small></span></a>
+    <nav aria-label="Hovedmeny"><a href="#tjenester">Tjenester</a><a href="#om">Om oss</a><a href="#tilbud">Få tilbud</a><a href="#kontakt">Kontakt</a></nav>
+  </div>
+</header>
+
+<main>
+<div class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Furnes, like ved Hamar</span>
+      <h1>Øst Interiør <em>og Håndverk</em></h1>
+      <p class="lead">Vi maler, legger gulv og flis, tapetserer og tar snekkerarbeid som dører, vinduer og kjøkken. Skal du ha gjort flere ting på en gang, kan du spørre om alt i samme forespørsel.</p>
+      <ul class="trades" aria-label="Det vi gjør">
+        <li style="--c:#1e2638">Maling</li>
+        <li style="--c:#c9a473">Gulv</li>
+        <li style="--c:#cfd8de">Flis</li>
+        <li style="--c:#d9bfcb">Tapet</li>
+        <li style="--c:#9aa98f">Snekker</li>
+        <li style="--c:#6d3b55">Dører</li>
+      </ul>
+      <div class="actions">
+        <a class="btn solid" href="#tilbud">Få tilbud</a>
+        <a class="btn" href="tel:+4791115088"><svg aria-hidden="true"><use href="#i-phone"/></svg>Ring 911 15 088</a>
+      </div>
+    </div>
+    <div class="room" aria-hidden="true">
+      <svg viewBox="0 0 480 540" preserveAspectRatio="xMidYMax slice">
+        <!-- wall: wallpaper left, half-painted wall right -->
+        <rect width="480" height="390" fill="#9aa98f"/>
+        <rect width="160" height="390" fill="url(#p-wall)"/>
+        <path d="M160 0h176c-6 40 8 70 0 110c-7 40 6 80 0 120c-6 40 8 80 0 120l1 40H160z" fill="#1e2638"/>
+        <path d="M336 0c-6 40 8 70 0 110c-7 40 6 80 0 120c-6 40 8 80 0 120l1 40" fill="none" stroke="#2c3852" stroke-width="5" stroke-dasharray="3 7" opacity=".7"/>
+        <!-- door -->
+        <rect x="190" y="118" width="116" height="272" fill="#f5f2ea"/>
+        <rect x="182" y="110" width="132" height="8" fill="#ece7dc"/>
+        <rect x="182" y="110" width="8" height="280" fill="#ece7dc"/><rect x="306" y="110" width="8" height="280" fill="#ece7dc"/>
+        <rect x="206" y="136" width="84" height="100" rx="2" fill="none" stroke="#d8d1c2" stroke-width="3"/>
+        <rect x="206" y="254" width="84" height="118" rx="2" fill="none" stroke="#d8d1c2" stroke-width="3"/>
+        <rect x="288" y="250" width="12" height="4" rx="2" fill="#a3804f"/>
+        <!-- roller at the paint edge -->
+        <g transform="translate(330 170) rotate(-6)">
+          <rect x="-10" y="0" width="22" height="78" rx="9" fill="#2c3852"/>
+          <rect x="-10" y="0" width="22" height="78" rx="9" fill="none" stroke="#f5f2ea" stroke-opacity=".25" stroke-width="2"/>
+          <path d="M12 39h22v74" fill="none" stroke="#e9e4d8" stroke-width="5" stroke-linejoin="round"/>
+          <rect x="28" y="108" width="12" height="62" rx="5" fill="#6d3b55"/>
+        </g>
+        <!-- skirting and floor -->
+        <rect y="378" width="480" height="16" fill="#f5f2ea"/>
+        <rect y="394" width="480" height="146" fill="url(#p-plank)"/>
+        <rect y="394" width="480" height="146" fill="url(#shade)"/>
+        <linearGradient id="shade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#000" stop-opacity=".16"/><stop offset=".4" stop-color="#000" stop-opacity="0"/></linearGradient>
+        <!-- paint fan deck -->
+        <g transform="translate(118 512)">
+          <g transform="rotate(-58)"><rect x="-22" y="-210" width="44" height="200" rx="5" fill="#e8e2d4"/><rect x="-22" y="-210" width="44" height="58" rx="5" fill="#dfe5d6"/></g>
+          <g transform="rotate(-42)"><rect x="-22" y="-210" width="44" height="200" rx="5" fill="#f5f2ea"/><rect x="-22" y="-210" width="44" height="60" fill="#9aa98f"/><rect x="-22" y="-150" width="44" height="40" fill="#b9c3ad"/></g>
+          <g transform="rotate(-26)"><rect x="-22" y="-210" width="44" height="200" rx="5" fill="#f5f2ea"/><rect x="-22" y="-210" width="44" height="60" fill="#c9a473"/><rect x="-22" y="-150" width="44" height="40" fill="#dcc29c"/></g>
+          <g transform="rotate(-10)"><rect x="-22" y="-210" width="44" height="200" rx="5" fill="#f5f2ea"/><rect x="-22" y="-210" width="44" height="60" fill="#6d3b55"/><rect x="-22" y="-150" width="44" height="40" fill="#a87a90"/></g>
+          <g transform="rotate(6)"><rect x="-22" y="-210" width="44" height="200" rx="5" fill="#f5f2ea" stroke="#0000001a"/><rect x="-22" y="-210" width="44" height="60" fill="#1e2638"/><rect x="-22" y="-150" width="44" height="40" fill="#2c3852"/><path d="M-12 -90h24M-12 -80h16M-12 -60h24M-12 -50h16" stroke="#b9b3a6" stroke-width="2"/></g>
+          <circle r="7" fill="#a3804f"/><circle r="3" fill="#f5f2ea"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<div class="wrap cap-wrap" aria-live="polite">
+  <div class="cap">
+    <div class="sw" aria-hidden="true"><i></i><i></i><i></i></div>
+    <div class="cap-in">
+      <span class="cap-k">Kapasitet</span>
+      <span class="cap-t" id="cap-text">Ta kontakt for ledig kapasitet og pris.</span>
+      <a class="cap-a" href="#tilbud">Spør om tilbud</a>
+      <p class="cap-b" id="cap-msg"></p>
+    </div>
+  </div>
+</div>
+
+<section id="tjenester">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Tjenester</span>
+      <h2>Det vi gjør <em>inne hos deg</em></h2>
+      <p>Velg det du trenger hjelp med. Trykk "Ta med" på det som gjelder, så ligger det klart i skjemaet lenger ned.</p>
+    </div>
+    <div class="svc">
+      <article class="s" data-job="Maling">
+        <div class="face"><svg viewBox="0 0 300 132" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="300" height="132" fill="#dfe5d6"/><path d="M0 0h190c-5 22 6 44 0 66c-6 22 5 44 0 66H0z" fill="#1e2638"/><g transform="translate(196 30)"><rect x="-8" y="0" width="18" height="70" rx="8" fill="#2c3852"/><path d="M10 35h18v40" fill="none" stroke="#8a8f99" stroke-width="4"/></g></svg></div>
+        <div class="body">
+          <span class="code">01</span>
+          <h3>Maling</h3>
+          <p>Malerarbeid i rom du vil friske opp. Har du en farge i tankene, skriv den gjerne i beskrivelsen.</p>
+          <button class="pick" type="button" aria-pressed="false">Ta med</button>
+        </div>
+      </article>
+      <article class="s" data-job="Gulv">
+        <div class="face"><svg viewBox="0 0 300 132" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="300" height="132" fill="url(#p-plank)"/></svg></div>
+        <div class="body">
+          <span class="code">02</span>
+          <h3>Gulvlegging</h3>
+          <p>Vi legger nytt gulv. Si hvilket rom det gjelder og omtrent hvor stort det er, så har vi et utgangspunkt.</p>
+          <button class="pick" type="button" aria-pressed="false">Ta med</button>
+        </div>
+      </article>
+      <article class="s" data-job="Flis">
+        <div class="face"><svg viewBox="0 0 300 132" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="300" height="132" fill="url(#p-tile)"/></svg></div>
+        <div class="body">
+          <span class="code">03</span>
+          <h3>Flislegging</h3>
+          <p>Vi legger flis. Har du allerede valgt fliser, ta det med når du skriver.</p>
+          <button class="pick" type="button" aria-pressed="false">Ta med</button>
+        </div>
+      </article>
+      <article class="s" data-job="Tapet">
+        <div class="face"><svg viewBox="0 0 300 132" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="300" height="132" fill="url(#p-wall2)"/></svg></div>
+        <div class="body">
+          <span class="code">04</span>
+          <h3>Tapetsering</h3>
+          <p>Ny tapet på en vegg eller i hele rommet. Fortell hvilket rom det gjelder.</p>
+          <button class="pick" type="button" aria-pressed="false">Ta med</button>
+        </div>
+      </article>
+      <article class="s" data-job="Snekker">
+        <div class="face"><svg viewBox="0 0 300 132" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="300" height="132" fill="url(#p-grain)"/></svg></div>
+        <div class="body">
+          <span class="code">05</span>
+          <h3>Snekkerarbeid</h3>
+          <p>Snekkerarbeid av ulike slag. Beskriv hva som skal gjøres, så tar vi det derfra.</p>
+          <button class="pick" type="button" aria-pressed="false">Ta med</button>
+        </div>
+      </article>
+      <article class="s" data-job="Dører, vinduer og kjøkken">
+        <div class="face"><svg viewBox="0 0 300 132" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="300" height="132" fill="#6d3b55"/><rect x="40" y="18" width="70" height="120" fill="#f5f2ea"/><rect x="50" y="30" width="50" height="40" fill="none" stroke="#d8d1c2" stroke-width="2.5"/><rect x="50" y="80" width="50" height="50" fill="none" stroke="#d8d1c2" stroke-width="2.5"/><rect x="150" y="26" width="90" height="62" fill="#f5f2ea"/><rect x="157" y="33" width="35" height="48" fill="#d9bfcb"/><rect x="198" y="33" width="35" height="48" fill="#d9bfcb"/></svg></div>
+        <div class="body">
+          <span class="code">06</span>
+          <h3>Dører, vinduer og kjøkken</h3>
+          <p>Vi monterer dører, vinduer og kjøkken. Skriv litt om hva du har kjøpt eller tenker å kjøpe.</p>
+          <button class="pick" type="button" aria-pressed="false">Ta med</button>
+        </div>
+      </article>
+    </div>
+    <div class="together">
+      <div class="fan" aria-hidden="true"><i style="background:#1e2638"></i><i style="background:#c9a473"></i><i style="background:#cfd8de"></i><i style="background:#d9bfcb"></i><i style="background:#9aa98f"></i><i style="background:#6d3b55"></i></div>
+      <p><b>Flere ting som skal gjøres?</b> Gulv og maling, flis og dør, eller alt sammen. Vi driver med alle disse fagene, så du kan spørre om alt i én forespørsel.</p>
+      <a href="#tilbud">Til skjemaet</a>
+    </div>
+  </div>
+</section>
+
+<section class="steps-sec">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Slik jobber vi</span>
+      <h2>Tre enkle steg</h2>
+    </div>
+    <div class="steps">
+      <div class="step" style="--c:#5d6d55"><b>1</b><h3>Du tar kontakt</h3><p>Ring oss eller fyll ut skjemaet. Kryss av for det du trenger og skriv kort hvor jobben er.</p></div>
+      <div class="step" style="--c:#6d3b55"><b>2</b><h3>Vi kommer på befaring</h3><p>Vi ser på rommene og hører hva du ser for deg.</p></div>
+      <div class="step" style="--c:#1e2638"><b>3</b><h3>Du får et fast tilbud</h3><p>Etter befaringen får du et tilbud å ta stilling til. Ingenting er bestemt før du sier ja.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="jobbene">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Bilder av jobbene</span>
+      <h2>Fra jobbene våre</h2>
+    </div>
+    <div class="tiles" aria-hidden="true">
+      <div class="tile"><svg viewBox="0 0 200 250" preserveAspectRatio="xMidYMid slice"><rect width="200" height="250" fill="#1e2638"/><rect x="0" y="0" width="70" height="250" fill="#2c3852"/><rect y="214" width="200" height="36" fill="url(#p-plank)"/><rect y="206" width="200" height="8" fill="#f5f2ea"/></svg><span>Maling</span></div>
+      <div class="tile"><svg viewBox="0 0 200 250" preserveAspectRatio="xMidYMid slice"><rect width="200" height="250" fill="url(#p-plank)"/></svg><span>Gulv</span></div>
+      <div class="tile"><svg viewBox="0 0 200 250" preserveAspectRatio="xMidYMid slice"><rect width="200" height="250" fill="url(#p-tile)"/></svg><span>Flis</span></div>
+      <div class="tile"><svg viewBox="0 0 200 250" preserveAspectRatio="xMidYMid slice"><rect width="200" height="250" fill="url(#p-wall)"/></svg><span>Tapet</span></div>
+    </div>
+    <p class="ph">Her legger vi inn bilder av jobbene deres.</p>
+  </div>
+</section>
+
+<section id="om" class="about-sec">
+  <div class="wrap about">
+    <div>
+      <div class="head">
+        <span class="eyebrow">Om oss</span>
+        <h2>Et ungt firma med <em>flere fag</em></h2>
+      </div>
+      <p>Øst Interiør og Håndverk AS ble startet i 2024. Vi maler, legger gulv og flis, tapetserer og tar snekkerarbeid, også montering av dører, vinduer og kjøkken.</p>
+      <p>Firmaet er registrert på Furnes, like ved Hamar.</p>
+    </div>
+    <dl class="facts">
+      <div><dt>Firma</dt><dd>Øst Interiør og Håndverk AS</dd></div>
+      <div><dt>Org.nr</dt><dd>933 576 639</dd></div>
+      <div><dt>Stiftet</dt><dd>2024</dd></div>
+      <div><dt>Ansatte</dt><dd>6</dd></div>
+      <div><dt>Telefon</dt><dd><a href="tel:+4791115088">911 15 088</a></dd></div>
+    </dl>
+  </div>
+</section>
+
+<section id="tilbud">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Uforpliktende tilbud</span>
+      <h2>Få et uforpliktende tilbud</h2>
+      <p>Kryss av for alt du vil ha gjort, og fortell kort hva det gjelder. Så tar vi kontakt.</p>
+    </div>
+    <div class="qgrid">
+      <form id="form" novalidate>
+        <fieldset class="f">
+          <legend class="lbl">Hva gjelder det <small>(velg så mange du vil)</small></legend>
+          <div class="jobs" id="jobs">
+            <div class="job"><input type="checkbox" id="j1" name="jobb" value="Maling"><label for="j1"><i style="--c:#1e2638"></i>Maling</label></div>
+            <div class="job"><input type="checkbox" id="j2" name="jobb" value="Gulv"><label for="j2"><i style="--c:#c9a473"></i>Gulv</label></div>
+            <div class="job"><input type="checkbox" id="j3" name="jobb" value="Flis"><label for="j3"><i style="--c:#9fb0ba"></i>Flis</label></div>
+            <div class="job"><input type="checkbox" id="j4" name="jobb" value="Tapet"><label for="j4"><i style="--c:#c7a6b5"></i>Tapet</label></div>
+            <div class="job"><input type="checkbox" id="j5" name="jobb" value="Snekker"><label for="j5"><i style="--c:#9aa98f"></i>Snekker</label></div>
+            <div class="job"><input type="checkbox" id="j6" name="jobb" value="Dører, vinduer og kjøkken"><label for="j6"><i style="--c:#6d3b55"></i>Dør, vindu, kjøkken</label></div>
+            <div class="job"><input type="checkbox" id="j7" name="jobb" value="Annet"><label for="j7"><i style="--c:#e8e2d4"></i>Annet</label></div>
+          </div>
+          <p class="picked" id="picked" aria-live="polite"></p>
+          <p class="err" id="jobs-err">Kryss av for minst én ting.</p>
+        </fieldset>
+        <div class="f">
+          <label for="besk">Beskrivelse</label>
+          <textarea id="besk" name="beskrivelse" placeholder="For eksempel: male stue og gang, og nytt gulv på soverommet" required></textarea>
+        </div>
+        <div class="row">
+          <div class="f">
+            <label for="sted">Adresse eller sted</label>
+            <input id="sted" name="sted" autocomplete="street-address">
+          </div>
+          <div class="f">
+            <label for="nar">Når passer det</label>
+            <select id="nar" name="nar">
+              <option>Så fort som mulig</option>
+              <option>I løpet av måneden</option>
+              <option>Senere</option>
+              <option selected>Vet ikke</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="f">
+            <label for="navn">Navn</label>
+            <input id="navn" name="navn" autocomplete="name" required>
+          </div>
+          <div class="f">
+            <label for="tlf">Telefon</label>
+            <input id="tlf" name="telefon" type="tel" inputmode="tel" autocomplete="tel" required>
+          </div>
+        </div>
+        <div class="f">
+          <label for="epost">E-post <small>(valgfritt)</small></label>
+          <input id="epost" name="epost" type="email" inputmode="email" autocomplete="email">
+        </div>
+        <button class="btn solid" type="submit">Send forespørsel</button>
+        <p class="sent" id="sent" role="status">Dette er en forhåndsvisning. Når siden er satt opp, kommer forespørselen rett i innboksen deres.</p>
+      </form>
+      <aside class="side">
+        <div class="strip" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <h3>Heller ringe?</h3>
+        <p>Det går like fint å ringe.</p>
+        <a class="big" href="tel:+4791115088">911 15 088</a>
+        <p>Øst Interiør og Håndverk AS</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section id="kontakt" class="contact-sec">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Kontakt</span>
+      <h2>Ta kontakt</h2>
+    </div>
+    <div class="contact">
+      <div class="cbox">
+        <h3>Telefon</h3>
+        <a class="tel" href="tel:+4791115088">911 15 088</a>
+        <p class="who">Kontakt: Kjetil Wang</p>
+      </div>
+      <div class="cbox">
+        <h3>Område</h3>
+        <p>Furnes, like ved Hamar</p>
+        <p><a href="#tilbud">Send en forespørsel</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="strip" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="wrap">
+    <span class="mark"><svg aria-hidden="true"><use href="#i-mark"/></svg><span><b>Øst Interiør</b><small>og Håndverk</small></span></span>
+    Øst Interiør og Håndverk AS, org.nr 933 576 639
+  </div>
+</footer>
+
+<div class="mobilebar" id="mobilebar">
+  <a class="a" href="#tilbud">Få tilbud</a>
+  <a class="b" href="tel:+4791115088"><svg aria-hidden="true"><use href="#i-phone"/></svg>Ring</a>
+</div>
+
+<script>
+// The owner writes capacity in a Google Sheet (columns: Felt, Tekst).
+// Rows: "Kapasitet" (e.g. "Vi har ledig kapasitet fra uke 46"), "Beskjed" (optional, hidden if empty).
+// Paste the sheet's "Publiser på nettet" CSV link here. Empty = fallback text.
+const SHEET_CSV = "";
+const FALLBACK = "Ta kontakt for ledig kapasitet og pris.";
+
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+// Minimal CSV parser (handles quoted fields with commas).
+function parseCsv(text) {
+  const rows = []; let row = [], field = "", q = false;
+  for (let i = 0; i < text.length; i++) {
+    const c = text[i];
+    if (q) { if (c === '"' && text[i + 1] === '"') { field += '"'; i++; } else if (c === '"') q = false; else field += c; }
+    else if (c === '"') q = true;
+    else if (c === ",") { row.push(field); field = ""; }
+    else if (c === "\n" || c === "\r") { if (c === "\r" && text[i + 1] === "\n") i++; row.push(field); rows.push(row); row = []; field = ""; }
+    else field += c;
+  }
+  if (field || row.length) { row.push(field); rows.push(row); }
+  return rows;
+}
+
+function renderCap(d) {
+  document.getElementById("cap-text").innerHTML = esc(d["kapasitet"] || FALLBACK);
+  const m = document.getElementById("cap-msg"), msg = (d["beskjed"] || "").trim();
+  m.innerHTML = esc(msg);
+  m.classList.toggle("show", !!msg);
+}
+
+renderCap({});
+if (SHEET_CSV) {
+  // Cache-buster is required: Google caches published CSVs for about 5 minutes.
+  fetch(SHEET_CSV + "&t=" + Date.now(), { cache: "no-store" }).then(r => r.ok ? r.text() : Promise.reject(r.status)).then(text => {
+    const d = {};
+    for (const [felt = "", tekst = ""] of parseCsv(text).slice(1)) {
+      const k = felt.trim().toLowerCase();
+      if (k) d[k] = tekst.trim();
+    }
+    renderCap(d);
+  }).catch(() => renderCap({}));
+}
+
+// Several jobs at once: service cards and form checkboxes stay in sync.
+const boxes = [...document.querySelectorAll('input[name="jobb"]')];
+const cards = [...document.querySelectorAll(".s[data-job]")];
+const picked = document.getElementById("picked"), jobsErr = document.getElementById("jobs-err");
+function sync() {
+  const on = boxes.filter(b => b.checked).map(b => b.value);
+  cards.forEach(c => {
+    const sel = on.includes(c.dataset.job);
+    c.classList.toggle("on", sel);
+    const btn = c.querySelector(".pick");
+    btn.setAttribute("aria-pressed", sel);
+    btn.textContent = sel ? "Tatt med" : "Ta med";
+  });
+  picked.innerHTML = on.length ? "Du har valgt: <b>" + esc(on.join(", ")) + "</b>" : "";
+  if (on.length) jobsErr.classList.remove("show");
+}
+boxes.forEach(b => b.addEventListener("change", sync));
+cards.forEach(c => c.querySelector(".pick").addEventListener("click", () => {
+  const b = boxes.find(x => x.value === c.dataset.job);
+  b.checked = !b.checked; sync();
+}));
+sync();
+
+// Preview form: never sends anything, just shows a note.
+const form = document.getElementById("form"), sent = document.getElementById("sent");
+form.addEventListener("submit", e => {
+  e.preventDefault();
+  if (!boxes.some(b => b.checked)) { jobsErr.classList.add("show"); boxes[0].focus(); return; }
+  const missing = [...form.querySelectorAll("[required]")].find(el => !el.value.trim());
+  if (missing) { missing.focus(); missing.setCustomValidity("Fyll ut dette feltet"); missing.reportValidity(); missing.setCustomValidity(""); return; }
+  sent.classList.add("show");
+  sent.scrollIntoView({ behavior: "smooth", block: "center" });
+});
+
+// Sticky bar shows once the hero buttons have scrolled away.
+const bar = document.getElementById("mobilebar"), heroBtns = document.querySelector(".hero .actions");
+if ("IntersectionObserver" in window) {
+  new IntersectionObserver(([e]) => bar.classList.toggle("on", !e.isIntersecting && e.boundingClientRect.top < 0)).observe(heroBtns);
+} else bar.classList.add("on");
+</script>
+</body>
+</html>
