@@ -8,7 +8,7 @@
 <meta name="description" content="Murer'n &amp; Snekker'n AS i Lillehammer. Mur, tømrer og flis i samme firma. Sentralt godkjent hos DiBK.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@600;700&family=Karla:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <style>
 :root{
   --paper:#f6f1e7; --card:#fffbf4; --ink:#1f1b17; --muted:#5d554b; --line:#e2d7c5;
@@ -20,11 +20,11 @@
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--paper);color:var(--ink);font:400 1.0625rem/1.6 "Public Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1.1rem/1.58 "Karla",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
 a{color:inherit}
 img,svg{display:block}
 .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
-h1,h2,h3,.disp{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:800;letter-spacing:-.02em;line-height:1.02;margin:0}
+h1,h2,h3,.disp{font-family:"Zilla Slab",Rockwell,Georgia,serif;font-weight:700;letter-spacing:-.005em;line-height:1.04;margin:0}
 .preview{background:var(--gold);color:#1f1a0e;text-align:center;font-size:.8rem;font-weight:600;padding:6px 12px}
 .ap{color:var(--brick-l)}
 .ap-g{color:var(--spruce-l)}
@@ -38,7 +38,7 @@ h1,h2,h3,.disp{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weigh
 /* Header */
 header.top{background:var(--paper);border-bottom:1px solid var(--line)}
 header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px}
-.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:1.15rem;letter-spacing:-.01em}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:"Zilla Slab",Rockwell,Georgia,serif;font-weight:700;font-size:1.3rem;letter-spacing:0}
 .brand .mark{width:30px;height:30px;border-radius:6px;overflow:hidden;display:grid;grid-template-columns:1fr 1fr;flex:none;box-shadow:0 0 0 1px #0000001a}
 .brand .mark span:first-child{background-size:60px 24px}
 .brand .mark span:last-child{background-size:29px 120px,29px 100%,29px 100%}
@@ -55,7 +55,7 @@ header.top .hdr-call{display:none}
 .split{display:grid;grid-template-rows:1fr 1fr;position:relative;margin:0}
 .half{position:relative;display:flex;padding:22px 20px;min-height:160px;overflow:hidden}
 .half .word{font-size:clamp(3.6rem,16vw,8rem);color:#fffaf0;text-shadow:0 2px 0 #00000030,0 10px 30px #0000003d;line-height:.9}
-.half .tag{position:absolute;font:700 .72rem/1 "Public Sans",sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#fffaf0;background:#00000040;padding:7px 10px;border-radius:999px;backdrop-filter:blur(2px)}
+.half .tag{position:absolute;font:700 .72rem/1 "Karla",sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#fffaf0;background:#00000040;padding:7px 10px;border-radius:999px;backdrop-filter:blur(2px)}
 .half.mur{align-items:flex-end;justify-content:flex-start;padding-bottom:26px;padding-top:56px}
 .half.mur .tag{top:18px;left:20px}
 .half.snekker{align-items:flex-start;justify-content:flex-end;padding-top:56px;padding-bottom:78px}
@@ -63,11 +63,11 @@ header.top .hdr-call{display:none}
 .half.mur::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#0000 40%,#3b120a66)}
 .half.snekker::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#0000 40%,#0a170f66)}
 .half > *{position:relative;z-index:1}
-.amp{position:absolute;z-index:3;left:auto;right:22px;top:calc(50% - 26px);transform:translateY(-50%) rotate(-6deg);width:76px;height:76px;border-radius:50%;background:var(--paper);color:var(--ink);display:grid;place-items:center;font-size:2.8rem;font-weight:800;box-shadow:0 0 0 6px #fffaf055,0 12px 28px #00000040;padding-bottom:6px}
+.amp{position:absolute;z-index:3;left:auto;right:22px;top:calc(50% - 26px);transform:translateY(-50%) rotate(-6deg);width:76px;height:76px;border-radius:50%;background:var(--paper);color:var(--ink);display:grid;place-items:center;font-family:"Zilla Slab",Rockwell,Georgia,serif;font-size:3rem;font-weight:700;box-shadow:0 0 0 6px #fffaf055,0 12px 28px #00000040;padding-bottom:6px}
 .ridge{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:auto;z-index:2;pointer-events:none}
 .hero-body{padding:8px 0 40px}
 .hero-body .wrap{display:grid;gap:26px;align-items:center}
-.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.78rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--brick-d);margin:0 0 12px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.78rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--brick-d);margin:0 0 12px}
 .eyebrow::before{content:"";width:22px;height:10px;border-radius:2px;background:linear-gradient(90deg,var(--brick) 0 50%,var(--spruce) 50%)}
 .lead{font-size:clamp(1.15rem,3.6vw,1.6rem);line-height:1.35;margin:0 0 22px;font-weight:500;max-width:30ch}
 .lead strong{font-weight:700}
@@ -97,8 +97,8 @@ header.top .hdr-call{display:none}
 .bubble{position:absolute;top:7px;left:50%;width:22px;height:16px;margin-left:-11px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#fff,#f4ffe0 60%,#d7eda6);animation:settle 2.4s ease-out 1}
 @keyframes settle{0%{transform:translateX(-26px)}40%{transform:translateX(14px)}70%{transform:translateX(-5px)}100%{transform:none}}
 .level-txt{min-width:0;padding-right:10px}
-.level-txt small{display:block;font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#5b4a0c}
-.level-txt b{display:block;font-family:"Bricolage Grotesque",sans-serif;font-size:1.15rem;line-height:1.25;color:#1f1b17}
+.level-txt small{display:block;font-size:.72rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#5b4a0c}
+.level-txt b{display:block;font-family:"Zilla Slab",Rockwell,Georgia,serif;font-size:1.15rem;line-height:1.25;color:#1f1b17}
 .level-msg{display:none;margin:6px 0 0;font-size:.95rem;color:#3a300a}
 .level-msg.show{display:block}
 .level a{display:none}
@@ -108,7 +108,7 @@ section.sec{padding:64px 0}
 .sec-head{max-width:640px;margin-bottom:30px}
 .sec-head h2{font-size:clamp(2rem,6vw,3rem)}
 .sec-head p{color:var(--muted);margin:12px 0 0}
-.kicker{font-size:.78rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--spruce);margin:0 0 10px}
+.kicker{font-size:.78rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--spruce);margin:0 0 10px}
 
 .cards{display:grid;gap:16px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
@@ -131,7 +131,7 @@ section.sec{padding:64px 0}
 /* Steps */
 .steps{display:grid;gap:14px;counter-reset:s}
 .step{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px 20px 22px 86px;position:relative;min-height:108px}
-.step::before{counter-increment:s;content:counter(s);position:absolute;left:18px;top:18px;width:50px;height:50px;border-radius:10px;font:800 1.6rem/50px "Bricolage Grotesque",sans-serif;text-align:center;color:#fff;background:var(--brick)}
+.step::before{counter-increment:s;content:counter(s);position:absolute;left:18px;top:18px;width:50px;height:50px;border-radius:10px;font:700 1.6rem/50px "Zilla Slab",Rockwell,Georgia,serif;text-align:center;color:#fff;background:var(--brick)}
 .step:nth-child(2)::before{background:var(--spruce)}
 .step:nth-child(3)::before{background:#b98a4e}
 .step h3{font-size:1.3rem;margin-bottom:6px}
@@ -160,7 +160,7 @@ section.sec{padding:64px 0}
 .cert a.reg{font-weight:700;color:var(--brick-d)}
 .mini{display:grid;gap:12px;margin-top:16px}
 .mini div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
-.mini b{display:block;font-family:"Bricolage Grotesque",sans-serif;font-size:1.2rem}
+.mini b{display:block;font-family:"Zilla Slab",Rockwell,Georgia,serif;font-size:1.2rem}
 .mini p{margin:4px 0 0;color:var(--muted);font-size:.95rem}
 
 /* About */
@@ -169,7 +169,7 @@ section.sec{padding:64px 0}
 .about .sec-head p{color:#d8d0c2}
 .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:8px}
 .fact{border-top:3px solid var(--brick-l);padding-top:12px}
-.fact b{display:block;font:800 clamp(2rem,8vw,3.2rem)/1 "Bricolage Grotesque",sans-serif;color:#fffaf0}
+.fact b{display:block;font:700 clamp(2rem,8vw,3.2rem)/1 "Zilla Slab",Rockwell,Georgia,serif;color:#fffaf0}
 .fact span{font-size:.9rem;color:#cfc6b6}
 .about .owner{margin:26px 0 0;padding:16px 18px;border:1px dashed #ffffff40;border-radius:12px;color:#d8d0c2;font-style:italic;max-width:640px}
 .about-ridge{position:absolute;right:-40px;bottom:0;width:520px;opacity:.12;pointer-events:none}
@@ -188,7 +188,7 @@ form.q .btn{width:100%;min-height:60px;font-size:1.1rem}
 .done.show{display:block}
 .contact-card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px 20px;align-self:start}
 .contact-card h3{font-size:1.5rem;margin-bottom:12px}
-.big-tel{display:flex;align-items:center;gap:12px;text-decoration:none;font:800 clamp(1.8rem,7vw,2.4rem)/1.1 "Bricolage Grotesque",sans-serif;color:var(--brick-d);margin:6px 0 4px}
+.big-tel{display:flex;align-items:center;gap:12px;text-decoration:none;font:700 clamp(1.8rem,7vw,2.4rem)/1.1 "Zilla Slab",Rockwell,Georgia,serif;color:var(--brick-d);margin:6px 0 4px}
 .big-tel svg{width:30px;height:30px}
 .contact-card p{margin:10px 0 0;color:var(--muted)}
 .contact-card .place{display:flex;gap:10px;align-items:center;font-weight:600;color:var(--ink);margin-top:18px}
@@ -296,7 +296,7 @@ footer p{margin:4px 0}
           <defs><path id="ring" d="M80 80 m-58 0 a58 58 0 1 1 116 0 a58 58 0 1 1 -116 0"/></defs>
           <circle cx="80" cy="80" r="76" fill="#24402f"/>
           <circle cx="80" cy="80" r="70" fill="none" stroke="#a9d1b2" stroke-width="1.5" stroke-dasharray="3 4"/>
-          <text font-family="Public Sans,sans-serif" font-size="12.5" font-weight="700" letter-spacing="3.2" fill="#fffaf0"><textPath href="#ring">SENTRALT GODKJENT · DIBK · TIL 2027 ·</textPath></text>
+          <text font-family="Karla,sans-serif" font-size="12.5" font-weight="700" letter-spacing="3.2" fill="#fffaf0"><textPath href="#ring">SENTRALT GODKJENT · DIBK · TIL 2027 ·</textPath></text>
           <circle cx="80" cy="80" r="40" fill="#a8402c"/>
           <path d="M62 81l12 12 25-27" fill="none" stroke="#fffaf0" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
@@ -410,7 +410,7 @@ footer p{margin:4px 0}
             <defs><path id="ring2" d="M80 80 m-58 0 a58 58 0 1 1 116 0 a58 58 0 1 1 -116 0"/></defs>
             <circle cx="80" cy="80" r="76" fill="#a8402c"/>
             <circle cx="80" cy="80" r="70" fill="none" stroke="#f0a487" stroke-width="1.5" stroke-dasharray="3 4"/>
-            <text font-family="Public Sans,sans-serif" font-size="12.5" font-weight="700" letter-spacing="3.2" fill="#fffaf0"><textPath href="#ring2">SENTRAL GODKJENNING · DIBK ·</textPath></text>
+            <text font-family="Karla,sans-serif" font-size="12.5" font-weight="700" letter-spacing="3.2" fill="#fffaf0"><textPath href="#ring2">SENTRAL GODKJENNING · DIBK ·</textPath></text>
             <circle cx="80" cy="80" r="40" fill="#24402f"/>
             <path d="M62 81l12 12 25-27" fill="none" stroke="#fffaf0" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
