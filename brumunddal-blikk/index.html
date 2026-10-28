@@ -386,7 +386,7 @@ footer b{color:#fff}
 // The owner writes capacity in a Google Sheet (columns: Felt, Tekst).
 // Rows: "Kapasitet" (e.g. "Vi har ledig kapasitet fra uke 46"), "Beskjed" (optional, hidden if empty).
 // Paste the sheet's "Publiser på nettet" CSV link here. Empty = fallback text.
-const SHEET_CSV = "";
+const SHEET_CSV = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTPZbt0XIZY7sEQjpSa-iGsoXih0OxmhWl3YU1q79JtMxkq1QvZM0CKECtC0eMNiY4mugcu-1kZ-NQS/pub?output=csv";
 const FALLBACK = "Ta kontakt for ledig kapasitet og pris.";
 
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
