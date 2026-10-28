@@ -1,0 +1,558 @@
+<!doctype html>
+<html lang="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Danflis AS | mur og flis i Stange</title>
+<meta name="description" content="Danflis AS i Stange driver med muring og flislegging, og har sentral godkjenning for murarbeid. Ring 959 14 317 eller be om et uforpliktende tilbud.">
+<!-- Preview only: keep out of search engines until the owner says yes -->
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#f4eee5">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f4eee5;--bg2:#ebe2d5;--card:#fbf8f3;--grout:#ddd2c2;--line:#d3c6b3;
+  --ink:#24211d;--muted:#625b51;
+  --terra:#b4532e;--terra-d:#8c3c1f;--terra-l:#d98a63;
+  --teal:#1e4c4d;--teal-d:#143536;--teal-l:#9cc2bd;
+  --gold:#e9c46a;
+  /* Square tile grid with grout lines */
+  --tilegrid:linear-gradient(90deg,var(--grout) 0 2px,transparent 2px),linear-gradient(180deg,var(--grout) 0 2px,transparent 2px);
+  /* Herringbone, 45 degrees */
+  --herring:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64'%3E%3Cdefs%3E%3Cpattern id='h' width='4' height='4' patternUnits='userSpaceOnUse' patternTransform='scale(11.3) rotate(45)'%3E%3Cpath d='M2 -1h1v2h-1zM0 0h2v1h-2zM0 1h1v2h-1zM3 0h1v2h-1zM1 1h2v1h-2zM1 2h1v2h-1zM-1 3h2v1h-2zM2 2h2v1h-2zM2 3h1v2h-1zM3 3h2v1h-2z' fill='none' stroke='%23fff' stroke-opacity='.55' stroke-width='.1'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='64' height='64' fill='url(%23h)'/%3E%3C/svg%3E");
+  /* Running bond brick */
+  --brick:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='28'%3E%3Cpath d='M0 0.5h60M0 14.5h60M0.5 0v14M30.5 14v14' stroke='%23fff' stroke-opacity='.6' stroke-width='3' fill='none'/%3E%3C/svg%3E")
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Figtree,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;font-size:1.05rem;overflow-x:hidden}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:600;line-height:1.08;letter-spacing:-.01em;font-variation-settings:"opsz" 96}
+h3{letter-spacing:0;font-variation-settings:"opsz" 36}
+a{color:inherit}
+svg{display:block}
+.wrap{max-width:1100px;margin:0 auto;padding:0 16px}
+.preview{background:var(--gold);color:#1f1a0e;text-align:center;font-size:.8rem;font-weight:600;padding:6px 12px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.82rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--terra-d)}
+.eyebrow::before{content:"";width:14px;height:14px;background:var(--terra);box-shadow:inset 0 0 0 2px #ffffff40;transform:rotate(45deg);flex:none}
+
+/* Header */
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 16px}
+.mark{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:Fraunces,serif;font-weight:700;font-size:1.45rem;letter-spacing:.01em;line-height:1}
+.mark svg{width:28px;height:28px}
+.mark small{font-family:Figtree,sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.18em;color:var(--muted);text-transform:uppercase;margin-left:2px}
+.top nav{display:flex;gap:22px;font-weight:600;font-size:.95rem}
+.top nav a{text-decoration:none;padding:6px 0;border-bottom:2px solid transparent}
+.top nav a:hover{border-color:var(--terra)}
+
+/* Hero */
+.hero{position:relative;padding:28px 0 96px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(3.4rem,11vw,6.6rem);font-weight:700;line-height:.95;margin:16px 0 0;color:var(--ink)}
+.hero h1 em{font-style:italic;font-weight:500;color:var(--terra)}
+.lead{font-size:clamp(1.12rem,2.4vw,1.3rem);max-width:540px;margin-top:20px;color:#3b362f}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:12px 26px;font:inherit;font-weight:700;font-size:1.08rem;text-decoration:none;border-radius:4px;border:2px solid var(--teal);color:var(--teal);background:transparent;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.btn.solid{background:var(--terra);border-color:var(--terra);color:#fff}
+.btn:hover{background:var(--teal);border-color:var(--teal);color:#fff}
+.btn svg{width:20px;height:20px}
+.cert{display:inline-flex;align-items:center;gap:10px;margin-top:26px;font-size:.95rem;font-weight:600;color:var(--teal);text-decoration:none;border-bottom:1px solid #1e4c4d55;padding-bottom:2px}
+.cert svg{width:22px;height:22px;flex:none}
+
+/* The tiled panel on the right */
+.panel{position:relative;aspect-ratio:4/5;border-radius:6px;overflow:hidden;background-color:var(--terra);background-image:var(--herring);background-size:64px 64px;box-shadow:0 30px 60px #5a2a1630,inset 0 0 0 10px var(--bg2)}
+.panel::before{content:"";position:absolute;inset:0;background:linear-gradient(160deg,#ffffff1f,transparent 45%,#00000026)}
+.panel .inlay{position:absolute;left:10px;right:10px;bottom:10px;height:30%;background-color:var(--teal);background-image:var(--tilegrid);background-size:34px 34px;background-position:-2px -2px;border-top:10px solid var(--bg2)}
+.panel .inlay::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#ffffff14,#0000002a)}
+.panel .tag{position:absolute;top:28px;left:28px;background:var(--card);color:var(--ink);padding:12px 16px;border-radius:3px;font-weight:600;font-size:.92rem;line-height:1.3;box-shadow:0 10px 24px #0000002a;max-width:70%}
+.panel .tag b{display:block;font-family:Fraunces,serif;font-size:1.35rem;font-weight:600}
+
+/* Kapasitet */
+.cap-wrap{position:relative;z-index:3;margin-top:-56px}
+.cap{display:grid;grid-template-columns:64px 1fr;background:var(--teal);color:#fff;border-radius:6px;overflow:hidden;box-shadow:0 18px 40px #14353640}
+.cap .sq{background-color:var(--teal-d);background-image:linear-gradient(90deg,#ffffff26 0 2px,transparent 2px),linear-gradient(180deg,#ffffff26 0 2px,transparent 2px);background-size:16px 16px}
+.cap-in{padding:18px 22px;display:flex;flex-wrap:wrap;align-items:center;gap:6px 20px}
+.cap-k{font-size:.8rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--teal-l);display:flex;align-items:center;gap:8px}
+.cap-k::before{content:"";width:9px;height:9px;border-radius:50%;background:#7fd1a5;box-shadow:0 0 0 4px #7fd1a533}
+.cap-t{font-family:Fraunces,serif;font-weight:600;font-size:clamp(1.25rem,3.4vw,1.55rem);line-height:1.2;flex:1 1 300px}
+.cap-b{display:none;width:100%;border-top:1px solid #ffffff33;padding-top:8px;color:#e1ecea}
+.cap-b.show{display:block}
+.cap-a{font-weight:700;text-decoration:none;border-bottom:2px solid var(--terra-l);padding:4px 0;color:#fff}
+
+/* Sections */
+section{padding:84px 0}
+.head{margin-bottom:34px;max-width:660px}
+.head h2{font-size:clamp(2.2rem,6vw,3.3rem);margin:12px 0 12px}
+.head p{color:var(--muted);font-size:1.1rem}
+
+/* Services */
+.svc{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.s{background:var(--card);border:1px solid var(--line);border-radius:6px;overflow:hidden;display:flex;flex-direction:column}
+.s .face{height:150px;position:relative}
+.s.mur .face{background-color:#a9502f;background-image:var(--brick);background-size:60px 28px}
+.s.flis .face{background-color:#d9d2c5;background-image:linear-gradient(90deg,#fff 0 3px,transparent 3px),linear-gradient(180deg,#fff 0 3px,transparent 3px),linear-gradient(135deg,#ffffff70,transparent 60%);background-size:50px 50px,50px 50px,100% 100%}
+.s .face::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,#00000022)}
+.s .face span{position:absolute;left:22px;bottom:-26px;width:56px;height:56px;border-radius:4px;background:var(--card);border:1px solid var(--line);display:grid;place-items:center;z-index:1;color:var(--teal)}
+.s .face svg{width:32px;height:32px}
+.s .body{padding:42px 26px 26px}
+.s h3{font-size:2rem;margin-bottom:8px}
+.s p{color:#47413a}
+.ex{margin-top:18px;padding-top:16px;border-top:1px dashed var(--line)}
+.ex small{display:block;font-size:.78rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips a{display:inline-flex;align-items:center;gap:8px;min-height:42px;padding:8px 14px;border-radius:4px;background:var(--bg);border:1px solid var(--line);font-weight:600;text-decoration:none}
+.chips a::before{content:"";width:10px;height:10px;background:var(--terra);border-radius:1px}
+.chips a:hover{border-color:var(--terra)}
+.svc-note{margin-top:22px;color:var(--muted)}
+.svc-note a{color:var(--terra-d);font-weight:700}
+
+/* Steps: three tiles with grout between */
+.steps-sec{background:var(--bg2)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;background:var(--grout);padding:6px;border-radius:6px}
+.step{background:var(--card);padding:28px 24px;border-radius:2px;position:relative}
+.step b{display:grid;place-items:center;width:52px;height:52px;border-radius:3px;background:var(--teal);color:#fff;font-family:Fraunces,serif;font-size:1.6rem;font-weight:600;line-height:1}
+.step:nth-child(2) b{background:var(--terra)}
+.step:nth-child(3) b{background:var(--ink)}
+.step h3{font-size:1.55rem;margin:18px 0 8px}
+.step p{color:#47413a}
+.fine{margin-top:20px;color:var(--muted);font-size:.95rem}
+
+/* Photo strip */
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:240px;gap:10px}
+.tile{position:relative;border-radius:6px;overflow:hidden;display:flex;align-items:flex-end;padding:12px}
+.tile span{position:relative;z-index:1;background:#fbf8f3f2;color:var(--ink);font-weight:600;font-size:.9rem;padding:6px 10px;border-radius:3px}
+.tile::after{content:"";position:absolute;inset:0;background:linear-gradient(160deg,#ffffff22,transparent 50%,#0000002a)}
+.t1{background-color:#8e8478;background-image:var(--herring);background-size:52px 52px}
+.t2{background-color:var(--teal);background-image:linear-gradient(90deg,#ffffffaa 0 2px,transparent 2px),linear-gradient(180deg,#ffffffaa 0 2px,transparent 2px);background-size:22px 22px}
+.t3{background-color:#b9603b;background-image:var(--brick);background-size:48px 22px}
+.t4{background-color:#cfc9c0;background-image:linear-gradient(118deg,transparent 0 38%,#ffffff70 38.4% 39%,transparent 39.4% 64%,#8a837a44 64.2% 64.6%,transparent 65%),linear-gradient(90deg,#fff 0 3px,transparent 3px),linear-gradient(180deg,#fff 0 3px,transparent 3px);background-size:100% 100%,50% 50%,50% 50%}
+.ph{margin-top:16px;display:flex;align-items:center;gap:12px;color:var(--muted);font-weight:500}
+.ph::before{content:"";width:34px;height:2px;background:var(--terra);flex:none}
+
+/* Godkjenning */
+.god{background:var(--teal);color:#fff;position:relative;overflow:hidden}
+.god::before{content:"";position:absolute;inset:0;background-image:linear-gradient(90deg,#ffffff0d 0 2px,transparent 2px),linear-gradient(180deg,#ffffff0d 0 2px,transparent 2px);background-size:56px 56px;pointer-events:none}
+.god .wrap{position:relative}
+.god .eyebrow{color:var(--teal-l)}
+.god .eyebrow::before{background:var(--terra-l)}
+.god-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+.god h2{font-size:clamp(2.2rem,6vw,3.3rem);margin:12px 0 14px}
+.god p{color:#dbe8e6}
+.god p+p{margin-top:12px}
+.god a.link{display:inline-flex;margin-top:22px;color:#fff;font-weight:700;border-bottom:2px solid var(--terra-l);text-decoration:none;padding:4px 0}
+.paper{background:var(--card);color:var(--ink);border-radius:6px;padding:26px 26px 22px;box-shadow:0 24px 50px #0000003a;position:relative}
+.paper::before{content:"";position:absolute;left:0;right:0;top:0;height:8px;background:repeating-linear-gradient(90deg,var(--terra) 0 24px,var(--terra-d) 24px 26px);border-radius:6px 6px 0 0}
+.paper h3{font-size:1.5rem;margin:6px 0 16px;display:flex;align-items:center;gap:12px}
+.paper h3 svg{width:34px;height:34px;color:var(--teal);flex:none}
+.paper dl div{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-top:1px solid var(--grout)}
+.paper dt{color:var(--muted);font-weight:500}
+.paper dd{font-weight:700;text-align:right}
+.paper .ok{color:#2c7a4f}
+
+/* Om oss */
+.about{display:grid;grid-template-columns:1.2fr 1fr;gap:44px;align-items:start}
+.about p+p{margin-top:12px}
+.facts{background:var(--card);border:1px solid var(--line);border-radius:6px}
+.facts div{display:flex;justify-content:space-between;gap:16px;padding:14px 18px;border-bottom:1px solid var(--grout)}
+.facts div:last-child{border-bottom:0}
+.facts dt{color:var(--muted);font-weight:600}
+.facts dd{font-weight:700;text-align:right}
+
+/* Form */
+.quote-sec{background-color:var(--bg2);background-image:var(--tilegrid);background-size:72px 72px}
+.qgrid{display:grid;grid-template-columns:1.5fr 1fr;gap:34px;align-items:start}
+form{background:var(--card);padding:28px 24px;border-radius:6px;border:1px solid var(--line);box-shadow:0 20px 44px #5a3a1a18}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:0 16px}
+label{display:block;font-weight:700;font-size:.98rem;margin:0 0 6px}
+label small{font-weight:500;color:var(--muted);font-size:.86rem}
+.f{margin-bottom:16px}
+input,select,textarea{width:100%;font:inherit;font-size:1.05rem;color:var(--ink);background:#fff;border:2px solid var(--line);border-radius:4px;padding:13px 14px;min-height:54px}
+textarea{min-height:120px;resize:vertical}
+select{appearance:none;background-image:linear-gradient(45deg,transparent 50%,#24211d 50%),linear-gradient(135deg,#24211d 50%,transparent 50%);background-position:calc(100% - 22px) 50%,calc(100% - 16px) 50%;background-size:6px 6px;background-repeat:no-repeat;padding-right:40px}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 3px #1e4c4d33}
+form .btn{width:100%;font-size:1.15rem;min-height:60px}
+.sent{display:none;margin-top:16px;background:#e6f0ee;border:2px solid var(--teal);border-left-width:8px;padding:16px 18px;font-weight:600;border-radius:4px}
+.sent.show{display:block}
+.side{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:24px}
+.side h3{font-size:1.6rem;margin-bottom:8px}
+.side p{color:var(--muted)}
+.side .big{display:block;font-family:Fraunces,serif;font-weight:700;font-size:2.4rem;color:var(--terra-d);text-decoration:none;line-height:1.1;margin:8px 0 10px}
+
+/* Kontakt */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.cbox{background:var(--card);border:1px solid var(--line);border-top:6px solid var(--terra);padding:24px;border-radius:6px}
+.cbox:nth-child(2){border-top-color:var(--teal)}
+.cbox h3{font-size:1.45rem;margin-bottom:8px}
+.cbox p+p{margin-top:8px}
+.cbox a{font-weight:700;text-underline-offset:3px}
+.cbox .tel{font-family:Fraunces,serif;font-size:2.1rem;text-decoration:none;color:var(--terra-d)}
+.cbox .who{color:var(--muted)}
+
+footer{background:var(--ink);color:#cfc6b8;padding:36px 0;font-size:.92rem}
+footer .mark{color:#fff;margin-bottom:12px}
+footer .strip{height:10px;background-color:var(--terra);background-image:var(--brick);background-size:30px 10px}
+
+.mobilebar{display:none}
+@media (max-width:860px){
+  .hero-grid{grid-template-columns:1fr;gap:30px}
+  .panel{aspect-ratio:auto;height:210px}
+  .panel .inlay{height:38%}
+  .svc,.about,.qgrid,.contact,.god-grid{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  .tiles{grid-template-columns:1fr 1fr;grid-template-rows:170px 170px}
+}
+@media (max-width:760px){
+  .top nav{display:none}
+  .mobilebar{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:fixed;left:12px;right:12px;bottom:12px;z-index:10;transform:translateY(140%);transition:transform .25s}
+  .mobilebar.on{transform:none}
+  .mobilebar a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:56px;border-radius:4px;font-weight:700;font-size:1.1rem;text-decoration:none;box-shadow:0 8px 22px #0005}
+  .mobilebar svg{width:18px;height:18px}
+  .mobilebar .a{background:var(--terra);color:#fff}
+  .mobilebar .b{background:var(--teal);color:#fff}
+  footer{padding-bottom:100px}
+}
+@media (max-width:520px){
+  .hero{padding:12px 0 88px}
+  .row{grid-template-columns:1fr}
+  .actions .btn{flex:1 1 100%}
+  section{padding:64px 0}
+  form{padding:22px 16px}
+  .cap{grid-template-columns:18px 1fr}
+  .cap-in{padding:16px 16px}
+  .facts div{flex-direction:column;gap:0}
+  .facts dd{text-align:left}
+  .s .body{padding:40px 20px 22px}
+}
+</style>
+</head>
+<body>
+<div class="preview">Forhåndsvisning laget for Danflis AS, bildene kommer fra dere</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></symbol>
+    <symbol id="i-mark" viewBox="0 0 28 28"><rect x="1" y="1" width="12" height="12" rx="1" fill="#b4532e"/><rect x="15" y="1" width="12" height="12" rx="1" fill="#1e4c4d"/><rect x="1" y="15" width="12" height="12" rx="1" fill="#1e4c4d"/><rect x="15" y="15" width="12" height="12" rx="1" fill="#b4532e"/></symbol>
+    <symbol id="i-seal" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 2.5l2.2 1.6 2.7-.1.9 2.6 2.2 1.6-.8 2.6.8 2.6-2.2 1.6-.9 2.6-2.7-.1L12 19.5l-2.2-1.6-2.7.1-.9-2.6L4 13.8l.8-2.6L4 8.6l2.2-1.6.9-2.6 2.7.1z"/><path d="M8.6 11.2l2.4 2.3 4.4-4.4"/></g></symbol>
+  </defs>
+</svg>
+
+<header>
+  <div class="wrap top">
+    <a class="mark" href="#"><svg aria-hidden="true"><use href="#i-mark"/></svg>Danflis<small>Mur og flis</small></a>
+    <nav aria-label="Hovedmeny"><a href="#tjenester">Tjenester</a><a href="#godkjenning">Godkjenning</a><a href="#om">Om oss</a><a href="#kontakt">Kontakt</a></nav>
+  </div>
+</header>
+
+<main>
+<div class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Mur og flis i Stange</span>
+      <h1>Danflis <em>murer og legger flis</em></h1>
+      <p class="lead">Skal du ha nytt bad, flis på kjøkkenet eller noe som skal mures? Fortell oss hva du har tenkt, så kommer vi og ser på det.</p>
+      <div class="actions">
+        <a class="btn solid" href="#tilbud">Få tilbud</a>
+        <a class="btn" href="tel:+4795914317"><svg aria-hidden="true"><use href="#i-phone"/></svg>Ring 959 14 317</a>
+      </div>
+      <a class="cert" href="#godkjenning"><svg aria-hidden="true"><use href="#i-seal"/></svg>Sentral godkjenning for murarbeid</a>
+    </div>
+    <div class="panel" aria-hidden="true">
+      <div class="tag"><b>Mur og flis</b>Jønsbergvegen 514, Stange</div>
+      <div class="inlay"></div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap cap-wrap" aria-live="polite">
+  <div class="cap">
+    <div class="sq" aria-hidden="true"></div>
+    <div class="cap-in">
+      <span class="cap-k">Kapasitet</span>
+      <span class="cap-t" id="cap-text">Ta kontakt for ledig kapasitet og pris.</span>
+      <a class="cap-a" href="#tilbud">Spør om tilbud</a>
+      <p class="cap-b" id="cap-msg"></p>
+    </div>
+  </div>
+</div>
+
+<section id="tjenester">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Tjenester</span>
+      <h2>Muring og flislegging</h2>
+      <p>Det er det vi driver med. Si hva du har tenkt, så finner vi ut av resten sammen.</p>
+    </div>
+    <div class="svc">
+      <article class="s mur">
+        <div class="face"><span><svg viewBox="0 0 32 32" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="6" width="26" height="20"/><path d="M3 12.7h26M3 19.3h26M16 6v6.7M9.5 12.7v6.6M22.5 12.7v6.6M16 19.3V26"/></g></svg></span></div>
+        <div class="body">
+          <h3>Muring</h3>
+          <p>Vi tar på oss murarbeid, og vi har sentral godkjenning for det. Fortell hva som skal mures og hvor, så kommer vi på befaring.</p>
+          <div class="ex">
+            <small>Spør oss om</small>
+            <div class="chips"><a href="#tilbud" data-pick="Muring">Murarbeid</a></div>
+          </div>
+        </div>
+      </article>
+      <article class="s flis">
+        <div class="face"><span><svg viewBox="0 0 32 32" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2"><rect x="4" y="4" width="24" height="24" rx="1"/><path d="M16 4v24M4 16h24"/></g></svg></span></div>
+        <div class="body">
+          <h3>Flislegging</h3>
+          <p>Vi legger flis. Har du begynt å se på fliser, ta det gjerne med i beskrivelsen.</p>
+          <div class="ex">
+            <small>For eksempel</small>
+            <div class="chips">
+              <a href="#tilbud" data-pick="Flis på bad">Bad</a>
+              <a href="#tilbud" data-pick="Flis på kjøkken">Kjøkken</a>
+              <a href="#tilbud" data-pick="Flis på gulv">Gulv</a>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+    <p class="svc-note">Usikker på om det er noe for oss? <a href="#tilbud">Spør likevel</a>, så sier vi ifra.</p>
+  </div>
+</section>
+
+<section class="steps-sec">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Slik jobber vi</span>
+      <h2>Tre enkle steg</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><b>1</b><h3>Du tar kontakt</h3><p>Ring oss eller fyll ut skjemaet. Skriv kort hva det gjelder og hvor jobben er.</p></div>
+      <div class="step"><b>2</b><h3>Vi kommer på befaring</h3><p>Vi ser på rommet eller muren og hører hva du ser for deg.</p></div>
+      <div class="step"><b>3</b><h3>Du får et fast tilbud</h3><p>Etter befaringen får du et tilbud å ta stilling til. Ingenting er bestemt før du sier ja.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="jobbene">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Bilder av jobbene</span>
+      <h2>Fra jobbene våre</h2>
+    </div>
+    <div class="tiles" aria-hidden="true">
+      <div class="tile t1"><span>Gulv</span></div>
+      <div class="tile t2"><span>Bad</span></div>
+      <div class="tile t3"><span>Mur</span></div>
+      <div class="tile t4"><span>Kjøkken</span></div>
+    </div>
+    <p class="ph">Her legger vi inn bilder av jobbene deres.</p>
+  </div>
+</section>
+
+<section id="godkjenning" class="god">
+  <div class="wrap god-grid">
+    <div>
+      <span class="eyebrow">Godkjenning</span>
+      <h2>Sentralt godkjent for murarbeid</h2>
+      <p>Danflis AS har sentral godkjenning fra Direktoratet for byggkvalitet (DiBK) som utførende for murarbeid.</p>
+      <p>Ordningen er frivillig. For å få den må firmaet vise at det har folk med riktig utdanning og praksis, og rutiner for å gjøre jobben riktig. Du kan sjekke godkjenningen selv i registeret.</p>
+      <a class="link" href="https://sgregister.dibk.no/enterprises/915454771" rel="noopener">Se godkjenningen hos DiBK</a>
+    </div>
+    <div class="paper">
+      <h3><svg aria-hidden="true"><use href="#i-seal"/></svg>Sentral godkjenning</h3>
+      <dl>
+        <div><dt>Firma</dt><dd>Danflis AS</dd></div>
+        <div><dt>Funksjon</dt><dd>Utførende</dd></div>
+        <div><dt>Fagområde</dt><dd>Murarbeid</dd></div>
+        <div><dt>Tiltaksklasse</dt><dd>1</dd></div>
+        <div><dt>Gyldig</dt><dd>10.11.2025 til 10.11.2028</dd></div>
+        <div><dt>Status</dt><dd class="ok">Godkjent</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section id="om">
+  <div class="wrap about">
+    <div>
+      <div class="head">
+        <span class="eyebrow">Om oss</span>
+        <h2>Et mur- og flisfirma i Stange</h2>
+      </div>
+      <p>Danflis AS holder til i Jønsbergvegen i Stange og driver med muring og flislegging.</p>
+      <p>Firmaet ble stiftet i 2015.</p>
+    </div>
+    <dl class="facts">
+      <div><dt>Firma</dt><dd>Danflis AS</dd></div>
+      <div><dt>Org.nr</dt><dd>915 454 771</dd></div>
+      <div><dt>Stiftet</dt><dd>2015</dd></div>
+      <div><dt>Adresse</dt><dd>Jønsbergvegen 514, 2335 Stange</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section id="tilbud" class="quote-sec">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Uforpliktende tilbud</span>
+      <h2>Få et uforpliktende tilbud</h2>
+      <p>Fortell kort hva det gjelder, så tar vi kontakt.</p>
+    </div>
+    <div class="qgrid">
+      <form id="form" novalidate>
+        <div class="f">
+          <label for="hva">Hva gjelder det</label>
+          <select id="hva" name="hva" required>
+            <option value="">Velg</option>
+            <option>Flis på bad</option>
+            <option>Flis på kjøkken</option>
+            <option>Flis på gulv</option>
+            <option>Annen flislegging</option>
+            <option>Muring</option>
+            <option>Annet</option>
+          </select>
+        </div>
+        <div class="f">
+          <label for="besk">Beskrivelse</label>
+          <textarea id="besk" name="beskrivelse" placeholder="For eksempel: nye fliser på badet, ca. 5 kvm gulv" required></textarea>
+        </div>
+        <div class="row">
+          <div class="f">
+            <label for="sted">Adresse eller sted</label>
+            <input id="sted" name="sted" autocomplete="street-address">
+          </div>
+          <div class="f">
+            <label for="nar">Når passer det</label>
+            <select id="nar" name="nar">
+              <option>Så fort som mulig</option>
+              <option>I løpet av måneden</option>
+              <option>Senere</option>
+              <option selected>Vet ikke</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="f">
+            <label for="navn">Navn</label>
+            <input id="navn" name="navn" autocomplete="name" required>
+          </div>
+          <div class="f">
+            <label for="tlf">Telefon</label>
+            <input id="tlf" name="telefon" type="tel" inputmode="tel" autocomplete="tel" required>
+          </div>
+        </div>
+        <div class="f">
+          <label for="epost">E-post <small>(valgfritt)</small></label>
+          <input id="epost" name="epost" type="email" inputmode="email" autocomplete="email">
+        </div>
+        <button class="btn solid" type="submit">Send forespørsel</button>
+        <p class="sent" id="sent" role="status">Dette er en forhåndsvisning. Når siden er satt opp, kommer forespørselen rett i innboksen deres.</p>
+      </form>
+      <aside class="side">
+        <h3>Heller ringe?</h3>
+        <p>Det går like fint å ringe.</p>
+        <a class="big" href="tel:+4795914317">959 14 317</a>
+        <p>Danflis AS<br>Jønsbergvegen 514, 2335 Stange</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section id="kontakt">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Kontakt</span>
+      <h2>Ta kontakt</h2>
+    </div>
+    <div class="contact">
+      <div class="cbox">
+        <h3>Telefon</h3>
+        <a class="tel" href="tel:+4795914317">959 14 317</a>
+        <p class="who">Kontakt: Hans Uwe Christensen</p>
+      </div>
+      <div class="cbox">
+        <h3>Adresse</h3>
+        <p>Jønsbergvegen 514<br>2335 Stange</p>
+        <p><a href="https://www.google.com/maps/search/?api=1&amp;query=J%C3%B8nsbergvegen+514%2C+2335+Stange">Åpne i Google Maps</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="strip" aria-hidden="true" style="margin:-36px 0 30px"></div>
+  <div class="wrap">
+    <span class="mark"><svg aria-hidden="true"><use href="#i-mark"/></svg>Danflis</span>
+    Danflis AS, org.nr 915 454 771<br>
+    Jønsbergvegen 514, 2335 Stange
+  </div>
+</footer>
+
+<div class="mobilebar" id="mobilebar">
+  <a class="a" href="#tilbud">Få tilbud</a>
+  <a class="b" href="tel:+4795914317"><svg aria-hidden="true"><use href="#i-phone"/></svg>Ring</a>
+</div>
+
+<script>
+// The owner writes capacity in a Google Sheet (columns: Felt, Tekst).
+// Rows: "Kapasitet" (e.g. "Vi har ledig kapasitet fra uke 46"), "Beskjed" (optional, hidden if empty).
+// Paste the sheet's "Publiser på nettet" CSV link here. Empty = fallback text.
+const SHEET_CSV = "";
+const FALLBACK = "Ta kontakt for ledig kapasitet og pris.";
+
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+// Minimal CSV parser (handles quoted fields with commas).
+function parseCsv(text) {
+  const rows = []; let row = [], field = "", q = false;
+  for (let i = 0; i < text.length; i++) {
+    const c = text[i];
+    if (q) { if (c === '"' && text[i + 1] === '"') { field += '"'; i++; } else if (c === '"') q = false; else field += c; }
+    else if (c === '"') q = true;
+    else if (c === ",") { row.push(field); field = ""; }
+    else if (c === "\n" || c === "\r") { if (c === "\r" && text[i + 1] === "\n") i++; row.push(field); rows.push(row); row = []; field = ""; }
+    else field += c;
+  }
+  if (field || row.length) { row.push(field); rows.push(row); }
+  return rows;
+}
+
+function renderCap(d) {
+  document.getElementById("cap-text").innerHTML = esc(d["kapasitet"] || FALLBACK);
+  const m = document.getElementById("cap-msg"), msg = (d["beskjed"] || "").trim();
+  m.innerHTML = esc(msg);
+  m.classList.toggle("show", !!msg);
+}
+
+renderCap({});
+if (SHEET_CSV) {
+  // Cache-buster is required: Google caches published CSVs for about 5 minutes.
+  fetch(SHEET_CSV + "&t=" + Date.now(), { cache: "no-store" }).then(r => r.ok ? r.text() : Promise.reject(r.status)).then(text => {
+    const d = {};
+    for (const [felt = "", tekst = ""] of parseCsv(text).slice(1)) {
+      const k = felt.trim().toLowerCase();
+      if (k) d[k] = tekst.trim();
+    }
+    renderCap(d);
+  }).catch(() => renderCap({}));
+}
+
+// Service chips preselect the matching option in the form.
+const hva = document.getElementById("hva");
+document.querySelectorAll("[data-pick]").forEach(a => a.addEventListener("click", () => { hva.value = a.dataset.pick; }));
+
+// Preview form: never sends anything, just shows a note.
+const form = document.getElementById("form"), sent = document.getElementById("sent");
+form.addEventListener("submit", e => {
+  e.preventDefault();
+  const missing = [...form.querySelectorAll("[required]")].find(el => !el.value.trim());
+  if (missing) { missing.focus(); missing.setCustomValidity("Fyll ut dette feltet"); missing.reportValidity(); missing.setCustomValidity(""); return; }
+  sent.classList.add("show");
+  sent.scrollIntoView({ behavior: "smooth", block: "center" });
+});
+
+// Sticky bar shows once the hero buttons have scrolled away.
+const bar = document.getElementById("mobilebar"), heroBtns = document.querySelector(".hero .actions");
+if ("IntersectionObserver" in window) {
+  new IntersectionObserver(([e]) => bar.classList.toggle("on", !e.isIntersecting && e.boundingClientRect.top < 0)).observe(heroBtns);
+} else bar.classList.add("on");
+</script>
+</body>
+</html>
