@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Byggmester Ole H. Røisehagen AS, Kolbu</title>
+<meta name="description" content="Byggmester i Kolbu på Østre Toten. Oppføring av bygg, snekkerarbeid og vedlikehold. Ring 918 55 567.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Sofia+Sans+Condensed:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#eef1ef;      /* tegnepapir, kjølig */
+  --sheet:#fbfcfb;      /* rent ark */
+  --graphite:#23272b;   /* blyant, tekst og ramme */
+  --graphite-2:#4a5258; /* sekundær tekst */
+  --rule:#c6cecb;       /* hårstrek */
+  --grid:#dde3e0;       /* rutenett i tegningen */
+  --ink:#1c4ea0;        /* tusj, hovedknapp */
+  --ink-dark:#143c7d;
+  --ink-soft:#e3eaf6;
+  --pine:#e4ba63;       /* furu, liten markør */
+  --banner:#efe2b8;
+  --display:"Sofia Sans Condensed","Arial Narrow",sans-serif;
+  --body:"Atkinson Hyperlegible",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--paper);color:var(--graphite);font-family:var(--body);font-size:1.0625rem;line-height:1.6;padding-bottom:76px}
+::selection{background:var(--ink);color:#fff}
+a{color:var(--ink)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+img,svg{display:block;max-width:100%}
+.wrap{width:100%;max-width:1160px;margin:0 auto;padding:0 20px}
+
+/* preview banner */
+.preview{background:var(--banner);color:var(--graphite);text-align:center;font-size:.8rem;font-weight:700;padding:7px 14px;line-height:1.4}
+
+/* header: graphite frame */
+.top{background:var(--graphite);color:#f1f3f2}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px}
+.mark{color:#fff;text-decoration:none;display:flex;flex-direction:column;line-height:1}
+.mark b{font-family:var(--display);font-weight:800;font-size:1.35rem;letter-spacing:.14em;text-transform:uppercase}
+.mark span{font-size:.78rem;color:#c3cbc8;margin-top:4px;letter-spacing:.02em}
+.top nav{display:none}
+.top nav a{color:#dfe5e2;text-decoration:none;font-family:var(--display);font-weight:700;text-transform:uppercase;letter-spacing:.1em;font-size:.92rem;padding:8px 2px;border-bottom:1px solid transparent}
+.top nav a:hover{color:#fff;border-bottom-color:var(--pine)}
+.top .call{color:#fff;text-decoration:none;font-family:var(--display);font-weight:700;letter-spacing:.06em;font-size:1.05rem;border:1px solid #6d777c;padding:10px 14px;white-space:nowrap}
+.top .call:hover{border-color:#fff}
+
+/* buttons: square, ink */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 24px;font-family:var(--display);font-weight:700;font-size:1.12rem;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border:2px solid var(--ink);border-radius:0;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.btn-ink{background:var(--ink);color:#fff}
+.btn-ink:hover{background:var(--ink-dark);border-color:var(--ink-dark)}
+.btn-line{background:transparent;color:var(--graphite);border-color:var(--graphite)}
+.btn-line:hover{background:var(--graphite);color:#fff}
+.btn svg{width:18px;height:18px;flex:none}
+
+/* headings + dimension line under them */
+h1,h2,h3{font-family:var(--display);text-transform:uppercase;font-weight:800;line-height:.98;letter-spacing:.03em;text-wrap:balance}
+.head{display:inline-grid;gap:12px;margin-bottom:28px;max-width:100%}
+.head h2{font-size:clamp(2.1rem,7vw,3.4rem)}
+.dim{position:relative;height:14px;color:var(--graphite)}
+.dim::before{content:"";position:absolute;left:0;right:0;top:7px;height:1px;background:currentColor}
+.dim i{position:absolute;top:0;width:1px;height:14px;background:currentColor}
+.dim i::after{content:"";position:absolute;left:-5px;top:3px;width:11px;height:1.5px;background:currentColor;transform:rotate(-45deg)}
+.dim i:first-child{left:0}.dim i:last-child{right:0}
+
+section{padding:64px 0}
+.lead{font-size:1.15rem;max-width:58ch;color:var(--graphite-2)}
+
+/* hero */
+.hero{padding:36px 0 40px}
+.hero .wrap{display:grid;gap:32px}
+.hero h1{font-size:clamp(2.6rem,11.5vw,5.4rem);letter-spacing:.02em}
+.hero h1 small{display:block;font-size:.36em;letter-spacing:.2em;font-weight:700;color:var(--graphite-2);margin-bottom:10px}
+.hero p.lead{margin:20px 0 26px;color:var(--graphite)}
+.hero .ctas{display:grid;gap:12px}
+.where{margin-top:18px;font-size:.95rem;color:var(--graphite-2)}
+
+.drawing{background:var(--sheet);border:1px solid var(--graphite);position:relative}
+.drawing .plot{background-color:var(--sheet);background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:20px 20px;background-position:-1px -1px;border-bottom:1px solid var(--graphite);padding:10px}
+.drawing svg{width:100%;height:auto}
+.drawing svg .ln{fill:none;stroke:var(--graphite);stroke-width:2;stroke-linejoin:round}
+.drawing svg .thin{fill:none;stroke:var(--graphite);stroke-width:1}
+.drawing svg .ink{fill:none;stroke:var(--ink);stroke-width:1.4}
+.drawing svg text{font-family:var(--display);font-weight:700;fill:var(--graphite);letter-spacing:.08em;font-size:13px}
+.drawing svg text.ink-t{fill:var(--ink)}
+.tb{display:grid;grid-template-columns:1fr 1fr;font-size:.82rem;line-height:1.3}
+.tb div{padding:8px 10px;border-right:1px solid var(--graphite);border-top:1px solid var(--rule)}
+.tb div:nth-child(2n){border-right:0}
+.tb div:nth-child(-n+2){border-top:0}
+.tb span{display:block;font-family:var(--display);font-weight:700;text-transform:uppercase;letter-spacing:.12em;font-size:.72rem;color:var(--graphite-2)}
+.tb strong{font-weight:700}
+
+@media (prefers-reduced-motion:no-preference){
+  .draw{stroke-dasharray:var(--len);stroke-dashoffset:var(--len);animation:draw 1.4s cubic-bezier(.16,1,.3,1) forwards}
+  .draw.d2{animation-delay:.35s}.draw.d3{animation-delay:.7s}
+  @keyframes draw{to{stroke-dashoffset:0}}
+}
+
+/* capacity bar */
+.cap{background:var(--graphite);color:#f1f3f2}
+.cap{border-top:1px solid #3c4348}
+.cap .wrap{display:flex;gap:14px;align-items:flex-start;padding-top:14px;padding-bottom:14px}
+.cap .sq{width:14px;height:14px;background:var(--pine);flex:none;margin-top:6px}
+.cap b{font-family:var(--display);text-transform:uppercase;letter-spacing:.14em;font-size:.85rem;color:var(--pine);display:block}
+.cap p{font-size:1.08rem;line-height:1.45}
+.cap #beskjed{color:#c9d1ce;font-size:.98rem;margin-top:4px}
+.cap #beskjed:empty{display:none}
+
+/* byggeplaner */
+.plans{background:var(--sheet);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.plans .wrap{display:grid;gap:28px}
+.plans h2{font-size:clamp(2.6rem,10vw,4.6rem)}
+.quote{border-top:1px solid var(--graphite);border-bottom:1px solid var(--graphite);padding:18px 0}
+.quote p{font-size:1.2rem;line-height:1.5}
+.quote cite{display:block;font-style:normal;font-size:.88rem;color:var(--graphite-2);margin-top:10px}
+.quote cite a{color:var(--graphite-2)}
+.plans .ctas{display:grid;gap:12px;align-content:start}
+.plans .small{font-size:.95rem;color:var(--graphite-2)}
+
+/* services: rows, not cards */
+.rows{border-top:2px solid var(--graphite)}
+.row{display:grid;gap:6px;padding:22px 0;border-bottom:1px solid var(--rule)}
+.row h3{font-size:1.65rem;letter-spacing:.05em}
+.row p{color:var(--graphite-2);max-width:60ch}
+
+/* steps as a dimension chain */
+.chain{list-style:none;display:grid;gap:0;border-left:1px solid var(--graphite);margin-left:7px}
+.chain li{position:relative;padding:0 0 30px 26px}
+.chain li:last-child{padding-bottom:0}
+.chain li::before{content:"";position:absolute;left:-8px;top:12px;width:15px;height:1.5px;background:var(--graphite);transform:rotate(-45deg)}
+.chain .n{font-family:var(--display);font-weight:800;font-size:1rem;color:var(--ink);letter-spacing:.1em}
+.chain h3{font-size:1.6rem;margin:2px 0 6px}
+.chain p{color:var(--graphite-2);max-width:42ch}
+.note{margin-top:26px;font-size:.95rem;color:var(--graphite-2)}
+
+/* gallery placeholders: material hatches */
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.tile{border:1px solid var(--graphite);background:var(--sheet);display:flex;flex-direction:column}
+.tile .h{aspect-ratio:4/3}
+.tile .lbl{border-top:1px solid var(--graphite);padding:6px 10px;font-family:var(--display);font-weight:700;text-transform:uppercase;letter-spacing:.12em;font-size:.8rem;background:var(--sheet)}
+.h-wood{background:repeating-linear-gradient(45deg,transparent 0 9px,#9aa4a8 9px 10px),repeating-linear-gradient(-45deg,transparent 0 9px,#c3cbc8 9px 10px);background-color:var(--sheet)}
+.h-ins{background-color:var(--sheet);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='18'%3E%3Cpath d='M0 9 Q7 0 14 9 T28 9' fill='none' stroke='%239aa4a8' stroke-width='1.2'/%3E%3C/svg%3E")}
+.h-con{background-color:var(--sheet);background-image:radial-gradient(#9aa4a8 1.1px,transparent 1.3px),radial-gradient(#c3cbc8 1.6px,transparent 1.8px);background-size:13px 13px,23px 23px;background-position:0 0,6px 9px}
+.h-brd{background:repeating-linear-gradient(90deg,var(--sheet) 0 22px,#9aa4a8 22px 23px),var(--sheet)}
+.gal-text{margin-top:20px;max-width:56ch}
+.gal-text p{color:var(--graphite-2)}
+
+/* about */
+.about .wrap{display:grid;gap:36px}
+.about-text p{max-width:60ch;margin-bottom:14px}
+.says{font-family:var(--display);font-weight:800;text-transform:uppercase;font-size:clamp(1.8rem,6vw,2.6rem);letter-spacing:.04em;line-height:1;margin:24px 0 6px}
+.says + small{color:var(--graphite-2);font-size:.88rem}
+.facts{border:1px solid var(--graphite);background:var(--sheet);align-self:start}
+.facts dl{display:grid;grid-template-columns:auto 1fr}
+.facts dt,.facts dd{padding:12px 14px;border-top:1px solid var(--rule)}
+.facts dt:first-of-type,.facts dd:first-of-type{border-top:0}
+.facts dt{font-family:var(--display);font-weight:700;text-transform:uppercase;letter-spacing:.12em;font-size:.8rem;color:var(--graphite-2);border-right:1px solid var(--rule);padding-top:15px}
+.facts .stamp{border-top:1px solid var(--graphite);padding:16px 14px;display:flex;gap:14px;align-items:center}
+.facts .stamp svg{width:44px;height:44px;flex:none;color:var(--ink)}
+.facts .stamp b{display:block;font-family:var(--display);text-transform:uppercase;letter-spacing:.06em;font-size:1.15rem;line-height:1.1}
+.facts .stamp a{font-size:.92rem}
+
+/* form */
+.quote-form{background:var(--sheet);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+form{display:grid;gap:18px;max-width:720px}
+label{display:grid;gap:6px;font-weight:700;font-size:1rem}
+label .opt{font-weight:400;color:var(--graphite-2)}
+input,select,textarea{font:inherit;color:var(--graphite);background:#fff;border:1.5px solid var(--graphite);border-radius:0;min-height:54px;padding:12px 14px;width:100%}
+textarea{min-height:130px;resize:vertical}
+select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9'%3E%3Cpath d='M1 1l6 6 6-6' fill='none' stroke='%2323272b' stroke-width='2'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;padding-right:44px}
+input::placeholder,textarea::placeholder{color:#69727a}
+.two{display:grid;gap:18px}
+form .btn{width:100%}
+.done{display:none;border:2px solid var(--ink);background:var(--ink-soft);padding:20px;max-width:720px;margin-top:22px;font-size:1.08rem}
+.done.show{display:block}
+
+/* contact */
+.contact .wrap{display:grid;gap:28px}
+.cbox{border-top:2px solid var(--graphite)}
+.cline{display:grid;grid-template-columns:110px 1fr;gap:12px;padding:16px 0;border-bottom:1px solid var(--rule);align-items:baseline}
+.cline span{font-family:var(--display);font-weight:700;text-transform:uppercase;letter-spacing:.12em;font-size:.82rem;color:var(--graphite-2)}
+.cline a{font-weight:700}
+.cline .big{font-family:var(--display);font-weight:800;font-size:1.9rem;letter-spacing:.04em;text-decoration:none;color:var(--graphite)}
+
+footer{background:var(--graphite);color:#c9d1ce;padding:36px 0 40px;font-size:.92rem}
+footer b{color:#fff;font-family:var(--display);letter-spacing:.1em;text-transform:uppercase;font-size:1.05rem;display:block;margin-bottom:6px}
+footer a{color:#fff}
+
+/* sticky mobile bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:20;display:grid;grid-template-columns:1fr 1fr;background:var(--graphite);border-top:1px solid #3c4348;padding:8px;gap:8px;padding-bottom:calc(8px + env(safe-area-inset-bottom))}
+.bar .btn{min-height:54px;font-size:1.05rem;padding:0 10px}
+.bar .btn-line{color:#fff;border-color:#8b9599}
+.bar .btn-line:hover{background:#fff;color:var(--graphite)}
+
+@media (min-width:640px){
+  .hero .ctas,.plans .ctas{grid-template-columns:auto auto;justify-content:start}
+  .two{grid-template-columns:1fr 1fr}
+  .tiles{grid-template-columns:repeat(4,1fr)}
+  .row{grid-template-columns:240px 1fr;gap:28px;align-items:baseline}
+}
+@media (min-width:900px){
+  body{padding-bottom:0}
+  .bar{display:none}
+  .top nav{display:flex;gap:26px}
+  .hero{padding:56px 0 64px}
+  .hero .wrap{grid-template-columns:1fr 1.05fr;align-items:center;gap:56px}
+  section{padding:96px 0}
+  .plans .wrap{grid-template-columns:1.1fr 1fr;align-items:start;gap:64px}
+  .plans .ctas{grid-template-columns:1fr;padding-top:8px}
+  .chain{grid-template-columns:repeat(3,1fr);border-left:0;border-top:1px solid var(--graphite);margin:14px 0 0}
+  .chain li{padding:22px 28px 0 0}
+  .chain li::before{left:-7px;top:-8px}
+  .chain li:last-child::after{content:"";position:absolute;right:-7px;top:-8px;width:15px;height:1.5px;background:var(--graphite);transform:rotate(-45deg)}
+  .about .wrap{grid-template-columns:1.3fr 1fr;gap:72px}
+  .contact .wrap{grid-template-columns:1fr 1fr;gap:72px}
+}
+</style>
+</head>
+<body>
+
+<div class="preview">Forhåndsvisning laget for Byggmester Ole H. Røisehagen AS</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="#top" aria-label="Byggmester Ole H. Røisehagen AS, til toppen">
+      <b>Røisehagen</b>
+      <span>Byggmester i Kolbu</span>
+    </a>
+    <nav aria-label="Hovedmeny">
+      <a href="#tjenester">Tjenester</a>
+      <a href="#slik">Slik jobber vi</a>
+      <a href="#om">Om oss</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <a class="call" href="tel:+4791855567">918 55 567</a>
+  </div>
+</header>
+
+<div class="cap" role="status" aria-live="polite">
+  <div class="wrap">
+    <span class="sq" aria-hidden="true"></span>
+    <div>
+      <b>Kapasitet</b>
+      <p id="kapasitet">Ta kontakt for ledig kapasitet og pris.</p>
+      <p id="beskjed"></p>
+    </div>
+  </div>
+</div>
+
+<main id="top">
+
+<section class="hero" aria-labelledby="h1">
+  <div class="wrap">
+    <div>
+      <h1 id="h1"><small>Byggmester</small>Ole H. Røisehagen</h1>
+      <p class="lead">Vi setter opp bygg, tar snekkerarbeid og hjelper deg med vedlikehold. Fra Kolbu på Østre Toten.</p>
+      <div class="ctas">
+        <a class="btn btn-ink" href="#tilbud">Få tilbud</a>
+        <a class="btn btn-line" href="tel:+4791855567">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg>
+          Ring 918 55 567</a>
+      </div>
+    </div>
+
+    <figure class="drawing" aria-label="Strektegning av et hus i snitt, med mål og tegningshode">
+      <div class="plot">
+        <svg viewBox="0 0 520 380" role="img" aria-hidden="true">
+          <!-- ground -->
+          <line class="thin" x1="20" y1="300" x2="500" y2="300"/>
+          <g class="thin" opacity=".55">
+            <line x1="40" y1="312" x2="52" y2="300"/><line x1="70" y1="312" x2="82" y2="300"/><line x1="440" y1="312" x2="452" y2="300"/><line x1="470" y1="312" x2="482" y2="300"/>
+          </g>
+          <!-- foundation -->
+          <rect class="thin" x="104" y="300" width="16" height="22"/>
+          <rect class="thin" x="400" y="300" width="16" height="22"/>
+          <!-- walls with insulation zigzag -->
+          <path class="ln draw" style="--len:1500" d="M104 300 V168 M120 300 V176 M400 176 V300 M416 168 V300 M104 290 H416"/>
+          <path class="thin" d="M104 180 l16 8 -16 8 16 8 -16 8 16 8 -16 8 16 8 -16 8 16 8 -16 8 16 8 -16 8 16 8 -16 8 16 8" opacity=".6"/>
+          <path class="thin" d="M416 180 l-16 8 16 8 -16 8 16 8 -16 8 16 8 -16 8 16 8" opacity=".6"/>
+          <!-- floor between storeys -->
+          <path class="ln" d="M120 228 H400 M120 236 H400"/>
+          <!-- roof -->
+          <path class="ln draw d2" style="--len:900" d="M78 186 L260 74 L442 186 M96 186 L260 86 L424 186"/>
+          <!-- rafters tie -->
+          <line class="thin" x1="150" y1="150" x2="370" y2="150"/>
+          <!-- window opening on right wall -->
+          <rect fill="var(--sheet)" x="398" y="250" width="20" height="30"/>
+          <path class="thin" d="M400 250 V280 M416 250 V280 M398 250 H418 M398 280 H418"/>
+          <!-- door -->
+          <path class="thin" d="M190 290 V244 H226 V290"/>
+          <!-- dimension: width -->
+          <g class="ink draw d3" style="--len:700">
+            <path d="M104 348 H416 M104 338 V358 M416 338 V358 M98 354 L110 342 M410 354 L422 342"/>
+          </g>
+          <rect x="226" y="337" width="68" height="20" fill="var(--sheet)"/>
+          <text class="ink-t" x="260" y="352" text-anchor="middle">8400</text>
+          <!-- dimension: height -->
+          <g class="ink draw d3" style="--len:700">
+            <path d="M470 300 V74 M460 300 H480 M460 74 H480 M464 306 L476 294 M464 80 L476 68"/>
+          </g>
+          <rect x="455" y="176" width="30" height="40" fill="var(--sheet)"/>
+          <text class="ink-t" x="470" y="196" text-anchor="middle" transform="rotate(-90 470 196)">6200</text>
+          <!-- section marker -->
+          <circle class="thin" cx="40" cy="60" r="16"/>
+          <line class="thin" x1="24" y1="60" x2="56" y2="60"/>
+          <text x="40" y="56" text-anchor="middle" font-size="12">A</text>
+          <rect x="62" y="50" width="78" height="20" fill="var(--sheet)"/>
+          <text x="66" y="65">SNITT A-A</text>
+        </svg>
+      </div>
+      <div class="tb">
+        <div><span>Byggherre</span><strong>Deg</strong></div>
+        <div><span>Utføres av</span><strong>Ole H. Røisehagen AS</strong></div>
+        <div><span>Sted</span><strong>Kolbu, Østre Toten</strong></div>
+        <div><span>Tegning</span><strong>Dine byggeplaner</strong></div>
+      </div>
+    </figure>
+  </div>
+</section>
+
+<section class="plans" aria-labelledby="h-plans">
+  <div class="wrap">
+    <div>
+      <div class="head"><h2 id="h-plans">Har du byggeplaner?</h2><div class="dim" aria-hidden="true"><i></i><i></i></div></div>
+      <div class="quote">
+        <p>"Har du behov for vedlikehold eller byggeplaner vi i Byggmester Ole H Røisehagen As kan løse oppgaven"</p>
+        <cite>Fra <a href="https://www.facebook.com/p/Byggmester-Ole-HR%C3%B8isehagen-100057469157163/" rel="noopener">Facebook-siden vår</a></cite>
+      </div>
+    </div>
+    <div class="ctas">
+      <a class="btn btn-ink" href="tel:+4791855567">Ring 918 55 567</a>
+      <a class="btn btn-line" href="#tilbud">Be om befaring</a>
+      <p class="small">Fortell kort hva du tenker på, så tar vi en prat om det.</p>
+    </div>
+  </div>
+</section>
+
+<section id="tjenester" aria-labelledby="h-tj">
+  <div class="wrap">
+    <div class="head"><h2 id="h-tj">Dette gjør vi</h2><div class="dim" aria-hidden="true"><i></i><i></i></div></div>
+    <div class="rows">
+      <div class="row"><h3>Oppføring av bygg</h3><p>Vi setter opp nye bygg.</p></div>
+      <div class="row"><h3>Snekkerarbeid</h3><p>Snekkerjobber, både store og små.</p></div>
+      <div class="row"><h3>Vedlikehold</h3><p>Når noe trenger å fikses eller skiftes ut, kommer vi og ser på det.</p></div>
+      <div class="row"><h3>Byggeplaner</h3><p>Har du en idé, kan vi gå gjennom den sammen før noe settes i gang.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="slik" aria-labelledby="h-slik" style="padding-top:0">
+  <div class="wrap">
+    <div class="head"><h2 id="h-slik">Slik jobber vi</h2><div class="dim" aria-hidden="true"><i></i><i></i></div></div>
+    <ol class="chain">
+      <li><span class="n">1</span><h3>Du tar kontakt</h3><p>Ring eller send en forespørsel her på siden, og si litt om hva det gjelder.</p></li>
+      <li><span class="n">2</span><h3>Vi kommer på befaring</h3><p>Vi ser på stedet og snakker om hva du ønsker.</p></li>
+      <li><span class="n">3</span><h3>Du får et fast tilbud</h3><p>Etter befaringen får du et tilbud på jobben, så vet du hva du har å forholde deg til.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section aria-labelledby="h-gal" style="padding-top:0">
+  <div class="wrap">
+    <div class="head"><h2 id="h-gal">Bilder av jobbene</h2><div class="dim" aria-hidden="true"><i></i><i></i></div></div>
+    <div class="tiles" aria-hidden="true">
+      <div class="tile"><div class="h h-wood"></div><div class="lbl">Bilde 1</div></div>
+      <div class="tile"><div class="h h-brd"></div><div class="lbl">Bilde 2</div></div>
+      <div class="tile"><div class="h h-ins"></div><div class="lbl">Bilde 3</div></div>
+      <div class="tile"><div class="h h-con"></div><div class="lbl">Bilde 4</div></div>
+    </div>
+    <div class="gal-text"><p>Her legger vi inn bilder av jobbene deres. Har dere bilder på Facebook, kan vi bruke dem.</p></div>
+  </div>
+</section>
+
+<section id="om" class="about" aria-labelledby="h-om" style="padding-top:0">
+  <div class="wrap">
+    <div class="about-text">
+      <div class="head"><h2 id="h-om">Om oss</h2><div class="dim" aria-hidden="true"><i></i><i></i></div></div>
+      <p>Byggmester Ole H. Røisehagen AS holder til i Kolbu på Østre Toten. Firmaet ble stiftet i 2015, og i dag er vi 6 ansatte.</p>
+      <p>Daglig leder er Ole Harald Røisehagen.</p>
+      <p class="says">"Små detaljer er viktig"</p>
+      <small>Fra Facebook-siden vår</small>
+    </div>
+    <div class="facts">
+      <dl>
+        <dt>Stiftet</dt><dd>2015</dd>
+        <dt>Ansatte</dt><dd>6</dd>
+        <dt>Sted</dt><dd>Kolbu, Østre Toten</dd>
+        <dt>Org.nr.</dt><dd>915 145 892</dd>
+      </dl>
+      <div class="stamp">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="24" cy="24" r="21"/><circle cx="24" cy="24" r="16" stroke-width="1"/><path d="M16 25l6 6 11-13"/></svg>
+        <div><b>Godkjent lærebedrift i tømrerfaget</b><a href="https://utdanning.no/finnlarebedrift/bedrift/915145892/" rel="noopener">Se oppføringen på utdanning.no</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="tilbud" class="quote-form" aria-labelledby="h-tilbud">
+  <div class="wrap">
+    <div class="head"><h2 id="h-tilbud">Få et uforpliktende tilbud</h2><div class="dim" aria-hidden="true"><i></i><i></i></div></div>
+    <p class="lead" style="margin-bottom:28px">Skriv litt om jobben, så ringer vi deg opp.</p>
+    <form id="form" novalidate>
+      <label>Hva gjelder det
+        <select name="type" required>
+          <option value="">Velg</option>
+          <option>Oppføring av bygg</option>
+          <option>Snekkerarbeid</option>
+          <option>Vedlikehold</option>
+          <option>Byggeplaner</option>
+          <option>Annet</option>
+        </select>
+      </label>
+      <label>Beskrivelse
+        <textarea name="beskrivelse" placeholder="Hva skal gjøres, og omtrent hvor stort er det?"></textarea>
+      </label>
+      <div class="two">
+        <label>Adresse eller sted
+          <input name="sted" autocomplete="street-address" placeholder="F.eks. Kolbu">
+        </label>
+        <label>Når passer det
+          <select name="naar">
+            <option>Så fort som mulig</option>
+            <option>I løpet av måneden</option>
+            <option>Senere</option>
+            <option>Vet ikke</option>
+          </select>
+        </label>
+      </div>
+      <div class="two">
+        <label>Navn
+          <input name="navn" autocomplete="name" required>
+        </label>
+        <label>Telefon
+          <input name="telefon" type="tel" inputmode="tel" autocomplete="tel" required>
+        </label>
+      </div>
+      <label><span>E-post <span class="opt">(valgfritt)</span></span>
+        <input name="epost" type="email" autocomplete="email">
+      </label>
+      <button class="btn btn-ink" type="submit">Send forespørsel</button>
+    </form>
+    <div class="done" id="done" role="status" tabindex="-1">Dette er en forhåndsvisning. Når siden er satt opp, kommer forespørselen rett i innboksen deres.</div>
+  </div>
+</section>
+
+<section id="kontakt" class="contact" aria-labelledby="h-kontakt">
+  <div class="wrap">
+    <div>
+      <div class="head"><h2 id="h-kontakt">Kontakt</h2><div class="dim" aria-hidden="true"><i></i><i></i></div></div>
+      <p class="lead">Det enkleste er å ringe. Du kan også sende en forespørsel lenger opp på siden.</p>
+    </div>
+    <div class="cbox">
+      <div class="cline"><span>Telefon</span><a class="big" href="tel:+4791855567">918 55 567</a></div>
+      <div class="cline"><span>Sted</span><div>Kolbu, Østre Toten</div></div>
+      <div class="cline"><span>Facebook</span><a href="https://www.facebook.com/p/Byggmester-Ole-HR%C3%B8isehagen-100057469157163/" rel="noopener">Byggmester Ole-H. Røisehagen</a></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <b>Byggmester Ole H. Røisehagen AS</b>
+    Org.nr. 915 145 892<br>
+    2847 Kolbu, Østre Toten<br>
+    <a href="tel:+4791855567">918 55 567</a>
+  </div>
+</footer>
+
+<div class="bar">
+  <a class="btn btn-ink" href="#tilbud">Få tilbud</a>
+  <a class="btn btn-line" href="tel:+4791855567">Ring</a>
+</div>
+
+<script>
+// Ledig kapasitet: owner edits a Google Sheet (columns Felt, Tekst; rows Kapasitet, Beskjed).
+const SHEET_CSV = "";
+const FALLBACK = "Ta kontakt for ledig kapasitet og pris.";
+
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+function parseCsv(text) {
+  const rows = []; let row = [], field = "", q = false;
+  for (let i = 0; i < text.length; i++) {
+    const c = text[i];
+    if (q) { if (c === '"' && text[i + 1] === '"') { field += '"'; i++; } else if (c === '"') q = false; else field += c; }
+    else if (c === '"') q = true;
+    else if (c === ",") { row.push(field); field = ""; }
+    else if (c === "\n" || c === "\r") { if (c === "\r" && text[i + 1] === "\n") i++; row.push(field); rows.push(row); row = []; field = ""; }
+    else field += c;
+  }
+  if (field || row.length) { row.push(field); rows.push(row); }
+  return rows;
+}
+
+if (SHEET_CSV) {
+  fetch(SHEET_CSV + "&t=" + Date.now(), { cache: "no-store" }).then(r => r.ok ? r.text() : Promise.reject(r.status)).then(text => {
+    const d = {};
+    for (const [felt = "", tekst = ""] of parseCsv(text).slice(1)) {
+      const k = felt.trim().toLowerCase();
+      if (k) d[k] = tekst.trim();
+    }
+    document.getElementById("kapasitet").innerHTML = esc(d["kapasitet"] || FALLBACK);
+    document.getElementById("beskjed").innerHTML = esc(d["beskjed"] || "");
+  }).catch(() => {});
+}
+
+// Preview: the form sends nothing
+document.getElementById("form").addEventListener("submit", e => {
+  e.preventDefault();
+  const box = document.getElementById("done");
+  box.classList.add("show");
+  box.focus();
+});
+</script>
+</body>
+</html>
