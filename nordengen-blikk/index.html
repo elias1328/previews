@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Blikkenslagerfirma Nordengen AS | blikkenslager på Skreia</title>
+<meta name="description" content="Blikkenslagerfirma Nordengen AS på Skreia i Østre Toten. Tak, beslag og takrenner. Ring 90 10 45 54 eller send et bilde av taket.">
+<!-- Preview only: keep out of search engines until the owner says yes -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#f3efe6">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f3efe6;--paper-2:#ebe5d8;--paper-3:#e2dacb;--line:#d3cab8;
+  --ink:#1b2a39;--ink-2:#45535f;--ink-3:#5b666f;
+  --lead:#b83d1b;--lead-d:#93300f;--lead-tint:#b83d1b14;
+  --ink-tint:#1b2a390f;--gold:#d8b25a;
+  --display:"Familjen Grotesk",system-ui,sans-serif;
+  --body:"Newsreader",Georgia,serif
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:16px}
+body{font-family:var(--body);font-optical-sizing:auto;background:var(--paper);color:var(--ink);font-size:1.14rem;line-height:1.55;overflow-x:hidden;padding-bottom:84px}
+::selection{background:var(--ink);color:var(--paper)}
+a{color:inherit;text-underline-offset:.2em;text-decoration-thickness:1px}
+:focus-visible{outline:2px solid var(--lead);outline-offset:3px;border-radius:4px}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.08;letter-spacing:-.02em;text-wrap:balance}
+h2{font-size:clamp(1.9rem,6.4vw,2.7rem);margin-bottom:14px}
+p{max-width:62ch}
+.wrap{max-width:1100px;margin:0 auto;padding:0 16px}
+.col > *{max-width:760px}
+.ui{font-family:var(--display)}
+.preview{background:var(--gold);color:#1f1a0e;text-align:center;font-family:var(--display);font-size:.8rem;font-weight:600;padding:6px 12px}
+
+/* Masthead */
+.mast{border-bottom:1px solid var(--line)}
+.mast .wrap{display:flex;justify-content:space-between;align-items:center;min-height:60px;gap:16px}
+.mark{font-family:var(--display);font-weight:700;font-size:1.05rem;text-decoration:none;letter-spacing:-.01em;display:flex;align-items:center;gap:10px}
+.mark svg{width:30px;height:22px;flex:none}
+.mast nav{display:none;gap:26px;font-family:var(--display);font-weight:500;font-size:.98rem}
+.mast nav a{text-decoration:none;padding:6px 0;border-bottom:1px solid transparent;transition:border-color .2s}
+.mast nav a:hover{border-color:var(--ink)}
+.mast .tel{font-family:var(--display);font-weight:600;text-decoration:none;white-space:nowrap}
+
+/* Buttons: one saturated action colour, the rest is a quiet tint */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 24px;border-radius:10px;font-family:var(--display);font-weight:600;font-size:1.06rem;text-decoration:none;border:0;cursor:pointer;transition:background .2s,transform .2s cubic-bezier(.16,1,.3,1)}
+.btn:active{transform:scale(.98)}
+.btn.go{background:var(--lead);color:#fff}
+.btn.go:hover{background:var(--lead-d)}
+.btn.soft{background:var(--ink-tint);color:var(--ink)}
+.btn.soft:hover{background:#1b2a391c}
+.btn svg{width:18px;height:18px;flex:none}
+
+/* Hero: the week strip is the hero */
+.hero{padding:34px 0 0}
+.hero + section{padding-top:56px}
+.hero h1{font-size:clamp(2.5rem,10.5vw,4.6rem);letter-spacing:-.035em;line-height:1;max-width:14ch}
+.hero h1 small{display:block;font-size:.42em;letter-spacing:-.01em;font-weight:500;color:var(--ink-2);margin-top:12px}
+.hero .lead{font-size:1.24rem;margin-top:18px;color:var(--ink)}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.stars{display:flex;align-items:center;gap:10px;margin-top:20px;font-family:var(--display);font-size:.95rem;color:var(--ink-2)}
+.stars svg{height:16px;width:88px;color:var(--ink)}
+
+.weeks{position:relative;margin-top:30px;background:#fbf9f4;border:1px solid var(--line);border-radius:14px;padding:20px 16px 18px;box-shadow:0 14px 34px -24px #1b2a3966;
+  clip-path:polygon(0 0,calc(100% - 34px) 0,100% 34px,100% 100%,0 100%)}
+/* the folded sheet-metal corner */
+.weeks::after{content:"";position:absolute;top:0;right:0;width:34px;height:34px;border-bottom-left-radius:6px;
+  background:linear-gradient(225deg,transparent 50%,#d9d2c4 50%,#cfc7b7 62%,#e7e1d5 100%);box-shadow:-2px 2px 4px -2px #1b2a3955}
+.weeks .kh{font-family:var(--display);font-weight:600;font-size:1.02rem;color:var(--ink-2);margin-bottom:12px}
+.strip{list-style:none;display:grid;grid-template-columns:repeat(6,1fr);gap:6px}
+.wk{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-height:84px;border-radius:10px;background:var(--paper-2);color:var(--ink);font-family:var(--display);overflow:hidden}
+.wk span{font-size:.74rem;font-weight:600;color:var(--ink-2)}
+.wk b{font-size:clamp(1.6rem,7vw,2.6rem);font-weight:700;line-height:1;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.wk.now{background:transparent;box-shadow:inset 0 0 0 1.5px var(--ink)}
+.wk.free{background:var(--lead);color:#fff;box-shadow:none;animation:wipe .9s cubic-bezier(.16,1,.3,1) .2s both}
+.wk.free span{color:#fff}
+.wk em{font-style:normal;font-size:.7rem;font-weight:700;letter-spacing:.02em}
+@keyframes wipe{from{clip-path:inset(100% 0 0 0)}to{clip-path:inset(0 0 0 0)}}
+@media (prefers-reduced-motion:reduce){.wk.free{animation:none}.btn{transition:none}}
+.weeks .txt{font-family:var(--display);font-weight:600;font-size:1.24rem;line-height:1.25;margin-top:14px}
+.weeks .msg{display:none;margin-top:6px;font-size:1.04rem;color:var(--ink-2)}
+.weeks .msg.show{display:block}
+
+/* Sections */
+section{padding:62px 0 8px}
+.intro{color:var(--ink-2);margin-bottom:22px}
+
+/* Services: a plain, well-set list */
+.rows{list-style:none;border-top:1px solid var(--ink)}
+.rows li{display:grid;gap:4px 24px;padding:18px 0 20px;border-bottom:1px solid var(--line)}
+.rows h3{font-size:clamp(1.45rem,5.6vw,1.8rem);letter-spacing:-.02em}
+.rows p{color:var(--ink-2);font-size:1.06rem}
+
+/* Quotes */
+.quotes{display:grid;gap:26px;margin-top:6px}
+.quotes figure{border-top:1px solid var(--ink);padding-top:14px}
+.quotes blockquote{font-size:clamp(1.45rem,5.4vw,1.9rem);line-height:1.25;font-weight:500;letter-spacing:-.01em}
+.quotes figcaption{font-family:var(--display);font-size:.9rem;color:var(--ink-2);margin-top:8px}
+.score{display:flex;align-items:baseline;gap:12px;font-family:var(--display);margin-bottom:22px}
+.score b{font-size:3.2rem;font-weight:700;letter-spacing:-.04em;line-height:1}
+.score span{color:var(--ink-2);font-size:1rem}
+
+/* Steps */
+.steps{list-style:none;counter-reset:s;border-top:1px solid var(--line)}
+.steps li{counter-increment:s;display:grid;grid-template-columns:44px 1fr;gap:2px 14px;padding:18px 0;border-bottom:1px solid var(--line)}
+.steps li::before{content:counter(s);grid-row:span 2;font-family:var(--display);font-weight:700;font-size:1.5rem;width:40px;height:40px;border:1.5px solid var(--ink);border-radius:50%;display:grid;place-items:center;line-height:1}
+.steps h3{font-size:1.22rem;align-self:center}
+.steps p{color:var(--ink-2);font-size:1.04rem}
+
+/* Form: filled fields with a bottom rule */
+.formcard{background:#fbf9f4;border:1px solid var(--line);border-radius:14px;padding:22px 16px;box-shadow:0 10px 30px -18px #1b2a3940}
+.field{display:block;margin-bottom:18px}
+.field > span{display:block;font-family:var(--display);font-weight:600;font-size:.98rem;margin-bottom:6px}
+.field > span i{font-style:normal;font-weight:400;color:var(--ink-3)}
+input,select,textarea{width:100%;font:inherit;font-size:1.08rem;color:var(--ink);background:var(--paper-2);border:0;border-bottom:2px solid var(--ink-3);border-radius:8px 8px 0 0;padding:14px 12px;min-height:54px;transition:border-color .2s,background .2s}
+textarea{min-height:120px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:0;border-bottom-color:var(--lead);background:#e6dfd0}
+input::placeholder,textarea::placeholder{color:#525d67}
+select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cpath d='M1 1l6 6 6-6' fill='none' stroke='%231b2a39' stroke-width='2'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:40px}
+.two{display:grid;gap:0 16px}
+.photo{display:flex;flex-direction:column;gap:10px;padding:18px;border:1.5px dashed var(--ink-3);border-radius:12px;margin-bottom:22px;background:var(--paper)}
+.photo input{position:absolute;width:1px;height:1px;opacity:0}
+.photo label.btn{align-self:flex-start}
+.photo .fname{font-family:var(--display);font-size:.98rem;color:var(--ink-2)}
+.photo:focus-within{border-color:var(--lead)}
+.send{width:100%;margin-top:6px;min-height:58px;font-size:1.12rem}
+.done{display:none;margin-top:16px;padding:16px;border-radius:10px;background:var(--ink);color:var(--paper);font-family:var(--display);font-weight:500}
+.done.show{display:block}
+
+/* Job photo placeholders */
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.tile{aspect-ratio:4/3;border-radius:10px;border:1px solid var(--line);position:relative;overflow:hidden}
+.t1{background:repeating-linear-gradient(135deg,#d8d2c6 0 2px,#e6e1d6 2px 14px)}
+.t2{background:radial-gradient(circle at 30% 120%,#c9c2b4 0 40%,transparent 41%),linear-gradient(180deg,#e7e2d8,#d6cfc2)}
+.t3{background:repeating-linear-gradient(0deg,#d4cdbf 0 1px,transparent 1px 18px),linear-gradient(180deg,#e9e4da,#dcd5c8)}
+.t4{background:linear-gradient(160deg,#e9e4da 0 48%,#cfc8bb 48% 52%,#e1dbcf 52%)}
+.tiles-note{margin-top:12px;color:var(--ink-2);font-size:1.02rem}
+
+/* Contact */
+.contact dl{display:grid;grid-template-columns:1fr;border-top:1px solid var(--line)}
+.contact dl div{display:grid;grid-template-columns:110px 1fr;gap:12px;padding:16px 0;border-bottom:1px solid var(--line)}
+.contact dt{font-family:var(--display);font-weight:600;color:var(--ink-2);font-size:.98rem;padding-top:2px}
+.contact dd a{font-weight:500}
+.contact .big{font-family:var(--display);font-weight:700;font-size:1.5rem;text-decoration:none;letter-spacing:-.01em}
+
+footer{margin-top:64px;background:var(--ink);color:#d9dee3;font-family:var(--display);font-size:.92rem;padding:30px 0 34px}
+footer b{color:#fff;font-weight:600}
+footer p{margin-top:4px}
+
+/* Sticky bar on phones */
+.mobilebar{position:fixed;left:0;right:0;bottom:0;z-index:20;display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:#f3efe6f2;border-top:1px solid var(--line);backdrop-filter:blur(8px)}
+.mobilebar .btn{min-height:52px;width:100%}
+
+@media (min-width:760px){
+  body{padding-bottom:0}
+  .mobilebar{display:none}
+  .mast nav{display:flex}
+  .hero{padding-top:52px}
+  .hero-top{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:end}
+  .weeks{padding:26px 28px 24px;margin-top:40px}
+  .strip{gap:10px}
+  .wk{min-height:112px}
+  .wk span{font-size:.86rem}
+  .rows li{grid-template-columns:260px 1fr;align-items:baseline}
+  .two{grid-template-columns:1fr 1fr}
+  .formcard{padding:32px}
+  .tiles{grid-template-columns:repeat(4,1fr)}
+  .quotes{grid-template-columns:1.4fr 1fr}
+  section{padding-top:84px}
+}
+</style>
+</head>
+<body>
+
+<div class="preview">Forhåndsvisning laget for Blikkenslagerfirma Nordengen AS</div>
+
+<header class="mast">
+  <div class="wrap">
+    <a class="mark" href="#top" aria-label="Blikkenslagerfirma Nordengen, til toppen">
+      <svg viewBox="0 0 30 22" aria-hidden="true"><path d="M2 20 L15 4 L28 20" fill="none" stroke="#1b2a39" stroke-width="2.4" stroke-linejoin="round"/><path d="M1 20 h7 v-2" fill="none" stroke="#b83d1b" stroke-width="2.4" stroke-linecap="round"/></svg>
+      Nordengen
+    </a>
+    <nav aria-label="Hovedmeny">
+      <a href="#tjenester">Tjenester</a>
+      <a href="#slik">Slik jobber vi</a>
+      <a href="#bilde">Send bilde</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <a class="tel" href="tel:+4790104554">90 10 45 54</a>
+  </div>
+</header>
+
+<main id="top">
+<div class="hero">
+  <div class="wrap">
+    <div class="hero-top">
+      <div>
+        <h1>Blikkenslager&shy;firma Nordengen<small>Tak og blikkenslagerarbeid på Skreia</small></h1>
+        <p class="lead">Lurer du på taket, beslagene eller takrennene? Ring, eller send et bilde av taket, så tar vi det derfra.</p>
+      </div>
+      <div>
+        <div class="actions">
+          <a class="btn go" href="#bilde">Få tilbud</a>
+          <a class="btn soft" href="tel:+4790104554"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 3h3l1.5 4.5-2.2 1.4a11 11 0 0 0 6.2 6.2l1.4-2.2L21 14.4v3a2 2 0 0 1-2.2 2A16.6 16.6 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>Ring 90 10 45 54</a>
+        </div>
+        <p class="stars"><svg viewBox="0 0 88 16" aria-hidden="true"><g fill="currentColor"><path id="st" d="M8 1l2 4.6 5 .5-3.8 3.3 1.1 4.9L8 11.8 3.7 14.3l1.1-4.9L1 6.1l5-.5z"/><use href="#st" x="18"/><use href="#st" x="36"/><use href="#st" x="54"/><use href="#st" x="72"/></g></svg>5,0 på Google, fire anmeldelser</p>
+      </div>
+    </div>
+
+    <div class="weeks" aria-live="polite">
+      <p class="kh">Neste ledige uke</p>
+      <ol class="strip" id="strip" aria-label="De neste ukene">
+        <li class="wk now"><span>uke</span><b>44</b></li><li class="wk"><span>uke</span><b>45</b></li><li class="wk"><span>uke</span><b>46</b></li><li class="wk"><span>uke</span><b>47</b></li><li class="wk"><span>uke</span><b>48</b></li><li class="wk"><span>uke</span><b>49</b></li>
+      </ol>
+      <p class="txt" id="kap-txt">Ta kontakt for neste ledige uke.</p>
+      <p class="msg" id="kap-msg"></p>
+    </div>
+  </div>
+</div>
+
+<section id="tjenester">
+  <div class="wrap col">
+    <h2>Dette kan vi hjelpe deg med</h2>
+    <ul class="rows">
+      <li>
+        <h3>Tak</h3>
+        <p>Takarbeid på hus og andre bygg. Si litt om hva det gjelder, så ser vi på det.</p>
+      </li>
+      <li>
+        <h3>Beslag</h3>
+        <p>Nye beslag der det trengs, også heldekkende beslag.</p>
+      </li>
+      <li>
+        <h3>Takrenner og nedløp</h3>
+        <p>Nye renner og nedløp, eller bytte av gamle som lekker eller henger.</p>
+      </li>
+      <li>
+        <h3>Pipebeslag</h3>
+        <p>Beslag rundt pipa, så vannet holder seg ute.</p>
+      </li>
+      <li>
+        <h3>Noe annet</h3>
+        <p>Lurer du på om vi tar en jobb, er det bare å spørre.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="omtaler">
+  <div class="wrap col">
+    <h2>Det folk skriver på Google</h2>
+    <p class="score"><b>5,0</b><span>i snitt fra fire anmeldelser</span></p>
+    <div class="quotes">
+      <figure>
+        <blockquote>"Hyggelig, effektiv og slår av en prat"</blockquote>
+        <figcaption>Anmeldelse på Google, om nytt heldekkende beslag</figcaption>
+      </figure>
+      <figure>
+        <blockquote>"Super service."</blockquote>
+        <figcaption>Anmeldelse på Google</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="slik">
+  <div class="wrap col">
+    <h2>Slik jobber vi</h2>
+    <ol class="steps">
+      <li><h3>Du tar kontakt</h3><p>Ring, eller send et bilde av taket i skjemaet under.</p></li>
+      <li><h3>Vi kommer på befaring</h3><p>Vi ser på taket sammen med deg og måler opp.</p></li>
+      <li><h3>Du får et fast tilbud</h3><p>Så vet du hva jobben gjelder før du bestemmer deg.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section id="bilde">
+  <div class="wrap col">
+    <h2>Send bilde av taket</h2>
+    <p class="intro">Et bilde fra bakken eller fra stigen holder fint. Fyll inn litt om jobben, så får du et uforpliktende tilbud.</p>
+    <form class="formcard" id="form" novalidate>
+      <div class="photo">
+        <span class="ui" style="font-weight:600">Bilde av taket <i style="font-style:normal;font-weight:400;color:var(--ink-3)">(valgfritt)</i></span>
+        <label class="btn soft" for="foto"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="13" r="3.5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>Ta eller velg bilde</label>
+        <input type="file" id="foto" name="foto" accept="image/*">
+        <span class="fname" id="fname">Ingen bilde valgt ennå</span>
+      </div>
+      <label class="field"><span>Hva gjelder det</span>
+        <select name="hva" required>
+          <option value="">Velg</option>
+          <option>Tak</option>
+          <option>Beslag</option>
+          <option>Takrenner og nedløp</option>
+          <option>Pipebeslag</option>
+          <option>Annet</option>
+        </select>
+      </label>
+      <label class="field"><span>Beskrivelse</span>
+        <textarea name="beskrivelse" placeholder="F.eks. takrenna lekker over inngangen"></textarea>
+      </label>
+      <div class="two">
+        <label class="field"><span>Adresse eller sted</span><input name="sted" autocomplete="street-address" placeholder="Vei og sted"></label>
+        <label class="field"><span>Når passer det</span>
+          <select name="naar">
+            <option>Så fort som mulig</option>
+            <option>I løpet av måneden</option>
+            <option>Senere</option>
+            <option>Vet ikke</option>
+          </select>
+        </label>
+        <label class="field"><span>Navn</span><input name="navn" autocomplete="name" required></label>
+        <label class="field"><span>Telefon</span><input name="tlf" type="tel" inputmode="tel" autocomplete="tel" required></label>
+      </div>
+      <label class="field"><span>E-post <i>(valgfritt)</i></span><input name="epost" type="email" autocomplete="email"></label>
+      <button class="btn go send" type="submit">Send forespørsel</button>
+      <p class="done" id="done" role="status">Dette er en forhåndsvisning. Når siden er satt opp, kommer forespørselen rett i innboksen deres.</p>
+    </form>
+  </div>
+</section>
+
+<section id="jobber">
+  <div class="wrap">
+    <h2>Bilder av jobbene</h2>
+    <div class="tiles" aria-hidden="true">
+      <div class="tile t1"></div><div class="tile t2"></div><div class="tile t3"></div><div class="tile t4"></div>
+    </div>
+    <p class="tiles-note">Her legger vi inn bilder av jobbene deres.</p>
+  </div>
+</section>
+
+<section id="om">
+  <div class="wrap col">
+    <h2>Om oss</h2>
+    <p>Blikkenslagerfirma Nordengen AS holder til på Skreia i Østre Toten. Vi driver med takarbeid og blikkenslagerarbeid, og firmaet ble registrert i 2018.</p>
+  </div>
+</section>
+
+<section id="kontakt" class="contact">
+  <div class="wrap col">
+    <h2>Kontakt</h2>
+    <dl>
+      <div><dt>Telefon</dt><dd><a class="big" href="tel:+4790104554">90 10 45 54</a></dd></div>
+      <div><dt>Åpent</dt><dd>Mandag til fredag kl. 7 til 16<br>Lørdag og søndag stengt</dd></div>
+      <div><dt>Sted</dt><dd>Skreia, Østre Toten<br><a href="https://www.google.com/maps/search/?api=1&amp;query=Blikkenslagerfirma%20Nordengen%20AS%20Skreia" target="_blank" rel="noopener">Åpne i Google Maps</a></dd></div>
+    </dl>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><b>Blikkenslagerfirma Nordengen AS</b></p>
+    <p>Org.nr. 921 294 638 MVA</p>
+    <p>Skreia, Østre Toten</p>
+  </div>
+</footer>
+
+<div class="mobilebar">
+  <a class="btn go" href="#bilde">Få tilbud</a>
+  <a class="btn soft" href="tel:+4790104554">Ring</a>
+</div>
+
+<script>
+// The owner writes the next free week in a Google Sheet (columns: Felt, Tekst).
+// Rows: "Kapasitet" (e.g. "Uke 46, ring for å avtale". A week number lights up in the week strip), "Beskjed" (optional season note, hidden if empty,
+// e.g. "Sjekk takrennene før vinteren").
+// Paste the sheet's "Publiser på nettet" CSV link here. Empty = fallback text.
+const SHEET_CSV = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSjdoSZZtA3xY8FogzlqYUyQAsCwkWqUb-FDCDKeGJu7duLnsF5S2Vov7ZH_tXxnwNeTUYhm5uEM4CD/pub?output=csv";
+const FALLBACK = "Ta kontakt for neste ledige uke.";
+
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+// Minimal CSV parser (handles quoted fields with commas).
+function parseCsv(text) {
+  const rows = []; let row = [], field = "", q = false;
+  for (let i = 0; i < text.length; i++) {
+    const c = text[i];
+    if (q) { if (c === '"' && text[i + 1] === '"') { field += '"'; i++; } else if (c === '"') q = false; else field += c; }
+    else if (c === '"') q = true;
+    else if (c === ",") { row.push(field); field = ""; }
+    else if (c === "\n" || c === "\r") { if (c === "\r" && text[i + 1] === "\n") i++; row.push(field); rows.push(row); row = []; field = ""; }
+    else field += c;
+  }
+  if (field || row.length) { row.push(field); rows.push(row); }
+  return rows;
+}
+
+// ISO week numbers from today's date in Europe/Oslo.
+function osloToday() {
+  const p = new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Oslo", year: "numeric", month: "2-digit", day: "2-digit" }).formatToParts(new Date());
+  const g = t => +p.find(x => x.type === t).value;
+  return new Date(Date.UTC(g("year"), g("month") - 1, g("day")));
+}
+function isoWeek(d) {
+  const t = new Date(d); const day = t.getUTCDay() || 7;
+  t.setUTCDate(t.getUTCDate() + 4 - day);
+  const y0 = new Date(Date.UTC(t.getUTCFullYear(), 0, 1));
+  return Math.ceil(((t - y0) / 864e5 + 1) / 7);
+}
+function renderStrip(free) {
+  const today = osloToday(), now = isoWeek(today), weeks = [];
+  for (let i = 0; i < 12; i++) weeks.push(isoWeek(new Date(today.getTime() + i * 7 * 864e5)));
+  const at = free ? weeks.indexOf(free) : -1;
+  const start = at > 5 ? at - 3 : 0; // keep the free week in view if it is further ahead
+  document.getElementById("strip").innerHTML = weeks.slice(start, start + 6).map(w =>
+    '<li class="wk' + (w === now ? " now" : "") + (w === free ? " free" : "") + '"><span>uke</span><b>' + w + "</b>" +
+    (w === free ? "<em>Ledig</em>" : "") + "</li>").join("");
+}
+function renderKap(d) {
+  const raw = (d["kapasitet"] || "").trim();
+  document.getElementById("kap-txt").innerHTML = esc(raw || FALLBACK);
+  // If the owner writes a week number ("uke 46"), that week lights up in the strip.
+  const m = raw.match(/uke\s*(\d{1,2})/i);
+  renderStrip(m ? +m[1] : 0);
+  const msgEl = document.getElementById("kap-msg"), msg = (d["beskjed"] || "").trim();
+  msgEl.innerHTML = esc(msg);
+  msgEl.classList.toggle("show", !!msg);
+}
+
+renderKap({});
+if (SHEET_CSV) {
+  fetch(SHEET_CSV + "&t=" + Date.now(), { cache: "no-store" }).then(r => r.ok ? r.text() : Promise.reject(r.status)).then(text => {
+    const d = {};
+    for (const [felt = "", tekst = ""] of parseCsv(text).slice(1)) {
+      const k = felt.trim().toLowerCase();
+      if (k) d[k] = tekst.trim();
+    }
+    renderKap(d);
+  }).catch(() => renderKap({}));
+}
+
+// Preview: show only the chosen file name, nothing is uploaded.
+document.getElementById("foto").addEventListener("change", e => {
+  const f = e.target.files && e.target.files[0];
+  document.getElementById("fname").textContent = f ? "Valgt: " + f.name : "Ingen bilde valgt ennå";
+});
+
+// Preview: the form does not send anything yet.
+document.getElementById("form").addEventListener("submit", e => {
+  e.preventDefault();
+  const done = document.getElementById("done");
+  done.classList.add("show");
+  done.scrollIntoView({ behavior: "smooth", block: "center" });
+});
+</script>
+</body>
+</html>
