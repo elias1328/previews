@@ -1,0 +1,598 @@
+<!doctype html>
+<html lang="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hegg Elektro AS | Elektriker i Elverum, Hamar og Trysil</title>
+<meta name="description" content="Hegg Elektro AS i Elverum tar på seg alt av elektroinstallasjoner i Elverum, Hamar, Trysil og omegn. Ring 954 38 341 eller be om et uforpliktende tilbud.">
+<!-- Preview only: keep out of search engines until the owner says yes -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#e9ebe8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;600&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Panel grey like a white-grey sikringsskap, graphite ink, conductor colours as accents */
+  --bg:#e9ebe8;--panel:#f6f7f5;--paper:#ffffff;--rail:#d5d9d6;
+  --ink:#1c2125;--muted:#4b555c;--line:#c3c8c6;--line-2:#dde1df;
+  --blue:#1d4f9c;--blue-d:#163d79;--blue-l:#dbe5f3;
+  --brown:#6d4428;--earth-g:#3c8a3a;--earth-y:#e2c22a;
+  --led:#2f9e44;--led-glow:#2f9e4433;
+  --dark:#1c2125;--dark-2:#272e33;--on-dark:#eef1ef;--on-dark-2:#b8c1c5;
+  --gold:#e9c46a
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:12px}
+body{font-family:"Atkinson Hyperlegible",system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;font-size:1.05rem;letter-spacing:.01em;overflow-x:hidden}
+h1,h2,h3{font-family:"Geologica",system-ui,sans-serif;line-height:1.12;letter-spacing:-.015em;text-wrap:balance}
+h2{font-weight:300;font-size:clamp(1.9rem,5.2vw,2.9rem);margin-bottom:14px}
+h3{font-weight:600;font-size:1.15rem}
+p{text-wrap:pretty}
+a{color:inherit;text-underline-offset:3px}
+svg{display:block}
+::selection{background:var(--blue);color:#fff}
+:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 18px}
+.lede{color:var(--muted);max-width:60ch;font-size:1.08rem}
+
+.preview{background:var(--gold);color:#1f1a0e;text-align:center;font-size:.8rem;font-weight:700;padding:6px 12px}
+
+/* Top: wordmark and nav */
+.top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 0}
+.mark{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:"Geologica",sans-serif;font-weight:600;font-size:1.15rem;letter-spacing:-.01em}
+.mark i{display:block;width:12px;height:12px;border:2px solid var(--ink);border-radius:50%;position:relative}
+.mark i::after{content:"";position:absolute;left:8px;top:3px;width:16px;height:2px;background:var(--ink)}
+.mark span{padding-left:10px}
+.top nav{display:flex;gap:4px}
+.top nav a{text-decoration:none;font-size:.95rem;padding:10px 12px;color:var(--muted);border-bottom:2px solid transparent}
+.top nav a:hover{color:var(--ink);border-bottom-color:var(--ink)}
+
+/* Kapasitet bar: a status lamp on the panel */
+.kap{background:var(--paper);border:1px solid var(--line);display:flex;align-items:flex-start;gap:14px;padding:14px 18px}
+.lamp{flex:none;width:14px;height:14px;border-radius:50%;background:var(--led);box-shadow:0 0 0 5px var(--led-glow),inset 0 -2px 3px #0003;margin-top:5px}
+.kap .k{display:block;font-size:.82rem;font-weight:700;color:var(--muted)}
+.kap .v{display:block;font-family:"Geologica",sans-serif;font-size:1.12rem;font-weight:400;line-height:1.35}
+.kap .msg{display:none;margin-top:6px;color:var(--brown);font-weight:700}
+.kap .msg.show{display:block}
+
+/* Hero */
+.hero{display:grid;grid-template-columns:1.25fr .9fr;gap:40px;align-items:start;padding:52px 0 40px}
+.hero h1{font-size:clamp(2.6rem,7.6vw,5.2rem);font-weight:600;letter-spacing:-.03em;line-height:1}
+.hero h1 .l{display:block;font-weight:300;color:var(--muted);letter-spacing:-.025em;margin-top:6px}
+.hero .lede{margin-top:22px;font-size:1.15rem}
+.area-line{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px;list-style:none}
+.area-line li{background:var(--paper);border:1px solid var(--line);padding:6px 12px;font-weight:700;font-size:.95rem}
+.area-line li.home{background:var(--ink);color:#fff;border-color:var(--ink)}
+.area-line li.om{background:none;border-style:dashed;color:var(--muted);font-weight:400}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:12px 22px;font:inherit;font-weight:700;text-decoration:none;border:2px solid var(--ink);background:none;color:var(--ink);cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.btn:hover{background:var(--ink);color:#fff}
+.btn.solid{background:var(--blue);border-color:var(--blue);color:#fff}
+.btn.solid:hover{background:var(--blue-d);border-color:var(--blue-d)}
+
+/* Ring panel (the big button) */
+.ring{background:var(--paper);border:1px solid var(--line);box-shadow:0 18px 40px -18px #1c212540}
+.ring-head{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:14px 18px;border-bottom:1px solid var(--line-2);font-size:.92rem;color:var(--muted)}
+.open{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--ink)}
+.open .d{width:9px;height:9px;border-radius:50%;background:#9aa3a8}
+.open.yes .d{background:var(--led);box-shadow:0 0 0 4px var(--led-glow)}
+.ring-btn{display:block;text-decoration:none;background:var(--blue);color:#fff;padding:22px 18px 24px;transition:background .2s}
+.ring-btn:hover{background:var(--blue-d)}
+.ring-btn small{display:flex;align-items:center;gap:10px;font-size:1rem;font-weight:700}
+.ring-btn small svg{width:22px;height:22px}
+.ring-btn b{display:block;font-family:"Geologica",sans-serif;font-weight:300;font-size:clamp(2.5rem,9vw,3.4rem);letter-spacing:-.02em;line-height:1.05;margin-top:8px;font-variant-numeric:tabular-nums;white-space:nowrap}
+.ring-foot{padding:16px 18px 18px;display:grid;gap:12px}
+.ring-foot p{font-size:.95rem;color:var(--muted)}
+.ring-foot .btn{width:100%}
+.stars{display:flex;align-items:center;gap:8px;font-size:.95rem}
+.stars svg{width:84px;height:16px;color:var(--ink)}
+
+/* Sections */
+section{padding:84px 0}
+.sec-head{max-width:720px;margin-bottom:34px}
+
+/* Tjenester as a breaker panel */
+.board{background:var(--rail);padding:14px;border:1px solid var(--line)}
+.board-in{background:var(--paper);border:1px solid var(--line)}
+.kurs{display:grid;grid-template-columns:44px minmax(150px,240px) 1fr;gap:18px;align-items:center;padding:18px 20px;border-top:1px solid var(--line-2)}
+.kurs:first-child{border-top:0}
+.brk{width:34px;height:52px;color:var(--ink)}
+.tape{display:inline-block;background:var(--bg);border:1px solid var(--line);padding:5px 10px;font-weight:700;font-size:1rem;line-height:1.3}
+.kurs p{color:var(--muted)}
+.board-note{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;padding:14px 6px 2px;font-size:.95rem;color:var(--ink)}
+.board-note a{font-weight:700}
+
+/* Område: single-line diagram */
+.area{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.area-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:44px;align-items:center}
+.diagram{width:100%;height:auto}
+.diagram .wire{fill:none;stroke:var(--line);stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+.diagram .live{fill:none;stroke:var(--blue);stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:0}
+.diagram .stub{fill:none;stroke:var(--muted);stroke-width:1.5;stroke-dasharray:4 5}
+.diagram .node{fill:var(--paper);stroke:var(--ink);stroke-width:3}
+.diagram .base{fill:var(--ink)}
+.diagram text{font-family:"Geologica",sans-serif;fill:var(--ink)}
+.diagram .t{font-size:23px;font-weight:600}
+.diagram .s{font-size:17px;fill:var(--muted);font-family:"Atkinson Hyperlegible",sans-serif}
+.legend{list-style:none;display:grid;gap:0;margin-top:22px;border-top:1px solid var(--line-2)}
+.legend li{display:flex;justify-content:space-between;gap:10px;padding:12px 0;border-bottom:1px solid var(--line-2)}
+.legend li span{color:var(--muted)}
+
+/* Slik jobber vi */
+.steps{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);position:relative;counter-reset:s}
+.steps::before{content:"";position:absolute;left:11px;right:11px;top:11px;height:2px;background:var(--brown)}
+.steps li{position:relative;padding:44px 26px 0 0}
+.steps li::before{content:"";position:absolute;left:0;top:0;width:18px;height:18px;border-radius:50%;background:var(--bg);border:3px solid var(--brown)}
+.steps h3{font-size:1.3rem;font-weight:400;margin-bottom:8px}
+.steps p{color:var(--muted);max-width:32ch}
+
+/* Bilder */
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.tile{aspect-ratio:4/5;border:1px solid var(--line);position:relative;overflow:hidden;background:var(--panel)}
+.tile.a{background:linear-gradient(90deg,transparent 0 30%,var(--brown) 30% 36%,transparent 36% 46%,var(--blue) 46% 52%,transparent 52% 62%,#8a9298 62% 68%,transparent 68%),var(--panel)}
+.tile.b{background:linear-gradient(var(--line-2) 1px,transparent 1px) 0 0/22px 22px,linear-gradient(90deg,var(--line-2) 1px,var(--panel) 1px) 0 0/22px 22px}
+.tile.c{background:linear-gradient(135deg,transparent 0 44%,var(--earth-g) 44% 48.5%,var(--earth-y) 48.5% 51.5%,var(--earth-g) 51.5% 56%,transparent 56%),var(--panel)}
+.tile.d{background:radial-gradient(circle at 50% 50%,var(--blue) 0 16%,var(--panel) 16.5% 24%,var(--brown) 24.5% 34%,var(--panel) 34.5% 42%,var(--ink) 42.5% 52%,var(--panel) 52.5%)}
+.tile span{position:absolute;left:10px;bottom:10px;background:var(--paper);border:1px solid var(--line);font-size:.85rem;font-weight:700;padding:4px 9px}
+.tiles-note{margin-top:16px;color:var(--muted)}
+
+/* Omtaler */
+.quotes{display:grid;grid-template-columns:1fr 1fr auto;gap:0;border-top:2px solid var(--ink);border-bottom:1px solid var(--line)}
+.quotes blockquote{padding:26px 26px 26px 0}
+.quotes blockquote+blockquote{padding-left:26px;border-left:1px solid var(--line)}
+.quotes blockquote p{font-family:"Geologica",sans-serif;font-weight:300;font-size:clamp(1.35rem,3.4vw,1.8rem);line-height:1.25}
+.quotes cite{display:block;margin-top:10px;font-style:normal;color:var(--muted);font-size:.92rem}
+.score{padding:26px 0 26px 26px;border-left:1px solid var(--line);min-width:180px}
+.score b{display:block;font-family:"Geologica",sans-serif;font-weight:300;font-size:3rem;line-height:1}
+.score span{color:var(--muted);font-size:.95rem}
+
+/* Om oss + DSB */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+.about p+p{margin-top:12px}
+.reg{background:var(--paper);border:1px solid var(--line)}
+.reg h3{padding:18px 20px;border-bottom:1px solid var(--line-2);display:flex;align-items:center;gap:12px}
+.reg h3 svg{width:22px;height:22px;flex:none}
+.reg dl{display:grid;grid-template-columns:auto 1fr;gap:0}
+.reg dt,.reg dd{padding:12px 20px;border-bottom:1px solid var(--line-2)}
+.reg dt{color:var(--muted);font-size:.95rem;padding-right:8px}
+.reg dd{font-weight:700}
+.reg a{display:block;padding:16px 20px;font-weight:700;color:var(--blue)}
+
+/* Tilbud form */
+.quote-sec{background:var(--dark);color:var(--on-dark)}
+.quote-sec .lede{color:var(--on-dark-2)}
+.form-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:44px;align-items:start}
+.form-side p{color:var(--on-dark-2);margin-top:14px}
+.form-side a{color:#fff;font-weight:700}
+form{background:var(--paper);color:var(--ink);padding:26px 22px}
+.f{display:grid;gap:6px;margin-bottom:20px}
+.f label{font-weight:700;font-size:.95rem}
+.f label small{font-weight:400;color:var(--muted)}
+.f input,.f select,.f textarea{font:inherit;font-size:1.05rem;color:var(--ink);background:var(--panel);border:0;border-bottom:2px solid var(--line);border-radius:0;padding:13px 14px;min-height:52px;width:100%;transition:border-color .2s,background .2s}
+.f textarea{min-height:120px;resize:vertical}
+.f ::placeholder{color:var(--muted);opacity:1}
+.f input:focus,.f select:focus,.f textarea:focus{outline:0;border-bottom-color:var(--blue);background:var(--blue-l)}
+.f select{appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--ink) 50%),linear-gradient(135deg,var(--ink) 50%,transparent 50%);background-position:calc(100% - 22px) 50%,calc(100% - 16px) 50%;background-size:6px 6px;background-repeat:no-repeat;padding-right:40px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:0 16px}
+form .btn{width:100%;min-height:58px;font-size:1.08rem}
+.sent{display:none;margin-top:16px;background:var(--blue-l);border:1px solid var(--blue);padding:14px 16px;font-weight:700}
+.sent.show{display:block}
+
+/* Kontakt */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+.c-list{list-style:none;border-top:1px solid var(--line)}
+.c-list li{display:grid;grid-template-columns:130px 1fr;gap:12px;padding:16px 0;border-bottom:1px solid var(--line)}
+.c-list li span{color:var(--muted)}
+.c-list a{font-weight:700}
+.hours{list-style:none}
+.hours li{display:flex;justify-content:space-between;padding:4px 0;font-variant-numeric:tabular-nums;position:relative}
+.hours li span:last-child,.num{font-family:"Geologica",sans-serif}
+.hours li.today{font-weight:700}
+.hours li.today::before{content:"";position:absolute;left:-16px;top:13px;width:8px;height:8px;border-radius:50%;background:var(--blue)}
+
+footer{background:var(--dark);color:var(--on-dark-2);padding:30px 0;font-size:.9rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+
+.mobilebar{display:none}
+
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr;gap:30px;padding:36px 0 52px}
+  .area-grid,.about,.form-grid,.contact{grid-template-columns:1fr;gap:30px}
+  .tiles{grid-template-columns:1fr 1fr}
+  .quotes{grid-template-columns:1fr}
+  .quotes blockquote,.quotes blockquote+blockquote{padding:22px 0;border-left:0}
+  .quotes blockquote+blockquote{border-top:1px solid var(--line)}
+  .score{border-left:0;border-top:1px solid var(--line);padding:22px 0}
+}
+@media (max-width:700px){
+  body{font-size:1.02rem}
+  .wrap{padding:0 16px}
+  .top nav{display:none}
+  section{padding:64px 0}
+  .kurs{grid-template-columns:34px 1fr;gap:6px 14px;padding:16px 14px}
+  .kurs .brk{grid-row:span 2;width:28px;height:44px}
+  .kurs p{grid-column:2}
+  .board{padding:8px}
+  .steps{grid-template-columns:1fr;gap:28px}
+  .steps::before{left:8px;right:auto;top:10px;bottom:10px;width:2px;height:auto}
+  .steps li{padding:0 0 0 38px}
+  .two{grid-template-columns:1fr}
+  form{padding:22px 16px}
+  .c-list li{grid-template-columns:1fr;gap:2px}
+  .mobilebar{display:grid;grid-template-columns:1fr 1fr;gap:8px;position:fixed;left:10px;right:10px;bottom:10px;z-index:10}
+  .mobilebar a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:54px;font-weight:700;text-decoration:none;box-shadow:0 8px 22px -6px #1c212566}
+  .mobilebar .a{background:var(--paper);color:var(--ink);border:2px solid var(--ink)}
+  .mobilebar .b{background:var(--blue);color:#fff;border:2px solid var(--blue)}
+  .mobilebar svg{width:18px;height:18px}
+  footer{padding-bottom:96px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .btn,.ring-btn{transition:none}
+}
+</style>
+</head>
+<body>
+<div class="preview">Forhåndsvisning laget for Hegg Elektro AS, bildene kommer fra dere</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 3.5h3.2l1.6 4.2-2 1.3a11 11 0 0 0 7.2 7.2l1.3-2 4.2 1.6V19a1.6 1.6 0 0 1-1.7 1.6C10.6 20.1 3.9 13.4 3.4 5.2A1.6 1.6 0 0 1 5 3.5Z"/></symbol>
+    <symbol id="breaker" viewBox="0 0 34 52">
+      <rect x="1" y="1" width="32" height="50" rx="2" fill="#ffffff" stroke="currentColor" stroke-width="1.5"/>
+      <rect x="9" y="12" width="16" height="28" rx="1.5" fill="#e9ebe8" stroke="currentColor" stroke-width="1.2"/>
+    </symbol>
+  </defs>
+</svg>
+
+<header class="wrap">
+  <div class="top">
+    <a class="mark" href="#"><i aria-hidden="true"></i><span>Hegg Elektro</span></a>
+    <nav aria-label="Hovedmeny">
+      <a href="#tjenester">Tjenester</a><a href="#omrade">Område</a><a href="#om">Om oss</a><a href="#tilbud">Få tilbud</a><a href="#kontakt">Kontakt</a>
+    </nav>
+  </div>
+
+  <div class="kap" id="kapasitet" aria-live="polite">
+    <span class="lamp" aria-hidden="true"></span>
+    <div>
+      <span class="k">Ledig kapasitet</span>
+      <span class="v" id="kap-text">Ta kontakt for ledig kapasitet og pris.</span>
+      <span class="msg" id="kap-msg"></span>
+    </div>
+  </div>
+
+  <div class="hero">
+    <div>
+      <h1>Hegg Elektro <span class="l">Elektriker i Elverum</span></h1>
+      <p class="lede">Vi tar på oss alt av elektroinstallasjoner i Trysil, Elverum, Hamar og omegn. Ring, eller fortell kort hva du trenger, så tar vi det derfra.</p>
+      <ul class="area-line" aria-label="Område">
+        <li class="home">Elverum</li><li>Hamar</li><li>Trysil</li><li class="om">og omegn</li>
+      </ul>
+      <div class="cta-row">
+        <a class="btn solid" href="#tilbud">Få tilbud</a>
+        <a class="btn" href="#omrade">Se området</a>
+      </div>
+    </div>
+
+    <aside class="ring" aria-label="Ring Hegg Elektro">
+      <div class="ring-head">
+        <span>Man til fre kl. 7 til 16</span>
+        <span class="open" id="open"><span class="d"></span><span id="open-text">Åpningstider</span></span>
+      </div>
+      <a class="ring-btn" href="tel:+4795438341">
+        <small><svg aria-hidden="true"><use href="#phone"/></svg>Ring Hegg Elektro</small>
+        <b>954 38 341</b>
+      </a>
+      <div class="ring-foot">
+        <div class="stars">
+          <svg viewBox="0 0 84 16" aria-hidden="true"><g fill="currentColor"><path id="st" d="M8 .8l2.2 4.6 5 .6-3.7 3.4 1 5-4.5-2.5-4.5 2.5 1-5L.8 6l5-.6Z"/><use href="#st" x="17"/><use href="#st" x="34"/><use href="#st" x="51"/><use href="#st" x="68"/></g></svg>
+          <span><b class="num">5,0</b> på Google, 2 anmeldelser</span>
+        </div>
+        <a class="btn" href="#tilbud">Skriv hva jobben gjelder</a>
+      </div>
+    </aside>
+  </div>
+</header>
+
+<main>
+<section id="tjenester">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Det vi gjør</h2>
+      <p class="lede">Elektroinstallasjon i bygninger og industri. Det er dette Hegg Elektro står registrert for hos DSB.</p>
+    </div>
+    <div class="board">
+      <div class="board-in">
+        <div class="kurs">
+          <svg class="brk" viewBox="0 0 34 52" aria-hidden="true"><use href="#breaker"/><rect class="lever" x="11" y="14" width="12" height="12" rx="1.5" fill="currentColor"/></svg>
+          <h3><span class="tape">Elektroinstallasjon</span></h3>
+          <p>Nytt anlegg, utvidelse eller endring. Vi tar på oss alt av elektroinstallasjoner.</p>
+        </div>
+        <div class="kurs">
+          <svg class="brk" viewBox="0 0 34 52" aria-hidden="true"><use href="#breaker"/><rect class="lever" x="11" y="14" width="12" height="12" rx="1.5" fill="currentColor"/></svg>
+          <h3><span class="tape">Vedlikehold</span></h3>
+          <p>Vedlikehold av elektriske anlegg som allerede står.</p>
+        </div>
+        <div class="kurs">
+          <svg class="brk" viewBox="0 0 34 52" aria-hidden="true"><use href="#breaker"/><rect class="lever" x="11" y="14" width="12" height="12" rx="1.5" fill="currentColor"/></svg>
+          <h3><span class="tape">Prosjektering</span></h3>
+          <p>Prosjektering av elektriske anlegg, altså planen for anlegget før noe blir montert.</p>
+        </div>
+        <div class="kurs">
+          <svg class="brk" viewBox="0 0 34 52" aria-hidden="true"><use href="#breaker"/><rect class="lever" x="11" y="14" width="12" height="12" rx="1.5" fill="currentColor"/></svg>
+          <h3><span class="tape">Bolig og bygg</span></h3>
+          <p>Lavspenningsanlegg i bygninger, også i boligen din.</p>
+        </div>
+        <div class="kurs">
+          <svg class="brk" viewBox="0 0 34 52" aria-hidden="true"><use href="#breaker"/><rect class="lever" x="11" y="14" width="12" height="12" rx="1.5" fill="currentColor"/></svg>
+          <h3><span class="tape">Industri</span></h3>
+          <p>Lavspenningsanlegg i industri.</p>
+        </div>
+      </div>
+      <p class="board-note"><span>Usikker på hva jobben heter? Velg Annet i skjemaet, eller ring.</span><a href="tel:+4795438341">954 38 341</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="area" id="omrade">
+  <div class="wrap area-grid">
+    <svg class="diagram" viewBox="0 0 620 250" role="img" aria-label="Skjema over området: Hamar, Elverum og Trysil, med Elverum i midten">
+      <path class="stub" d="M70 170v46M540 70v-46M70 170H24M540 70h56"/>
+      <path class="wire" d="M70 170H290M290 170H390L470 70H540"/>
+      <path class="live" id="live-a" pathLength="1" d="M290 170H70"/>
+      <path class="live" id="live-b" pathLength="1" d="M290 170H390L470 70H540"/>
+      <circle class="node" cx="70" cy="170" r="11"/>
+      <rect class="base" x="276" y="156" width="28" height="28" rx="2"/>
+      <circle class="node" cx="540" cy="70" r="11"/>
+      <text class="t" x="70" y="140" text-anchor="middle">Hamar</text>
+      <text class="t" x="290" y="140" text-anchor="middle">Elverum</text>
+      <text class="s" x="290" y="212" text-anchor="middle">her holder vi til</text>
+      <text class="t" x="540" y="112" text-anchor="middle">Trysil</text>
+      <text class="s" x="40" y="240">og omegn</text>
+      <text class="s" x="548" y="20">og omegn</text>
+    </svg>
+    <div>
+      <h2>Elverum, Hamar, Trysil og omegn</h2>
+      <p class="lede">Vi holder til i Elverum og tar oppdrag i Hamar, Trysil og områdene rundt. Bor du et sted imellom, er det bare å ringe og spørre.</p>
+      <ul class="legend">
+        <li><b>Elverum</b><span>der vi holder til</span></li>
+        <li><b>Hamar</b><span>og omegn</span></li>
+        <li><b>Trysil</b><span>og omegn</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="slik">
+  <div class="wrap">
+    <div class="sec-head"><h2>Slik jobber vi</h2></div>
+    <ol class="steps">
+      <li><h3>Du tar kontakt</h3><p>Ring 954 38 341, eller send en forespørsel her på siden.</p></li>
+      <li><h3>Vi kommer på befaring</h3><p>Vi ser på jobben der den skal gjøres, så vi vet hva det gjelder.</p></li>
+      <li><h3>Du får et fast tilbud</h3><p>Så kan du ta stilling til det i ro og mak, før noe settes i gang.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="area" id="bilder">
+  <div class="wrap">
+    <div class="sec-head"><h2>Bilder av jobbene</h2></div>
+    <div class="tiles" aria-hidden="true">
+      <div class="tile a"><span>Deres bilde</span></div>
+      <div class="tile b"><span>Deres bilde</span></div>
+      <div class="tile c"><span>Deres bilde</span></div>
+      <div class="tile d"><span>Deres bilde</span></div>
+    </div>
+    <p class="tiles-note">Her legger vi inn bilder av jobbene deres.</p>
+  </div>
+</section>
+
+<section id="omtaler">
+  <div class="wrap">
+    <div class="sec-head"><h2>Det kundene skriver</h2></div>
+    <div class="quotes">
+      <blockquote><p>"Stort pluss for at han ryddet opp etter seg."</p><cite>Google-anmeldelse</cite></blockquote>
+      <blockquote><p>"Rask og god service!"</p><cite>Google-anmeldelse</cite></blockquote>
+      <div class="score"><b>5,0</b><span>på Google, 2 anmeldelser</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="area" id="om">
+  <div class="wrap about">
+    <div>
+      <h2>Om Hegg Elektro</h2>
+      <p class="lede">Hegg Elektro AS ble startet i <span class="num">2023</span> og holder til i Elverum. Daglig leder er Petter Hegg.</p>
+      <p class="lede">Firmaet tar på seg alt av elektroinstallasjoner i Trysil, Elverum, Hamar og omegn.</p>
+    </div>
+    <div class="reg">
+      <h3><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 2.8 4.5 5.6v5.6c0 4.6 3.2 8.4 7.5 9.9 4.3-1.5 7.5-5.3 7.5-9.9V5.6Z M8.6 12l2.4 2.4 4.6-4.8"/></svg>Registrert hos DSB</h3>
+      <dl>
+        <dt>Register</dt><dd>Elvirksomhetsregisteret</dd>
+        <dt>Faglig ansvarlig</dt><dd>Petter Hegg</dd>
+        <dt>Oppgaver</dt><dd>Prosjektering, bygging og vedlikehold av elektriske anlegg</dd>
+        <dt>Anlegg</dt><dd>Lavspenning i bygninger og industri</dd>
+      </dl>
+      <a href="https://elvirksomhetsregisteret.dsb.no/org/105913" rel="noopener">Se registreringen hos DSB</a>
+    </div>
+  </div>
+</section>
+
+<section class="quote-sec" id="tilbud">
+  <div class="wrap form-grid">
+    <div class="form-side">
+      <h2>Få et uforpliktende tilbud</h2>
+      <p class="lede">Skriv kort hva det gjelder og hvor. Det holder med noen linjer.</p>
+      <p>Vil du heller snakke med noen, ring <a href="tel:+4795438341">954 38 341</a>.</p>
+    </div>
+    <form id="form" novalidate>
+      <div class="f">
+        <label for="hva">Hva gjelder det</label>
+        <select id="hva" name="hva">
+          <option>Elektroinstallasjon</option>
+          <option>Vedlikehold</option>
+          <option>Prosjektering</option>
+          <option>Bolig og bygg</option>
+          <option>Industri</option>
+          <option>Annet</option>
+        </select>
+      </div>
+      <div class="f">
+        <label for="beskrivelse">Beskrivelse</label>
+        <textarea id="beskrivelse" name="beskrivelse" placeholder="F.eks. flere stikkontakter på kjøkkenet"></textarea>
+      </div>
+      <div class="two">
+        <div class="f">
+          <label for="sted">Adresse eller sted</label>
+          <input id="sted" name="sted" autocomplete="street-address" placeholder="F.eks. Elverum">
+        </div>
+        <div class="f">
+          <label for="naar">Når passer det</label>
+          <select id="naar" name="naar">
+            <option>Så fort som mulig</option>
+            <option>I løpet av måneden</option>
+            <option>Senere</option>
+            <option>Vet ikke</option>
+          </select>
+        </div>
+        <div class="f">
+          <label for="navn">Navn</label>
+          <input id="navn" name="navn" autocomplete="name">
+        </div>
+        <div class="f">
+          <label for="tlf">Telefon</label>
+          <input id="tlf" name="tlf" type="tel" inputmode="tel" autocomplete="tel">
+        </div>
+      </div>
+      <div class="f">
+        <label for="epost">E-post <small>(valgfritt)</small></label>
+        <input id="epost" name="epost" type="email" autocomplete="email">
+      </div>
+      <button class="btn solid" type="submit">Send forespørsel</button>
+      <p class="sent" id="sent" role="status">Dette er en forhåndsvisning. Når siden er satt opp, kommer forespørselen rett i innboksen deres.</p>
+    </form>
+  </div>
+</section>
+
+<section id="kontakt">
+  <div class="wrap contact">
+    <div>
+      <h2>Kontakt</h2>
+      <ul class="c-list">
+        <li><span>Telefon</span><a href="tel:+4795438341">954 38 341</a></li>
+        <li><span>Sted</span><div>Elverum<br><a href="https://www.google.com/maps/search/?api=1&amp;query=Hegg+Elektro+AS+Elverum" rel="noopener">Åpne i Google Maps</a></div></li>
+        <li><span>Facebook</span><a href="https://www.facebook.com/heggelektro" rel="noopener">facebook.com/heggelektro</a></li>
+      </ul>
+    </div>
+    <div class="reg">
+      <h3>Åpningstider</h3>
+      <div style="padding:14px 20px 18px 36px">
+        <ul class="hours" id="hours"></ul>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Hegg Elektro AS, org.nr. 931 691 600</span>
+    <span>Elverum, telefon 954 38 341</span>
+  </div>
+</footer>
+
+<div class="mobilebar">
+  <a class="a" href="#tilbud">Få tilbud</a>
+  <a class="b" href="tel:+4795438341"><svg aria-hidden="true"><use href="#phone"/></svg>Ring</a>
+</div>
+
+<script>
+// ---- Ledig kapasitet ----
+// The owner edits a Google Sheet from the phone (columns: Felt, Tekst).
+// Rows: "Kapasitet" (e.g. "Vi har ledig kapasitet fra uke 46"), "Beskjed" (optional, hidden if empty).
+// Paste the sheet's "Publiser på nettet" CSV link here. Empty = fallback text.
+const SHEET_CSV = "";
+const FALLBACK = "Ta kontakt for ledig kapasitet og pris.";
+
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+// Minimal CSV parser (handles quoted fields with commas).
+function parseCsv(text) {
+  const rows = []; let row = [], field = "", q = false;
+  for (let i = 0; i < text.length; i++) {
+    const c = text[i];
+    if (q) { if (c === '"' && text[i + 1] === '"') { field += '"'; i++; } else if (c === '"') q = false; else field += c; }
+    else if (c === '"') q = true;
+    else if (c === ",") { row.push(field); field = ""; }
+    else if (c === "\n" || c === "\r") { if (c === "\r" && text[i + 1] === "\n") i++; row.push(field); rows.push(row); row = []; field = ""; }
+    else field += c;
+  }
+  if (field || row.length) { row.push(field); rows.push(row); }
+  return rows;
+}
+
+function renderKap(d) {
+  document.getElementById("kap-text").innerHTML = esc(d["kapasitet"] || FALLBACK);
+  const m = document.getElementById("kap-msg"), msg = (d["beskjed"] || "").trim();
+  m.innerHTML = esc(msg);
+  m.classList.toggle("show", !!msg);
+}
+
+renderKap({});
+if (SHEET_CSV) {
+  fetch(SHEET_CSV + "&t=" + Date.now(), { cache: "no-store" }).then(r => r.ok ? r.text() : Promise.reject(r.status)).then(text => {
+    const d = {};
+    for (const [felt = "", tekst = ""] of parseCsv(text).slice(1)) {
+      const k = felt.trim().toLowerCase();
+      if (k) d[k] = tekst.trim();
+    }
+    renderKap(d);
+  }).catch(() => renderKap({}));
+}
+
+// ---- Opening hours (from Google: Mon to Fri 07 to 16) ----
+const HOURS = [null, [420, 960], [420, 960], [420, 960], [420, 960], [420, 960], null]; // index 0 = Sunday
+const DAYS = ["Søndag", "Mandag", "Tirsdag", "Onsdag", "Torsdag", "Fredag", "Lørdag"];
+const now = new Date(), today = now.getDay(), mins = now.getHours() * 60 + now.getMinutes();
+const t = m => String(Math.floor(m / 60)).padStart(2, "0") + "." + String(m % 60).padStart(2, "0");
+const h = HOURS[today], isOpen = h && mins >= h[0] && mins < h[1];
+if (isOpen) {
+  document.getElementById("open").classList.add("yes");
+  document.getElementById("open-text").textContent = "Åpent nå";
+} else {
+  let next = today;
+  if (!h || mins >= h[1]) next = (today + 1) % 7;
+  while (!HOURS[next]) next = (next + 1) % 7;
+  const when = next === today ? "i dag" : next === (today + 1) % 7 ? "i morgen" : DAYS[next].toLowerCase();
+  document.getElementById("open-text").textContent = "Åpner " + when + " kl. 7";
+}
+document.getElementById("hours").innerHTML = [1, 2, 3, 4, 5, 6, 0].map(d =>
+  `<li class="${d === today ? "today" : ""}"><span>${DAYS[d]}</span><span>${HOURS[d] ? t(HOURS[d][0]) + " til " + t(HOURS[d][1]) : "Stengt"}</span></li>`
+).join("");
+
+// ---- The one moment: the line from Elverum lights up when the map comes into view ----
+const live = document.querySelectorAll(".live");
+const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+if (!reduce && "IntersectionObserver" in window) {
+  live.forEach(p => { p.style.strokeDashoffset = 1; });
+  const io = new IntersectionObserver(es => {
+    if (!es.some(e => e.isIntersecting)) return;
+    live.forEach((p, i) => p.animate([{ strokeDashoffset: 1 }, { strokeDashoffset: 0 }],
+      { duration: 1400 + i * 300, easing: "cubic-bezier(.16,1,.3,1)", fill: "forwards" }));
+    io.disconnect();
+  }, { threshold: .4 });
+  io.observe(document.querySelector(".diagram"));
+}
+
+// ---- Preview form: never sends anything ----
+document.getElementById("form").addEventListener("submit", e => {
+  e.preventDefault();
+  const s = document.getElementById("sent");
+  s.classList.add("show");
+  s.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "center" });
+});
+</script>
+</body>
+</html>
