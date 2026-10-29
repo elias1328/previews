@@ -1,0 +1,596 @@
+<!doctype html>
+<html lang="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Torbjørn Amundsen AS | Rørlegger, butikk og showroom i Gjøvik</title>
+<meta name="description" content="Rørlegger i Gjøvik siden 1980. Butikk og showroom i Strandgata 38A. Bad, service, varmepumpe og boligsprinkel. Ring 61 17 33 52.">
+<!-- Preview only: keep out of search engines until the owner says yes -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#12444a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Albert+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Porcelain like a washbasin, a petrol-painted shop fascia with gilt letters, hot and cold tap dots */
+  --porcelain:#f5f4f0;--paper:#ffffff;--tile:#e8e9e4;--tile-2:#dfe1dc;
+  --ink:#172225;--muted:#4a5759;--line:#cfd3cd;
+  --petrol:#12444a;--petrol-d:#0b3236;--petrol-2:#1b5a61;--petrol-l:#dcebea;
+  --gilt:#d9b766;--gilt-d:#a9873a;
+  --hot:#c4372c;--cold:#2565ad;
+  --note:#fff9df;--note-ink:#2a2a24;
+  --ledge:#c9ccc5;--ledge-d:#aeb2aa;
+  --banner:#e9c46a;
+  --r-arch:50% 50% 14px 14px / 92px 92px 14px 14px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:12px}
+body{font-family:"Albert Sans",system-ui,sans-serif;background:var(--porcelain);color:var(--ink);line-height:1.6;font-size:1.06rem;overflow-x:hidden}
+h1,h2,h3{font-family:"Gloock",Georgia,serif;font-weight:400;line-height:1.1;letter-spacing:-.01em;text-wrap:balance}
+h2{font-size:clamp(1.9rem,5.4vw,2.9rem);margin-bottom:12px}
+h3{font-size:1.3rem}
+p{text-wrap:pretty}
+a{color:inherit;text-underline-offset:3px}
+svg{display:block}
+::selection{background:var(--petrol);color:#fff}
+:focus-visible{outline:3px solid var(--cold);outline-offset:3px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 18px}
+.lede{color:var(--muted);max-width:62ch;font-size:1.1rem}
+.tabnum{font-variant-numeric:tabular-nums}
+
+.preview{background:var(--banner);color:#1f1a0e;text-align:center;font-size:.8rem;font-weight:700;padding:6px 12px}
+
+/* Street line above the shop */
+.street{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:10px;padding-bottom:10px;font-size:.92rem;color:var(--muted)}
+.street nav{display:flex;gap:2px}
+.street nav a{text-decoration:none;padding:10px 12px;border-radius:999px;color:var(--ink);font-weight:500}
+.street nav a:hover{background:var(--tile)}
+.street .tel{font-weight:700;color:var(--petrol);text-decoration:none;padding:10px 0}
+@media (max-width:760px){.street nav{display:none}}
+
+/* ===== The shopfront ===== */
+.front{background:var(--tile);border-top:1px solid var(--line)}
+.fascia{background:linear-gradient(180deg,var(--petrol-2),var(--petrol) 40%,var(--petrol-d));color:var(--gilt);text-align:center;padding:22px 16px 18px;position:relative;box-shadow:0 10px 18px -12px rgba(8,30,33,.6)}
+.fascia::before,.fascia::after{content:"";position:absolute;left:0;right:0;height:5px;background:linear-gradient(180deg,#0a2b2f,#1f6870)}
+.fascia::before{top:0}.fascia::after{bottom:0}
+.fascia h1{font-size:clamp(2rem,8.4vw,4.4rem);letter-spacing:.01em;text-shadow:0 1px 0 var(--gilt-d),0 2px 0 rgba(0,0,0,.35)}
+.fascia .trade{display:flex;justify-content:center;flex-wrap:wrap;gap:6px 18px;margin-top:8px;font-size:.78rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#e9d9ac}
+.fascia .trade span{display:inline-flex;align-items:center;gap:8px}
+.dot{width:8px;height:8px;border-radius:50%;display:inline-block;flex:none}
+.dot.h{background:var(--hot)}.dot.k{background:var(--cold)}
+
+.facade{display:grid;grid-template-columns:1fr 34%;gap:14px;padding:18px 0 0;align-items:end}
+/* Display window: arched top, glass, a shelf of parts, the note taped inside */
+.window{position:relative;border:10px solid var(--petrol);border-bottom-width:14px;border-radius:var(--r-arch);background:
+  linear-gradient(115deg,rgba(255,255,255,.55) 0 18%,rgba(255,255,255,0) 18% 30%,rgba(255,255,255,.28) 30% 34%,rgba(255,255,255,0) 34%),
+  linear-gradient(180deg,#eef3f2,#dfe8e7);min-height:330px;overflow:hidden;box-shadow:inset 0 0 0 2px var(--gilt-d)}
+.window .shelf{position:absolute;left:0;right:0;bottom:0;height:120px}
+.window .shelf svg{width:100%;height:100%}
+.door{position:relative;border:10px solid var(--petrol);border-bottom:0;border-radius:var(--r-arch);background:linear-gradient(180deg,#e7eeed,#d5dfde);height:100%;min-height:330px;display:flex;justify-content:center}
+.door::after{content:"";position:absolute;right:12%;top:56%;width:8px;height:38px;border-radius:6px;background:linear-gradient(90deg,#9aa2a3,#eef1f1,#8d9596)}
+.door .no{position:absolute;top:22px;font-family:"Gloock",serif;color:var(--petrol);font-size:1.05rem;letter-spacing:.06em}
+
+/* Hanging open/closed sign on the door: the one authored motion */
+.sign{position:absolute;top:58px;transform-origin:50% -26px;animation:swing 1.6s cubic-bezier(.16,1,.3,1) .3s both}
+.sign::before{content:"";position:absolute;left:50%;top:-26px;width:44px;height:26px;margin-left:-22px;border:2px solid #6c7577;border-bottom:0;border-radius:22px 22px 0 0;clip-path:polygon(0 100%,50% 0,100% 100%)}
+.sign b{display:block;background:var(--paper);border:2px solid var(--ink);border-radius:8px;padding:8px 10px 6px;text-align:center;min-width:96px;box-shadow:0 6px 10px -4px rgba(0,0,0,.3)}
+.sign .st{display:block;font-family:"Gloock",serif;font-weight:400;font-size:1.25rem;letter-spacing:.08em;color:var(--hot);line-height:1.1}
+.sign.open .st{color:#1f7a3f}
+.sign .sub{display:block;font-size:.72rem;font-weight:600;color:var(--muted);margin-top:2px;line-height:1.3}
+@keyframes swing{0%{transform:rotate(-14deg)}35%{transform:rotate(8deg)}60%{transform:rotate(-4deg)}80%{transform:rotate(2deg)}100%{transform:rotate(0)}}
+
+/* The note in the window (the owner's message, from the sheet) */
+.note{position:absolute;left:8%;top:84px;width:min(62%,300px);background:var(--note);color:var(--note-ink);padding:18px 18px 16px;transform:rotate(-2.2deg);box-shadow:0 10px 16px -10px rgba(0,0,0,.45),0 1px 0 rgba(0,0,0,.05)}
+.note::before,.note::after{content:"";position:absolute;top:-9px;width:54px;height:20px;background:rgba(236,226,190,.85);box-shadow:0 1px 1px rgba(0,0,0,.08)}
+.note::before{left:-12px;transform:rotate(-24deg)}
+.note::after{right:-12px;transform:rotate(22deg)}
+.note .lbl{font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--petrol);display:block;margin-bottom:4px}
+.note p{font-family:"Caveat",cursive;font-weight:600;font-size:1.5rem;line-height:1.15}
+
+.step-ledge{height:16px;background:linear-gradient(180deg,var(--ledge),var(--ledge-d));box-shadow:0 6px 10px -6px rgba(0,0,0,.35)}
+
+/* Under the shop: the plain intro */
+.intro{display:grid;grid-template-columns:1.25fr .9fr;gap:36px;padding-top:34px;padding-bottom:46px;align-items:start}
+.intro .big{font-family:"Gloock",serif;font-size:clamp(1.55rem,4.6vw,2.2rem);line-height:1.18;max-width:24ch}
+.intro .lede{margin-top:12px}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 26px;border-radius:999px;font:700 1.03rem "Albert Sans",sans-serif;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:transform .12s ease-out,background-color .15s ease-out}
+.btn:active{transform:scale(.96)}
+.btn.main{background:var(--petrol);color:#fff}
+.btn.main:hover{background:var(--petrol-d)}
+.btn.alt{background:var(--paper);color:var(--petrol);border-color:var(--petrol)}
+.btn.alt:hover{background:var(--petrol-l)}
+.btn svg{width:20px;height:20px}
+.beskjed{display:none;margin-top:18px;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:12px 16px;font-weight:600}
+.beskjed.show{display:flex;gap:10px;align-items:baseline}
+
+/* Hours board, like the opening-hours plate on a shop door */
+.hours{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:20px 20px 16px}
+.hours h2{font-size:1.45rem;margin-bottom:8px}
+.hours table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.hours td{padding:9px 4px;border-top:1px solid var(--tile-2)}
+.hours td:last-child{text-align:right;font-weight:600}
+.hours tr.today td{color:var(--petrol);font-weight:700}
+.hours tr.today td:first-child::after{content:"  i dag";font-weight:500;color:var(--muted);font-size:.85rem}
+.hours .addr{margin-top:12px;font-size:.95rem;color:var(--muted)}
+
+/* ===== Shelf sections ===== */
+section{padding:62px 0}
+.band{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.shelfrow{position:relative;padding-bottom:26px;margin-bottom:8px}
+.shelfrow::after{content:"";position:absolute;left:0;right:0;bottom:0;height:12px;border-radius:3px;background:linear-gradient(180deg,var(--ledge),var(--ledge-d));box-shadow:0 8px 10px -7px rgba(0,0,0,.35)}
+
+/* Har vi delen? */
+.parts{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.parts .quotes{display:grid;gap:14px;margin-top:22px}
+.parts blockquote{background:var(--porcelain);border-radius:16px;padding:16px 18px}
+.parts blockquote p{font-family:"Gloock",serif;font-size:1.22rem;line-height:1.3}
+.parts blockquote cite{display:block;margin-top:6px;font-style:normal;font-size:.86rem;color:var(--muted)}
+.cabinet{background:var(--tile);border-radius:var(--r-arch);padding:46px 18px 0;border:8px solid var(--petrol)}
+.cabinet .shelfrow{display:flex;justify-content:space-around;align-items:flex-end;min-height:120px}
+.cabinet svg{height:96px;width:auto}
+.cabinet .tag{position:absolute;bottom:-1px;left:50%;transform:translate(-50%,0);z-index:1;font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);background:var(--paper);padding:0 8px;border-radius:3px;line-height:12px;height:12px}
+
+/* Services: shelf-edge labels, not cards */
+.svc{list-style:none;margin-top:26px;display:grid;grid-template-columns:1fr 1fr;gap:0 44px}
+.svc li{position:relative;padding:20px 0 22px;border-bottom:12px solid var(--ledge);box-shadow:0 8px 8px -9px rgba(0,0,0,.4)}
+.svc li+li{margin-top:0}
+.svc .lab{display:inline-flex;align-items:center;gap:10px;background:var(--porcelain);border:1px solid var(--line);border-radius:8px;padding:4px 12px;font-size:.82rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--petrol)}
+.svc h3{margin-top:12px}
+.svc p{color:var(--muted);margin-top:6px;max-width:48ch}
+
+/* Steps */
+.steps{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:28px;counter-reset:s}
+.steps li{counter-increment:s;padding-top:16px;border-top:2px solid var(--petrol)}
+.steps li::before{content:counter(s);font-family:"Gloock",serif;font-size:2rem;color:var(--petrol);line-height:1;display:block;margin-bottom:8px}
+.steps p{color:var(--muted);margin-top:4px}
+
+/* Photo placeholders: three small display windows */
+.panes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:26px}
+.pane{aspect-ratio:3/4;border:8px solid var(--petrol);border-radius:var(--r-arch);background:
+  linear-gradient(115deg,rgba(255,255,255,.6) 0 16%,rgba(255,255,255,0) 16% 28%,rgba(255,255,255,.3) 28% 31%,rgba(255,255,255,0) 31%),
+  linear-gradient(180deg,#eaf0ef,#d7e1e0);display:flex;align-items:flex-end;justify-content:center;padding:14px}
+.pane span{background:var(--paper);border-radius:999px;padding:6px 14px;font-size:.88rem;font-weight:600;color:var(--petrol)}
+.panes-note{margin-top:14px;color:var(--muted)}
+
+/* Approvals and about */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.cert{background:var(--porcelain);border-radius:18px;padding:22px}
+.cert ul{list-style:none;margin-top:10px}
+.cert li{padding:8px 0;border-top:1px solid var(--tile-2);display:flex;gap:10px;align-items:baseline}
+.cert li .dot{transform:translateY(-1px)}
+.cert .src{margin-top:12px;font-size:.92rem}
+.about p+p{margin-top:12px}
+.about .facts{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.about .facts span{background:var(--petrol-l);color:var(--petrol-d);border-radius:999px;padding:6px 14px;font-weight:600;font-size:.92rem}
+
+/* Form */
+.formwrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px;align-items:start}
+form{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:22px;display:grid;gap:16px}
+label{display:block;font-weight:600;font-size:.95rem;margin-bottom:6px}
+label small{font-weight:400;color:var(--muted)}
+input,select,textarea{width:100%;font:inherit;font-size:1.02rem;color:var(--ink);background:var(--porcelain);border:1.5px solid var(--ledge-d);border-radius:12px;padding:13px 14px;min-height:52px}
+textarea{min-height:120px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--petrol);box-shadow:0 0 0 3px var(--petrol-l);background:var(--paper)}
+::placeholder{color:#6b7779}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+form .btn{width:100%;font-size:1.08rem}
+.sent{display:none;background:var(--petrol-l);color:var(--petrol-d);border-radius:14px;padding:14px 16px;font-weight:600}
+.sent.show{display:block}
+
+/* Contact */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.bigtel{display:inline-block;font-family:"Gloock",serif;font-size:clamp(2.2rem,8vw,3.4rem);color:var(--petrol);text-decoration:none;line-height:1.1;margin:6px 0 10px;font-variant-numeric:tabular-nums}
+.bigtel:hover{text-decoration:underline;text-decoration-thickness:2px}
+.contact dl{display:grid;grid-template-columns:auto 1fr;gap:10px 18px;margin-top:8px}
+.contact dt{font-weight:700}
+.contact dd{color:var(--muted)}
+
+footer{background:var(--petrol-d);color:#d6e3e2;padding:34px 0 110px;font-size:.92rem}
+footer .name{font-family:"Gloock",serif;color:var(--gilt);font-size:1.3rem}
+footer a{color:#fff}
+
+/* Sticky phone bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:20;display:none;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(245,244,240,.96);border-top:1px solid var(--line);backdrop-filter:saturate(1.2) blur(6px)}
+.bar .btn{flex:1;min-height:52px;padding:0 12px}
+
+@media (min-width:861px){
+  .facade{grid-template-columns:1fr 27%}
+  .window,.door{min-height:420px}
+  .window .shelf{height:140px}
+  .note{top:96px;left:9%;width:330px}
+  .pane{aspect-ratio:4/4.2}
+}
+@media (max-width:860px){
+  .intro,.parts,.two,.formwrap,.contact{grid-template-columns:1fr;gap:28px}
+  .svc{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr;gap:18px}
+  .panes{grid-template-columns:repeat(3,1fr);gap:10px}
+  .bar{display:flex}
+  section{padding:48px 0}
+}
+@media (max-width:560px){
+  .facade{grid-template-columns:1fr 31%;gap:10px}
+  .window{min-height:300px;border-width:8px;border-bottom-width:12px}
+  .door{min-height:300px;border-width:8px}
+  .window .shelf{height:96px}
+  .note{left:7%;top:62px;width:78%;padding:14px 14px 12px}
+  .note p{font-size:1.3rem}
+  .sign b{min-width:0;padding:6px 7px 5px}
+  .sign .st{font-size:1rem}
+  .sign .sub{font-size:.66rem}
+  .door .no{font-size:.9rem;top:14px}
+  .sign{top:48px}
+  .row2{grid-template-columns:1fr}
+  .pane{border-width:5px;padding:8px}
+  .pane span{font-size:.74rem;padding:4px 8px;text-align:center}
+  .cabinet svg{height:70px}
+  .cabinet{padding:36px 10px 0}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .sign{animation:none}
+  .btn{transition:none}
+}
+</style>
+</head>
+<body>
+
+<div class="preview">Forhåndsvisning laget for Torbjørn Amundsen AS, bildene kommer fra dere</div>
+
+<header class="wrap street">
+  <span>Strandgata 38A, Gjøvik</span>
+  <nav aria-label="Hovedmeny">
+    <a href="#butikken">Butikken</a>
+    <a href="#tjenester">Tjenester</a>
+    <a href="#tilbud">Få tilbud</a>
+    <a href="#kontakt">Kontakt</a>
+  </nav>
+  <a class="tel tabnum" href="tel:+4761173352">61 17 33 52</a>
+</header>
+
+<main>
+<!-- The shopfront: fascia, display window with the owner's note, door with the open sign -->
+<div class="front">
+  <div class="fascia">
+    <h1>Torbjørn Amundsen AS</h1>
+    <div class="trade"><span><i class="dot h"></i>Rørlegger</span><span>Butikk</span><span>Showroom<i class="dot k"></i></span></div>
+  </div>
+  <div class="wrap">
+    <div class="facade">
+      <div class="window" aria-label="Utstillingsvinduet">
+        <div class="note" id="note" role="note">
+          <span class="lbl">Lapp i vinduet</span>
+          <p id="noteText">Velkommen innom butikken. Mandag til torsdag 8 til 16, fredag 8 til 13.</p>
+        </div>
+        <div class="shelf" aria-hidden="true">
+          <svg viewBox="0 0 600 120" preserveAspectRatio="xMidYMax meet">
+            <defs>
+              <linearGradient id="chrome" x1="0" x2="1">
+                <stop offset="0" stop-color="#7d8789"/><stop offset=".35" stop-color="#f4f7f7"/><stop offset=".6" stop-color="#b9c1c2"/><stop offset="1" stop-color="#6f797b"/>
+              </linearGradient>
+              <linearGradient id="copper" x1="0" x2="1">
+                <stop offset="0" stop-color="#8a4a26"/><stop offset=".4" stop-color="#e3a073"/><stop offset="1" stop-color="#9a5530"/>
+              </linearGradient>
+              <radialGradient id="shadow"><stop offset="0" stop-color="#000" stop-opacity=".32"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
+            </defs>
+            <!-- shelf board -->
+            <rect x="0" y="100" width="600" height="20" fill="#c9ccc5"/>
+            <rect x="0" y="100" width="600" height="3" fill="#eef0ec"/>
+            <!-- mixer tap -->
+            <ellipse cx="110" cy="100" rx="44" ry="5" fill="url(#shadow)"/>
+            <rect x="96" y="44" width="28" height="56" rx="6" fill="url(#chrome)"/>
+            <path d="M104 50 C 104 22, 150 18, 160 40 L 160 52 L 150 52 L 150 44 C 144 32, 116 34, 116 50 Z" fill="url(#chrome)"/>
+            <rect x="92" y="32" width="36" height="9" rx="4.5" fill="url(#chrome)" transform="rotate(-12 110 36)"/>
+            <circle cx="102" cy="58" r="3" fill="#c4372c"/><circle cx="118" cy="58" r="3" fill="#2565ad"/>
+            <!-- ball valve with red lever -->
+            <ellipse cx="250" cy="100" rx="42" ry="5" fill="url(#shadow)"/>
+            <rect x="214" y="70" width="72" height="22" rx="4" fill="url(#chrome)"/>
+            <rect x="236" y="62" width="28" height="36" rx="6" fill="url(#chrome)"/>
+            <rect x="246" y="48" width="8" height="16" fill="url(#chrome)"/>
+            <rect x="244" y="40" width="64" height="12" rx="6" fill="#c4372c"/>
+            <rect x="214" y="92" width="72" height="8" fill="#9aa3a4"/>
+            <!-- copper elbow -->
+            <ellipse cx="380" cy="100" rx="38" ry="5" fill="url(#shadow)"/>
+            <path d="M356 100 L356 70 C 356 50, 372 40, 392 40 L 410 40 L 410 60 L 394 60 C 384 60, 376 66, 376 76 L 376 100 Z" fill="url(#copper)"/>
+            <rect x="352" y="88" width="28" height="12" rx="2" fill="#b26a40"/>
+            <rect x="404" y="36" width="12" height="28" rx="2" fill="#b26a40"/>
+            <!-- pressure gauge -->
+            <ellipse cx="505" cy="100" rx="40" ry="5" fill="url(#shadow)"/>
+            <rect x="499" y="78" width="12" height="22" fill="url(#chrome)"/>
+            <circle cx="505" cy="52" r="32" fill="url(#chrome)"/>
+            <circle cx="505" cy="52" r="25" fill="#fbfbf8"/>
+            <path d="M486 62 A 22 22 0 1 1 524 62" fill="none" stroke="#172225" stroke-width="2" stroke-dasharray="2 5"/>
+            <path d="M512 60 A 22 22 0 0 0 524 62" fill="none" stroke="#c4372c" stroke-width="3"/>
+            <line x1="505" y1="52" x2="492" y2="38" stroke="#172225" stroke-width="2.5" stroke-linecap="round"/>
+            <circle cx="505" cy="52" r="3.5" fill="#172225"/>
+          </svg>
+        </div>
+      </div>
+      <div class="door" aria-label="Døra til butikken">
+        <span class="no" aria-hidden="true">38A</span>
+        <div class="sign" id="sign" role="status" aria-live="polite">
+          <b><span class="st" id="signState">ÅPENT</span><span class="sub" id="signSub">til kl. 16</span></b>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="step-ledge" aria-hidden="true"></div>
+</div>
+
+<div class="wrap intro">
+  <div>
+    <p class="big">Rørleggeren i Strandgata i Gjøvik, med egen butikk og showroom.</p>
+    <p class="lede">Vi tar bad, service og reparasjoner, varmepumpe og boligsprinkel, for både private og bedrifter. Firmaet har holdt på siden 1980.</p>
+    <div class="btns">
+      <a class="btn main" href="#tilbud">Få tilbud</a>
+      <a class="btn alt" href="tel:+4761173352"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Ring 61 17 33 52</a>
+    </div>
+    <p class="beskjed" id="beskjed" role="status"><i class="dot h"></i><span id="beskjedText"></span></p>
+  </div>
+  <aside class="hours" aria-labelledby="h-hours">
+    <h2 id="h-hours">Åpningstider</h2>
+    <table>
+      <tbody id="hoursBody">
+        <tr data-d="1"><td>Mandag</td><td>08 til 16</td></tr>
+        <tr data-d="2"><td>Tirsdag</td><td>08 til 16</td></tr>
+        <tr data-d="3"><td>Onsdag</td><td>08 til 16</td></tr>
+        <tr data-d="4"><td>Torsdag</td><td>08 til 16</td></tr>
+        <tr data-d="5"><td>Fredag</td><td>08 til 13</td></tr>
+        <tr data-d="6"><td>Lørdag</td><td>Stengt</td></tr>
+        <tr data-d="0"><td>Søndag</td><td>Stengt</td></tr>
+      </tbody>
+    </table>
+    <p class="addr">Strandgata 38A, rett ved CC Gjøvik.</p>
+  </aside>
+</div>
+
+<section class="band" id="butikken" aria-labelledby="h-del">
+  <div class="wrap parts">
+    <div>
+      <h2 id="h-del">Har vi delen?</h2>
+      <p class="lede">Butikken i Strandgata har rør og deler, også til eldre anlegg. Lurer du på om vi har det du trenger, så ring før du kommer, eller ta med den gamle delen.</p>
+      <div class="quotes">
+        <blockquote><p>"Et lite museum i rør og deler. Det de ikke har her, finnes ikke."</p><cite>Fra en anmeldelse på Google</cite></blockquote>
+        <blockquote><p>"Har alt av gamle deler (nye)."</p><cite>Fra en anmeldelse på Google, kunde fra Søndre Land</cite></blockquote>
+      </div>
+    </div>
+    <div class="cabinet" aria-hidden="true">
+      <div class="shelfrow">
+        <svg viewBox="0 0 70 100"><defs><linearGradient id="ch2" x1="0" x2="1"><stop offset="0" stop-color="#7d8789"/><stop offset=".35" stop-color="#f4f7f7"/><stop offset="1" stop-color="#6f797b"/></linearGradient></defs><rect x="22" y="20" width="26" height="80" rx="5" fill="url(#ch2)"/><rect x="14" y="10" width="42" height="14" rx="7" fill="#2565ad"/></svg>
+        <svg viewBox="0 0 70 100"><rect x="10" y="40" width="50" height="60" rx="6" fill="url(#ch2)"/><circle cx="35" cy="28" r="16" fill="#c4372c"/><circle cx="35" cy="28" r="5" fill="#7e1f17"/></svg>
+        <svg viewBox="0 0 70 100"><path d="M18 100 V52 a22 22 0 0 1 22 -22 H62 V48 H40 a4 4 0 0 0 -4 4 V100 Z" fill="#c98256"/></svg>
+        <span class="tag">Rør</span>
+      </div>
+      <div class="shelfrow">
+        <svg viewBox="0 0 80 100"><rect x="6" y="56" width="68" height="16" rx="3" fill="url(#ch2)"/><rect x="28" y="42" width="24" height="44" rx="4" fill="url(#ch2)"/><rect x="36" y="20" width="8" height="24" fill="url(#ch2)"/><circle cx="40" cy="18" r="12" fill="none" stroke="#c4372c" stroke-width="6"/></svg>
+        <svg viewBox="0 0 70 100"><circle cx="35" cy="56" r="28" fill="url(#ch2)"/><circle cx="35" cy="56" r="21" fill="#fbfbf8"/><line x1="35" y1="56" x2="24" y2="44" stroke="#172225" stroke-width="3" stroke-linecap="round"/><rect x="30" y="84" width="10" height="16" fill="url(#ch2)"/></svg>
+        <svg viewBox="0 0 70 100"><path d="M14 100 V60 h42 v40 Z M20 60 V40 h30 v20" fill="url(#ch2)"/><rect x="24" y="30" width="22" height="10" rx="3" fill="#2565ad"/></svg>
+        <span class="tag">Deler</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="tjenester" aria-labelledby="h-tj">
+  <div class="wrap">
+    <h2 id="h-tj">Det vi gjør</h2>
+    <p class="lede">Små og store jobber, hjemme hos deg eller for bedriften din.</p>
+    <ul class="svc">
+      <li><span class="lab"><i class="dot k"></i>Bad</span><h3>Oppussing av bad</h3><p>Fra et nytt blandebatteri på servanten til hele badet.</p></li>
+      <li><span class="lab"><i class="dot h"></i>Service</span><h3>Service og reparasjoner</h3><p>Ettersyn, reparasjoner og bytte av utstyr som har gjort sitt.</p></li>
+      <li><span class="lab"><i class="dot h"></i>Varme</span><h3>Varmepumpe</h3><p>Råd om valg og montering av varmepumpe.</p></li>
+      <li><span class="lab"><i class="dot k"></i>Sprinkel</span><h3>Brannsikring og boligsprinkel</h3><p>Sprinkelanlegg i boliger.</p></li>
+      <li><span class="lab"><i class="dot k"></i>Anlegg</span><h3>Varme- og sanitæranlegg</h3><p>Nye anlegg i nybygg, og nytt rør i hus som pusses opp.</p></li>
+      <li><span class="lab"><i class="dot h"></i>Butikk</span><h3>Butikk og showroom</h3><p>Kom innom i Strandgata 38A i åpningstiden.</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="band" aria-labelledby="h-slik">
+  <div class="wrap">
+    <h2 id="h-slik">Slik går det for seg</h2>
+    <ol class="steps">
+      <li><h3>Du tar kontakt</h3><p>Ring, send en forespørsel her, eller stikk innom butikken.</p></li>
+      <li><h3>Vi kommer på befaring</h3><p>Vi ser på jobben der den skal gjøres.</p></li>
+      <li><h3>Du får et fast tilbud</h3><p>Så bestemmer du deg i ro og mak.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section aria-labelledby="h-bilder">
+  <div class="wrap">
+    <h2 id="h-bilder">Fra butikken og jobbene</h2>
+    <div class="panes">
+      <div class="pane"><span>Butikken</span></div>
+      <div class="pane"><span>Showroomet</span></div>
+      <div class="pane"><span>Ferdig bad</span></div>
+    </div>
+    <p class="panes-note">Her legger vi inn bilder av butikken, showroomet og jobbene deres.</p>
+  </div>
+</section>
+
+<section class="band" aria-labelledby="h-god">
+  <div class="wrap two">
+    <div class="cert">
+      <h2 id="h-god">Godkjent</h2>
+      <p>Sentralt godkjent hos Direktoratet for byggkvalitet, gyldig til 18.11.2027.</p>
+      <ul>
+        <li><i class="dot k"></i>Sanitærinstallasjoner</li>
+        <li><i class="dot h"></i>Varme- og kuldeinstallasjoner</li>
+        <li><i class="dot k"></i>Slukkeinstallasjoner (sprinkel)</li>
+        <li><i class="dot h"></i>Ansvarlig søker</li>
+        <li><i class="dot k"></i>Godkjent lærebedrift</li>
+      </ul>
+      <p class="src"><a href="https://sgregister.dibk.no/enterprises/910154915" rel="noopener">Se godkjenningen hos DiBK</a></p>
+    </div>
+    <div class="about" aria-labelledby="h-om">
+      <h2 id="h-om">Om oss</h2>
+      <p>Torbjørn Amundsen AS har holdt til i Gjøvik siden 1980. Vi har butikk og showroom i Strandgata 38A, og rørleggere som rykker ut til private og bedrifter i området.</p>
+      <p>Vi er med i VVS Fagmann, og du finner oss også på <a href="https://www.vvsfagmann.no/finn-fagmann/torbjorn-amundsen-as-6471" rel="noopener">siden vår hos VVS Fagmann</a>.</p>
+      <div class="facts"><span>Siden 1980</span><span>VVS Fagmann</span><span>Lærebedrift</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="tilbud" aria-labelledby="h-tilbud">
+  <div class="wrap formwrap">
+    <div>
+      <h2 id="h-tilbud">Få et uforpliktende tilbud</h2>
+      <p class="lede">Fortell kort hva det gjelder, så tar vi kontakt. Haster det, er det raskest å ringe 61 17 33 52.</p>
+    </div>
+    <form id="form" novalidate>
+      <div>
+        <label for="hva">Hva gjelder det</label>
+        <select id="hva" name="hva">
+          <option>Oppussing av bad</option>
+          <option>Service eller reparasjon</option>
+          <option>Varmepumpe</option>
+          <option>Brannsikring og boligsprinkel</option>
+          <option>Varme- eller sanitæranlegg</option>
+          <option>Annet</option>
+        </select>
+      </div>
+      <div>
+        <label for="besk">Beskrivelse</label>
+        <textarea id="besk" name="besk" placeholder="For eksempel: drypper fra blandebatteriet på badet"></textarea>
+      </div>
+      <div class="row2">
+        <div>
+          <label for="sted">Adresse eller sted</label>
+          <input id="sted" name="sted" autocomplete="street-address">
+        </div>
+        <div>
+          <label for="naar">Når passer det</label>
+          <select id="naar" name="naar">
+            <option>Så fort som mulig</option>
+            <option>I løpet av måneden</option>
+            <option>Senere</option>
+            <option>Vet ikke</option>
+          </select>
+        </div>
+      </div>
+      <div class="row2">
+        <div>
+          <label for="navn">Navn</label>
+          <input id="navn" name="navn" autocomplete="name">
+        </div>
+        <div>
+          <label for="tlf">Telefon</label>
+          <input id="tlf" name="tlf" type="tel" inputmode="tel" autocomplete="tel">
+        </div>
+      </div>
+      <div>
+        <label for="epost">E-post <small>(valgfritt)</small></label>
+        <input id="epost" name="epost" type="email" autocomplete="email">
+      </div>
+      <button class="btn main" type="submit">Send forespørsel</button>
+      <p class="sent" id="sent" role="status">Dette er en forhåndsvisning. Når siden er satt opp, kommer forespørselen rett i innboksen deres.</p>
+    </form>
+  </div>
+</section>
+
+<section class="band" id="kontakt" aria-labelledby="h-kontakt">
+  <div class="wrap contact">
+    <div>
+      <h2 id="h-kontakt">Ring eller kom innom</h2>
+      <a class="bigtel" href="tel:+4761173352">61 17 33 52</a>
+      <dl>
+        <dt>Butikk</dt><dd>Strandgata 38A, 2821 Gjøvik</dd>
+        <dt>Åpent</dt><dd>Man. til tor. 08 til 16, fre. 08 til 13</dd>
+      </dl>
+      <div class="btns">
+        <a class="btn alt" href="https://www.google.com/maps/search/?api=1&amp;query=Torbj%C3%B8rn%20Amundsen%20AS%2C%20Strandgata%2038A%2C%202821%20Gj%C3%B8vik" rel="noopener">Åpne i Google Maps</a>
+      </div>
+    </div>
+    <div class="hours" aria-hidden="true" style="background:var(--porcelain)">
+      <p style="font-family:Gloock,serif;font-size:1.4rem;line-height:1.25">Butikken ligger i Strandgata, rett ved CC Gjøvik. Ta gjerne med den gamle delen.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="name">Torbjørn Amundsen AS</p>
+    <p>Strandgata 38A, 2821 Gjøvik. Org.nr. 910 154 915. Tlf. <a href="tel:+4761173352">61 17 33 52</a></p>
+  </div>
+</footer>
+
+<div class="bar" aria-label="Snarveier">
+  <a class="btn main" href="#tilbud">Få tilbud</a>
+  <a class="btn alt" href="tel:+4761173352">Ring</a>
+</div>
+
+<script>
+/* Owner's note in the window, edited from the phone in a Google Sheet.
+   Sheet columns: Felt, Tekst. Rows: "Lapp" (the note in the window), "Beskjed" (optional line under the buttons, hidden if empty). */
+const SHEET_CSV = "";
+
+function parseCsv(text) {
+  const rows = []; let row = [], field = "", q = false;
+  for (let i = 0; i < text.length; i++) {
+    const c = text[i];
+    if (q) { if (c === '"' && text[i + 1] === '"') { field += '"'; i++; } else if (c === '"') q = false; else field += c; }
+    else if (c === '"') q = true;
+    else if (c === ",") { row.push(field); field = ""; }
+    else if (c === "\n" || c === "\r") { if (c === "\r" && text[i + 1] === "\n") i++; row.push(field); rows.push(row); row = []; field = ""; }
+    else field += c;
+  }
+  if (field || row.length) { row.push(field); rows.push(row); }
+  return rows;
+}
+function esc(s) { return String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c])); }
+
+if (SHEET_CSV) {
+  fetch(SHEET_CSV + "&t=" + Date.now(), { cache: "no-store" }).then(r => r.ok ? r.text() : Promise.reject(r.status)).then(text => {
+    for (const [felt = "", tekst = ""] of parseCsv(text).slice(1)) {
+      const k = felt.trim().toLowerCase(), v = tekst.trim();
+      if (k === "lapp" && v) document.getElementById("noteText").innerHTML = esc(v);
+      if (k === "beskjed" && v) { document.getElementById("beskjedText").innerHTML = esc(v); document.getElementById("beskjed").classList.add("show"); }
+    }
+  }).catch(() => { /* keep the built-in note */ });
+}
+
+/* Open or closed right now, in Gjøvik time */
+(function () {
+  const HOURS = { 1: [8, 16], 2: [8, 16], 3: [8, 16], 4: [8, 16], 5: [8, 13] };
+  const NAMES = ["søn.", "man.", "tir.", "ons.", "tor.", "fre.", "lør."];
+  let day, mins;
+  try {
+    const parts = new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/Oslo", weekday: "short", hour: "2-digit", minute: "2-digit", hourCycle: "h23" }).formatToParts(new Date());
+    const get = t => parts.find(p => p.type === t).value;
+    day = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].indexOf(get("weekday"));
+    mins = +get("hour") * 60 + +get("minute");
+  } catch (e) { const d = new Date(); day = d.getDay(); mins = d.getHours() * 60 + d.getMinutes(); }
+
+  const row = document.querySelector('#hoursBody tr[data-d="' + day + '"]');
+  if (row) row.classList.add("today");
+
+  const sign = document.getElementById("sign"), st = document.getElementById("signState"), sub = document.getElementById("signSub");
+  const h = HOURS[day];
+  if (h && mins >= h[0] * 60 && mins < h[1] * 60) {
+    sign.classList.add("open"); st.textContent = "ÅPENT"; sub.textContent = "til kl. " + h[1];
+  } else {
+    sign.classList.remove("open"); st.textContent = "STENGT";
+    let d = day, first = true;
+    for (let i = 0; i < 8; i++) {
+      const hh = HOURS[d];
+      if (hh && (!first || mins < hh[0] * 60)) break;
+      d = (d + 1) % 7; first = false;
+    }
+    sub.textContent = (d === day ? "åpner" : "åpner " + NAMES[d]) + " kl. " + HOURS[d][0];
+  }
+})();
+
+/* Preview form: never sends anything */
+document.getElementById("form").addEventListener("submit", e => {
+  e.preventDefault();
+  const s = document.getElementById("sent");
+  s.classList.add("show");
+  s.scrollIntoView({ block: "nearest", behavior: "smooth" });
+});
+</script>
+</body>
+</html>
